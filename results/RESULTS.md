@@ -26,33 +26,36 @@ picked it went 15-4, and it won 5 of the 6 games where the two disagreed.
 
 ## NFL
 
-### 2026 Week 5 (official): college method with approved NFL settings
+### 2026 Week 5 (official): college method with the approved NFL settings
 
-File: `nfl_cfbmethod_2026_week05_picks.csv`.
+File: `nfl_cfbmethod_2026_week05_picks.csv`. Grade it after Monday night with
+`python3 nfl_cfbmethod/grade.py --season 2026 --week 5`.
 
 | Pick | Win chance |
 |---|---|
-| Jaguars over Eagles (London) | 74% |
-| Patriots over Raiders | 71% |
-| Rams over Bills (Monday) | 71% |
-| Bengals over Dolphins | 69% |
-| Texans over Titans | 63% |
-| Jets over Browns | 59% |
-| Commanders over Giants | 58% |
-| Cardinals over Lions | 56% |
-| Vikings over Saints | 55% |
-| Colts over Steelers | 53% |
-| Seahawks over 49ers | 53% |
-| Chargers over Broncos | 51% |
+| Rams over Bills (Monday) | 74.5% |
+| Jaguars over Eagles (London) | 74.5% |
+| Bengals over Dolphins | 74% |
+| Patriots over Raiders | 70% |
+| Texans over Titans | 64% |
+| Cardinals over Lions | 59% |
+| Vikings over Saints | 59% |
+| Colts over Steelers | 58.5% |
+| Jets over Browns | 56% |
+| Commanders over Giants | 56% |
+| Chargers over Broncos | 56% |
+| Seahawks over 49ers | 55.5% |
 
 No pick: Bears at Packers (Caleb Williams questionable, Tyson Bagent starts),
 Ravens at Falcons (Lamar Jackson out, Tyler Huntley starts).
 
 Result: pending.
 
-Earlier Week 5 runs, kept for comparison (also pending):
+Earlier Week 5 runs, kept to compare after the games (all pending):
 
-- `nfl_cfbmethod-untuned_2026_week05_picks.csv`: college settings unchanged
-  (Jaguars 79%, Rams 67%, Patriots 62%, Broncos 61%, ...)
-- `nfl_2026_week05_picks.csv`: the retired quarterback version (Texans 72%,
-  Jaguars 66%, Patriots 64%, Broncos 60%, ...)
+- `nfl_cfbmethod-3seasons_2026_week05_picks.csv`: first tuning (3 seasons, no
+  recency): Jaguars 74%, Patriots 71%, Rams 71%, Bengals 69%, Texans 63%, ...
+- `nfl_cfbmethod-untuned_2026_week05_picks.csv`: college settings unchanged:
+  Jaguars 79%, Rams 67%, Patriots 62%, Broncos 61%, ...
+- `nfl_2026_week05_picks.csv`: the retired quarterback version: Texans 72%,
+  Jaguars 66%, Patriots 64%, Broncos 60%, ...

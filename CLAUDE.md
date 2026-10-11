@@ -16,9 +16,10 @@
    starting QB is out or unconfirmed), say exactly what's missing and make no
    pick for that game.
 5. **Log everything.** Save every set of picks in `results/` before kickoff and
-   grade it after.
+   grade it after (NFL: `nfl_cfbmethod/grade.py`, which also runs the
+   closing-line check; closing lines are for grading only, never an input).
 
-`nfl_cfbmethod/` is the NFL version. It follows `METHOD.md` with three NFL
+`nfl_cfbmethod/` is the NFL version. It follows `METHOD.md` with the NFL
 settings the owner approved on 2026-10-11 (listed at the end of `METHOD.md`).
 Those are locked the same way. The earlier quarterback version (`nfl/`) was
 retired on 2026-10-11 after the owner left the call to accuracy; it's in git

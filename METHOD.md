@@ -71,26 +71,34 @@ its reason. Picks are logged in `results/` before kickoff and graded after.
 
 ## NFL version (`nfl_cfbmethod/`): approved NFL settings
 
-The NFL version runs the college code above unchanged except for three
-settings the owner approved on 2026-10-11, each chosen on a week-by-week
-backtest of the 2023-2025 NFL seasons (665 games, weeks 4-18):
+The NFL version runs the college code above unchanged except for the settings
+the owner approved on 2026-10-11 (`nfl_cfbmethod/nfl_engine.py`), each chosen
+on a week-by-week backtest of the 2019-2025 NFL seasons (1,522 games, weeks
+4-18, each season graded with a calibration fit on the other seasons):
 
 | Setting | College (locked) | NFL (approved) |
 |---|---|---|
 | Ridge penalty | 50 | 500 |
-| Weight on last season's ratings | 70% | 45% |
-| Calibration games | last season, weeks 4-8 (~230 college games) | last three seasons, weeks 4-18 (~650 games) |
+| Weight on last season's ratings | 70% | 30% |
+| Recency within the season | none (every play counts the same) | plays count half as much for every 5 weeks older |
+| Calibration games | last season, weeks 4-8 (~230 college games) | every season since 2019, weeks 4-18 (~1,500 games) |
 
-Data is ESPN's NFL play-by-play for the current season and the four before it
-(the oldest backtest season needs its own previous season), and the expected
-points model is fit on all of it.
+Data is ESPN's NFL play-by-play from 2018 through the current season (2018 is
+the starting point for the 2019 replay), and the expected points model is fit
+on all of it. These NFL settings are locked the same way as the college method.
 
-Backtest with these settings: 417-248 (63%); 70%+ picks 113-43, 60-70% 135-71,
-under 60% 169-134. With the college settings and calibration on 2025 weeks
-4-8 only (68 NFL games), it was 128-91 on 2025, and its early-season win chances
-scored worse than a coin flip.
+**Backtest with these settings:** 963-559 (63%). 70%+ picks 271-93 (74%),
+60-70% 305-161 (65%), under 60% 387-305 (56%). Every season landed between 61%
+and 68%. With the unchanged college settings it was 128-91 on 2025, and its
+early-season win chances scored worse than a coin flip.
 
-On the same 387 games of 2024-25, the tuned version picked 67.2% of winners
-against 66.1% for the earlier quarterback version (`nfl/`, since retired). An
-average of the two had slightly better win chances but picked fewer winners
-(65.6%), so it wasn't adopted.
+**Closing-line check (scorecard only; lines never feed a pick):** over the same
+1,522 games, the closing line was more accurate than the engine (Brier 0.2087
+vs 0.2264). Taking the closing-line favorite went 1024-498. When the engine
+picked the market underdog it went 119-180, and picks where the engine was 5+
+points more confident than the close went 207-245, losing 7.3% per bet at
+closing odds. `nfl_cfbmethod/grade.py` runs this check on every graded week.
+
+The earlier quarterback version (`nfl/`) was retired: on the same 387 games of
+2024-25, a tuned version of this method picked 67.2% of winners against its
+66.1%, and averaging the two didn't pick more winners.

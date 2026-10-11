@@ -19,16 +19,18 @@ starting QB who is out or unconfirmed, gets a no-pick with the reason.
 - `cfb/original_2026-10-10/`: the exact scripts as run that morning
 - `cfb/`: the same method packaged to run on any date
 - `nfl_cfbmethod/`: the NFL version: the same method and `cfb/` code, with three
-  approved NFL settings (end of `METHOD.md`)
+  approved NFL settings (end of `METHOD.md`); `grade.py` grades each week and runs
+  the closing-line check
 
 ## How each engine works
 
 | | College football (`cfb/`) | NFL (`nfl_cfbmethod/`) |
 |---|---|---|
-| Data | ESPN play-by-play, last 3 seasons | ESPN play-by-play, last 5 seasons |
+| Data | ESPN play-by-play, last 3 seasons | ESPN play-by-play since 2018 |
 | Ratings | Offense and defense EPA + success rate, opponent-adjusted (ridge penalty 50) | Same (ridge penalty 500) |
-| Starting point | 70% of last season's rating | 45% of last season's rating |
-| Calibration | Last season's week-by-week replay, weeks 4-8 | Last three seasons' replays, weeks 4-18 |
+| Starting point | 70% of last season's rating | 30% of last season's rating |
+| Recency | Every play this season counts the same | Plays count half as much for every 5 weeks older |
+| Calibration | Last season's week-by-week replay, weeks 4-8 | Every season's replay since 2019, weeks 4-18 |
 | No-pick rules | Under 150 plays this season; starting QB out or unconfirmed | Same |
 
 ## Running it
@@ -44,6 +46,9 @@ python3 cfb/run.py --date 2026-10-17 --nopick "Oregon=starting QB ruled out"
 
 # NFL: college method with the approved NFL settings (team nicknames for --nopick)
 python3 nfl_cfbmethod/run.py --date 2026-10-18 --date 2026-10-19 --nopick "Ravens=starting QB out"
+
+# NFL: grade a week after it's played, with the closing-line check (scorecard only)
+python3 nfl_cfbmethod/grade.py --season 2026 --week 5
 ```
 
 Each run prints the picks grouped by confidence, the backtest record, this
@@ -65,8 +70,9 @@ Only the high-confidence tiers have held up:
 
 - **College:** 2025 backtest, weeks 4-8: 70%+ picks 100-21, 60-70% picks 31-25,
   under-60% picks 25-28. Live on 2026-10-10: 70%+ 6-1, 60-70% 3-5, coin flips 2-2.
-- **NFL:** 2023-2025 backtest (665 games): 417-248 overall; 70%+ picks 113-43,
-  60-70% 135-71, under 60% 169-134.
+- **NFL:** 2019-2025 backtest (1,522 games): 963-559 overall; 70%+ picks 271-93,
+  60-70% 305-161, under 60% 387-305. The closing line was still more accurate,
+  and the engine's picks against the market favorite went 119-180.
 
 Betting markets already price most of what these engines know, so a high win
 chance is not the same as a good bet. See `results/RESULTS.md` for the running

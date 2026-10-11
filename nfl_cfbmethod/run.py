@@ -7,16 +7,19 @@ the owner approved on 2026-10-11.
 It imports the college engine's own code (cfb/parse.py, cfb/epa.py,
 cfb/engine.py, cfb/qbs.py) without editing it. Same inputs, plays, expected
 points, ratings, features and quarterback rule. Plumbing differs (ESPN's NFL
-feed, weeks 1-18, team nicknames), plus three approved NFL settings:
+feed, weeks 1-18, team nicknames), plus the NFL settings the owner approved on
+2026-10-11 (nfl_engine.py):
 
   - ridge penalty 500 instead of 50
-  - last season weighted 45% instead of 70%
-  - win chances calibrated on the last three seasons' week-by-week replays
-    (weeks 4-18, about 650 games) instead of last season's weeks 4-8
+  - last season weighted 30% instead of 70%
+  - recency: within a season, plays count half as much for every 5 weeks older
+  - win chances calibrated on every season's week-by-week replay since 2019
+    (weeks 4-18, about 1,500 games) instead of last season's weeks 4-8
 
-All three were chosen on a 2023-2025 backtest (see METHOD.md). Quarterback
+All were chosen on a 2019-2025 backtest (see METHOD.md). Quarterback
 availability is checked by hand, as for college: rerun with --nopick for any
-game whose regular starter is out or unconfirmed.
+game whose regular starter is out or unconfirmed. Closing lines are never an
+input; grade.py uses them only to grade picks after they lock.
 """
 import argparse
 import datetime
@@ -39,14 +42,15 @@ import engine  # noqa: E402    (cfb/engine.py)
 import epa  # noqa: E402       (cfb/epa.py)
 import parse  # noqa: E402     (cfb/parse.py)
 import qbs  # noqa: E402       (cfb/qbs.py)
+import nfl_engine  # noqa: E402  (nfl_cfbmethod/nfl_engine.py)
 
 assert os.path.dirname(download.__file__) == HERE and os.path.dirname(engine.__file__) == CFB
 
 # Approved NFL settings (owner, 2026-10-11). cfb/engine.py itself is not edited.
 NFL_ALPHA = 500
-NFL_RHO = 0.45
-CAL_SEASONS = 3
-engine.ALPHA = NFL_ALPHA
+NFL_RHO = 0.30
+HALF_LIFE = 5      # weeks
+CAL_START = 2019   # calibrate on every season from 2019 through last season
 
 
 def calibrate(bt):
@@ -81,7 +85,7 @@ def main():
     a = ap.parse_args()
     day = datetime.date.fromisoformat(a.date[0])
     season = day.year if day.month >= 7 else day.year - 1
-    first_season = season - CAL_SEASONS - 1  # the oldest backtest season needs the season before it
+    first_season = CAL_START - 1  # the oldest backtest season needs the season before it
     os.makedirs(a.cache, exist_ok=True)
     os.makedirs(a.out, exist_ok=True)
 
@@ -114,27 +118,28 @@ def main():
     print("[4/6] Expected points and EPA")
     sc = engine.prepare(epa.build(plays, games))
 
-    cal_seasons = list(range(season - CAL_SEASONS, season))
+    cal_seasons = list(range(CAL_START, season))
     print(f"[5/6] Backtest {cal_seasons[0]}-{cal_seasons[-1]} (weeks 4-18) to calibrate")
-    bt = pd.concat([engine.walk_forward(sc, games, s, range(4, 19), NFL_RHO) for s in cal_seasons], ignore_index=True)
+    bt = pd.concat([nfl_engine.walk_forward(sc, games, s, range(4, 19), NFL_ALPHA, NFL_RHO, HALF_LIFE)
+                    for s in cal_seasons], ignore_index=True)
     cal = calibrate(bt)
     p = leave_one_season_out(bt)
     won = ((p > 0.5) == (bt["home_win"] == 1)).astype(int).values
     print(f"      calibrated on {len(bt)} games; coefficients {dict(zip(engine.FEATS, np.round(cal.coef_[0], 3)))}")
     print(f"      backtest (each season graded with the other seasons' calibration): {int(won.sum())}-{int(len(won) - won.sum())} | {tiers(p, won)}")
-    for s in cal_seasons:
-        m = (bt["season"] == s).values
-        print(f"        {s}: {int(won[m].sum())}-{int(m.sum() - won[m].sum())}")
+    print("        by season: " + ", ".join(f"{s} {int(won[(bt['season'] == s).values].sum())}-"
+                                         f"{int((bt['season'] == s).sum() - won[(bt['season'] == s).values].sum())}"
+                                         for s in cal_seasons))
     early = bt["week"].between(4, 8).values
     print(f"      weeks 4-8 only: {int(won[early].sum())}-{int(early.sum() - won[early].sum())} | {tiers(p[early], won[early])}")
-    cur = engine.walk_forward(sc, games, season, range(4, (week or 4)), NFL_RHO)
+    cur = nfl_engine.walk_forward(sc, games, season, range(4, (week or 4)), NFL_ALPHA, NFL_RHO, HALF_LIFE)
     if len(cur):
         p_cur = cal.predict_proba(cur[engine.FEATS])[:, 1]
         won_cur = ((p_cur > 0.5) == (cur["home_win"] == 1)).astype(int).values
         print(f"      {season} so far (out of sample): {int(won_cur.sum())}-{int(len(won_cur) - won_cur.sum())} | {tiers(p_cur, won_cur)}")
 
     print("[6/6] Picks")
-    picks = engine.predict(sc, season, slate, cal, NFL_RHO)
+    picks = nfl_engine.predict(sc, season, int(week), slate, cal, NFL_ALPHA, NFL_RHO, HALF_LIFE)
     for item in a.nopick:
         team, _, reason = item.partition("=")
         m = (picks["home_name"].str.lower() == team.strip().lower()) | (picks["away_name"].str.lower() == team.strip().lower())
