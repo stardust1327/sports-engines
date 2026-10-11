@@ -18,6 +18,8 @@
 5. **Log everything.** Save every set of picks in `results/` before kickoff and
    grade it after.
 
-`nfl/` (quarterback ratings plus rest days) was built before these rules and
-deviates from `METHOD.md`. It stays only until the owner decides whether to
-keep it. `nfl_cfbmethod/` is the NFL version that follows `METHOD.md`.
+`nfl_cfbmethod/` is the NFL version. It follows `METHOD.md` with three NFL
+settings the owner approved on 2026-10-11 (listed at the end of `METHOD.md`).
+Those are locked the same way. The earlier quarterback version (`nfl/`) was
+retired on 2026-10-11 after the owner left the call to accuracy; it's in git
+history if ever needed.

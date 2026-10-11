@@ -1,13 +1,22 @@
-"""NFL picks using the locked college football method (METHOD.md), unchanged.
+"""NFL picks with the college football method (METHOD.md) and the NFL settings
+the owner approved on 2026-10-11.
 
   python3 nfl_cfbmethod/run.py --date 2026-10-11 --date 2026-10-12
   python3 nfl_cfbmethod/run.py --date 2026-10-11 --nopick "Ravens=Lamar Jackson out"
 
 It imports the college engine's own code (cfb/parse.py, cfb/epa.py,
-cfb/engine.py, cfb/qbs.py) without changes. Only the plumbing differs: ESPN's
-NFL feed instead of college, NFL weeks 1-18, and team nicknames for display.
-Quarterback availability is checked by hand, exactly as for college: rerun
-with --nopick for any game whose regular starter is out or unconfirmed.
+cfb/engine.py, cfb/qbs.py) without editing it. Same inputs, plays, expected
+points, ratings, features and quarterback rule. Plumbing differs (ESPN's NFL
+feed, weeks 1-18, team nicknames), plus three approved NFL settings:
+
+  - ridge penalty 500 instead of 50
+  - last season weighted 45% instead of 70%
+  - win chances calibrated on the last three seasons' week-by-week replays
+    (weeks 4-18, about 650 games) instead of last season's weeks 4-8
+
+All three were chosen on a 2023-2025 backtest (see METHOD.md). Quarterback
+availability is checked by hand, as for college: rerun with --nopick for any
+game whose regular starter is out or unconfirmed.
 """
 import argparse
 import datetime
@@ -21,6 +30,7 @@ sys.path.insert(0, CFB)
 sys.path.insert(0, HERE)  # NFL download.py first; everything else comes from cfb/
 
 import numpy as np  # noqa: E402
+import pandas as pd  # noqa: E402
 from zoneinfo import ZoneInfo  # noqa: E402
 from sklearn.linear_model import LogisticRegression  # noqa: E402
 
@@ -32,14 +42,23 @@ import qbs  # noqa: E402       (cfb/qbs.py)
 
 assert os.path.dirname(download.__file__) == HERE and os.path.dirname(engine.__file__) == CFB
 
+# Approved NFL settings (owner, 2026-10-11). cfb/engine.py itself is not edited.
+NFL_ALPHA = 500
+NFL_RHO = 0.45
+CAL_SEASONS = 3
+engine.ALPHA = NFL_ALPHA
 
-def lowo(bt):
-    pr = np.zeros(len(bt))
-    for w in bt["week"].unique():
-        tr, te = bt["week"] != w, bt["week"] == w
-        lr = LogisticRegression(C=1e6, max_iter=1000, fit_intercept=False).fit(bt.loc[tr, engine.FEATS], bt.loc[tr, "home_win"])
-        pr[te.values] = lr.predict_proba(bt.loc[te, engine.FEATS])[:, 1]
-    return pr
+
+def calibrate(bt):
+    return LogisticRegression(C=1e6, max_iter=1000, fit_intercept=False).fit(bt[engine.FEATS], bt["home_win"])
+
+
+def leave_one_season_out(bt):
+    p = np.zeros(len(bt))
+    for s in bt["season"].unique():
+        tr, te = bt["season"] != s, bt["season"] == s
+        p[te.values] = calibrate(bt[tr]).predict_proba(bt.loc[te, engine.FEATS])[:, 1]
+    return p
 
 
 def tiers(p, won):
@@ -62,6 +81,7 @@ def main():
     a = ap.parse_args()
     day = datetime.date.fromisoformat(a.date[0])
     season = day.year if day.month >= 7 else day.year - 1
+    first_season = season - CAL_SEASONS - 1  # the oldest backtest season needs the season before it
     os.makedirs(a.cache, exist_ok=True)
     os.makedirs(a.out, exist_ok=True)
 
@@ -76,9 +96,9 @@ def main():
         return
     first_kick = min(g["kickoff_utc"] for g in slate)
 
-    print(f"[2/6] Play-by-play for {season - 2}-{season}")
+    print(f"[2/6] Play-by-play for {first_season}-{season}")
     rows = []
-    for s in (season - 2, season - 1, season):
+    for s in range(first_season, season + 1):
         rows += download.final_games(a.cache, s, refresh=(s == season))
     rows = [r for r in rows if r[3] < first_kick]
     fetched, errors = download.summaries(a.cache, [r[0] for r in rows])
@@ -94,23 +114,27 @@ def main():
     print("[4/6] Expected points and EPA")
     sc = engine.prepare(epa.build(plays, games))
 
-    print(f"[5/6] Backtest on {season - 1} (weeks 4-18) to calibrate")
-    bt = engine.walk_forward(sc, games, season - 1, range(4, 19))
-    cal, ncal = engine.calibrate(bt, week)
-    bt["p"] = lowo(bt)
-    won = ((bt["p"] > 0.5) == (bt["home_win"] == 1)).astype(int).values
+    cal_seasons = list(range(season - CAL_SEASONS, season))
+    print(f"[5/6] Backtest {cal_seasons[0]}-{cal_seasons[-1]} (weeks 4-18) to calibrate")
+    bt = pd.concat([engine.walk_forward(sc, games, s, range(4, 19), NFL_RHO) for s in cal_seasons], ignore_index=True)
+    cal = calibrate(bt)
+    p = leave_one_season_out(bt)
+    won = ((p > 0.5) == (bt["home_win"] == 1)).astype(int).values
+    print(f"      calibrated on {len(bt)} games; coefficients {dict(zip(engine.FEATS, np.round(cal.coef_[0], 3)))}")
+    print(f"      backtest (each season graded with the other seasons' calibration): {int(won.sum())}-{int(len(won) - won.sum())} | {tiers(p, won)}")
+    for s in cal_seasons:
+        m = (bt["season"] == s).values
+        print(f"        {s}: {int(won[m].sum())}-{int(m.sum() - won[m].sum())}")
     early = bt["week"].between(4, 8).values
-    print(f"      calibrated on {ncal} games; coefficients {dict(zip(engine.FEATS, np.round(cal.coef_[0], 3)))}")
-    print(f"      {season - 1} backtest, weeks 4-8: {int(won[early].sum())}-{int(early.sum() - won[early].sum())} | {tiers(bt['p'].values[early], won[early])}")
-    print(f"      {season - 1} backtest, all weeks: {int(won.sum())}-{int(len(won) - won.sum())} | {tiers(bt['p'].values, won)}")
-    cur = engine.walk_forward(sc, games, season, range(4, (week or 4)))
+    print(f"      weeks 4-8 only: {int(won[early].sum())}-{int(early.sum() - won[early].sum())} | {tiers(p[early], won[early])}")
+    cur = engine.walk_forward(sc, games, season, range(4, (week or 4)), NFL_RHO)
     if len(cur):
         p_cur = cal.predict_proba(cur[engine.FEATS])[:, 1]
         won_cur = ((p_cur > 0.5) == (cur["home_win"] == 1)).astype(int).values
         print(f"      {season} so far (out of sample): {int(won_cur.sum())}-{int(len(won_cur) - won_cur.sum())} | {tiers(p_cur, won_cur)}")
 
     print("[6/6] Picks")
-    picks = engine.predict(sc, season, slate, cal)
+    picks = engine.predict(sc, season, slate, cal, NFL_RHO)
     for item in a.nopick:
         team, _, reason = item.partition("=")
         m = (picks["home_name"].str.lower() == team.strip().lower()) | (picks["away_name"].str.lower() == team.strip().lower())
@@ -135,7 +159,7 @@ def main():
             print(f"\n  {label}")
             for r in sub.itertuples():
                 opp = r.home_name if r.pick == r.away_name else r.away_name
-                print(f"    {r.pick} over {opp}: {r.pick_prob:.0%}  ({r.kickoff}{', neutral site' if r.neutral else ''})")
+                print(f"    {r.pick} over {opp}: {r.pick_prob:.1%}  ({r.kickoff}{', neutral site' if r.neutral else ''})")
     nop = picks[picks["status"] != "PICK"]
     if len(nop):
         print("\n  No pick")

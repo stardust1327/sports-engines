@@ -68,3 +68,29 @@ starter is making a first start with very little playing time.
 The pick is the team with at least a 50% win chance, grouped as 70%+
 (strongest), 60-70% (leans) and under 60% (coin flips), with every no-pick and
 its reason. Picks are logged in `results/` before kickoff and graded after.
+
+## NFL version (`nfl_cfbmethod/`): approved NFL settings
+
+The NFL version runs the college code above unchanged except for three
+settings the owner approved on 2026-10-11, each chosen on a week-by-week
+backtest of the 2023-2025 NFL seasons (665 games, weeks 4-18):
+
+| Setting | College (locked) | NFL (approved) |
+|---|---|---|
+| Ridge penalty | 50 | 500 |
+| Weight on last season's ratings | 70% | 45% |
+| Calibration games | last season, weeks 4-8 (~230 college games) | last three seasons, weeks 4-18 (~650 games) |
+
+Data is ESPN's NFL play-by-play for the current season and the four before it
+(the oldest backtest season needs its own previous season), and the expected
+points model is fit on all of it.
+
+Backtest with these settings: 417-248 (63%); 70%+ picks 113-43, 60-70% 135-71,
+under 60% 169-134. With the college settings and calibration on 2025 weeks
+4-8 only (68 NFL games), it was 128-91 on 2025, and its early-season win chances
+scored worse than a coin flip.
+
+On the same 387 games of 2024-25, the tuned version picked 67.2% of winners
+against 66.1% for the earlier quarterback version (`nfl/`, since retired). An
+average of the two had slightly better win chances but picked fewer winners
+(65.6%), so it wasn't adopted.

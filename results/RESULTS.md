@@ -26,36 +26,33 @@ picked it went 15-4, and it won 5 of the 6 games where the two disagreed.
 
 ## NFL
 
-### 2026 Week 5, college method (official, per the owner's instruction)
+### 2026 Week 5 (official): college method with approved NFL settings
 
-File: `nfl_cfbmethod_2026_week05_picks.csv`. Made with the locked `METHOD.md`
-method, unchanged (`nfl_cfbmethod/`).
+File: `nfl_cfbmethod_2026_week05_picks.csv`.
 
 | Pick | Win chance |
 |---|---|
-| Jaguars over Eagles (London) | 79% |
-| Rams over Bills (Monday) | 67% |
-| Patriots over Raiders | 62% |
-| Broncos over Chargers | 61% |
-| Steelers over Colts | 59.6% |
+| Jaguars over Eagles (London) | 74% |
+| Patriots over Raiders | 71% |
+| Rams over Bills (Monday) | 71% |
+| Bengals over Dolphins | 69% |
+| Texans over Titans | 63% |
 | Jets over Browns | 59% |
-| Cardinals over Lions | 59% |
-| 49ers over Seahawks | 58% |
-| Commanders over Giants | 56% |
-| Vikings over Saints | 52% |
-| Bengals over Dolphins | 51% |
-| Titans over Texans | 50% |
+| Commanders over Giants | 58% |
+| Cardinals over Lions | 56% |
+| Vikings over Saints | 55% |
+| Colts over Steelers | 53% |
+| Seahawks over 49ers | 53% |
+| Chargers over Broncos | 51% |
 
 No pick: Bears at Packers (Caleb Williams questionable, Tyson Bagent starts),
 Ravens at Falcons (Lamar Jackson out, Tyler Huntley starts).
 
 Result: pending.
 
-### 2026 Week 5, quarterback version (made before the rule, for comparison)
+Earlier Week 5 runs, kept for comparison (also pending):
 
-File: `nfl_2026_week05_picks.csv` (`nfl/`, which deviates from `METHOD.md`).
-Texans 72%, Jaguars 66%, Patriots 64%, Broncos 60%, Vikings 59%, Bengals 59%,
-Rams 58%, Seahawks 58%, Commanders 56%, Colts 54%, Falcons 53%, Browns 52%,
-Lions 51%; no pick on Bears at Packers.
-
-Result: pending.
+- `nfl_cfbmethod-untuned_2026_week05_picks.csv`: college settings unchanged
+  (Jaguars 79%, Rams 67%, Patriots 62%, Broncos 61%, ...)
+- `nfl_2026_week05_picks.csv`: the retired quarterback version (Texans 72%,
+  Jaguars 66%, Patriots 64%, Broncos 60%, ...)
