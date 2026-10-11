@@ -5,15 +5,27 @@ play-by-play data. They rate every team by how efficient it is on each play,
 adjusted for the opponent, and turn that into a win chance for each game.
 
 **What goes in:** play-level EPA (expected points added) and success rate,
-home field, and rest days (NFL).
+home field, and (earlier NFL version only) rest days.
 **What never goes in:** betting lines, records, yards, points scored, or
 narrative. Final scores are used only to check and calibrate the engines.
 **Missing data means no pick:** a team without enough play-by-play, or a
 starting QB with too little history, gets a no-pick with the reason.
 
+## Start here
+
+- `METHOD.md`: the locked method (exactly what made the 2026-10-10 college picks)
+- `CLAUDE.md`: the owner's rules. The method doesn't change, and new models don't
+  deviate from it, without the owner's approval.
+- `cfb/original_2026-10-10/`: the exact scripts as run that morning
+- `cfb/`: the same method packaged to run on any date
+- `nfl_cfbmethod/`: the NFL version of the same method (reuses `cfb/` code unchanged)
+- `nfl/`: an earlier NFL engine with quarterback ratings and rest days, built
+  before the rules; it deviates from `METHOD.md` and stays only until the owner
+  decides
+
 ## How each engine works
 
-| | College football (`cfb/`) | NFL (`nfl/`) |
+| | College football (`cfb/`, also used by `nfl_cfbmethod/`) | NFL, earlier QB version (`nfl/`) |
 |---|---|---|
 | Data | ESPN play-by-play, last 3 seasons | nflverse play-by-play, last 5 seasons |
 | Ratings | Offense and defense EPA + success rate, opponent-adjusted | Pass offense (team + QB) and rush offense vs defense, opponent-adjusted |
@@ -33,7 +45,10 @@ pip install -r requirements.txt
 python3 cfb/run.py --date 2026-10-17
 python3 cfb/run.py --date 2026-10-17 --nopick "Oregon=starting QB ruled out"
 
-# NFL: one week
+# NFL with the locked college method (team nicknames for --nopick)
+python3 nfl_cfbmethod/run.py --date 2026-10-18 --date 2026-10-19 --nopick "Ravens=starting QB out"
+
+# NFL, earlier quarterback version (deviates from METHOD.md)
 python3 nfl/run.py --season 2026 --week 6
 python3 nfl/run.py --season 2026 --week 6 --qb "SEA=Sam Darnold" --nopick "CHI=starter questionable"
 ```

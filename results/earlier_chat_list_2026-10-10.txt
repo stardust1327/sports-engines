@@ -1,0 +1,189 @@
+College Football 
+
+1. Game Predictions
+Arizona @ West Virginia
+* Winner Pick: West Virginia
+* Predicted Score / Margin: West Virginia 27 - Arizona 23
+* Confidence Score: 6
+* Core Rationale: West Virginia holds a distinct trench dominance advantage in run-blocking win rate, which will wear down Arizona's defensive front in a grueling cross-country situational travel spot. The Mountaineers' ball control limits Arizona's offensive possessions, effectively neutralizing their passing matchup advantages by keeping the quarterback off the field.
+Texas A&M @ Missouri
+* Winner Pick: Texas A&M
+* Predicted Score / Margin: Texas A&M 24 - Missouri 20
+* Confidence Score: 7
+* Core Rationale: Texas A&M’s defensive line possesses an elite pass-rush win rate, creating a massive trench dominance disparity against Missouri's offensive front. This pressure disrupts Missouri's quarterback EPA under pressure, allowing the Aggies to control high-leverage situations on third down.
+Indiana @ Nebraska
+* Winner Pick: Indiana
+* Predicted Score / Margin: Indiana 28 - Nebraska 24
+* Confidence Score: 6
+* Core Rationale: Indiana's net efficiency and EPA per play have surged, giving them a structural advantage over a Nebraska defense that struggles with late-down high-leverage execution. Despite Nebraska's home-field situational edge, Indiana's offensive line holds enough pass-block win rate to facilitate clean pockets for their passing attack.
+UCF @ Oklahoma St.
+* Winner Pick: Oklahoma St.
+* Predicted Score / Margin: Oklahoma St. 31 - UCF 27
+* Confidence Score: 6
+* Core Rationale: Oklahoma State's passing matchups against UCF's vulnerable secondary yield a significantly higher projected EPA per dropback. Furthermore, UCF's reliance on the run will be met by Oklahoma State's superior defensive trench metrics, forcing UCF into negative situational third-and-longs.
+Sacramento St. @ Bowling Green
+* Winner Pick: Bowling Green
+* Predicted Score / Margin: Bowling Green 34 - Sacramento St. 17
+* Confidence Score: 8
+* Core Rationale: Bowling Green holds an overwhelming FBS-level trench dominance advantage on both sides of the ball, virtually guaranteeing a massive net efficiency disparity. Sacramento State will struggle with passing matchups against a heavier, faster defensive line, leading to poor red zone conversion rates.
+North Carolina @ Pittsburgh
+* Winner Pick: Pittsburgh
+* Predicted Score / Margin: Pittsburgh 33 - North Carolina 28
+* Confidence Score: 7
+* Core Rationale: Pittsburgh's high-tempo offense generates a substantial net yards per play (YPP) advantage against a historically porous North Carolina defense. The Panthers also hold the edge in high-leverage execution, particularly in offensive third-down conversions, while forcing UNC into a negative travel and rest situation.
+Tulane @ Army
+* Winner Pick: Army
+* Predicted Score / Margin: Army 21 - Tulane 17
+* Confidence Score: 6
+* Core Rationale: Army's flexbone rushing attack creates a unique situational prep factor that Tulane's defense will struggle to simulate, leading to sustained trench dominance for the Black Knights. Army's ability to bleed the clock drastically limits total possessions, magnifying their high-leverage execution in the red zone.
+Wake Forest @ NC State
+* Winner Pick: NC State
+* Predicted Score / Margin: NC State 27 - Wake Forest 20
+* Confidence Score: 7
+* Core Rationale: NC State generates far superior defensive line pressure, tilting the passing matchups heavily in their favor by tanking Wake Forest's EPA under blitz conditions. This trench dominance combined with a comfortable home situational spot provides a high floor for the Wolfpack.
+Ball St. @ Northwestern
+* Winner Pick: Northwestern
+* Predicted Score / Margin: Northwestern 24 - Ball St. 10
+* Confidence Score: 8
+* Core Rationale: Northwestern’s defensive net efficiency completely outclasses Ball State’s struggling offense, particularly in pass-rush win rate. Ball State's inability to execute in high-leverage red zone situations will stall out their drives against Northwestern's disciplined coverage unit.
+S. Carolina @ Florida
+* Winner Pick: S. Carolina
+* Predicted Score / Margin: S. Carolina 26 - Florida 21
+* Confidence Score: 6
+* Core Rationale: South Carolina boasts a severe defensive trench dominance advantage, which will consistently disrupt Florida's backfield and crater their offensive EPA per play. Florida's offensive line struggles directly feed into South Carolina's passing matchup edge, forcing crucial turnovers in high-leverage spots.
+Old Dominion @ Appalachian St.
+* Winner Pick: Appalachian St.
+* Predicted Score / Margin: Appalachian St. 31 - Old Dominion 20
+* Confidence Score: 7
+* Core Rationale: Appalachian State’s offensive trench dominance allows them to dictate the pace of play, resulting in a significantly higher net YPP. Additionally, the situational factor of playing at elevation in Boone gives Appalachian State a stark stamina advantage in the fourth quarter.
+Rice @ East Carolina
+* Winner Pick: East Carolina
+* Predicted Score / Margin: East Carolina 28 - Rice 17
+* Confidence Score: 7
+* Core Rationale: East Carolina's defensive coverage metrics project a massive advantage in passing matchups against a Rice offense prone to negative plays. ECU’s superior high-leverage execution, specifically their defensive turnover differential, will short-circuit Rice's drives.
+Miami (OH) @ UMass
+* Winner Pick: Miami (OH)
+* Predicted Score / Margin: Miami (OH) 27 - UMass 13
+* Confidence Score: 8
+* Core Rationale: Miami (OH) possesses one of the best group-of-five defensive fronts, creating total trench dominance against a weak UMass offensive line. This leads to a massive net efficiency gap and an inability for UMass to convert on high-leverage third downs.
+Illinois @ Michigan St.
+* Winner Pick: Illinois
+* Predicted Score / Margin: Illinois 23 - Michigan St. 17
+* Confidence Score: 6
+* Core Rationale: Illinois effectively masks its offensive limitations with elite defensive trench dominance and a highly efficient running game. Michigan State's negative EPA under pressure points to a distinct disadvantage in passing matchups against the Illini pass rush.
+Tulsa @ Navy
+* Winner Pick: Navy
+* Predicted Score / Margin: Navy 30 - Tulsa 20
+* Confidence Score: 7
+* Core Rationale: Navy’s run-block win rate sets the foundation for complete trench dominance, keeping Tulsa’s defense on the field and exhausting their front seven. The situational factor of defending the triple-option on short prep time will decimate Tulsa's high-leverage execution.
+Ole Miss @ Vanderbilt
+* Winner Pick: Ole Miss
+* Predicted Score / Margin: Ole Miss 38 - Vanderbilt 17
+* Confidence Score: 8
+* Core Rationale: Ole Miss features an overwhelming advantage in offensive EPA per play and net efficiency that Vanderbilt's defense simply cannot match. The Rebels will exploit Vanderbilt's secondary in passing matchups, ensuring high-leverage red zone conversions on nearly every trip.
+Virginia Tech @ California
+* Winner Pick: California
+* Predicted Score / Margin: California 24 - Virginia Tech 21
+* Confidence Score: 5
+* Core Rationale: The situational travel factor of Virginia Tech flying across the country multiple time zones creates a distinct physiological edge for California. Cal’s defensive line is statistically stout enough to achieve a neutral trench dominance battle, allowing their superior offensive high-leverage execution to squeak out a win.
+Buffalo @ Toledo
+* Winner Pick: Toledo
+* Predicted Score / Margin: Toledo 31 - Buffalo 14
+* Confidence Score: 8
+* Core Rationale: Toledo dominates the MAC in both net efficiency and defensive trench metrics, easily overwhelming Buffalo's offensive line. Toledo's quarterback thrives against the blitz, securing a massive passing matchup advantage on critical third downs.
+UCLA @ Oregon
+* Winner Pick: Oregon
+* Predicted Score / Margin: Oregon 42 - UCLA 17
+* Confidence Score: 9
+* Core Rationale: Oregon possesses elite net efficiency and devastating trench dominance across both sides of the ball compared to a rebuilding UCLA roster. Oregon's passing matchups yield a historically high expected EPA per play, removing any situational variance from the equation.
+Eastern Michigan @ Akron
+* Winner Pick: Eastern Michigan
+* Predicted Score / Margin: Eastern Michigan 24 - Akron 16
+* Confidence Score: 7
+* Core Rationale: Eastern Michigan holds a consistent advantage in run-blocking metrics, establishing trench dominance that limits Akron's time of possession. Akron's catastrophic turnover differential trends doom their high-leverage execution in tight games.
+Central Michigan @ Ohio
+* Winner Pick: Ohio
+* Predicted Score / Margin: Ohio 27 - Central Michigan 20
+* Confidence Score: 7
+* Core Rationale: Ohio’s defense boasts superior pass-rush win rates, giving them the edge in passing matchups against CMU. The situational advantage of Ohio playing at home bolsters their highly reliable red-zone execution.
+Duke @ Georgia Tech
+* Winner Pick: Georgia Tech
+* Predicted Score / Margin: Georgia Tech 28 - Duke 24
+* Confidence Score: 6
+* Core Rationale: Georgia Tech's offensive line run-block win rate heavily outpaces Duke's defensive front, cementing trench dominance. Tech's rushing efficiency provides a higher floor in high-leverage short-yardage situations, nullifying Duke's situational prep advantages.
+Kent St. @ Western Michigan
+* Winner Pick: Western Michigan
+* Predicted Score / Margin: Western Michigan 35 - Kent St. 13
+* Confidence Score: 8
+* Core Rationale: Kent State ranks at the bottom of the FBS in net YPP and EPA per play, making this a severe net efficiency mismatch. Western Michigan's defensive front will enjoy total trench dominance, forcing Kent State into an abysmal third-down conversion rate.
+Texas @ Oklahoma
+* Winner Pick: Texas
+* Predicted Score / Margin: Texas 31 - Oklahoma 24
+* Confidence Score: 7
+* Core Rationale: Texas holds a superior offensive net efficiency and a distinct passing matchup advantage, as their quarterback EPA against the blitz outperforms Oklahoma's secondary ratings. The neutral-site situational factor negates home field, allowing Texas's superior high-leverage red zone execution to dictate the final margin.
+Houston @ Kansas St.
+* Winner Pick: Kansas St.
+* Predicted Score / Margin: Kansas St. 34 - Houston 14
+* Confidence Score: 8
+* Core Rationale: Kansas State's rushing attack and offensive line metric profiles yield complete trench dominance against an undersized Houston front. The situational factor of a loud home environment forces Houston into negative high-leverage execution, notably pre-snap penalties and third-down failures.
+Charlotte @ North Texas
+* Winner Pick: North Texas
+* Predicted Score / Margin: North Texas 38 - Charlotte 24
+* Confidence Score: 7
+* Core Rationale: North Texas operates at a blistering pace with a highly rated passing matchup advantage, heavily skewing net efficiency in their favor. Charlotte lacks the defensive pass-rush win rate necessary to disrupt the timing, leading to poor third-down defensive metrics.
+Stanford @ Notre Dame
+* Winner Pick: Notre Dame
+* Predicted Score / Margin: Notre Dame 38 - Stanford 10
+* Confidence Score: 9
+* Core Rationale: Notre Dame's offensive and defensive lines exhibit elite trench dominance metrics, physically outmatching a depleted Stanford roster. The net efficiency gap is colossal, guaranteeing Notre Dame controls the game flow via high-leverage rushing conversions.
+UConn @ Temple
+* Winner Pick: UConn
+* Predicted Score / Margin: UConn 24 - Temple 17
+* Confidence Score: 6
+* Core Rationale: UConn's run-block win rate is statistically superior to Temple's defensive front, allowing the Huskies to control the clock and establish trench dominance. Temple's negative net YPP and poor turnover differential highlight their lack of high-leverage execution.
+Maryland @ Ohio St.
+* Winner Pick: Ohio St.
+* Predicted Score / Margin: Ohio St. 45 - Maryland 17
+* Confidence Score: 9
+* Core Rationale: Ohio State possesses a massive edge in every analytical category, most notably passing matchups, where their receivers generate elite separation metrics against Maryland's secondary. Ohio State's trench dominance on defense will crater Maryland's EPA per dropback under pressure.
+Tennessee @ Arkansas
+* Winner Pick: Tennessee
+* Predicted Score / Margin: Tennessee 34 - Arkansas 20
+* Confidence Score: 7
+* Core Rationale: Tennessee’s defensive line features top-tier pass-rush metrics, generating severe trench dominance against a porous Arkansas offensive line. This pressure directly feeds into Tennessee's high-leverage execution advantage, generating multiple negative plays that kill Arkansas drives.
+San Diego St. @ Oregon St.
+* Winner Pick: Oregon St.
+* Predicted Score / Margin: Oregon St. 28 - San Diego St. 14
+* Confidence Score: 8
+* Core Rationale: Oregon State's run-heavy offensive scheme benefits from immense trench dominance, grinding down SDSU's defensive front. SDSU's offensive net efficiency is too low to capitalize on their passing matchups, resulting in empty trips into the red zone.
+North Dakota St. @ UNLV
+* Winner Pick: UNLV
+* Predicted Score / Margin: UNLV 31 - North Dakota St. 24
+* Confidence Score: 6
+* Core Rationale: UNLV's Go-Go offense generates a high EPA per play through sheer schematic stress, giving them a net efficiency edge despite NDSU's FCS pedigree. The Rebels' superior team speed translates into higher-leverage execution on the perimeter, bypassing NDSU's interior trench strength.
+LSU @ Kentucky
+* Winner Pick: Kentucky
+* Predicted Score / Margin: Kentucky 27 - LSU 24
+* Confidence Score: 5
+* Core Rationale: Kentucky's defensive trench dominance and ability to generate pressure up the middle exploits LSU's interior line weaknesses, disrupting their passing matchup advantages. The situational night game atmosphere in Lexington serves as a negative travel factor for LSU, leading to crucial high-leverage turnovers.
+UAB @ Memphis
+* Winner Pick: Memphis
+* Predicted Score / Margin: Memphis 38 - UAB 24
+* Confidence Score: 8
+* Core Rationale: Memphis holds a massive advantage in passing matchup metrics, with their quarterback generating an elite EPA from clean pockets against a weak UAB pass rush. UAB's terrible defensive net efficiency guarantees Memphis will execute at a high rate in the red zone.
+CCAR @ Marshall
+* Winner Pick: Marshall
+* Predicted Score / Margin: Marshall 28 - CCAR 21
+* Confidence Score: 6
+* Core Rationale: Marshall's home-field situational factor combines with a stout defensive front to generate a slim trench dominance advantage. Coastal Carolina's offense has regressed in third-down high-leverage execution, giving Marshall the edge in total drive efficiency.
+Nevada @ UTEP
+* Winner Pick: Nevada
+* Predicted Score / Margin: Nevada 27 - UTEP 16
+* Confidence Score: 7
+* Core Rationale: Nevada's rushing attack boasts a superior net YPP compared to UTEP's stagnant offense, providing a clear net efficiency edge. UTEP's inability to establish trench dominance defensively will allow Nevada to easily control the clock and execute efficiently in the red zone.
+2. Custom Parlay Allocations
+* Parlay Name / Strategy: True Fundamentals High-Confidence Core
+* Wager Amount: $25
+* Legs Included: Ohio State (to beat Maryland), Oregon (to beat UCLA), Notre Dame (to beat Stanford)
+* Implied Probability & Estimated Target Payout: ~50% Implied Probability / $25 Profit ($50 Total Return)
+* Strategic Rationale: These three matchups possess the highest combined quantitative disparities in trench dominance, net efficiency, and passing mismatches across the entire slate, isolating teams with elite EPA margins facing completely structurally overmatched opponents.
