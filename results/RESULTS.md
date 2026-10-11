@@ -76,6 +76,10 @@ the same games.
 
 Parlay ($25): Jaguars + Vikings + Bengals. Same no-picks as the engine.
 
+Both sets side by side: `nfl_2026_week05_engine_vs_framework.pdf` (made by
+`make_nfl_2026_week05_report.py`). The engine was re-run at 4:50 AM Sunday and
+matched the logged picks exactly.
+
 Result: pending.
 
 Earlier Week 5 runs, kept to compare after the games (all pending):
