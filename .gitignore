@@ -4,3 +4,4 @@ nfl_cfbmethod/cache/
 __pycache__/
 *.pyc
 *.tmp
+prompt_football/cache/

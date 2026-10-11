@@ -51,6 +51,33 @@ Ravens at Falcons (Lamar Jackson out, Tyler Huntley starts).
 
 Result: pending.
 
+### 2026 Week 5: Prompt Football framework (comparison run)
+
+Files: `prompt_nfl_2026_week05.md` (picks in the prompt's format, with rationale,
+parlay and backtest) and `prompt_nfl_2026_week05_picks.csv`. This is the owner's
+five-criteria prompt scored with play-by-play numbers (`prompt_football/nfl.py`);
+it went 558-335 (62.5%) on a 2022-2025 backtest, against the engine's 64.0% on
+the same games.
+
+| Pick | Win chance | Engine |
+|---|---|---|
+| Jaguars over Eagles (London) | 85% | agrees (74.5%) |
+| Vikings over Saints | 76% | agrees (59%) |
+| Bengals over Dolphins | 69% | agrees (74%) |
+| Raiders over Patriots | 64% | Patriots 70% |
+| Commanders over Giants | 63% | agrees (56%) |
+| Steelers over Colts | 60% | Colts 58.5% |
+| 49ers over Seahawks | 57% | Seahawks 55.5% |
+| Jets over Browns | 57% | agrees (56%) |
+| Lions over Cardinals | 56% | Cardinals 59% |
+| Broncos over Chargers | 55% | Chargers 56% |
+| Texans over Titans | 53% | agrees (64%) |
+| Rams over Bills (Monday) | 53% | agrees (74.5%) |
+
+Parlay ($25): Jaguars + Vikings + Bengals. Same no-picks as the engine.
+
+Result: pending.
+
 Earlier Week 5 runs, kept to compare after the games (all pending):
 
 - `nfl_cfbmethod-3seasons_2026_week05_picks.csv`: first tuning (3 seasons, no

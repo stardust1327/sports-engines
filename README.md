@@ -21,6 +21,10 @@ starting QB who is out or unconfirmed, gets a no-pick with the reason.
 - `nfl_cfbmethod/`: the NFL version: the same method and `cfb/` code, with three
   approved NFL settings (end of `METHOD.md`); `grade.py` grades each week and runs
   the closing-line check
+- `prompt_football/nfl.py`: the owner's "Prompt Football" prompt (trenches 25%,
+  net efficiency 25%, passing 20%, situational 15%, high leverage 15%) scored with
+  play-by-play numbers, for comparison with the engine. It's separate from the
+  locked method; how each criterion is measured is at the top of the file
 
 ## How each engine works
 
