@@ -1,0 +1,29 @@
+game_id,team,qb_id,qb,source,dropbacks_3yr,differs_from_last_start,history
+2026_05_PHI_JAX,JAX,00-0036971,Trevor Lawrence,schedule,1068,False,W1:T.Lawrence > W2:T.Lawrence > W3:T.Lawrence > W4:T.Lawrence
+2026_05_PHI_JAX,PHI,00-0036389,Jalen Hurts,schedule,1098,False,W1:J.Hurts > W2:J.Hurts > W3:J.Hurts > W4:J.Hurts
+2026_05_CHI_GB,GB,00-0036264,Jordan Love,schedule,1096,False,W1:J.Love > W2:J.Love > W3:J.Love > W4:J.Love
+2026_05_CHI_GB,CHI,00-0038416,Tyson Bagent,schedule,52,False,W1:C.Williams > W2:C.Williams > W3:C.Keenum > W4:T.Bagent
+2026_05_CIN_MIA,MIA,00-0038128,Malik Willis,schedule,244,False,W1:M.Willis > W2:M.Willis > W3:M.Willis > W4:M.Willis
+2026_05_CIN_MIA,CIN,00-0036442,Joe Burrow,schedule,1176,False,W1:J.Burrow > W2:J.Burrow > W3:J.Burrow > W4:J.Burrow
+2026_05_LV_NE,NE,00-0039851,Drake Maye,schedule,1158,False,W1:D.Maye > W2:D.Maye > W3:D.Maye > W4:D.Maye
+2026_05_LV_NE,LV,00-0029604,Kirk Cousins,schedule,910,False,W1:K.Cousins > W2:K.Cousins > W3:K.Cousins > W4:K.Cousins
+2026_05_MIN_NO,NO,00-0040743,Tyler Shough,schedule,572,False,W1:T.Shough > W2:T.Shough > W3:T.Shough > W4:T.Shough
+2026_05_MIN_NO,MIN,00-0035228,Kyler Murray,schedule,888,False,W1:C.Wentz > W2:C.Wentz > W3:K.Murray > W4:K.Murray
+2026_05_CLE_NYJ,NYJ,00-0030565,Geno Smith,schedule,1305,False,W1:G.Smith > W2:G.Smith > W3:G.Smith > W4:G.Smith
+2026_05_CLE_NYJ,CLE,00-0033537,Deshaun Watson,schedule,409,False,W1:D.Watson > W2:D.Watson > W3:D.Watson > W4:D.Watson
+2026_05_IND_PIT,PIT,00-0023459,Aaron Rodgers,schedule,1343,False,W1:A.Rodgers > W2:A.Rodgers > W3:A.Rodgers > W4:A.Rodgers
+2026_05_IND_PIT,IND,00-0035710,Daniel Jones,schedule,951,False,W1:D.Jones > W2:D.Jones > W3:D.Jones > W4:D.Jones
+2026_05_HOU_TEN,TEN,00-0040676,Cam Ward,schedule,750,False,W1:C.Ward > W2:C.Ward > W3:C.Ward > W4:C.Ward
+2026_05_HOU_TEN,HOU,00-0039163,C.J. Stroud,schedule,1254,False,W1:C.Stroud > W2:C.Stroud > W3:C.Stroud > W4:C.Stroud
+2026_05_NYG_WAS,WAS,00-0039910,Jayden Daniels,schedule,900,True,W1:J.Daniels > W2:J.Daniels > W3:M.Mariota > W4:A.Kaliakmanis
+2026_05_NYG_WAS,NYG,00-0031503,Jameis Winston,schedule,485,False,W1:J.Dart > W2:J.Winston > W3:J.Winston > W4:J.Winston
+2026_05_DEN_LAC,LAC,00-0036355,Justin Herbert,schedule,1332,False,W1:J.Herbert > W2:J.Herbert > W3:J.Herbert > W4:J.Herbert
+2026_05_DEN_LAC,DEN,00-0039732,Bo Nix,schedule,1452,False,W1:B.Nix > W2:B.Nix > W3:B.Nix > W4:B.Nix
+2026_05_DET_ARI,ARI,00-0033119,Jacoby Brissett,schedule,898,False,W1:J.Brissett > W2:J.Brissett > W3:J.Brissett > W4:J.Brissett
+2026_05_DET_ARI,DET,00-0033106,Jared Goff,schedule,1374,False,W1:J.Goff > W2:J.Goff > W3:J.Goff > W4:J.Goff
+2026_05_SF_SEA,SEA,00-0034869,Sam Darnold,override,1209,False,W1:D.Lock > W2:D.Lock > W3:S.Darnold > W4:S.Darnold
+2026_05_SF_SEA,SF,00-0037834,Brock Purdy,schedule,960,False,W1:B.Purdy > W2:B.Purdy > W3:B.Purdy > W4:B.Purdy
+2026_05_BAL_ATL,ATL,00-0039917,Michael Penix Jr.,schedule,461,False,W1:C.Rush > W2:C.Rush > W3:M.Penix > W4:M.Penix
+2026_05_BAL_ATL,BAL,00-0035993,Tyler Huntley,schedule,253,True,W1:L.Jackson > W2:L.Jackson > W3:L.Jackson > W4:L.Jackson
+2026_05_BUF_LA,LA,00-0026498,Matthew Stafford,schedule,1340,False,W1:M.Stafford > W2:M.Stafford > W3:M.Stafford > W4:M.Stafford
+2026_05_BUF_LA,BUF,00-0034857,Josh Allen,schedule,1222,False,W1:J.Allen > W2:J.Allen > W3:J.Allen > W4:J.Allen

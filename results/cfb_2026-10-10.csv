@@ -1,0 +1,24 @@
+kickoff_phx,away,home,status,pick,win_prob,tier,reason,away_score,home_score,winner,result
+12:30 PM,Stanford,Notre Dame,PICK,Notre Dame,0.985,70%+,,7,58,Notre Dame,W
+12:30 PM,Charlotte,North Texas,PICK,North Texas,0.949,70%+,,10,50,North Texas,W
+12:30 PM,Buffalo,Toledo,PICK,Toledo,0.929,70%+,,23,8,Buffalo,L
+1:15 PM,Maryland,Ohio State,PICK,Ohio State,0.912,70%+,,16,45,Ohio State,W
+3:00 PM,San Diego State,Oregon State,PICK,Oregon State,0.886,70%+,,14,66,Oregon State,W
+4:00 PM,UAB,Memphis,PICK,Memphis,0.84,70%+,,13,38,Memphis,W
+12:30 PM,Kent State,Western Michigan,PICK,Western Michigan,0.78,70%+,,7,38,Western Michigan,W
+12:30 PM,Central Michigan,Ohio,PICK,Ohio,0.675,60-70%,,14,31,Ohio,W
+12:30 PM,Illinois,Michigan State,PICK,Michigan State,0.658,60-70%,,38,37,Illinois,L
+12:45 PM,UConn,Temple,PICK,Temple,0.653,60-70%,,34,20,UConn,L
+4:00 PM,LSU,Kentucky,PICK,LSU,0.653,60-70%,,34,35,Kentucky,L
+12:30 PM,Tulsa,Navy,PICK,Navy,0.636,60-70%,,26,34,Navy,W
+12:30 PM,Houston,Kansas State,PICK,Houston,0.615,60-70%,,35,16,Houston,W
+12:30 PM,Texas,Oklahoma,PICK,Texas,0.614,60-70%,,24,27,Oklahoma,L
+4:00 PM,Coastal Carolina,Marshall,PICK,Marshall,0.602,60-70%,,27,21,Coastal Carolina,L
+4:00 PM,North Dakota State,UNLV,PICK,North Dakota State,0.538,under 60%,,7,13,UNLV,L
+4:00 PM,Nevada,UTEP,PICK,Nevada,0.537,under 60%,,30,13,Nevada,W
+12:30 PM,Duke,Georgia Tech,PICK,Georgia Tech,0.508,under 60%,,25,28,Georgia Tech,W
+12:30 PM,Eastern Michigan,Akron,PICK,Akron,0.506,under 60%,,25,23,Eastern Michigan,L
+12:30 PM,Ole Miss,Vanderbilt,NO PICK,,,,Vanderbilt QB Jared Curtis listed probable; starter not confirmed,52,17,Ole Miss,
+12:30 PM,UCLA,Oregon,NO PICK,,,,Oregon QB Dante Moore ruled out; Dylan Raiola (36 throws) started,17,15,UCLA,
+12:30 PM,Virginia Tech,California,NO PICK,,,,Cal QB Sagapolutele questionable (concussion protocol); VT 64% if he plays,20,25,California,
+1:15 PM,Tennessee,Arkansas,NO PICK,,,,Tennessee QB George MacIntyre first career start (20 throws),24,17,Tennessee,

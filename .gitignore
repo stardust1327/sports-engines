@@ -1,0 +1,6 @@
+# downloaded data (re-fetched automatically)
+cfb/cache/
+nfl/cache/
+__pycache__/
+*.pyc
+*.tmp
