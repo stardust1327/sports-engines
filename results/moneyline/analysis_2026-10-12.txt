@@ -1,0 +1,84 @@
+NFL check: nflverse vs ESPN closing no-vig home chance, 1156 games: corr 0.996, median gap 0.009
+NFL engine rows without an nflverse match: 0
+
+### NFL ENGINE backtest 2019-2025: 1522 games with closing lines, seasons 2019-2025
+  picks right: model 962-560 (63.2%) | closing-line favorite 1022-500 (67.1%)
+  Brier (lower better): model 0.2263 | closing line 0.2087
+  bet every pick at the closing moneyline: 962-560, -51.9 units, ROI -3.4% (95% range -7.4% to +0.6%)
+  picks against the market favorite: 296 (19%), 118-178, ROI -4.9% (95% range -18.6% to +8.7%)
+  picks agreeing with the market favorite: 1226, 844-382, ROI -3.0% (95% range -6.8% to +0.7%)
+  'value' picks (model 5+ pts above the closing price): 453, 207-246, ROI -7.3% (95% range -17.1% to +2.6%)
+  'value' picks (model 10+ pts above the closing price): 292, 117-175, ROI -8.0% (95% range -21.4% to +5.5%)
+    tier      70%+: 367 picks, 276-91 (75.2%), market favorite on them 74.9%, ROI -4.2% (95% range -10.1% to +1.8%)
+    tier    60-70%: 464 picks, 298-166 (64.2%), market favorite on them 68.8%, ROI -4.2% (95% range -11.1% to +2.6%)
+    tier under 60%: 691 picks, 388-303 (56.2%), market favorite on them 61.9%, ROI -2.4% (95% range -9.3% to +4.5%)
+  adds anything to the closing line? model weight -0.16 (se 0.14); out-of-sample Brier: line alone 0.2087, line + model 0.2093
+  with opening lines (608 games, 2023-2025): bet every pick at the open: ROI -2.0% (95% range -8.2% to +4.2%)
+    value picks vs the open (5+ pts): 183, 96-87, ROI at the open -0.5% (95% range -14.9% to +13.8%), at the close -4.3% (95% range -18.5% to +9.9%)
+    line moved toward the pick (open to close): every pick 54% moved toward, 37% away, avg +0.77%; value picks avg +1.43%
+    does the model's disagreement with the open predict the line move? correlation +0.077
+
+### NFL FRAMEWORK backtest 2022-2025: 893 games with closing lines, seasons 2022-2025
+  picks right: model 558-335 (62.5%) | closing-line favorite 614-279 (68.8%)
+  Brier (lower better): model 0.2230 | closing line 0.2056
+  bet every pick at the closing moneyline: 558-335, -41.3 units, ROI -4.6% (95% range -9.9% to +0.6%)
+  picks against the market favorite: 202 (23%), 73-129, ROI -16.8% (95% range -32.3% to -1.2%)
+  picks agreeing with the market favorite: 691, 485-206, ROI -1.1% (95% range -6.1% to +3.9%)
+  'value' picks (model 5+ pts above the closing price): 323, 153-170, ROI -10.1% (95% range -21.0% to +0.8%)
+  'value' picks (model 10+ pts above the closing price): 181, 68-113, ROI -18.4% (95% range -34.4% to -2.4%)
+    tier      70%+: 236 picks, 179-57 (75.8%), market favorite on them 77.5%, ROI -4.5% (95% range -11.6% to +2.6%)
+    tier    60-70%: 293 picks, 190-103 (64.8%), market favorite on them 67.9%, ROI -0.9% (95% range -9.7% to +8.0%)
+    tier under 60%: 364 picks, 189-175 (51.9%), market favorite on them 63.7%, ROI -7.7% (95% range -17.4% to +1.9%)
+  adds anything to the closing line? model weight -0.16 (se 0.17); out-of-sample Brier: line alone 0.2056, line + model 0.2077
+  with opening lines (613 games, 2023-2025): bet every pick at the open: ROI +0.0% (95% range -6.3% to +6.4%)
+    value picks vs the open (5+ pts): 247, 147-100, ROI at the open +7.4% (95% range -4.4% to +19.2%), at the close +3.7% (95% range -7.8% to +15.3%)
+    line moved toward the pick (open to close): every pick 52% moved toward, 39% away, avg +0.81%; value picks avg +1.51%
+    does the model's disagreement with the open predict the line move? correlation +0.154
+
+  same 887 NFL games (2022-2025): engine ROI -3.7% (95% range -8.8% to +1.5%); framework ROI -4.5% (95% range -9.7% to +0.8%)
+
+college closing lines from the summary fallback: 21 games
+
+### COLLEGE ENGINE 2024-2026 (as it would have run): 1256 games with closing lines, seasons 2024-2026
+  picks right: model 879-377 (70.0%) | closing-line favorite 907-349 (72.2%)
+  Brier (lower better): model 0.1938 | closing line 0.1837
+  bet every pick at the closing moneyline: 879-377, -14.9 units, ROI -1.2% (95% range -5.2% to +2.8%)
+  picks against the market favorite: 178 (14%), 75-103, ROI -0.8% (95% range -18.4% to +16.8%)
+  picks agreeing with the market favorite: 1078, 804-274, ROI -1.3% (95% range -4.9% to +2.4%)
+  'value' picks (model 5+ pts above the closing price): 475, 281-194, ROI +0.0% (95% range -8.2% to +8.3%)
+  'value' picks (model 10+ pts above the closing price): 296, 163-133, ROI +3.6% (95% range -8.0% to +15.1%)
+    tier      70%+: 622 picks, 505-117 (81.2%), market favorite on them 81.4%, ROI +1.1% (95% range -3.0% to +5.3%)
+    tier    60-70%: 326 picks, 209-117 (64.1%), market favorite on them 65.0%, ROI -0.3% (95% range -9.1% to +8.6%)
+    tier under 60%: 308 picks, 165-143 (53.6%), market favorite on them 61.4%, ROI -6.9% (95% range -17.2% to +3.4%)
+  adds anything to the closing line? model weight +0.19 (se 0.12); out-of-sample Brier: line alone 0.1837, line + model 0.1833
+  with opening lines (1253 games, 2024-2026): bet every pick at the open: ROI -1.6% (95% range -5.7% to +2.4%)
+    value picks vs the open (5+ pts): 466, 274-192, ROI at the open +0.1% (95% range -8.4% to +8.5%), at the close -1.2% (95% range -9.5% to +7.1%)
+    line moved toward the pick (open to close): every pick 37% moved toward, 51% away, avg -0.51%; value picks avg +0.52%
+    does the model's disagreement with the open predict the line move? correlation +0.240
+    2024: 552 games, picks 385-167, favorite 71.0%, ROI -1.0% (95% range -7.0% to +5.1%)
+    2025: 565 games, picks 401-164, favorite 73.3%, ROI -0.3% (95% range -6.2% to +5.6%)
+    2026: 139 games, picks 93-46, favorite 72.7%, ROI -5.7% (95% range -17.9% to +6.5%)
+
+### COLLEGE FRAMEWORK 2022-2026 (backtest + 2026 so far): 2356 games with closing lines, seasons 2022-2026
+  picks right: model 1588-768 (67.4%) | closing-line favorite 1699-657 (72.1%)
+  Brier (lower better): model 0.2090 | closing line 0.1828
+  bet every pick at the closing moneyline: 1588-768, -79.3 units, ROI -3.4% (95% range -6.7% to -0.1%)
+  picks against the market favorite: 441 (19%), 165-276, ROI -6.2% (95% range -19.2% to +6.9%)
+  picks agreeing with the market favorite: 1915, 1423-492, ROI -2.7% (95% range -5.4% to -0.0%)
+  'value' picks (model 5+ pts above the closing price): 816, 414-402, ROI -2.7% (95% range -10.6% to +5.2%)
+  'value' picks (model 10+ pts above the closing price): 566, 248-318, ROI -6.1% (95% range -16.6% to +4.4%)
+    tier      70%+: 937 picks, 728-209 (77.7%), market favorite on them 79.0%, ROI -4.5% (95% range -8.1% to -0.9%)
+    tier    60-70%: 668 picks, 440-228 (65.9%), market favorite on them 71.9%, ROI -3.2% (95% range -8.9% to +2.5%)
+    tier under 60%: 751 picks, 420-331 (55.9%), market favorite on them 63.8%, ROI -2.0% (95% range -9.8% to +5.7%)
+  adds anything to the closing line? model weight -0.08 (se 0.08); out-of-sample Brier: line alone 0.1828, line + model 0.1831
+  with opening lines (1629 games, 2023-2026): bet every pick at the open: ROI -1.3% (95% range -5.3% to +2.7%)
+    value picks vs the open (5+ pts): 538, 284-254, ROI at the open +2.4% (95% range -7.6% to +12.3%), at the close +1.6% (95% range -8.5% to +11.7%)
+    line moved toward the pick (open to close): every pick 38% moved toward, 50% away, avg -0.47%; value picks avg +0.48%
+    does the model's disagreement with the open predict the line move? correlation +0.178
+    2022: 546 games, picks 352-194, favorite 70.7%, ROI -9.4% (95% range -15.8% to -3.0%)
+    2023: 554 games, picks 386-168, favorite 73.3%, ROI +0.5% (95% range -7.5% to +8.5%)
+    2024: 552 games, picks 381-171, favorite 71.0%, ROI +0.2% (95% range -6.2% to +6.5%)
+    2025: 565 games, picks 379-186, favorite 73.3%, ROI -3.8% (95% range -10.1% to +2.5%)
+    2026: 139 games, picks 90-49, favorite 72.7%, ROI -7.4% (95% range -20.3% to +5.6%)
+
+  same 1256 college games (2024-2026): engine 879-377 ROI -1.2% (95% range -5.2% to +2.8%); framework 850-406 ROI -2.5% (95% range -6.7% to +1.8%)

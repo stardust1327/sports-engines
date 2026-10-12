@@ -3,6 +3,16 @@
 Every pick is logged before kickoff, graded after. One week is too small a
 sample to judge an engine; the record means more as it grows.
 
+## Against the moneyline (checked 2026-10-12)
+
+Details, method and re-run steps: `moneyline/README.md`. Grading only; lines
+never feed a pick. On every game each model rated out of sample, betting $100 on
+every pick at the closing moneyline: NFL engine (2019-2025, 1,522 games) -3.4%,
+NFL framework (2022-2025, 893) -4.6%, college engine (2024-2026, 1,256) -1.2%,
+college framework (2022-2026, 2,356) -3.4%. That's about what betting every
+favorite returns. All four pick fewer winners than the moneyline favorite, and
+the closing line's win chances are more accurate than every model's.
+
 ## College football
 
 ### 2026-10-10 (23 games from the 12:30 PM Phoenix kickoffs on)
