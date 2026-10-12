@@ -1,0 +1,3 @@
+game_id,kickoff_utc,state,away_id,home_id,away_name,home_name,neutral,venue,home_plays,away_plays,net_epa,net_sr,is_home,p_home,pick,pick_prob,status,reason,kickoff
+401871054,2026-10-14T23:30Z,pre,338,2623,Kennesaw State,Missouri State,False,Robert W. Plaster Stadium,258,267,-0.015903055423668624,-0.03443635910474651,1.0,0.5433690322316024,Missouri State,0.5433690322316024,PICK,,Wed 4:30 PM
+401871068,2026-10-15T00:00Z,pre,98,2534,Western Kentucky,Sam Houston,False,Elliott T. Bowers Stadium,270,330,0.18309518139381267,0.036089955699274555,1.0,0.7378783278670882,Sam Houston,0.7378783278670882,PICK,,Wed 5:00 PM

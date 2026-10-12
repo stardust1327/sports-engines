@@ -49,7 +49,12 @@ File: `nfl_cfbmethod_2026_week05_picks.csv`. Grade it after Monday night with
 No pick: Bears at Packers (Caleb Williams questionable, Tyson Bagent starts),
 Ravens at Falcons (Lamar Jackson out, Tyler Huntley starts).
 
-Result: pending.
+Result (Sunday graded 2026-10-11; Rams-Bills Monday pending): **6-4-1**.
+Won: Jaguars, Bengals, Patriots, Texans, Vikings, Jets. Lost: Cardinals, Colts,
+Chargers, Seahawks. Tie: Giants 27, Commanders 27 (`grade.py` currently counts a
+tie as a loss and prints 6-5). Closing-line favorite went 9-2 on the same games;
+the engine's 3 picks of the market underdog all lost. Graded file:
+`nfl_cfbmethod_2026_week05_graded.csv`.
 
 ### 2026 Week 5: Prompt Football framework (comparison run)
 
@@ -80,7 +85,10 @@ Both sets side by side: `nfl_2026_week05_engine_vs_framework.pdf` (made by
 `make_nfl_2026_week05_report.py`). The engine was re-run at 4:50 AM Sunday and
 matched the logged picks exactly.
 
-Result: pending.
+Result (Sunday; Rams-Bills Monday pending): **9-1-1**. Only loss: Raiders
+(Patriots won 45-17). Tie: Commanders-Giants 27-27. Parlay (Jaguars + Vikings +
+Bengals) hit. On the 5 games where the two models disagreed, the framework went
+4-1 (Steelers, 49ers, Lions, Broncos right; Raiders wrong).
 
 Earlier Week 5 runs, kept to compare after the games (all pending):
 
@@ -90,3 +98,46 @@ Earlier Week 5 runs, kept to compare after the games (all pending):
   Jaguars 79%, Rams 67%, Patriots 62%, Broncos 61%, ...
 - `nfl_2026_week05_picks.csv`: the retired quarterback version: Texans 72%,
   Jaguars 66%, Patriots 64%, Broncos 60%, ...
+
+### 2026 Week 6 (logged Sunday night 2026-10-11, before QB reports)
+
+Engine file: `nfl_cfbmethod_2026_week06_picks.csv`. Framework file:
+`prompt_nfl_2026_week06_picks.csv`. Recheck QBs before each kickoff.
+
+| Game | Engine | Framework |
+|---|---|---|
+| Seahawks at Broncos (Thu) | Seahawks 54% | Seahawks 50% |
+| Texans vs Jaguars (London) | Jaguars 56% | Jaguars 74% |
+| Titans at Colts | Colts 73% | Colts 56% |
+| Jets at Patriots | Patriots 67% | **Jets 51%** |
+| Saints at Giants | Giants 60% | Giants 59% |
+| Panthers at Eagles | Panthers 57.5% | Panthers 61.5% |
+| Cardinals at Rams | Rams 75% | Rams 74% |
+| Chargers at Chiefs | Chiefs 61% | Chiefs 80% |
+| Bills at Raiders | Bills 68% | Bills 59% |
+| Cowboys at Packers | Packers 59% | Packers 53% |
+| Commanders at 49ers (Mon) | 49ers 82% | 49ers 79% |
+
+No pick (both): Bears at Falcons (Caleb Williams status unconfirmed), Ravens at
+Browns (Lamar Jackson status unconfirmed), Steelers at Buccaneers (Baker
+Mayfield, thumb, return unconfirmed).
+
+## College football midweek, 2026-10-13 to 10-16 (engine only)
+
+Files: `cfb_2026-10-13.csv` through `cfb_2026-10-16.csv`.
+
+| Pick | Win chance | QB status |
+|---|---|---|
+| Jacksonville State over FIU (Tue) | 63% | ok |
+| Middle Tennessee over Delaware (Tue) | 55% | Delaware starter unconfirmed |
+| Sam Houston over Western Kentucky (Wed) | 74% | WKU starter unconfirmed |
+| Missouri State over Kennesaw State (Wed) | 54% | ok |
+| Texas State over Colorado State (Thu) | 83% | CSU split starters |
+| Georgia Southern over Old Dominion (Thu) | 75% | ODU split starters |
+| East Carolina over UAB (Thu) | 59% | ECU split starters |
+| Purdue over Washington (Fri) | 77% | Washington starter unconfirmed |
+| Memphis over Tulane (Fri) | 73% | ok |
+| Coastal Carolina over App State (Fri) | 58% | ok |
+
+Games with an unconfirmed starter become no-picks unless the starter is
+confirmed before kickoff.

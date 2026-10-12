@@ -1,0 +1,4 @@
+game_id,kickoff_utc,state,away_id,home_id,away_name,home_name,neutral,venue,home_plays,away_plays,net_epa,net_sr,is_home,p_home,pick,pick_prob,status,reason,kickoff
+401862800,2026-10-15T23:30Z,pre,151,5,East Carolina,UAB,False,Protective Stadium,378,268,-0.17234999032542567,-0.06913203990826314,1.0,0.4071091250625518,East Carolina,0.5928908749374482,PICK,,Thu 4:30 PM
+401869950,2026-10-15T23:30Z,pre,290,295,Georgia Southern,Old Dominion,False,S.B. Ballard Stadium,332,379,-0.44951920924421884,-0.08831720524597503,1.0,0.2514175251728705,Georgia Southern,0.7485824748271295,PICK,,Thu 4:30 PM
+401860923,2026-10-16T00:00Z,pre,36,326,Colorado State,Texas State,False,UFCU Stadium,329,283,0.18988803265203186,0.12853347834742465,1.0,0.8342211058828981,Texas State,0.8342211058828981,PICK,,Thu 5:00 PM
