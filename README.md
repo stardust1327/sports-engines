@@ -25,6 +25,11 @@ starting QB who is out or unconfirmed, gets a no-pick with the reason.
   net efficiency 25%, passing 20%, situational 15%, high leverage 15%) scored with
   play-by-play numbers, for comparison with the engine. It's separate from the
   locked method; how each criterion is measured is at the top of the file
+- `prompt_football/cfb.py`: the same framework for college football (built
+  2026-10-11), on the college engine's play-by-play; the differences the college
+  data forces are listed at the top of the file.
+  `results/compare_cfb_engine_vs_framework.py` compares it with the engine on
+  the same games
 
 ## How each engine works
 
@@ -50,6 +55,9 @@ python3 cfb/run.py --date 2026-10-17 --nopick "Oregon=starting QB ruled out"
 
 # NFL: college method with the approved NFL settings (team nicknames for --nopick)
 python3 nfl_cfbmethod/run.py --date 2026-10-18 --date 2026-10-19 --nopick "Ravens=starting QB out"
+
+# College: the Prompt Football framework on the same dates (same --nopick rules)
+python3 prompt_football/cfb.py --date 2026-10-17 --nopick "Oregon=starting QB ruled out"
 
 # NFL: grade a week after it's played, with the closing-line check (scorecard only)
 python3 nfl_cfbmethod/grade.py --season 2026 --week 5

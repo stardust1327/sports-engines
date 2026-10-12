@@ -51,10 +51,11 @@ Ravens at Falcons (Lamar Jackson out, Tyler Huntley starts).
 
 Result (Sunday graded 2026-10-11; Rams-Bills Monday pending): **6-4-1**.
 Won: Jaguars, Bengals, Patriots, Texans, Vikings, Jets. Lost: Cardinals, Colts,
-Chargers, Seahawks. Tie: Giants 27, Commanders 27 (`grade.py` currently counts a
-tie as a loss and prints 6-5). Closing-line favorite went 9-2 on the same games;
-the engine's 3 picks of the market underdog all lost. Graded file:
-`nfl_cfbmethod_2026_week05_graded.csv`.
+Chargers, Seahawks. Tie: Giants 27, Commanders 27. Closing-line favorite went
+9-1-1 on the same games; the engine's 3 picks of the market underdog all lost.
+Brier: engine 0.1842, closing line 0.1356. Graded with the tie fix to `grade.py`
+(2026-10-11; before it, a tie was scored as an away-team win, so this printed
+6-5). Graded file: `nfl_cfbmethod_2026_week05_graded.csv`.
 
 ### 2026 Week 5: Prompt Football framework (comparison run)
 
@@ -122,22 +123,44 @@ No pick (both): Bears at Falcons (Caleb Williams status unconfirmed), Ravens at
 Browns (Lamar Jackson status unconfirmed), Steelers at Buccaneers (Baker
 Mayfield, thumb, return unconfirmed).
 
-## College football midweek, 2026-10-13 to 10-16 (engine only)
+## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
-Files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
+Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
+Framework files: `prompt_cfb_2026-10-13_picks.csv` through
+`prompt_cfb_2026-10-16_picks.csv`. Logged Sunday night 2026-10-11; QBs get
+rechecked before each kickoff. Disagreements in bold.
 
-| Pick | Win chance | QB status |
+| Game | Engine | Framework |
 |---|---|---|
-| Jacksonville State over FIU (Tue) | 63% | ok |
-| Middle Tennessee over Delaware (Tue) | 55% | Delaware starter unconfirmed |
-| Sam Houston over Western Kentucky (Wed) | 74% | WKU starter unconfirmed |
-| Missouri State over Kennesaw State (Wed) | 54% | ok |
-| Texas State over Colorado State (Thu) | 83% | CSU split starters |
-| Georgia Southern over Old Dominion (Thu) | 75% | ODU split starters |
-| East Carolina over UAB (Thu) | 59% | ECU split starters |
-| Purdue over Washington (Fri) | 77% | Washington starter unconfirmed |
-| Memphis over Tulane (Fri) | 73% | ok |
-| Coastal Carolina over App State (Fri) | 58% | ok |
+| Florida International at Jacksonville State (Tue) | Jacksonville State 63% | Jacksonville State 51% |
+| Kennesaw State at Missouri State (Wed) | Missouri State 54% | Missouri State 60% |
+| East Carolina at UAB (Thu) | East Carolina 59% | East Carolina 77% |
+| Georgia Southern at Old Dominion (Thu) | Georgia Southern 75% | Georgia Southern 85% |
+| Colorado State at Texas State (Thu) | Texas State 83% | Texas State 70% |
+| Memphis at Tulane (Fri) | Memphis 73% | Memphis 86% |
+| App State at Coastal Carolina (Fri) | Coastal Carolina 58% | **App State 65%** |
 
-Games with an unconfirmed starter become no-picks unless the starter is
-confirmed before kickoff.
+No pick (both), starter not yet named after a QB change in the last game:
+Delaware at Middle Tennessee (Tue), Western Kentucky at Sam Houston (Wed),
+Washington at Purdue (Fri). Rule used: a team whose last starter isn't its season leader
+in attempts (the CHANGE flag) is a no-pick until the news names the starter. A
+team whose last starter also leads it in attempts keeps its pick (East Carolina,
+Colorado State and Old Dominion here).
+
+## College Prompt Football framework (built 2026-10-11)
+
+`prompt_football/cfb.py`: the owner's five criteria and weights, built the same
+way as `prompt_football/nfl.py` but with the college play-by-play (the
+differences the college data forces are listed at the top of the file). Replay
+of 2022-2025, weeks 4-15, each season calibrated on the others: 1523-720
+(67.9%). Home field is worth 2.45 points (conference games 2019, 2021-25).
+
+Same games as the college engine (`cfb_engine_vs_framework_same_games.csv`, made
+by `compare_cfb_engine_vs_framework.py`):
+
+| Games both rated | Engine | Framework |
+|---|---|---|
+| 2025 weeks 4-15 (580) | 411-169 (70.9%) | 394-186 (67.9%) |
+| 2026 so far (142) | 96-46 (67.6%) | 93-49 (65.5%) |
+
+The engine's picks stay the official ones.
