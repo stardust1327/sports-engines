@@ -13,6 +13,9 @@ starting QB who is out or unconfirmed, gets a no-pick with the reason.
 
 ## Start here
 
+- `CHECKINS.md`: the runbook the scheduled check-ins follow (grading, weekly runs,
+  QB checks, PDFs), with the helper scripts in `results/` (`whats_next.py`,
+  `grade_picks.py`, `set_nopick.py`, `merge_rerun.py`, `make_report.py`)
 - `METHOD.md`: the locked method (exactly what made the 2026-10-10 college picks)
 - `CLAUDE.md`: the owner's rules. The method doesn't change, and new models don't
   deviate from it, without the owner's approval.

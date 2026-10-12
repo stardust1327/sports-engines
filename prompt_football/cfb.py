@@ -435,6 +435,7 @@ def main():
     d0 = datetime.date.fromisoformat(dates[0])
     S = d0.year if d0.month >= 7 else d0.year - 1
     tz = ZoneInfo(args.tz)
+    os.makedirs(args.cache, exist_ok=True)
 
     slates = {}
     for dt in dates:
