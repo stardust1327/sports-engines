@@ -124,7 +124,7 @@ Mayfield, thumb, return unconfirmed).
 
 ## College football midweek, 2026-10-13 to 10-16 (engine only)
 
-Files: `cfb_2026-10-13.csv` through `cfb_2026-10-16.csv`.
+Files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
 
 | Pick | Win chance | QB status |
 |---|---|---|
