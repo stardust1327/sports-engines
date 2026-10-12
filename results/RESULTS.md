@@ -89,7 +89,8 @@ matched the logged picks exactly.
 Result (Sunday; Rams-Bills Monday pending): **9-1-1**. Only loss: Raiders
 (Patriots won 45-17). Tie: Commanders-Giants 27-27. Parlay (Jaguars + Vikings +
 Bengals) hit. On the 5 games where the two models disagreed, the framework went
-4-1 (Steelers, 49ers, Lions, Broncos right; Raiders wrong).
+4-1 (Steelers, 49ers, Lions, Broncos right; Raiders wrong). Graded file:
+`prompt_nfl_2026_week05_graded.csv`.
 
 Earlier Week 5 runs, kept to compare after the games (all pending):
 
@@ -101,6 +102,9 @@ Earlier Week 5 runs, kept to compare after the games (all pending):
   Jaguars 66%, Patriots 64%, Broncos 60%, ...
 
 ### 2026 Week 6 (logged Sunday night 2026-10-11, before QB reports)
+
+PDF of Week 5 graded plus these picks and the midweek college picks:
+`results_and_next_picks_2026-10-11.pdf` (made by `make_2026-10-11_report.py`).
 
 Engine file: `nfl_cfbmethod_2026_week06_picks.csv`. Framework file:
 `prompt_nfl_2026_week06_picks.csv`. Recheck QBs before each kickoff.
