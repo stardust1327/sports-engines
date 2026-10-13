@@ -56,6 +56,24 @@ def exists(name):
     return "yes" if os.path.exists(os.path.join(HERE, name)) else "no"
 
 
+def notes_status(season, week, notes):
+    """'team notes: ...' for a logged NFL week: picks with a noted team, and whether they're graded."""
+    import pandas as pd
+    import team_notes
+    path = os.path.join(HERE, f"nfl_cfbmethod_{season}_week{week:02d}_picks.csv")
+    if not os.path.exists(path):
+        return ""
+    a = team_notes.apply(pd.read_csv(path, dtype={"game_id": str}), "engine", notes)
+    noted = a[(a.status == "PICK") & (a.note_text.str.len() > 0)]
+    if not len(noted):
+        return "; team notes: no noted picks"
+    g = os.path.join(HERE, team_notes.GRADED_NAME)
+    done = os.path.exists(g) and len(pd.read_csv(g).query("season == @season and week == @week"))
+    flips = int(noted.note_flips.sum())
+    return (f"; team notes: {len(noted)} noted pick(s)" + (f", {flips} changed by a note" if flips else "")
+            + f", graded {'yes' if done else 'no'}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--today", help="YYYY-MM-DD (default: today, Pacific)")
@@ -64,6 +82,14 @@ def main():
     today = datetime.date.fromisoformat(a.today) if a.today else now.date()
     season = today.year if today.month >= 7 else today.year - 1
     print(f"Today (Pacific): {today}  |  season {season}")
+
+    # ---- the owner's team notes (CHECKINS.md "Team notes"); never add, change or remove one unasked
+    import team_notes
+    notes = team_notes.load()
+    live = team_notes.current(notes)
+    print("Team notes in force (the owner's, applied to both NFL models; CHECKINS.md 'Team notes'): "
+          + ("; ".join(f"{team_notes.note_text(notes, e)} points (set {team_notes.phx(e['_t'])})" for e in live)
+             or "none"))
 
     # ---- NFL
     weeks = nfl_weeks(season)
@@ -93,7 +119,7 @@ def main():
             print(f"  logged: engine picks {exists(f'nfl_cfbmethod_{season}_week{ww}_picks.csv')}, framework picks "
                   f"{exists(f'prompt_nfl_{season}_week{ww}_picks.csv')}; graded: engine "
                   f"{exists(f'nfl_cfbmethod_{season}_week{ww}_graded.csv')}, framework "
-                  f"{exists(f'prompt_nfl_{season}_week{ww}_graded.csv')}")
+                  f"{exists(f'prompt_nfl_{season}_week{ww}_graded.csv')}{notes_status(season, w, notes)}")
         for e in sorted(ev, key=lambda e: e["date"]):
             print(f"    {fmt(when(e['date']))}  {e['shortName']:<12} {e['status']['type']['state']}")
 

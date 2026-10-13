@@ -137,6 +137,23 @@ No pick (both): Bears at Falcons (Caleb Williams status unconfirmed), Ravens at
 Browns (Lamar Jackson status unconfirmed), Steelers at Buccaneers (Baker
 Mayfield, thumb, return unconfirmed).
 
+Team note added Monday night 2026-10-12, before any Week 6 kickoff: the owner
+marked the Rams unreliable, docked 3 points. Cardinals at Rams with the note:
+engine **Rams 67%** (75% alone), framework **Rams 66%** (74% alone, predicted
+Rams 26-21). The pick doesn't change; the Rams drop out of the 70%+ tier.
+
+### Team notes (NFL, the owner's; added 2026-10-12)
+
+`team_notes.json` (the notes), `team_notes.py` (how they're applied and
+graded), `team_notes_graded.csv` (every graded pick with a noted team). The
+owner marks a team unreliable by hand, case by case; the note docks its
+predicted margin in both models for games after it was set. Official picks and
+records include the notes; the model-alone numbers stay beside them.
+
+| Team | Note | Since | Graded games | Scorecard |
+|---|---|---|---|---|
+| Rams | Unreliable, -3 points | 2026-10-12 9:14 PM Phoenix | 0 | First noted game: Week 6, Cardinals at Rams |
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
