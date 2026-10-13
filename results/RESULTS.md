@@ -142,17 +142,24 @@ marked the Rams unreliable, docked 3 points. Cardinals at Rams with the note:
 engine **Rams 67%** (75% alone), framework **Rams 66%** (74% alone, predicted
 Rams 26-21). The pick doesn't change; the Rams drop out of the 70%+ tier.
 
+Second note, 9:33 PM: the Bills, max effort, slightly boosted 1.5 points. Bills
+at Raiders with the note: engine **Bills 72%** (68% alone), framework **Bills
+64%** (59% alone, predicted Bills 27-23). The pick doesn't change; the engine's
+Bills move up into the 70%+ tier.
+
 ### Team notes (NFL, the owner's; added 2026-10-12)
 
 `team_notes.json` (the notes), `team_notes.py` (how they're applied and
-graded), `team_notes_graded.csv` (every graded pick with a noted team). The
-owner marks a team unreliable by hand, case by case; the note docks its
-predicted margin in both models for games after it was set. Official picks and
-records include the notes; the model-alone numbers stay beside them.
+graded), `team_notes_graded.csv` (every graded pick with a noted team). From
+watching the games, the owner marks a team by hand, case by case: unreliable
+(docked) or max effort (slightly boosted). The note moves its predicted margin
+in both models for games after it was set. Official picks and records include
+the notes; the model-alone numbers stay beside them.
 
 | Team | Note | Since | Graded games | Scorecard |
 |---|---|---|---|---|
 | Rams | Unreliable, -3 points | 2026-10-12 9:14 PM Phoenix | 0 | First noted game: Week 6, Cardinals at Rams |
+| Bills | Max effort, +1.5 points | 2026-10-12 9:33 PM Phoenix | 0 | First noted game: Week 6, Bills at Raiders |
 
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 

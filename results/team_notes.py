@@ -1,23 +1,26 @@
-"""Your team notes for the NFL picks: manual calls that a team is unreliable,
-applied to both NFL models, shown in the reports, and graded so you can see
-whether they're right. Added 2026-10-12 at the owner's request.
+"""Your team notes for the NFL picks: manual calls on a team's effort from
+watching its games, applied to both NFL models, shown in the reports, and
+graded so you can see whether they're right. Added 2026-10-12 at the owner's
+request: a human factor to fine-tune the statistical metrics.
 
-Unreliable (the owner's definition, also in team_notes.json): a team that
-doesn't want to win or looks lazy, whose earlier results came from luck rather
-than effort: it loses games it shouldn't have lost. Losing a game by itself
-doesn't make a team unreliable. Docked 3 points by default. Notes are manual,
-case by case: only the owner adds, changes or removes one.
+The kinds (the owner's own definitions are in team_notes.json):
+  Unreliable   a team that doesn't want to win or looks lazy, whose earlier
+               results came from luck rather than effort: it loses games it
+               shouldn't have lost. Losing a game by itself doesn't make a team
+               unreliable. Docked 3 points by default.
+  Max effort   a team that plays hard and aggressive and is out there to win
+               every game. Slightly boosted: 1.5 points by default.
+Notes are manual, case by case: only the owner adds, changes or removes one.
 
-How a note moves the numbers. Its points come off the noted team's predicted
+How a note moves the numbers. Its points go on the noted team's predicted
 margin. The models' own numbers in the picks files are never changed (they are
 the "model alone" numbers); the notes are applied whenever the files are read:
   engine     the win chance moves along the engine's own scale: 7.8 points per
              unit of log-odds, fit on its 2019-2025 backtest (1,522 games)
   framework  its predicted margin moves by the points, and its win chance and
              predicted score follow its own margin scale (about 7.7)
-In a close game 3 points is worth about 10 points of win chance; less for a
-big favorite. (The code also takes kinds with positive points, should the owner
-ever add one to team_notes.json.)
+In a close game 1.5 points is worth about 5 points of win chance and 3 points
+about 10; less for a big favorite.
 
 Timing. Every note keeps the time it was set and only counts for games that
 kick off after that, like a pick logged before kickoff.
@@ -27,6 +30,7 @@ next to it in every report and graded file, so the two can be compared.
 
   python3 results/team_notes.py list
   python3 results/team_notes.py set --team Rams --said "the owner's words" [--points -3] [--at 2026-10-13T04:14Z]
+  python3 results/team_notes.py set --team Bills --kind max_effort --said "the owner's words" [--points 1.5]
   python3 results/team_notes.py clear --team Rams --said "the owner's words"
   python3 results/team_notes.py show --season 2026 --week 6
   python3 results/team_notes.py grade --season 2026 --week 6   (after nfl_cfbmethod/grade.py and grade_picks.py)
@@ -174,8 +178,9 @@ def apply(df, model, notes=None):
     """A copy of a picks table with the team notes applied.
 
     model: "engine" (nfl_cfbmethod_*_picks.csv) or "framework" (prompt_nfl_*_picks.csv).
-    Adds note_text, note_pts_home (points on the home team's margin: its own note
-    minus the away team's), p_home_noted, pick_noted, pick_prob_noted and note_flips;
+    Adds note_text, noted_away and noted_home (True when that team has a note in
+    force), note_pts_home (points on the home team's margin: its own note minus the
+    away team's), p_home_noted, pick_noted, pick_prob_noted and note_flips;
     framework tables also get margin_home_noted, score_noted and confidence_noted.
     Picks without a note in force keep their own numbers in the _noted columns;
     no-picks stay no-picks. The model's own columns are left as they are."""
@@ -185,7 +190,8 @@ def apply(df, model, notes=None):
     out = df.copy().reset_index(drop=True)
     kick = kickoffs(out)
     scale = ENGINE_PTS_PER_LOGIT if model == "engine" else framework_scale(out)
-    cols = {c: [] for c in ("note_text", "note_pts_home", "p_home_noted", "pick_noted", "pick_prob_noted", "note_flips")}
+    cols = {c: [] for c in ("note_text", "noted_away", "noted_home", "note_pts_home", "p_home_noted", "pick_noted",
+                            "pick_prob_noted", "note_flips")}
     if model == "framework":
         cols.update(margin_home_noted=[], score_noted=[], confidence_noted=[])
     for i, r in out.iterrows():
@@ -193,6 +199,8 @@ def apply(df, model, notes=None):
         nh, na = in_force(notes, home, kick[i]), in_force(notes, away, kick[i])
         pts = (float(nh["points"]) if nh else 0.0) - (float(na["points"]) if na else 0.0)
         cols["note_text"].append("; ".join(note_text(notes, e) for e in (na, nh) if e))
+        cols["noted_away"].append(na is not None)
+        cols["noted_home"].append(nh is not None)
         cols["note_pts_home"].append(pts)
         if r["status"] != "PICK":
             for c in ("p_home_noted", "pick_noted", "pick_prob_noted"):

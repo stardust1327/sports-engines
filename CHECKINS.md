@@ -63,16 +63,18 @@ Scratch folder for re-runs: `/tmp/rerun` (`mkdir -p /tmp/rerun`).
 
 ## Team notes (NFL, the owner's; added 2026-10-12)
 
-The owner marks a team **unreliable** by hand, case by case: a team that doesn't
-want to win or looks lazy, whose earlier results came from luck rather than
-effort, so it loses games it shouldn't. Losing a game alone doesn't qualify. The
+From watching the games, the owner marks a team by hand, case by case:
+**unreliable** (doesn't want to win or looks lazy, earlier results came from luck
+rather than effort, loses games it shouldn't; losing a game alone doesn't
+qualify) or **max effort** (plays hard and aggressive, out there to win). The
 notes live in `results/team_notes.json`; `whats_next.py` prints the ones in force.
 
-- A note docks the team's predicted margin (default -3 points) in both NFL models
-  and only counts for games kicking off after it was set. The models' own numbers
-  in the picks files never change: `results/team_notes.py` and `make_report.py`
-  apply the notes when they read the files, so runs, re-runs, `merge_rerun.py` and
-  `set_nopick.py` work exactly as before.
+- A note moves the team's predicted margin in both NFL models (defaults:
+  unreliable -3 points, max effort +1.5) and only counts for games kicking off
+  after it was set. The models' own numbers in the picks files never change:
+  `results/team_notes.py` and `make_report.py` apply the notes when they read the
+  files, so runs, re-runs, `merge_rerun.py` and `set_nopick.py` work exactly as
+  before. In the PDF a noted team gets an asterisk, explained under the table.
 - **Official picks and records include the notes.** The model-alone pick and
   record stay beside them (they differ only when a note flips a pick).
 - Picks: after the week's picks are logged or refreshed, run
@@ -84,8 +86,9 @@ notes live in `results/team_notes.json`; `whats_next.py` prints the ones in forc
   (with your team notes)" record, plus the model-alone record when they differ,
   and the scorecard lines for the noted teams.
 - Only when the owner says so in a conversation: `python3 results/team_notes.py set
-  --team <Nickname> --said "<the owner's words>" [--points -3]` or `clear --team
-  <Nickname> --said "..."`. Never edit past events in the file.
+  --team <Nickname> [--kind max_effort] --said "<the owner's words>" [--points N]`
+  (the kind defaults to unreliable) or `clear --team <Nickname> --said "..."`.
+  Never edit past events in the file.
 
 ## QB check (used by every check-in)
 

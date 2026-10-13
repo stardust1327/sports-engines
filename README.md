@@ -34,9 +34,10 @@ starting QB who is out or unconfirmed, gets a no-pick with the reason.
   `results/compare_cfb_engine_vs_framework.py` compares it with the engine on
   the same games
 - `results/team_notes.json` and `results/team_notes.py`: the owner's NFL team
-  notes (added 2026-10-12). A team the owner marks unreliable is docked points on
-  its predicted margin in both NFL models; official picks include the note, the
-  model-alone numbers stay beside it, and every noted game is graded
+  notes (added 2026-10-12). From watching the games, the owner marks a team
+  unreliable (docked points on its predicted margin in both NFL models) or max
+  effort (slightly boosted); official picks include the note, the model-alone
+  numbers stay beside it, and every noted game is graded
   (`team_notes_graded.csv`) to track whether the notes are right
 
 ## How each engine works

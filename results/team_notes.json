@@ -1,10 +1,15 @@
 {
-  "what_this_is": "The owner's manual team notes for the NFL picks (both models). Only the owner adds, changes or removes a note, case by case; add one with results/team_notes.py set, never by editing past events. Each event keeps the time it was set: a note only counts for games that kick off after that time. Points go on the noted team's predicted margin (negative docks the team). See results/team_notes.py for how the points move each model's numbers and how the notes are graded.",
+  "what_this_is": "The owner's manual team notes for the NFL picks (both models). Only the owner adds, changes or removes a note, case by case; add one with results/team_notes.py set, never by editing past events. Each event keeps the time it was set: a note only counts for games that kick off after that time. Points go on the noted team's predicted margin (negative docks the team, positive boosts it). See results/team_notes.py for how the points move each model's numbers and how the notes are graded.",
   "kinds": {
     "unreliable": {
       "label": "Unreliable",
       "default_points": -3.0,
       "owner_definition": "Unreliable is a manual option that is on a case by case basis and it doesn't only consist of losing a game. It's when a team doesn't want to win or appears lazy / their prior results were a result of luck not effort. Basically losing games they shouldn't have lost."
+    },
+    "max_effort": {
+      "label": "Max effort",
+      "default_points": 1.5,
+      "owner_definition": "A team that plays with maximum effort: in every game the owner has watched it played hard, performed like an aggressive team that wants to win, and was out there to win it. Slightly boosted. A human factor from watching the games, to fine-tune the statistical metrics."
     }
   },
   "events": [
@@ -15,6 +20,14 @@
       "kind": "unreliable",
       "points": -3.0,
       "owner_said": "Add Rams to that list. ... I meant the rams should be deducted point for lack of effort."
+    },
+    {
+      "set_at": "2026-10-13T04:33Z",
+      "action": "set",
+      "team": "Bills",
+      "kind": "max_effort",
+      "points": 1.5,
+      "owner_said": "The Bills need to be slightly boosted for maximum effort"
     }
   ]
 }

@@ -118,8 +118,11 @@ def big_numbers(items):
     return t
 
 
-def game_label(r, neutral_word):
-    return f"{r.away_name} at {r.home_name}" + (f" ({neutral_word})" if bool(r.neutral) else "")
+def game_label(r, neutral_word, star=False):
+    """'Away at Home'; with star=True, an asterisk after each team that has one of your team notes."""
+    away = r.away_name + ("*" if star and truthy(getattr(r, "noted_away", False)) else "")
+    home = r.home_name + ("*" if star and truthy(getattr(r, "noted_home", False)) else "")
+    return f"{away} at {home}" + (f" ({neutral_word})" if bool(r.neutral) else "")
 
 
 def pick_text(status, pick, prob):
@@ -212,7 +215,8 @@ def graded_section(story, title, sub, eng, eng_g, frm, frm_g, neutral_word, mark
         if noted and r.f_status == "PICK" and hasattr(r, "f_note"):
             f_extra = note_line(r.f_note, r.f_pick_alone, r.f_prob_alone, r.f_flip, r.f_result_alone if r.f_flip else None)
         any_note = any_note or bool(e_extra or f_extra)
-        rows.append([P(r.kickoff, S_CELL), P(escape(game_label(r, neutral_word)), S_CELL), P(escape(final) or "Not final", S_CELL),
+        rows.append([P(r.kickoff, S_CELL), P(escape(game_label(r, neutral_word, star=noted)), S_CELL),
+                     P(escape(final) or "Not final", S_CELL),
                      pick_cell(pick_text(r.status, r.pick, r.pick_prob), S_CELL, e_extra),
                      res_cell(r.e_result) if r.status == "PICK" else "",
                      pick_cell(pick_text(r.f_status, r.f_pick, r.f_prob), S_CELL, f_extra) if r.f_status != "NOT RUN"
@@ -222,9 +226,7 @@ def graded_section(story, title, sub, eng, eng_g, frm, frm_g, neutral_word, mark
     widths = (1.0, 2.05, 1.75, 1.8, 0.75, 1.8, 0.75) if any_note else (1.0, 2.2, 2.3, 1.45, 0.75, 1.45, 0.75)
     story += [table(rows, widths, bg, span_from=3), Spacer(1, 5),
               P("Amber rows: the two models picked different teams. A tie is graded as a tie. Percentages are each "
-                "model's win chance for its pick." + (" Small line under a pick: your team note on that game and the "
-                                                      "model alone; official picks and records include your notes."
-                                                      if any_note else ""), S_NOTE)]
+                "model's win chance for its pick." + (notes_sentence(eng) if any_note else ""), S_NOTE)]
     if market is not None and len(market):
         g = market[(market.status == "PICK") & market.market_p_home.notna()]
         if len(g):
@@ -301,7 +303,7 @@ def picks_section(story, title, sub, eng, frm, neutral_word, note, box_cells):
             f_extra = note_line(r.note_text_f, r.alone_pick_f, r.alone_prob_f, r.flip_f)
             flips += int(bool(r.flip_f))
         any_note = any_note or bool(e_extra or f_extra)
-        rows.append([P(r.kickoff, S_CELL), P(escape(game_label(r, neutral_word)), S_CELL),
+        rows.append([P(r.kickoff, S_CELL), P(escape(game_label(r, neutral_word, star=noted)), S_CELL),
                      pick_cell(pick_text(r.status_e, r.pick_e, r.pick_prob_e), S_CELLB if e_strong else S_CELL, e_extra),
                      pick_cell(pick_text(r.status_f, r.pick_f, r.pick_prob_f), S_CELLB if f_strong else S_CELL, f_extra)
                      if r.status_f != "NOT RUN" else P("Not run", S_CELL),
@@ -323,14 +325,14 @@ def picks_section(story, title, sub, eng, frm, neutral_word, note, box_cells):
 
 
 def notes_sentence(eng):
-    """The team notes in force for this page's games, for the line under the picks table."""
+    """The team notes on this page's picks, for the line under the table ('' when there are none)."""
     t = eng.loc[(eng.status == "PICK") & (eng.note_text.astype(str).str.len() > 0), "note_text"]
     found = sorted({x.strip() for s in t for x in s.split(";")})
     if not found:
         return ""
-    return (" Your team notes on these games: " + escape("; ".join(found)) + " points. A note moves that team's "
-            "predicted margin by its points in both models; official picks include it, and the small line shows "
-            "each model alone.")
+    return (" <b>* Your team notes:</b> " + escape("; ".join(found)) + " points. A note moves that team's "
+            "predicted margin by its points in both models; official picks include it, and the small line under "
+            "a pick shows each model alone.")
 
 
 def nfl_picks(story, season, week):
@@ -399,8 +401,8 @@ def notes_page(story):
               Spacer(1, 10), t, Spacer(1, 6),
               P("Every graded pick that involved a noted team. <b>Model alone expected</b>: the wins the model predicted "
                 "without your note. <b>Points per game vs model alone</b>: how much better (+) or worse (-) the team "
-                "did than the model's predicted margin; an unreliable note is right when this is negative, ideally "
-                "by about the note's points. <b>Brier</b>: how close the win chances were to what happened, lower is "
+                "did than the model's predicted margin; an unreliable note is right when this is negative and a "
+                "max-effort note when it's positive, ideally by about the note's points. <b>Brier</b>: how close the win chances were to what happened, lower is "
                 "better. <b>Luck</b>: how far results land from the model's expectation by chance alone 95% of the "
                 "time over that many games; until a number gets outside it, one good or bad stretch can't prove a "
                 "note either way.", S_NOTE)]

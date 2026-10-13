@@ -19,11 +19,12 @@
    grade it after (NFL: `nfl_cfbmethod/grade.py`, which also runs the
    closing-line check; closing lines are for grading only, never an input; then
    `results/team_notes.py grade`).
-6. **Team notes are the owner's alone (approved 2026-10-12).** The owner marks
-   an NFL team unreliable by hand, case by case (`results/team_notes.json`); the
-   note docks that team's predicted margin in both NFL models, official picks
-   include it, and the model-alone numbers are always kept beside it and graded
-   so the note's accuracy is tracked. Never add, change or remove a note, or its
+6. **Team notes are the owner's alone (approved 2026-10-12).** From watching
+   the games, the owner marks an NFL team by hand, case by case
+   (`results/team_notes.json`): unreliable (docked) or max effort (slightly
+   boosted). The note moves that team's predicted margin in both NFL models,
+   official picks include it, and the model-alone numbers are always kept beside
+   it and graded so the note's accuracy is tracked. Never add, change or remove a note, or its
    points, unless the owner says so; record it with `results/team_notes.py` and
    the owner's words. The engines' own code and numbers don't change.
 

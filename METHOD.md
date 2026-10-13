@@ -110,12 +110,15 @@ notes (`results/team_notes.json`, applied by `results/team_notes.py`). This sits
 on top of the method above and changes nothing in it: the engine's code, inputs
 and win chances are untouched and kept in every file as the "model alone".
 
-- **Unreliable** (the owner's call, case by case): a team that doesn't want to
-  win or looks lazy, whose earlier results came from luck rather than effort, so
-  it loses games it shouldn't. Losing a game alone doesn't qualify.
-- The note docks the team's predicted margin (default 3 points). The engine's
-  win chance moves along its own scale: 7.8 points per unit of log-odds, the
-  slope of the final margin on the engine's log-odds over the 2019-2025 backtest
+- **Unreliable** (the owner's call from watching the games, case by case): a
+  team that doesn't want to win or looks lazy, whose earlier results came from
+  luck rather than effort, so it loses games it shouldn't. Losing a game alone
+  doesn't qualify. Docked 3 points by default.
+- **Max effort** (same): a team that plays hard and aggressive and is out there
+  to win. Slightly boosted, 1.5 points by default.
+- The note moves the team's predicted margin by its points. The engine's win
+  chance moves along its own scale: 7.8 points per unit of log-odds, the slope
+  of the final margin on the engine's log-odds over the 2019-2025 backtest
   (1,522 games). The framework moves its predicted margin by the points and
   follows its own margin-to-win-chance scale. A note counts only for games
   kicking off after it was set.
