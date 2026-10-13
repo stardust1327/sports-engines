@@ -67,6 +67,13 @@ Brier: engine 0.1842, closing line 0.1356. Graded with the tie fix to `grade.py`
 (2026-10-11; before it, a tie was scored as an away-team win, so this printed
 6-5). Graded file: `nfl_cfbmethod_2026_week05_graded.csv`.
 
+Final with Monday night (graded 2026-10-12 9:51 PM Phoenix): **6-5-1**. Lost
+Rams 75% (Bills 37, Rams 34; closing line had the Rams at 62%). Closing-line
+favorite 9-2-1 on the same 12 games. Brier: engine 0.2151, closing line 0.1566.
+Picks where the engine was 5+ points more confident than the close: 1-4.
+No team notes applied (both were set after kickoff). Report card:
+`report_2026-10-12_week5-graded.pdf`.
+
 ### 2026 Week 5: Prompt Football framework (comparison run)
 
 Files: `prompt_nfl_2026_week05.md` (picks in the prompt's format, with rationale,
@@ -101,6 +108,9 @@ Result (Sunday; Rams-Bills Monday pending): **9-1-1**. Only loss: Raiders
 Bengals) hit. On the 5 games where the two models disagreed, the framework went
 4-1 (Steelers, 49ers, Lions, Broncos right; Raiders wrong). Graded file:
 `prompt_nfl_2026_week05_graded.csv`.
+
+Final with Monday night: **9-2-1**. Lost Rams 53% (Bills 37, Rams 34). The Rams
+were the only Week 5 game where both models picked the same team and lost.
 
 Earlier Week 5 runs, kept to compare after the games (all pending):
 

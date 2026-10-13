@@ -1,15 +1,15 @@
-game_id,away,home,away_score,home_score,status,pick,pick_prob,result
-401872981,Eagles,Jaguars,17,19,PICK,Jaguars,0.8534,W
-401872990,Bears,Packers,7,31,NO PICK,,,
-401872984,Texans,Titans,26,3,PICK,Texans,0.5337,W
-401872982,Bengals,Dolphins,31,24,PICK,Bengals,0.6873,W
-401872986,Raiders,Patriots,17,45,PICK,Raiders,0.6409,L
-401872987,Vikings,Saints,23,13,PICK,Vikings,0.7642,W
-401872983,Browns,Jets,12,17,PICK,Jets,0.5699,W
-401872985,Colts,Steelers,22,34,PICK,Steelers,0.6013,W
-401872988,Giants,Commanders,27,27,PICK,Commanders,0.6275,T
-401872989,Broncos,Chargers,23,17,PICK,Broncos,0.5469,W
-401872991,Lions,Cardinals,45,21,PICK,Lions,0.5563,W
-401872992,49ers,Seahawks,32,29,PICK,49ers,0.5703,W
-401872993,Ravens,Falcons,30,23,NO PICK,,,
-401872994,Bills,Rams,,,PICK,Rams,0.5267,
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401872981,Eagles,Jaguars,17,19,True,PICK,,Jaguars,0.8534,W
+401872987,Vikings,Saints,23,13,True,PICK,,Vikings,0.7642,W
+401872982,Bengals,Dolphins,31,24,True,PICK,,Bengals,0.6873,W
+401872986,Raiders,Patriots,17,45,True,PICK,,Raiders,0.6409,L
+401872988,Giants,Commanders,27,27,True,PICK,,Commanders,0.6275,T
+401872985,Colts,Steelers,22,34,True,PICK,,Steelers,0.6013,W
+401872992,49ers,Seahawks,32,29,True,PICK,,49ers,0.5703,W
+401872983,Browns,Jets,12,17,True,PICK,,Jets,0.5699,W
+401872991,Lions,Cardinals,45,21,True,PICK,,Lions,0.5563,W
+401872989,Broncos,Chargers,23,17,True,PICK,,Broncos,0.5469,W
+401872984,Texans,Titans,26,3,True,PICK,,Texans,0.5337,W
+401872994,Bills,Rams,37,34,True,PICK,,Rams,0.5267,L
+401872990,Bears,Packers,7,31,True,NO PICK,Caleb Williams (hamstring) not cleared; backup Tyson Bagent expected to start,,,
+401872993,Ravens,Falcons,30,23,True,NO PICK,Lamar Jackson out; Tyler Huntley starts,,,
