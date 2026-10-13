@@ -156,10 +156,19 @@ watching the games, the owner marks a team by hand, case by case: unreliable
 in both models for games after it was set. Official picks and records include
 the notes; the model-alone numbers stay beside them.
 
-| Team | Note | Since | Graded games | Scorecard |
-|---|---|---|---|---|
-| Rams | Unreliable, -3 points | 2026-10-12 9:14 PM Phoenix | 0 | First noted game: Week 6, Cardinals at Rams |
-| Bills | Max effort, +1.5 points | 2026-10-12 9:33 PM Phoenix | 0 | First noted game: Week 6, Bills at Raiders |
+Each note runs out 3 weeks after the owner's last read on that team unless the
+owner renews it (added 9:41 PM at the owner's OK; `team_notes.py renew` logs a
+new read and starts the clock over).
+
+| Team | Note | Since | Runs out unless renewed | Graded games | Scorecard |
+|---|---|---|---|---|---|
+| Rams | Unreliable, -3 points | 2026-10-12 9:14 PM Phoenix | 2026-11-02 9:14 PM Phoenix | 0 | First noted game: Week 6, Cardinals at Rams |
+| Bills | Max effort, +1.5 points | 2026-10-12 9:33 PM Phoenix | 2026-11-02 9:33 PM Phoenix | 0 | First noted game: Week 6, Bills at Raiders |
+
+Week 5's Monday game (Bills 37, Rams 34) was the only Week 5 game where both
+models picked the same team and lost (the Commanders-Giants tie aside). The
+owner expected the Rams to lose, but the note was set after kickoff, so it
+doesn't count for that game; a read sent before kickoff would have.
 
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 

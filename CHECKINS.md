@@ -71,7 +71,9 @@ notes live in `results/team_notes.json`; `whats_next.py` prints the ones in forc
 
 - A note moves the team's predicted margin in both NFL models (defaults:
   unreliable -3 points, max effort +1.5) and only counts for games kicking off
-  after it was set. The models' own numbers in the picks files never change:
+  after it was set. It runs out 3 weeks (21 days) after the owner's last read on
+  that team unless the owner renews it. The models' own numbers in the picks
+  files never change:
   `results/team_notes.py` and `make_report.py` apply the notes when they read the
   files, so runs, re-runs, `merge_rerun.py` and `set_nopick.py` work exactly as
   before. In the PDF a noted team gets an asterisk, explained under the table.
@@ -85,10 +87,15 @@ notes live in `results/team_notes.json`; `whats_next.py` prints the ones in forc
   `python3 results/team_notes.py grade --season S --week W`. Report its "official
   (with your team notes)" record, plus the model-alone record when they differ,
   and the scorecard lines for the noted teams.
+- Expiring notes: when `whats_next.py` lists a note running out within 8 days, say
+  so in the message ("Rams note runs out Nov 2 unless you renew it") and ask
+  whether to renew. Never renew one unasked; an expired note simply stops applying.
 - Only when the owner says so in a conversation: `python3 results/team_notes.py set
   --team <Nickname> [--kind max_effort] --said "<the owner's words>" [--points N]`
-  (the kind defaults to unreliable) or `clear --team <Nickname> --said "..."`.
-  Never edit past events in the file.
+  (the kind defaults to unreliable), `renew --team <Nickname> --said "<the owner's
+  new read>"` (a new read on a noted team: logged with the date, same points,
+  clock starts over) or `clear --team <Nickname> --said "..."`. Never edit past
+  events in the file.
 
 ## QB check (used by every check-in)
 
@@ -277,5 +284,5 @@ the printouts before sending it.
   before pushing.
 - Messages to the owner are short: records first, then picks that changed or
   where the models disagree, then every game with a team note (with and without
-  the note), then every no-pick with exactly what's missing. Send the PDF when the
-  check-in makes one.
+  the note) and any note about to run out, then every no-pick with exactly what's
+  missing. Send the PDF when the check-in makes one.

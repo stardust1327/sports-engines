@@ -23,7 +23,15 @@ In a close game 1.5 points is worth about 5 points of win chance and 3 points
 about 10; less for a big favorite.
 
 Timing. Every note keeps the time it was set and only counts for games that
-kick off after that, like a pick logged before kickoff.
+kick off after that, like a pick logged before kickoff. A note runs out
+expire_after_days (21: three weeks) after it was set or last renewed, so an old
+read stops moving picks once a team may have changed. Each new read the owner
+gives on a noted team (renew) is logged with the date and starts the clock over;
+the list of reads is each team's running history.
+
+Notes are for what the plays can't show (effort, attitude): the engine already
+rates every play, so a bad game lowers a team's numbers on its own. The
+scorecard shows whether a note adds anything on top of that.
 
 Official picks are the ones with the notes applied. The model-alone pick stays
 next to it in every report and graded file, so the two can be compared.
@@ -31,6 +39,7 @@ next to it in every report and graded file, so the two can be compared.
   python3 results/team_notes.py list
   python3 results/team_notes.py set --team Rams --said "the owner's words" [--points -3] [--at 2026-10-13T04:14Z]
   python3 results/team_notes.py set --team Bills --kind max_effort --said "the owner's words" [--points 1.5]
+  python3 results/team_notes.py renew --team Rams --said "the owner's new read"   (same note, clock starts over)
   python3 results/team_notes.py clear --team Rams --said "the owner's words"
   python3 results/team_notes.py show --season 2026 --week 6
   python3 results/team_notes.py grade --season 2026 --week 6   (after nfl_cfbmethod/grade.py and grade_picks.py)
@@ -95,17 +104,42 @@ def load(path=None):
                 raise SystemExit(f"team_notes.json: points {pts} have the wrong sign for '{e['kind']}' ({e['team']})")
         e["_t"] = parse_time(e["set_at"])
     d["events"] = sorted(d["events"], key=lambda e: e["_t"])
+    days = d.get("expire_after_days")
+    if days is not None and float(days) <= 0:
+        raise SystemExit("team_notes.json: expire_after_days must be positive (or left out for no expiry)")
     return d
+
+
+def latest(notes, team, when=None):
+    """The team's most recent event (set, renewal or clear) before `when` (default: any time), or None."""
+    cur = None
+    for e in notes["events"]:
+        if e["team"] == team and (when is None or e["_t"] < when):
+            cur = e
+    return cur
+
+
+def expires_at(notes, e):
+    """When a set note stops counting unless it's renewed (None: never)."""
+    days = notes.get("expire_after_days")
+    return None if days is None else e["_t"] + datetime.timedelta(days=float(days))
 
 
 def in_force(notes, team, when):
     """The note in force for `team` at `when` (a UTC datetime), or None. A note set
-    at or after kickoff doesn't count for that game."""
-    cur = None
-    for e in notes["events"]:
-        if e["team"] == team and e["_t"] < when:
-            cur = e if e["action"] == "set" else None
-    return cur
+    at or after kickoff doesn't count for that game, and a note stops counting
+    expire_after_days after it was set or last renewed."""
+    cur = latest(notes, team, when)
+    if cur is None or cur["action"] != "set":
+        return None
+    end = expires_at(notes, cur)
+    return None if end is not None and when >= end else cur
+
+
+def reads(notes, team, kind, when=None):
+    """How many times the owner set or renewed this note (each is a read from watching a game)."""
+    return sum(1 for e in notes["events"] if e["team"] == team and e["action"] == "set" and e.get("kind") == kind
+               and (when is None or e["_t"] < when))
 
 
 def label(notes, e):
@@ -113,7 +147,7 @@ def label(notes, e):
 
 
 def note_text(notes, e, team=True):
-    """'Rams: plays hard +1.5' (team=True) or 'Plays hard +1.5'."""
+    """'Rams: unreliable -3.0' (team=True) or 'Unreliable -3.0'."""
     lab = label(notes, e)
     return f"{e['team']}: {lab.lower()} {float(e['points']):+.1f}" if team else f"{lab} {float(e['points']):+.1f}"
 
@@ -125,8 +159,24 @@ def current(notes, now=None):
     return [e for e in out if e is not None]
 
 
+def expired(notes, now=None):
+    """Notes that ran out without being renewed (the team's latest event is an expired set)."""
+    now = now or datetime.datetime.now(UTC)
+    out = []
+    for t in TEAMS:
+        e = latest(notes, t, now)
+        if e is not None and e["action"] == "set" and in_force(notes, t, now) is None:
+            out.append(e)
+    return out
+
+
 def phx(t):
     return t.astimezone(PHX).strftime("%Y-%m-%d %I:%M %p").replace(" 0", " ") + " Phoenix"
+
+
+def day(t):
+    """'Nov 2' (Phoenix)."""
+    return t.astimezone(PHX).strftime("%b %d").replace(" 0", " ")
 
 
 # ------------------------------------------------------------- apply them
@@ -403,12 +453,22 @@ def scorecard(results_dir=HERE, notes=None):
     out = []
     for team, kind, first in teams:
         live = in_force(notes, team, now)
-        latest = [e for e in notes["events"] if e["team"] == team and e.get("kind") == kind and e["action"] == "set"][-1]
-        cleared = live is None or live["kind"] != kind
+        last_set = [e for e in notes["events"] if e["team"] == team and e.get("kind") == kind and e["action"] == "set"][-1]
+        last = latest(notes, team, now) or last_set
+        if live is not None and live["kind"] == kind:
+            end = expires_at(notes, live)
+            state = f"expires {day(end)} unless renewed" if end else "in force"
+        elif last["action"] == "clear":
+            state = "cleared"
+        elif last.get("kind") == kind:
+            state = f"expired {day(expires_at(notes, last))}"
+        else:
+            state = "replaced by another note"
         sub = g[(g["team"] == team) & (g["kind"] == kind)] if len(g) else g
         for model in ("engine", "framework"):
-            out.append({"team": team, "kind": kind, "label": f"{notes['kinds'][kind]['label']} {float(latest['points']):+.1f}",
-                        "since": first["_t"], "cleared": cleared, "model": model,
+            out.append({"team": team, "kind": kind,
+                        "label": f"{notes['kinds'][kind]['label']} {float(last_set['points']):+.1f}",
+                        "since": first["_t"], "state": state, "reads": reads(notes, team, kind, now), "model": model,
                         "s": summarize(sub, model) if len(sub) else None})
     kinds_used = {}
     for team, kind, _ in teams:
@@ -419,7 +479,7 @@ def scorecard(results_dir=HERE, notes=None):
         sub = g[g["kind"] == kind] if len(g) else g
         for model in ("engine", "framework"):
             out.append({"team": f"All {notes['kinds'][kind]['label'].lower()}", "kind": kind,
-                        "label": f"{len(ts)} teams", "since": None, "cleared": False, "model": model,
+                        "label": f"{len(ts)} teams", "since": None, "state": "", "reads": None, "model": model,
                         "s": summarize(sub, model) if len(sub) else None})
     return out
 
@@ -436,7 +496,8 @@ def print_scorecard(results_dir=HERE, notes=None):
     print("Team notes scorecard (graded picks with a noted team; 'luck' = the range chance alone covers 95% of the time):")
     for r in rows:
         s = r["s"]
-        head = f"  {r['team']} ({r['label']}{', cleared' if r['cleared'] else ''}) vs the {r['model']}:"
+        extra = (f", {plural(r['reads'], 'read')}" if r["reads"] else "") + (f", {r['state']}" if r["state"] else "")
+        head = f"  {r['team']} ({r['label']}{extra}) vs the {r['model']}:"
         if not s:
             print(f"{head} no graded games yet")
             continue
@@ -450,15 +511,29 @@ def print_scorecard(results_dir=HERE, notes=None):
 
 # -------------------------------------------------------------------- CLI
 
+def expiry_text(notes, e):
+    end = expires_at(notes, e)
+    return f"; expires {phx(end)} unless renewed" if end else ""
+
+
 def cmd_list(a):
     notes = load()
-    now = current(notes)
-    print("Team notes in force now:" if now else "No team notes in force.")
-    for e in now:
-        print(f"  {note_text(notes, e)} points (set {phx(e['_t'])})")
-    print("History:")
+    live = current(notes)
+    print("Team notes in force now:" if live else "No team notes in force.")
+    for e in live:
+        print(f"  {note_text(notes, e)} points ({plural(reads(notes, e['team'], e['kind']), 'read')}, last "
+              f"{phx(e['_t'])}{expiry_text(notes, e)})")
+    gone = expired(notes)
+    if gone:
+        print("Expired (no longer applied; the owner can renew them):")
+        for e in gone:
+            print(f"  {note_text(notes, e)} points (ran out {phx(expires_at(notes, e))})")
+    print("History (every read the owner gave):")
     for e in notes["events"]:
-        what = note_text(notes, e) if e["action"] == "set" else f"{e['team']}: note cleared"
+        if e["action"] == "clear":
+            what = f"{e['team']}: note cleared"
+        else:
+            what = note_text(notes, e) + (" (renewed)" if e.get("renewal") else "")
         print(f"  {phx(e['_t'])}  {what}  | owner: \"{e.get('owner_said', '')}\"")
 
 
@@ -495,8 +570,8 @@ def cmd_set(a):
     write_event({"set_at": event_time(a.at), "action": "set", "team": a.team, "kind": a.kind,
                  "points": float(pts), "owner_said": a.said})
     notes = load()
-    print(f"Set: {note_text(notes, in_force(notes, a.team, datetime.datetime.now(UTC) + datetime.timedelta(minutes=2)))}"
-          f" (counts for games kicking off after it was set)")
+    e = latest(notes, a.team)
+    print(f"Set: {note_text(notes, e)} (counts for games kicking off after it was set{expiry_text(notes, e)})")
 
 
 def cmd_clear(a):
@@ -505,6 +580,22 @@ def cmd_clear(a):
         raise SystemExit(f"{a.team} has no note in force")
     write_event({"set_at": event_time(a.at), "action": "clear", "team": a.team, "owner_said": a.said})
     print(f"Cleared the note on the {a.team} (games already graded keep it)")
+
+
+def cmd_renew(a):
+    """Log a new read from the owner on a team that already has a note: same kind and
+    points, the owner's new words, and the expiry clock starts over. Works on an
+    expired note too (it comes back from now on)."""
+    notes = load()
+    last = latest(notes, a.team)
+    if last is None or last["action"] != "set":
+        raise SystemExit(f"{a.team} has no note to renew (use set for a new one)")
+    write_event({"set_at": event_time(a.at), "action": "set", "team": a.team, "kind": last["kind"],
+                 "points": float(last["points"]), "owner_said": a.said, "renewal": True})
+    notes = load()
+    e = latest(notes, a.team)
+    print(f"Renewed: {note_text(notes, e)} ({plural(reads(notes, a.team, e['kind']), 'read')} so far"
+          f"{expiry_text(notes, e)})")
 
 
 def cmd_show(a):
@@ -571,6 +662,10 @@ def main():
     c.add_argument("--team", required=True)
     c.add_argument("--said", required=True)
     c.add_argument("--at")
+    rn = sub.add_parser("renew", help="log a new read on a noted team; the expiry clock starts over")
+    rn.add_argument("--team", required=True)
+    rn.add_argument("--said", required=True, help="the owner's words")
+    rn.add_argument("--at")
     for name in ("show", "grade"):
         x = sub.add_parser(name)
         x.add_argument("--season", type=int, required=True)
@@ -582,7 +677,8 @@ def main():
     if a.cmd == "scorecard":
         print_scorecard(a.dir)
     else:
-        {"list": cmd_list, "set": cmd_set, "clear": cmd_clear, "show": cmd_show, "grade": cmd_grade}[a.cmd](a)
+        {"list": cmd_list, "set": cmd_set, "clear": cmd_clear, "renew": cmd_renew, "show": cmd_show,
+         "grade": cmd_grade}[a.cmd](a)
 
 
 if __name__ == "__main__":

@@ -121,7 +121,11 @@ and win chances are untouched and kept in every file as the "model alone".
   of the final margin on the engine's log-odds over the 2019-2025 backtest
   (1,522 games). The framework moves its predicted margin by the points and
   follows its own margin-to-win-chance scale. A note counts only for games
-  kicking off after it was set.
+  kicking off after it was set, and runs out 21 days after the owner's last read
+  on that team unless the owner renews it.
+- Notes are for what the plays can't show (effort, attitude). The engine
+  already rates every play, so a bad game lowers a team's numbers on its own;
+  the scorecard shows whether a note adds anything on top of that.
 - The official pick is the team at 50% or more after the notes. A note is graded
   on every pick involving the team: record, wins and points per game against what
   the model alone expected (with the range luck alone covers), accuracy of the

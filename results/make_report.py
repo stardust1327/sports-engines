@@ -350,8 +350,10 @@ def nfl_picks(story, season, week):
 
 # -------------------------------------------------------------- team notes
 
-def num(x, fmt):
-    return "" if x is None else format(x, fmt)
+def expiry_words(notes):
+    """'3 weeks' for 21 days, otherwise 'N days'."""
+    d = float(notes["expire_after_days"])
+    return f"{int(d // 7)} weeks" if d % 7 == 0 and d >= 14 else f"{d:g} days"
 
 
 def notes_page(story):
@@ -365,10 +367,12 @@ def notes_page(story):
     rows, empty = [[P(h, S_HEAD) for h in head]], []
     for i, r in enumerate(rows_in, start=1):
         s = r["s"]
-        since = f" (since {r['since'].astimezone(team_notes.PHX).strftime('%b %d').replace(' 0', ' ')})" if r["since"] else ""
+        detail = "; ".join(x for x in (f"since {team_notes.day(r['since'])}" if r["since"] else "",
+                                         team_notes.plural(r["reads"], "read") if r["reads"] else "", r["state"]) if x)
+        note_cell = ([P(escape(r["label"]), S_TCELL), P(escape(detail), S_SMALL)] if detail
+                     else P(escape(r["label"]), S_TCELL))
         cells = [P(escape(r["team"]) if r["model"] == "engine" else "", S_TCELLB),
-                 P(escape(r["label"] + since + (", cleared" if r["cleared"] else "")) if r["model"] == "engine" else "",
-                   S_TCELL),
+                 note_cell if r["model"] == "engine" else "",
                  P("Engine" if r["model"] == "engine" else "Framework", S_TCELL)]
         if not s:
             cells += [P("0", S_TCELL), P("No graded games yet", S_TCELL), "", "", "", "", ""]
@@ -396,8 +400,10 @@ def notes_page(story):
     live = "; ".join(team_notes.note_text(NOTES, e) for e in now) or "none"
     story += [P("Your team notes: how they're doing", S_TITLE), Spacer(1, 3),
               P("Notes you set by hand, case by case. A note moves the team's predicted margin by its points in both "
-                f"models, for games kicking off after you set it. In force now: {escape(live)}"
-                f"{' points' if now else ''}.", S_SUB),
+                "models, for games kicking off after you set it" +
+                (f", and runs out {expiry_words(NOTES)} after your last read on that team unless you renew it"
+                 if NOTES.get("expire_after_days") else "") +
+                f". In force now: {escape(live)}{' points' if now else ''}.", S_SUB),
               Spacer(1, 10), t, Spacer(1, 6),
               P("Every graded pick that involved a noted team. <b>Model alone expected</b>: the wins the model predicted "
                 "without your note. <b>Points per game vs model alone</b>: how much better (+) or worse (-) the team "

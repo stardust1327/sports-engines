@@ -38,7 +38,8 @@ starting QB who is out or unconfirmed, gets a no-pick with the reason.
   unreliable (docked points on its predicted margin in both NFL models) or max
   effort (slightly boosted); official picks include the note, the model-alone
   numbers stay beside it, and every noted game is graded
-  (`team_notes_graded.csv`) to track whether the notes are right
+  (`team_notes_graded.csv`) to track whether the notes are right. A note runs
+  out 3 weeks after the owner's last read on that team unless renewed
 
 ## How each engine works
 

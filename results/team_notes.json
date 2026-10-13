@@ -1,5 +1,6 @@
 {
-  "what_this_is": "The owner's manual team notes for the NFL picks (both models). Only the owner adds, changes or removes a note, case by case; add one with results/team_notes.py set, never by editing past events. Each event keeps the time it was set: a note only counts for games that kick off after that time. Points go on the noted team's predicted margin (negative docks the team, positive boosts it). See results/team_notes.py for how the points move each model's numbers and how the notes are graded.",
+  "what_this_is": "The owner's manual team notes for the NFL picks (both models). Only the owner adds, changes or removes a note, case by case; add one with results/team_notes.py set, never by editing past events. Each event keeps the time it was set: a note only counts for games that kick off after that time. Points go on the noted team's predicted margin (negative docks the team, positive boosts it). A note runs out expire_after_days after it was set or last renewed (team_notes.py renew logs the owner's new read and starts the clock over). See results/team_notes.py for how the points move each model's numbers and how the notes are graded.",
+  "expire_after_days": 21,
   "kinds": {
     "unreliable": {
       "label": "Unreliable",

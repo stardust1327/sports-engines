@@ -24,9 +24,11 @@
    (`results/team_notes.json`): unreliable (docked) or max effort (slightly
    boosted). The note moves that team's predicted margin in both NFL models,
    official picks include it, and the model-alone numbers are always kept beside
-   it and graded so the note's accuracy is tracked. Never add, change or remove a note, or its
-   points, unless the owner says so; record it with `results/team_notes.py` and
-   the owner's words. The engines' own code and numbers don't change.
+   it and graded so the note's accuracy is tracked. A note runs out 3 weeks
+   after the owner's last read on that team unless the owner renews it. Never
+   add, change, renew or remove a note, or its points, unless the owner says so;
+   record it with `results/team_notes.py` and the owner's words. The engines' own
+   code and numbers don't change.
 
 `nfl_cfbmethod/` is the NFL version. It follows `METHOD.md` with the NFL
 settings the owner approved on 2026-10-11 (listed at the end of `METHOD.md`).
