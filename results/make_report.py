@@ -21,11 +21,13 @@ Kickoff times are Phoenix, as the models write them.
 """
 import argparse
 import os
+import sys
 from xml.sax.saxutils import escape
 
 import pandas as pd
 
-import team_notes
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import team_notes  # noqa: E402  (results/team_notes.py)
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import landscape, letter
 from reportlab.lib.styles import ParagraphStyle

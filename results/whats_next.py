@@ -11,12 +11,14 @@ import argparse
 import datetime
 import json
 import os
+import sys
 import time
 import urllib.request
 from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-NFL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates={season}&seasontype={stype}&week={week}&limit=400"
+sys.path.insert(0, HERE)  # for team_notes.py
+NFL ="https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates={season}&seasontype={stype}&week={week}&limit=400"
 CFB = "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates={day}&groups=80&limit=400"
 PT = ZoneInfo("America/Los_Angeles")
 
