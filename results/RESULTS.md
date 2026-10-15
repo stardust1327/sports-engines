@@ -250,6 +250,35 @@ in attempts (the CHANGE flag) is a no-pick until the news names the starter. A
 team whose last starter also leads it in attempts keeps its pick (East Carolina,
 Colorado State and Old Dominion here).
 
+**Catch-up, Thursday 2026-10-15 morning.** The owner ran out of usage this week,
+so the Tuesday run and Wednesday's check didn't happen. Tuesday's and Wednesday's
+games were graded late, and the QB check for Thursday and Friday was done now.
+
+Results (both models, graded files `*_2026-10-13_graded.csv` and
+`*_2026-10-14_graded.csv`): **engine 2-0, framework 2-0**.
+- Tue: Jacksonville State 27, Florida International 24. Both right.
+- Wed: Missouri State 24, Kennesaw State 21. Both right, but Missouri State
+  started Henry Belin, who had replaced Skyler Locklear during its Oct 8 game.
+  The Wednesday QB check that would have looked at this was missed, so the pick
+  stood as logged; noted here rather than changed after the result.
+- No picks: Middle Tennessee 33, Delaware 30 (Delaware started Tyler Bell);
+  Western Kentucky 16, Sam Houston 3 (Brock Glenn started).
+
+QB check for the rest of the week (news through Thursday morning):
+- East Carolina at UAB: Emory Williams (named starter since Sep 26) and Ryder
+  Burton, no injury news. Picks stand.
+- Georgia Southern at Old Dominion: Max Johnson and Quinn Henicle (back from his
+  Week 4 injury, started the last two), no injury news. Picks stand.
+- Colorado State at Texas State: K'saan Farrar expected to start (ESPN's Pete
+  Thamel, Oct 13), his third straight start with Hauss Hejny (hamstring) still
+  out; Brad Jackson for Texas State. Picks stand under the rule above (Farrar
+  is the last starter and leads in attempts), the same call as Sunday night.
+- Memphis at Tulane, App State at Coastal Carolina: Marcus Stokes, Kadin Semonza,
+  Malachi Singleton and Deuce Bailey, no injury news. Picks stand.
+- Washington at Purdue: still no pick. Reason updated in both files: Demond
+  Williams Jr. hurt in last game, unlikely to play (coach Jedd Fisch, Oct 12);
+  Elijah Brown expected to start.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
