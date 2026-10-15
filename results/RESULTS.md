@@ -157,6 +157,52 @@ at Raiders with the note: engine **Bills 72%** (68% alone), framework **Bills
 64%** (59% alone, predicted Bills 27-23). The pick doesn't change; the engine's
 Bills move up into the 70%+ tier.
 
+### 2026 Week 6 refreshed Thursday 2026-10-15 (after Wednesday's practice reports)
+
+Run at the owner's request, 6:35 AM Phoenix. The Sunday-night run came before
+Week 5's Monday game, so both models were re-run with it included (Bills 37,
+Rams 34; nflverse play-by-play and FTN charting through Week 5) and merged with
+`merge_rerun.py` (all 14 games still not started). PDF:
+`report_2026-10-15_week6-picks.pdf`. Win chances include the owner's team notes;
+splits in bold.
+
+| Game | Engine (official) | Framework |
+|---|---|---|
+| Seahawks at Broncos (Thu) | **Seahawks 53.5%** | **Broncos 51.1%** (22-21) |
+| Texans vs Jaguars (London) | Jaguars 56.5% | Jaguars 71.8% (27-20) |
+| Titans at Colts | Colts 72.2% | Colts 58.0% (24-22) |
+| Jets at Patriots | Patriots 66.5% | Patriots 52.8% (24-23) |
+| Saints at Giants | Giants 59.6% | Giants 61.5% (25-22) |
+| Panthers at Eagles | Panthers 57.6% | Panthers 62.3% (26-22) |
+| Cardinals at Rams* | Rams 67.4% (75.2% alone) | Rams 67.1% (75.0% alone; 27-21) |
+| Chargers at Chiefs | Chiefs 61.5% | Chiefs 79.5% (27-17) |
+| Bills* at Raiders | Bills 71.3% (67.2% alone) | Bills 64.3% (59.7% alone; 28-23) |
+| Cowboys at Packers | Packers 58.4% | Packers 55.6% (26-24) |
+| Commanders at 49ers (Mon) | 49ers 82.7% | 49ers 78.7% (29-19) |
+
+\* The owner's team notes: Rams unreliable -3, Bills max effort +1.5. Neither
+changes a pick.
+
+No pick (both), from the official practice reports through Wednesday:
+- Bears at Falcons: Caleb Williams (hamstring) Week 6 status unconfirmed: full in
+  Wed estimated practice report, coach says it will be close.
+- Ravens at Browns: Lamar Jackson (ankle) Week 6 status unconfirmed: did not
+  practice Wed.
+- Steelers at Buccaneers: Baker Mayfield (thumb) did not practice Wed; return
+  unconfirmed (Jalon Daniels started the last 2).
+
+Changes from Sunday night: the framework flipped two coin flips, Jets to
+**Patriots 52.8%** (now agrees with the engine) and Seahawks to **Broncos 51.1%**
+(now the only split). The engine's picks are unchanged; every win chance moved
+less than a point. Same three no-picks, reasons updated.
+
+QB check: every other starter is off the report or practiced fully on Wednesday
+(full with an injury listed: Michael Penix Jr. rib, Bryce Young knee, Daniel Jones
+ankle, Patrick Mahomes knee, Drake Maye shoulder, Tyler Shough hand, Jalen Hurts
+calf). Thursday's game: Sam Darnold and Bo Nix are off the final report.
+Commanders and 49ers (Monday) hadn't posted a report as of Wednesday evening. The
+Friday lock settles Williams, Jackson and Mayfield.
+
 ### Team notes (NFL, the owner's; added 2026-10-12)
 
 `team_notes.json` (the notes), `team_notes.py` (how they're applied and
