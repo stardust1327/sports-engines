@@ -1,0 +1,4 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401869950,Georgia Southern,Old Dominion,23,15,True,PICK,,Georgia Southern,0.8516,W
+401862800,East Carolina,UAB,17,30,True,PICK,,East Carolina,0.769,L
+401860923,Colorado State,Texas State,27,66,True,PICK,,Texas State,0.6997,W

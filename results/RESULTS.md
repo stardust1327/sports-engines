@@ -279,6 +279,26 @@ QB check for the rest of the week (news through Thursday morning):
   Williams Jr. hurt in last game, unlikely to play (coach Jedd Fisch, Oct 12);
   Elijah Brown expected to start.
 
+**Thursday 2026-10-15 graded** (Thursday night, 9 PM Phoenix, at the owner's
+request; graded files `cfb_2026-10-15_graded.csv` and
+`prompt_cfb_2026-10-15_graded.csv`): **engine 2-1, framework 2-1**. Report:
+`report_2026-10-15_cfb-graded.pdf` (made by `make_2026-10-15_cfb_report.py`).
+The Friday check-in doesn't need to grade Thursday again.
+- Georgia Southern 23, Old Dominion 15. Both right (engine 75%, framework 85%).
+- Texas State 66, Colorado State 27. Both right (engine 83%, framework 70%).
+- UAB 30, East Carolina 17 (overtime). Both wrong (engine East Carolina 59%,
+  framework 77%).
+- QBs (ESPN play-by-play): every expected starter started (Emory Williams, Ryder
+  Burton, Max Johnson, Quinn Henicle, K'saan Farrar, Brad Jackson). Two were
+  replaced during the game: Turner Helton took over for Georgia Southern in the
+  2nd quarter (30 of its 41 passes) and Ryan Huff played the 2nd half for Old
+  Dominion (14 of its 24). Both teams' next QB checks need to settle who starts.
+
+Midweek so far (Tue-Thu): **engine 4-1, framework 4-1**; they haven't split on a
+graded game yet. Live record since the first logged picks: engine 15-9 since
+2026-10-10 (70%+ picks 8-1, 60-70% 4-5, under 60% 3-3); framework 4-1 since
+2026-10-13 (70%+ 1-1, 60-70% 1-0, under 60% 2-0).
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
