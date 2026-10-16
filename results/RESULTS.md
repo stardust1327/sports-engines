@@ -203,6 +203,62 @@ calf). Thursday's game: Sam Darnold and Bo Nix are off the final report.
 Commanders and 49ers (Monday) hadn't posted a report as of Wednesday evening. The
 Friday lock settles Williams, Jackson and Mayfield.
 
+### 2026 Week 6: Thursday night graded, picks refreshed Thursday 2026-10-15 evening
+
+Run at the owner's request, 9 PM Phoenix, after Thursday's practice reports.
+PDF: `report_2026-10-15_thursday-night.pdf`.
+
+**Thursday night: Broncos 17, Seahawks 14 (OT).** Engine (official) Seahawks
+53.5%: lost. Framework Broncos 51.1%: won. The closing line had the Seahawks at
+58%, so the market favorite lost too. Sam Darnold and Bo Nix started, as
+expected; no team note involved. Week 6 so far: **engine 0-1, framework 1-0**
+(graded files `nfl_cfbmethod_2026_week06_graded.csv` and
+`prompt_nfl_2026_week06_graded.csv`; the other 13 games pending).
+
+**New no-pick: Panthers at Eagles.** The Eagles ruled Jalen Hurts out (blood
+clot in his calf); Tanner McKee is expected to start. Both models had picked the
+Panthers (engine 57.6%, framework 62.3%); both files now carry the no-pick.
+
+Both models were re-run for the Sunday and Monday games with the four no-picks
+and merged with `merge_rerun.py` (13 games, none started). The engine's ESPN
+play-by-play now includes Thursday's game; nflverse's files didn't have it yet,
+so the framework's numbers are unchanged. Every engine win chance moved less
+than a point. Win chances include the owner's team notes; the models agree on
+all 9 picks.
+
+| Game | Engine (official) | Framework |
+|---|---|---|
+| Texans vs Jaguars (London) | Jaguars 56.6% | Jaguars 71.8% (27-20) |
+| Titans at Colts | Colts 72.6% | Colts 58.0% (24-22) |
+| Jets at Patriots | Patriots 66.5% | Patriots 52.8% (24-23) |
+| Saints at Giants | Giants 59.9% | Giants 61.5% (25-22) |
+| Cardinals at Rams* | Rams 67.2% (75.0% alone) | Rams 67.1% (75.0% alone; 27-21) |
+| Chargers at Chiefs | Chiefs 61.6% | Chiefs 79.5% (27-17) |
+| Bills* at Raiders | Bills 71.8% (67.8% alone) | Bills 64.3% (59.7% alone; 28-23) |
+| Cowboys at Packers | Packers 58.5% | Packers 55.6% (26-24) |
+| Commanders at 49ers (Mon) | 49ers 82.4% | 49ers 78.7% (29-19) |
+
+\* The owner's team notes: Rams unreliable -3, Bills max effort +1.5. Neither
+changes a pick.
+
+No pick (both), from the practice reports through Thursday:
+- Bears at Falcons: Caleb Williams (hamstring) Week 6 status unconfirmed: full
+  practice Wed and Thu, but he says he still has medical protocols to complete
+  and doesn't know if he'll play.
+- Ravens at Browns: Lamar Jackson (ankle) Week 6 status unconfirmed: did not
+  practice Wed or Thu.
+- Panthers at Eagles: Jalen Hurts (blood clot in calf) ruled out by the Eagles;
+  Tanner McKee expected to start.
+- Steelers at Buccaneers: Baker Mayfield (thumb) did not practice Wed or Thu,
+  Bucs OC says he's not quite ready this week; Jalon Daniels expected to start.
+
+QB check: every other starter is off the report or practiced fully on Thursday
+(full with an injury listed: Michael Penix Jr. ribs, Bryce Young knee, Daniel
+Jones ankle, Patrick Mahomes knee, Drake Maye shoulder, Tyler Shough hand).
+Monday's game: Jayden Daniels was a full participant in the Commanders' first
+report; Brock Purdy isn't on the 49ers' report. Friday's game statuses (the
+Friday lock) settle Williams, Jackson and Mayfield.
+
 ### Team notes (NFL, the owner's; added 2026-10-12)
 
 `team_notes.json` (the notes), `team_notes.py` (how they're applied and

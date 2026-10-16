@@ -1,0 +1,2 @@
+season,week,game_id,away,home,away_score,home_score,winner,status,reason,pick,pick_prob,p_home,result,home_moneyline,away_moneyline,market_p_home,market_p_pick,home_win,edge_vs_close
+2026,6,401872995,Seahawks,Broncos,14,17,Broncos,PICK,,Seahawks,0.5348078412689792,0.4651921587310208,L,130.0,-155.0,0.4170073589533933,0.5829926410466066,1,-0.04818479977762746

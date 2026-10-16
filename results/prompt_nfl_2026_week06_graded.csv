@@ -1,0 +1,15 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401873006,Chargers,Chiefs,,,False,PICK,,Chiefs,0.7953,
+401873008,Commanders,49ers,,,False,PICK,,49ers,0.7874,
+401873004,Cardinals,Rams,,,False,PICK,,Rams,0.7502,
+401872996,Texans,Jaguars,,,False,PICK,,Jaguars,0.7183,
+401872998,Panthers,Eagles,,,False,NO PICK,Jalen Hurts (blood clot in calf) ruled out by the Eagles; Tanner McKee expected to start,,,
+401873005,Bills,Raiders,,,False,PICK,,Bills,0.5972,
+401873000,Saints,Giants,,,False,PICK,,Giants,0.615,
+401873003,Titans,Colts,,,False,PICK,,Colts,0.5797,
+401873007,Cowboys,Packers,,,False,PICK,,Packers,0.5559,
+401873001,Jets,Patriots,,,False,PICK,,Patriots,0.5276,
+401872995,Seahawks,Broncos,14,17,True,PICK,,Broncos,0.5108,W
+401872999,Bears,Falcons,,,False,NO PICK,"Caleb Williams (hamstring) Week 6 status unconfirmed: full practice Wed and Thu, but he says he still has medical protocols to complete and doesn't know if he'll play",,,
+401872997,Ravens,Browns,,,False,NO PICK,Lamar Jackson (ankle) Week 6 status unconfirmed: did not practice Wed or Thu,,,
+401873002,Steelers,Buccaneers,,,False,NO PICK,"Baker Mayfield (thumb) did not practice Wed or Thu, Bucs OC says he's not quite ready this week; Jalon Daniels expected to start",,,
