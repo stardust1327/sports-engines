@@ -259,6 +259,46 @@ Monday's game: Jayden Daniels was a full participant in the Commanders' first
 report; Brock Purdy isn't on the 49ers' report. Friday's game statuses (the
 Friday lock) settle Williams, Jackson and Mayfield.
 
+### 2026 Week 6 locked Friday 2026-10-16 (after the 1 PM Pacific game statuses)
+
+Friday lock, scheduled check-in C. PDF: `report_2026-10-16_friday-lock.pdf`.
+Both models re-run for the Sunday and Monday games with the no-picks (engine
+re-run; framework with `--refresh` for this season's nflverse files) and merged
+with `merge_rerun.py` (13 games, none started). **No pick changed and no win
+chance moved**; the team notes still change no pick. Locked picks (win chances
+include the owner's team notes; the models agree on all 9):
+
+| Game | Engine (official) | Framework |
+|---|---|---|
+| Texans vs Jaguars (London) | Jaguars 56.6% | Jaguars 71.8% (27-20) |
+| Titans at Colts | Colts 72.6% | Colts 58.0% (24-22) |
+| Jets at Patriots | Patriots 66.5% | Patriots 52.8% (24-23) |
+| Saints at Giants | Giants 59.9% | Giants 61.5% (25-22) |
+| Cardinals at Rams* | Rams 67.2% (75.0% alone) | Rams 67.1% (75.0% alone; 27-21) |
+| Chargers at Chiefs | Chiefs 61.6% | Chiefs 79.5% (27-17) |
+| Bills* at Raiders | Bills 71.8% (67.8% alone) | Bills 64.3% (59.7% alone; 28-23) |
+| Cowboys at Packers | Packers 58.5% | Packers 55.6% (26-24) |
+| Commanders at 49ers (Mon) | 49ers 82.4% | 49ers 78.7% (29-19) |
+
+\* The owner's team notes: Rams unreliable -3, Bills max effort +1.5.
+
+No pick (both), from Friday's official game statuses:
+- Bears at Falcons: Caleb Williams (hamstring) questionable on Friday's report:
+  full practice all week, but he says he doesn't know yet if he's playing.
+  Check-in F (Sunday inactives) settles it.
+- Ravens at Browns: Lamar Jackson (ankle) ruled out; Tyler Huntley starts.
+- Panthers at Eagles: Jalen Hurts (blood clot in calf) ruled out; Tanner McKee
+  expected to start.
+- Steelers at Buccaneers: Baker Mayfield (right thumb) ruled out; Jalon Daniels
+  starts.
+
+QB check: no other quarterback has a game status for Sunday (Michael Penix Jr.,
+ribs, has no designation and is cleared to start; the Browns' Dillon Gabriel,
+back, is out but Deshaun Watson starts). Monday's game statuses come Saturday;
+Jayden Daniels and Brock Purdy have no injury news. Sunday's check (F) confirms
+the early-game inactives and Williams; Monday's check (G) confirms Daniels and
+Purdy.
+
 ### Team notes (NFL, the owner's; added 2026-10-12)
 
 `team_notes.json` (the notes), `team_notes.py` (how they're applied and
@@ -354,6 +394,20 @@ Midweek so far (Tue-Thu): **engine 4-1, framework 4-1**; they haven't split on a
 graded game yet. Live record since the first logged picks: engine 15-9 since
 2026-10-10 (70%+ picks 8-1, 60-70% 4-5, under 60% 3-3); framework 4-1 since
 2026-10-13 (70%+ 1-1, 60-70% 1-0, under 60% 2-0).
+
+**Friday 2026-10-16 QB check (Friday lock, 1:45 PM Pacific): all three games are
+now no picks (both models, `set_nopick.py`).**
+- Memphis at Tulane (was engine and framework Memphis): QB change, Trace
+  Johnson to start per sources (Fox 8 New Orleans, Oct 16), not confirmed by
+  Tulane; Kadin Semonza started the last 4 and coach Will Hall called the job
+  open (Oct 13). Memphis's Marcus Stokes has no injury news.
+- App State at Coastal Carolina (was engine Coastal Carolina, framework App
+  State): Malachi Singleton (ankle) is a game-time decision (questionable since
+  Oct 13, hurt vs Old Dominion); Henry Hasselbeck starts if he can't. Thursday's
+  check missed the Oct 13 questionable note. Deuce Bailey has no injury news.
+- Washington at Purdue (already a no pick): Demond Williams Jr. (rib) out;
+  Elijah Brown starts (ESPN sources, CBS, Oct 16). Ryan Browne isn't on Purdue's
+  availability report.
 
 ## College Prompt Football framework (built 2026-10-11)
 
