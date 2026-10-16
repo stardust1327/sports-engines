@@ -419,6 +419,9 @@ no picks.** PDF: `report_2026-10-16_cfb-friday.pdf`.
 - Washington: nothing newer than Williams Jr. out.
 - Both models were re-run into a scratch folder without the App State no-pick;
   that re-run gets merged only if Singleton is confirmed before kickoff.
+- 4:40 PM Phoenix, 20 minutes before kickoff: Singleton still a game-time
+  decision (RotoWire, Oct 16) and no starter named, so the re-run wasn't merged.
+  All three Friday games stay no picks.
 
 ## College football Saturday 2026-10-17 (engine and framework)
 
