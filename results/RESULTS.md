@@ -409,6 +409,108 @@ now no picks (both models, `set_nopick.py`).**
   Elijah Brown starts (ESPN sources, CBS, Oct 16). Ryan Browne isn't on Purdue's
   availability report.
 
+## College football Saturday 2026-10-17 (engine and framework)
+
+Run Friday 2026-10-16 afternoon at the owner's request (approved Thursday),
+instead of waiting for Saturday's 6:40 AM check-in. Engine file
+`cfb_2026-10-17_picks.csv` (official), framework file
+`prompt_cfb_2026-10-17_picks.csv`. QB checks use the news through Friday
+afternoon; no-picks were applied to both files with `set_nopick.py`. PDF:
+`report_2026-10-16_cfb-saturday.pdf`.
+
+**For Saturday's 6:40 AM check-in (D):** this slate is already logged. Re-check
+the QBs (above all the no-picks below, several of which may be settled by
+morning) and send any re-run through `/tmp/rerun` and `merge_rerun.py` rather
+than starting over. Thursday's college games were graded Thursday night (engine
+2-1, framework 2-1, in the midweek section); Friday's three games are all no
+picks.
+
+52 games: 35 picks in both models, 17 no picks. The models disagree on 7 (in
+bold). The engine has 14 picks at 70% or more.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework (score) |
+|---|---|---|
+| Cincinnati at West Virginia (9:00 AM) | Cincinnati 51% | Cincinnati 56% (33-31) |
+| Kansas at Kansas State (9:00 AM) | **Kansas 52%** | **Kansas State 63%** (33-27) |
+| Virginia at SMU (9:00 AM) | SMU 75% | SMU 66% (32-25) |
+| Ohio State at Indiana (9:00 AM) | Indiana 51% | Indiana 64% (33-27) |
+| Northwestern at Michigan State (9:00 AM) | Northwestern 71% | Northwestern 85% (38-21) |
+| Florida Atlantic at Army (9:00 AM) | **Army 63%** | **Florida Atlantic 51%** (33-32) |
+| Ball State at Bowling Green (9:00 AM) | **Ball State 50%** | **Bowling Green 66%** (29-23) |
+| Georgia State at James Madison (9:00 AM) | **James Madison 70%** | **Georgia State 56%** (30-27) |
+| Western Michigan at Central Michigan (10:30 AM) | Western Michigan 52% | Western Michigan 59% (28-24) |
+| Auburn at Georgia (12:30 PM) | Georgia 92% | Georgia 88% (37-18) |
+| Missouri at Ole Miss (12:30 PM) | **Ole Miss 55%** | **Missouri 62%** (30-25) |
+| Arizona State at Texas Tech (12:30 PM) | Texas Tech 81% | Texas Tech 61% (28-24) |
+| Georgia Tech at Virginia Tech (12:30 PM) | Virginia Tech 83% | Virginia Tech 85% (37-20) |
+| North Carolina at Duke (12:30 PM) | **North Carolina 58%** | **Duke 66%** (31-25) |
+| Penn State at Michigan (12:30 PM) | Michigan 65% | Michigan 64% (29-24) |
+| Northern Illinois at Wyoming (12:30 PM) | Wyoming 56% | Wyoming 70% (32-23) |
+| Toledo at Eastern Michigan (12:30 PM) | Toledo 67% | Toledo 75% (32-21) |
+| Tulsa at Rice (1:30 PM) | Tulsa 53% | Tulsa 71% (30-21) |
+| Troy at Louisiana (2:00 PM) | Troy 51% | Troy 50% (28-27) |
+| Washington State at Oregon State (3:00 PM) | Oregon State 91% | Oregon State 90% (37-16) |
+| Arkansas at Vanderbilt (4:00 PM) | Vanderbilt 64% | Vanderbilt 69% (31-24) |
+| TCU at Baylor (4:00 PM) | Baylor 64% | Baylor 75% (30-19) |
+| Florida State at Miami (4:00 PM) | Miami 91% | Miami 92% (44-20) |
+| Kent State at South Florida (4:00 PM) | South Florida 86% | South Florida 70% (32-24) |
+| Arkansas State at Southern Miss (4:00 PM) | **Arkansas State 53%** | **Southern Miss 53%** (30-29) |
+| Kentucky at Oklahoma (4:30 PM) | Oklahoma 65% | Oklahoma 56% (25-23) |
+| Notre Dame at BYU (4:30 PM) | Notre Dame 60% | Notre Dame 52% (28-27) |
+| Oklahoma State at Houston (4:30 PM) | Houston 81% | Houston 68% (33-26) |
+| Wisconsin at UCLA (4:30 PM) | UCLA 71% | UCLA 66% (27-21) |
+| Navy at UTSA (5:00 PM) | UTSA 64% | UTSA 67% (33-26) |
+| Louisiana Tech at UL Monroe (5:00 PM) | Louisiana Tech 73% | Louisiana Tech 76% (36-25) |
+| Ohio at Sacramento State (7:00 PM) | Ohio 63% | Ohio 71% (31-22) |
+| Utah at Colorado (7:15 PM) | Utah 78% | Utah 84% (35-18) |
+| Fresno State at San Diego State (7:30 PM) | Fresno State 59% | Fresno State 79% (32-19) |
+| New Mexico at Hawai'i (7:30 PM) | New Mexico 88% | New Mexico 86% (33-15) |
+
+No pick (both):
+- Not enough play-by-play this season for the FCS team: Charleston Southern at
+  Clemson, The Citadel at Texas A&M, Elon at Stanford.
+- Florida at Texas: Aaron Philo (shoulder) status in question, limited in
+  practice all week; Tramell Jones would make his first start.
+- Mississippi State at LSU: Kamario Taylor (foot) questionable, decision not
+  announced; Parker Puckett would start.
+- Pittsburgh at Boston College: Mason Heintschel (torn ACL) out for the season;
+  Holden Geriner makes his 2nd start.
+- Rutgers at Maryland: Dylan Lonergan (head injury Oct 3 vs Indiana) status
+  unconfirmed after the bye; AJ Surace would start.
+- Charlotte at Temple: QB changed last game (Conner Harrell started; Cole
+  Gonzales started the first 5); starter vs Temple not announced.
+- Massachusetts at Buffalo: William Watson III (ankle) questionable, missed last
+  game; Aedan McCarthy started it.
+- Alabama at Tennessee: Faizon Brandon (shoulder) questionable; George MacIntyre
+  named to start a 2nd straight game while Brandon is hurt.
+- UNLV at Air Force: Liam Szarka (leg) out for the season; Kemper Hodges has 1
+  start.
+- Akron at Miami (OH): David McComb (upper body) out for the season (MAC
+  availability report); Caleb Heavner has 2 starts.
+- Nevada at North Dakota State: Carter Jones (undisclosed) questionable (Oct 15).
+- Louisville at Syracuse: starter not named; Amari Odom out, Steve Angeli and
+  Malachi Nelson questionable (ACC report, Oct 15).
+- San José State at UTEP: EJ Colson Jr. (concussion) questionable; Raymond Moore
+  III started the last game.
+- Wake Forest at California: Jaron-Keawe Sagapolutele (concussion) questionable;
+  Jackson Brousseau started the last 2.
+- Nebraska at Oregon: Dante Moore (concussion) out again; Dylan Raiola was
+  benched vs UCLA and Dan Lanning calls it a competition; starter not named.
+
+How the QB rule was applied: a regular starter who is out or questionable for
+any injury means no pick, even when the coach names the replacement (Tennessee,
+Pittsburgh, Air Force, Miami (OH)). A coach's choice with the old starter
+healthy keeps the pick: Utah at Colorado stands, since Deion Sanders named Isaac
+Wilson after benching Julian Lewis at Baylor. Ohio at Sacramento State stands:
+Nick Poulos, the opening-day starter, is back from a concussion, started last
+week and has no injury news. Army, Rice and Navy (low pass attempts) run option
+offenses with the same starters and no injury news. The other flagged teams
+still playing a picked game (Ball State, James Madison, Central Michigan, Tulsa,
+Vanderbilt, Baylor, Southern Miss, UL Monroe, Louisiana Tech, Sacramento State,
+New Mexico) are SPLIT only: the last starter also leads the team in attempts,
+and there's no injury news. Vanderbilt's Jared Curtis starts with Blaze
+Berlowitz (collarbone) out about a month.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
