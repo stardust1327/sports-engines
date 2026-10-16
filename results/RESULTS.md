@@ -409,6 +409,17 @@ now no picks (both models, `set_nopick.py`).**
   Elijah Brown starts (ESPN sources, CBS, Oct 16). Ryan Browne isn't on Purdue's
   availability report.
 
+**Re-checked at the owner's request, 3:50 PM Phoenix: no change, all three stay
+no picks.** PDF: `report_2026-10-16_cfb-friday.pdf`.
+- Tulane: still sources only (Fox 8, 9:01 AM CDT), no word from Tulane. Trace
+  Johnson has 5 pass attempts this season (in relief vs Southern Miss, Sep 26,
+  ESPN box scores), so even a confirmed start is a first start with very little
+  playing time (METHOD.md section 6). Reason updated in both files to say so.
+- App State: Singleton still a game-time decision (RotoWire, Oct 16).
+- Washington: nothing newer than Williams Jr. out.
+- Both models were re-run into a scratch folder without the App State no-pick;
+  that re-run gets merged only if Singleton is confirmed before kickoff.
+
 ## College football Saturday 2026-10-17 (engine and framework)
 
 Run Friday 2026-10-16 afternoon at the owner's request (approved Thursday),
