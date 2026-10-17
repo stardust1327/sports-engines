@@ -591,6 +591,30 @@ at James Madison (JMU 70% / Georgia State 55%), Missouri at Ole Miss (Ole Miss
 Louisiana (Troy 52% / Louisiana 51%), Arkansas State at Southern Miss (Arkansas
 State 52% / Southern Miss 53%).
 
+**Saturday 11:50 AM check-in (E), 2026-10-17: QB news for the 35 games from
+12:30 PM Phoenix on.** No pick changed: still **33 picks, 19 no picks** (both
+models carry the same no-picks). Two reasons updated with `set_nopick.py`:
+- Alabama at Tennessee (still no pick): Faizon Brandon is off the SEC report
+  and "ready to go," but he first threw in practice Tuesday since the shoulder
+  injury, and Heupel said last week he was there "for emergency use only";
+  George MacIntyre starts ("this is George's football game," Heupel, Knox
+  News, Oct 17). The regular starter isn't back as the starter for an injury
+  reason, so it stays a no pick under the rule. (A re-run without the no-pick
+  was made in `/tmp/rerun` while this was checked; it was not merged.)
+- Nebraska at Oregon (still no pick): Dante Moore (concussion) out; Brock
+  Thomas expected to start (Pete Thamel, College GameDay, Oct 17), not
+  announced by Oregon.
+- Still unsettled at this check (no picks stand): Nevada (Carter Jones
+  questionable, "warmups will be more telling," Rotowire Oct 17), UTEP (EJ
+  Colson Jr. questionable, no update), California (Sagapolutele, no
+  confirmation found), San Diego State (no starter named).
+- Picked games checked with no QB news: final or game-day reports for Penn
+  State-Michigan, Missouri-Ole Miss (Austin Simmons cleared), North
+  Carolina-Duke, Georgia Tech-Virginia Tech, Arizona State-Texas Tech,
+  Florida State-Miami, Kentucky-Oklahoma; previews and news for the rest (the
+  MAC, Sun Belt, C-USA, Mountain West and independents post no league
+  reports).
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
