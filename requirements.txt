@@ -4,3 +4,4 @@ pyarrow>=14
 scipy>=1.11
 scikit-learn>=1.4
 reportlab>=4.0
+streamlit>=1.40  # parlay builder dashboard (app.py)
