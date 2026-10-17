@@ -317,6 +317,15 @@ new read and starts the clock over).
 | Rams | Unreliable, -3 points | 2026-10-12 9:14 PM Phoenix | 2026-11-02 9:14 PM Phoenix | 0 | First noted game: Week 6, Cardinals at Rams |
 | Bills | Max effort, +1.5 points | 2026-10-12 9:33 PM Phoenix | 2026-11-02 9:33 PM Phoenix | 0 | First noted game: Week 6, Bills at Raiders |
 
+**Both notes cleared Saturday 2026-10-17, 1:05 AM Phoenix, at the owner's word**
+("Can we remove the Bills and Rams owner note. I decided I don't like it"), before
+any noted game kicked off, so neither note was ever graded. Week 6 official picks
+are now the model-alone numbers; no pick changes: Cardinals at Rams, engine
+**Rams 75.0%**, framework **Rams 75.0%** (was 67.2% / 67.1% with the note); Bills
+at Raiders, engine **Bills 67.8%**, framework **Bills 59.7%** (was 71.8% / 64.3%).
+No team notes are in force. PDF: `report_2026-10-17_nfl-week6-picks.pdf`
+(re-made).
+
 Week 5's Monday game (Bills 37, Rams 34) was the only Week 5 game where both
 models picked the same team and lost (the Commanders-Giants tie aside). The
 owner expected the Rams to lose, but the note was set after kickoff, so it
