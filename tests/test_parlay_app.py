@@ -12,10 +12,10 @@ from pathlib import Path
 import pytest
 from streamlit.testing.v1 import AppTest
 
-import app as A
 from parlay_app import parlays as P
 from parlay_app import slates as S
-from tests.conftest import make_results
+from parlay_app import ui as A
+from tests.conftest import make_results, nfl_p_home
 
 ROOT = Path(__file__).resolve().parents[1]
 NOW = dt.datetime(2026, 10, 16, 12, 0, tzinfo=dt.timezone.utc)
@@ -74,8 +74,9 @@ def test_graded_slates_report_results_for_the_official_pick(results):
 def test_nfl_official_picks_have_the_owners_team_notes_applied(results):
     slate = next(s for s in S.discover_slates() if s.sport == "nfl")
     rams = S.load_games(slate)[0]
-    assert (rams.model_pick, rams.model_prob) == ("Rams", 0.75)
-    assert rams.pick == "Rams" and rams.win_prob < 0.75  # docked 3 points on the engine's own scale
+    assert (rams.model_pick, rams.model_prob) == ("Rams", nfl_p_home("21"))
+    assert rams.pick == "Rams" and rams.win_prob < rams.model_prob  # docked 3 points on the engine's own scale
+    assert rams.note_pts_home == -3.0
     assert "Rams" in rams.note and "unreliable" in rams.note.lower()
     bills = S.load_games(slate)[1]
     assert (bills.pick, bills.win_prob, bills.note) == (bills.model_pick, bills.model_prob, "")
@@ -85,7 +86,7 @@ def test_nfl_without_a_notes_file_uses_the_model_alone(tmp_path, monkeypatch):
     directory = make_results(tmp_path / "results", notes=False)
     monkeypatch.setenv("SPORTS_RESULTS_DIR", str(directory))
     rams = S.load_games(next(s for s in S.discover_slates() if s.sport == "nfl"))[0]
-    assert (rams.pick, rams.win_prob, rams.note) == ("Rams", 0.75, "")
+    assert (rams.pick, rams.win_prob, rams.note, rams.note_pts_home) == ("Rams", nfl_p_home("21"), "", 0.0)
 
 
 def test_tiers_match_the_engines_groups():
@@ -179,8 +180,9 @@ def _run_app() -> AppTest:
 def test_game_rows_show_the_model_alone_beside_a_noted_pick(results):
     games = S.load_games(next(s for s in S.discover_slates() if s.sport == "nfl"))
     rows = A.game_rows(games)
-    assert [r["Pick"] for r in rows] == ["Rams", "Bills"]  # the no-pick is listed separately
-    assert "model alone: Rams 75.0%" in rows[0]["Note"] and rows[1]["Note"] == ""
+    assert [r["Pick"] for r in rows] == ["Rams", "Bills", "Texans"]  # the no-pick is listed separately
+    assert "model alone: Rams 74.1%" in rows[0]["Note"] and rows[1]["Note"] == ""
+    assert "model alone: Jaguars 51.5%" in rows[2]["Note"]  # the Texans note flips this one
 
 
 def test_app_renders_every_tab(results):

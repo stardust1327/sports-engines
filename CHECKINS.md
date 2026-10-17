@@ -106,6 +106,14 @@ NFL engine (official), all game dates of a week (Eastern dates from `whats_next.
 python3 nfl_cfbmethod/run.py --date 2026-10-15 --date 2026-10-18 --date 2026-10-19 \
     [--nopick "Ravens=Lamar Jackson (ankle) ruled out; Tyler Huntley starts"] [--out /tmp/rerun]
 ```
+Dashboard ratings for the NFL engine page (after any engine run or `merge_rerun.py` that changes a week's
+engine picks file; it rebuilds the team ratings behind the logged picks with the engine's own code, reusing its
+cache, and changes no pick):
+```
+python3 nfl_ui/ratings.py --season 2026 --week 6
+```
+It saves `results/nfl_cfbmethod_<season>_week<NN>_ratings.csv`; commit it with the picks. If it reports a logged
+game it couldn't reproduce, say so in the message and carry on (the dashboard falls back for that game).
 NFL framework (needs the engine's `_qbs.csv` from the same run):
 ```
 python3 prompt_football/nfl.py --season 2026 --week 6 --raw prompt_football/cache \
@@ -148,7 +156,8 @@ the printouts before sending it.
    framework; do the QB check; re-run both with the no-picks (the first run of the
    week writes to `results/`; once picks are logged, re-runs go through
    `/tmp/rerun` and `merge_rerun.py`). Statuses aren't out yet on Tuesday: a QB
-   with an injury still in doubt is a no-pick for now.
+   with an injury still in doubt is a no-pick for now. Then `nfl_ui/ratings.py`
+   for the week (dashboard ratings).
 4. College games Tue-Fri this week, if any: both models, same QB check.
 5. Update `results/RESULTS.md`: Week W results for both models (official record
    (ties, the closing-line line from `grade.py`), Week W+1 picks table (engine
@@ -167,8 +176,8 @@ the printouts before sending it.
    5:15 PM kickoff). Check both starting QBs.
 3. College games today: QB check for both teams in every game.
 4. Apply changes: `set_nopick.py` for new no-picks; re-run both models into
-   `/tmp/rerun` and merge for picks that come back. Change nothing if nothing
-   changed.
+   `/tmp/rerun` and merge for picks that come back (then `nfl_ui/ratings.py` for
+   an NFL merge). Change nothing if nothing changed.
 5. If anything changed: update `RESULTS.md`, re-make the PDF for the affected
    slate, commit and push, send the PDF and what changed. If nothing changed: a
    one-line message ("QBs confirmed for ...; no changes").
@@ -181,7 +190,8 @@ the printouts before sending it.
    Saturday: use the latest news and leave the final word to check-in G.
 3. Refresh both NFL models with the current no-picks: engine for the week's
    remaining dates, framework with `--refresh`, both into `/tmp/rerun`, then
-   `merge_rerun.py` for each file. Report any pick that changed and why.
+   `merge_rerun.py` for each file, then `nfl_ui/ratings.py` for the week. Report
+   any pick that changed and why.
 4. College games today (Friday): QB check.
 5. Update `RESULTS.md` (mark the week's picks "locked Friday", list changes).
    PDF: `--nfl-picks S:W` (plus today's college dates if any changed). Commit,

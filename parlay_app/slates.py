@@ -59,6 +59,7 @@ class Game:
     note: str  # team notes in force for this game, if any
     away_score: int | None
     home_score: int | None
+    note_pts_home: float = 0.0  # points the team notes put on the home team's margin (its note minus the away team's)
 
     @property
     def leg_id(self) -> str:
@@ -154,7 +155,7 @@ def _scores(slate: Slate) -> dict[str, tuple[int | None, int | None]]:
     return scores
 
 
-def _team_notes_module(directory: Path):
+def team_notes_module(directory: Path):
     """results/team_notes.py, imported from its file (it lives next to the picks, not in a package)."""
     path = directory / "team_notes.py"
     if not path.exists():
@@ -166,13 +167,13 @@ def _team_notes_module(directory: Path):
 
 
 def _noted_nfl_picks(slate: Slate, directory: Path) -> dict[str, dict[str, object]] | None:
-    """{game_id: {pick, prob, note}} with the owner's team notes applied, or None when there are no notes."""
+    """{game_id: {pick, prob, note, pts}} with the owner's team notes applied, or None when there are no notes."""
     notes_path = directory / "team_notes.json"
     if not notes_path.exists():
         return None
     import pandas as pd
 
-    team_notes = _team_notes_module(directory)
+    team_notes = team_notes_module(directory)
     noted = team_notes.apply(
         pd.read_csv(slate.picks_path, dtype={"game_id": str}), "engine", team_notes.load(notes_path)
     )
@@ -180,7 +181,12 @@ def _noted_nfl_picks(slate: Slate, directory: Path) -> dict[str, dict[str, objec
     for row in noted.to_dict("records"):
         pick = row["pick_noted"] if isinstance(row["pick_noted"], str) else None
         prob = None if pick is None else float(row["pick_prob_noted"])
-        out[str(row["game_id"])] = {"pick": pick, "prob": prob, "note": row["note_text"] or ""}
+        out[str(row["game_id"])] = {
+            "pick": pick,
+            "prob": prob,
+            "note": row["note_text"] or "",
+            "pts": float(row["note_pts_home"]),
+        }
     return out
 
 
@@ -196,9 +202,9 @@ def load_games(slate: Slate, directory: Path | None = None) -> list[Game]:
         status = (row.get("status") or "").strip().upper()
         model_pick = (row.get("pick") or None) if status == "PICK" else None
         model_prob = _float(row.get("pick_prob")) if model_pick else None
-        pick, prob, note = model_pick, model_prob, ""
+        pick, prob, note, pts = model_pick, model_prob, "", 0.0
         if noted is not None and game_id in noted:
-            note = str(noted[game_id]["note"])
+            note, pts = str(noted[game_id]["note"]), float(noted[game_id]["pts"])
             if status == "PICK" and noted[game_id]["pick"] is not None:
                 pick, prob = noted[game_id]["pick"], noted[game_id]["prob"]
         away_score, home_score = scores.get(game_id, (None, None))
@@ -220,6 +226,7 @@ def load_games(slate: Slate, directory: Path | None = None) -> list[Game]:
                 note=note,
                 away_score=away_score,
                 home_score=home_score,
+                note_pts_home=pts,
             )
         )
     return sorted(games, key=lambda g: (g.kickoff_utc, g.game_id))
