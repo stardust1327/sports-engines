@@ -29,6 +29,18 @@
       "kind": "max_effort",
       "points": 1.5,
       "owner_said": "The Bills need to be slightly boosted for maximum effort"
+    },
+    {
+      "set_at": "2026-10-17T08:05Z",
+      "action": "clear",
+      "team": "Bills",
+      "owner_said": "Can we remove the Bills and Rams owner note. I decided I don't like it"
+    },
+    {
+      "set_at": "2026-10-17T08:05Z",
+      "action": "clear",
+      "team": "Rams",
+      "owner_said": "Can we remove the Bills and Rams owner note. I decided I don't like it"
     }
   ]
 }

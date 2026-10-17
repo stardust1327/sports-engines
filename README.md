@@ -34,7 +34,8 @@ starting QB who is out or unconfirmed, gets a no-pick with the reason.
   `results/compare_cfb_engine_vs_framework.py` compares it with the engine on
   the same games
 - `results/team_notes.json` and `results/team_notes.py`: the owner's NFL team
-  notes (added 2026-10-12). From watching the games, the owner marks a team
+  notes (added 2026-10-12, **turned off by the owner 2026-10-17**; kept as a
+  record, applied nowhere). From watching the games, the owner marks a team
   unreliable (docked points on its predicted margin in both NFL models) or max
   effort (slightly boosted); official picks include the note, the model-alone
   numbers stay beside it, and every noted game is graded
@@ -72,9 +73,6 @@ python3 prompt_football/cfb.py --date 2026-10-17 --nopick "Oregon=starting QB ru
 # NFL: grade a week after it's played, with the closing-line check (scorecard only)
 python3 nfl_cfbmethod/grade.py --season 2026 --week 5
 
-# NFL team notes: the week's picks with the notes applied, then grade them after the games
-python3 results/team_notes.py show --season 2026 --week 6
-python3 results/team_notes.py grade --season 2026 --week 6
 ```
 
 Each run prints the picks grouped by confidence, the backtest record, this
