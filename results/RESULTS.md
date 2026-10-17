@@ -540,6 +540,57 @@ New Mexico) are SPLIT only: the last starter also leads the team in attempts,
 and there's no injury news. Vanderbilt's Jared Curtis starts with Blaze
 Berlowitz (collarbone) out about a month.
 
+**Saturday 6:40 AM check-in (D), 2026-10-17: QBs re-checked, both models
+re-run into `/tmp/rerun` and merged (`merge_rerun.py`).** News through
+Saturday morning (Friday-night SEC/Big Ten/ACC/Big 12 availability reports where
+found). PDF: `report_2026-10-17_cfb-saturday-run.pdf` (midweek graded + today's
+picks). Now **33 picks, 19 no picks; the models disagree on 7.**
+
+Midweek graded (Friday's three games graded this morning, all no picks: Tulane
+31-17 over Memphis, App State 35-32 at Coastal Carolina, Washington 38-26 at
+Purdue). **Midweek Tue-Fri final: engine 4-1, framework 4-1.**
+
+Changes:
+- **Pick back: Rutgers at Maryland** (engine Maryland 78%, framework Maryland
+  67%). Greg Schiano: Dylan Lonergan is "full go and he'll be the starter"
+  (NJ.com, Oct 13). Lonergan is Rutgers' regular starter (season leader), so the
+  pick stands; framework re-run with `--starter "Rutgers=Dylan Lonergan"`. The
+  Friday Big Ten availability report itself wasn't found.
+- **New no pick: Wisconsin at UCLA** (was UCLA in both): Nico Iamaleava
+  (season-ending injury, Oct 12) out; Ty Dieffenbach makes his first start
+  (3 of 6 passing in relief vs Oregon). Friday's check missed this.
+- **New no pick: Washington State at Oregon State** (was Oregon State in both):
+  Caden Pinnick benched; redshirt freshman Owen Eshelman makes his first career
+  start (Spokesman-Review, Oct 16) with no plays in this season's play-by-play
+  (METHOD.md section 6).
+- **New no pick: Fresno State at San Diego State** (was Fresno State in both):
+  SDSU starter not named; Jayden Denegal benched Oct 10, coach Sean Lewis says
+  "everything's on the table" (East Village Times, Oct 17).
+- Small number moves from the re-run's fresh data: engine Ball State at Bowling
+  Green now Bowling Green 51% (was Ball State 50%), so the models now agree;
+  framework Troy at Louisiana now Louisiana 51% (was Troy 50%), now a split.
+- Reasons updated (still no picks): Florida (Philo questionable on Friday
+  night's SEC report, game-time decision), Mississippi State (Taylor
+  downgraded to doubtful), Massachusetts (Watson ruled out, McCarthy also out,
+  Logan Inagawa first career start), Alabama at Tennessee (Brandon off the
+  report but MacIntyre starts per ESPN sources, not confirmed by Heupel),
+  Louisville at Syracuse (Angeli, Achilles, not starting; Nelson starts),
+  Charlotte (still not announced), Nevada and San José State at UTEP
+  (questionable, no update), Wake Forest at California (Sagapolutele probable,
+  not confirmed), Nebraska at Oregon (Moore out, starter not named).
+- Every other picked team: no QB injury or change news found (checks at
+  Friday's/Thursday's availability reports or game previews; the MAC, Sun Belt,
+  C-USA, Mountain West and independents don't post league reports).
+- For check-in E: Wake Forest at California (Sagapolutele probable), Charlotte,
+  Nevada, UTEP, SDSU and Oregon starters could settle before kickoff.
+
+Splits (engine official vs framework): Kansas at Kansas State (Kansas 51% /
+Kansas State 64%), Florida Atlantic at Army (Army 63% / FAU 52%), Georgia State
+at James Madison (JMU 70% / Georgia State 55%), Missouri at Ole Miss (Ole Miss
+54% / Missouri 62%), North Carolina at Duke (UNC 57% / Duke 66%), Troy at
+Louisiana (Troy 52% / Louisiana 51%), Arkansas State at Southern Miss (Arkansas
+State 52% / Southern Miss 53%).
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
