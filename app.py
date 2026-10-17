@@ -2,8 +2,8 @@
 
     streamlit run app.py
 
-Read-only. Both pages read the picks the engines save in results/ (or SPORTS_RESULTS_DIR), never change a pick, a rule
-or a team note, and never use a betting line (CLAUDE.md rules 1-6). The engines themselves (cfb/, nfl_cfbmethod/) are
+Read-only. Both pages read the picks the engines save in results/ (or SPORTS_RESULTS_DIR), never change a pick or a rule,
+never apply the team notes the owner turned off, and never use a betting line (CLAUDE.md rules 1-6). The engines themselves (cfb/, nfl_cfbmethod/) are
 not run or imported here.
 """
 

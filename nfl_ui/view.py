@@ -1,7 +1,8 @@
-"""NFL engine page: who the engine picks each week and why, the QB check, results and the owner's team notes.
+"""NFL engine page: who the engine picks each week and why, the QB check and the results.
 
 Read-only (nfl_ui/week.py): it shows the files the engine and the check-ins save in results/ and never runs the engine,
-changes a pick, a setting or a team note, or uses a betting line as an input (CLAUDE.md rules 1-6). The closing-line
+changes a pick or a setting, applies the team notes the owner turned off, or uses a betting line as an input
+(CLAUDE.md rules 1-6). The closing-line
 check on the Track record tab is grading only, after the games, as nfl_cfbmethod/grade.py does it.
 """
 
@@ -92,7 +93,7 @@ def where(wg: W.WeekGame) -> str:
 
 
 def edge_line(why: Y.Why, g: S.Game) -> str:
-    """The engine's edge in points, and what the owner's team note did to it."""
+    """The engine's edge in points (and what a team note did to it, if notes are ever turned back on)."""
     line = f"Engine edge: **{why.pick} by {why.total_points:.1f} points**"
     if not g.note:
         return line
@@ -197,7 +198,7 @@ def _model_result(g: S.Game) -> str:
 
 
 def record_rows(graded: list[tuple[int, int, S.Game]]) -> list[dict[str, Any]]:
-    """Official record by week and tier, with the model alone beside it."""
+    """Official record by week and tier (with the model alone beside it if team notes are ever turned back on)."""
     by_week: dict[tuple[int, int], list[S.Game]] = defaultdict(list)
     for season, week, g in graded:
         by_week[(season, week)].append(g)
@@ -208,7 +209,8 @@ def record_rows(graded: list[tuple[int, int, S.Game]]) -> list[dict[str, Any]]:
         for name, low, rng in TIERS:
             high = min((lo for _, lo, _ in TIERS if lo > low), default=1.01)
             row[f"{name} ({rng})"] = record([g.result for g in games if low <= g.win_prob < high])
-        row["Model alone"] = record([_model_result(g) for g in games])
+        if S.TEAM_NOTES_ON:  # official and model-alone picks only differ with notes on (off since 2026-10-17)
+            row["Model alone"] = record([_model_result(g) for g in games])
         rows.append(row)
     return rows
 
@@ -348,7 +350,7 @@ def _qb_tab(st: Any, week: W.Week) -> None:
 
 def _record_tab(st: Any, slates: list[S.Slate]) -> None:
     graded = graded_games(slates)
-    st.markdown("**This season: official picks (with your team notes)**")
+    st.markdown("**This season: official picks**")
     if graded:
         st.dataframe(record_rows(graded), hide_index=True, width="stretch")
     else:
@@ -368,80 +370,13 @@ def _record_tab(st: Any, slates: list[S.Slate]) -> None:
         )
         st.caption(
             "Closing lines are read only here, after the games, as nfl_cfbmethod/grade.py does; they never go into a "
-            "pick. Graded on the model alone, without team notes."
+            "pick."
         )
     else:
         st.caption("No graded weeks in nfl_scorecard.csv yet.")
     st.markdown("**Backtest, 2019-2025 (1,522 games, weeks 4-18)**")
     st.dataframe(BACKTEST, hide_index=True)
     st.caption("From METHOD.md. The closing line was still more accurate (Brier 0.2087 vs 0.2264).")
-
-
-def _notes_tab(st: Any, now: dt.datetime) -> None:
-    directory = S.results_dir()
-    path = directory / "team_notes.json"
-    if not path.exists():
-        st.info("No team notes saved.")
-        return
-    tn = S.team_notes_module(directory)
-    notes = tn.load(str(path))
-    st.caption(
-        "Your notes, from watching the games. They move a team's predicted margin in the official picks (the model-alone "
-        "numbers stay beside them) and are graded on every pick involving the team. Only you add, renew or clear one."
-    )
-    live = tn.current(notes, now)
-    st.markdown("**In force now**")
-    if live:
-        st.dataframe(
-            [
-                {
-                    "Team": e["team"],
-                    "Note": tn.note_text(notes, e, team=False),
-                    "Set": tn.phx(e["_t"]),
-                    "Runs out": tn.phx(tn.expires_at(notes, e)) if tn.expires_at(notes, e) else "",
-                }
-                for e in live
-            ],
-            hide_index=True,
-            width="stretch",
-        )
-    else:
-        st.caption("None.")
-    st.markdown("**Scorecard (engine)**")
-    rows = [r for r in tn.scorecard(str(directory), notes) if r["model"] == "engine"]
-    shown = [
-        {
-            "Team": r["team"],
-            "Note": r["label"],
-            "Status": r["state"],
-            "Games": r["s"]["games"],
-            "Team record": r["s"]["record"],
-            "Wins vs model alone": f"{r['s']['wins_vs']:+.1f} (luck ±{r['s']['luck_wins']:.1f})",
-            "Points per game vs model alone": f"{r['s']['pts_vs']:+.1f} (luck ±{r['s']['luck_pts']:.1f})",
-            "Verdict": r["s"]["status"],
-        }
-        for r in rows
-        if r["s"]
-    ]
-    if shown:
-        st.dataframe(shown, hide_index=True, width="stretch")
-    else:
-        st.caption("No graded games with a noted team yet.")
-    st.markdown("**Every read you've given**")
-    st.dataframe(
-        [
-            {
-                "When": tn.phx(e["_t"]),
-                "Team": e["team"],
-                "Action": e["action"],
-                "Note": tn.note_text(notes, e, team=False) if e["action"] == "set" else "",
-                "Your words": e.get("owner_said", ""),
-            }
-            for e in reversed(notes["events"])
-        ],
-        hide_index=True,
-        width="stretch",
-    )
 
 
 HOW_IT_WORKS = """
@@ -459,7 +394,8 @@ defense allows, minus the reverse) and home field (none at a neutral site). A lo
 week-by-week replay since 2019 turns them into a win chance. The pick is the team at 50% or more.
 
 **Points:** the reasons on each pick are the same numbers in points, on the engine's own scale (7.8 points per unit of
-log-odds, the one your team notes use), so they add up to the engine's edge.
+log-odds, the slope of the final margin on the engine's log-odds over its 2019-2025 backtest), so they add up to
+the engine's edge.
 
 **No pick:** a team with fewer than 150 plays this season, or a starting QB who is out or not confirmed. The reason is
 always saved.
@@ -483,8 +419,8 @@ def render() -> None:
     slate = slates[labels.index(picked)]
     week = W.load_week(slate)
     f = Y.formula([wg.numbers for wg in week.games if wg.numbers is not None])
-    picks_tab, ratings_tab, qb_tab, record_tab, notes_tab, how_tab = st.tabs(
-        ["Picks", "Team ratings", "QB check", "Track record", "Team notes", "How it works"]
+    picks_tab, ratings_tab, qb_tab, record_tab, how_tab = st.tabs(
+        ["Picks", "Team ratings", "QB check", "Track record", "How it works"]
     )
     with picks_tab:
         _picks_tab(st, week, f, now)
@@ -494,7 +430,5 @@ def render() -> None:
         _qb_tab(st, week)
     with record_tab:
         _record_tab(st, slates)
-    with notes_tab:
-        _notes_tab(st, now)
     with how_tab:
         st.markdown(HOW_IT_WORKS)

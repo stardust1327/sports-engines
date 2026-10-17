@@ -95,17 +95,16 @@ def test_points_use_the_scale_the_team_notes_use():
     assert Y.points(0.5) == 0.0 and Y.points(0.75) == pytest.approx(7.8 * math.log(3))
 
 
-def test_reasons_add_up_to_the_logged_edge_and_the_note(results):
+def test_reasons_add_up_to_the_logged_edge(results):
     week = _week()
     f = _formula(week)
     rams = Y.explain(_game(week, "21"), f, week.rating_sets[0].teams)
     assert (rams.pick, rams.opponent, rams.pick_is_home, rams.detailed) == ("Rams", "Cardinals", True, True)
     assert rams.model_points == pytest.approx(Y.points(nfl_p_home("21")))
-    assert rams.note_points == -3.0 and rams.total_points == pytest.approx(rams.model_points - 3.0)
+    assert rams.note_points == 0.0 and rams.total_points == rams.model_points  # team notes are off (rule 6)
     assert sum(r.points for r in rams.reasons) == pytest.approx(rams.total_points)
-    assert [r.label for r in rams.helping_opponent] == ["Your team note"]
     labels = {r.label for r in rams.reasons}
-    assert {"Rams offense", "Rams defense", "Cardinals offense", "Cardinals defense", "Rams home field"} <= labels
+    assert labels == {"Rams offense", "Rams defense", "Cardinals offense", "Cardinals defense", "Rams home field"}
     bills = Y.explain(_game(week, "22"), f, week.rating_sets[0].teams)  # the away pick: signs flip
     assert (bills.pick, bills.pick_is_home) == ("Bills", False)
     assert bills.model_points == pytest.approx(-Y.points(nfl_p_home("22")))
@@ -114,30 +113,40 @@ def test_reasons_add_up_to_the_logged_edge_and_the_note(results):
     assert home.points == pytest.approx(-7.8 * NFL_FORMULA[2])  # home field helps the opponent
     offense = next(r for r in bills.reasons if r.label == "Bills offense")
     assert offense.detail.startswith("1st of 8 in expected points per play")
+    assert V.edge_line(rams, _game(week, "21").game) == f"Engine edge: **Rams by {rams.model_points:.1f} points**"
+
+
+def test_switched_off_team_notes_still_add_up_if_turned_back_on(results, monkeypatch):
+    monkeypatch.setattr(S, "TEAM_NOTES_ON", True)
+    week = _week()
+    f, teams = _formula(week), week.rating_sets[0].teams
+    rams = Y.explain(_game(week, "21"), f, teams)
+    assert rams.note_points == -3.0 and rams.total_points == pytest.approx(rams.model_points - 3.0)
+    assert sum(r.points for r in rams.reasons) == pytest.approx(rams.total_points)
+    assert [r.label for r in rams.helping_opponent] == ["Your team note"]
+    wg = _game(week, "24")
+    flipped = Y.explain(wg, f, teams)
+    assert (flipped.pick, wg.game.model_pick) == ("Texans", "Jaguars")  # the Texans' max-effort note flips it
+    assert flipped.model_points < 0 < flipped.total_points and flipped.note_points == 1.5
+    line = V.edge_line(flipped, wg.game)
+    assert f"Texans by {flipped.total_points:.1f} points" in line and "flips the pick" in line and "Jaguars" in line
 
 
 def test_without_team_ratings_the_edge_splits_into_the_three_logged_numbers(results):
     week = _week()
     why = Y.explain(_game(week, "21"), _formula(week), {})
     assert not why.detailed
-    assert {r.label for r in why.reasons} == {
-        "Expected points per play",
-        "Success rate",
-        "Rams home field",
-        "Your team note",
-    }
+    assert {r.label for r in why.reasons} == {"Expected points per play", "Success rate", "Rams home field"}
     assert sum(r.points for r in why.reasons) == pytest.approx(why.total_points)
 
 
-def test_a_neutral_site_has_no_home_field_and_a_note_can_flip_the_pick(results):
+def test_a_neutral_site_has_no_home_field(results):
     week = _week()
     wg = _game(week, "24")
     why = Y.explain(wg, _formula(week), week.rating_sets[0].teams)
     assert not any("home field" in r.label for r in why.reasons)
-    assert (why.pick, wg.game.model_pick) == ("Texans", "Jaguars")  # the Texans' max-effort note flips it
-    assert why.model_points < 0 < why.total_points and why.note_points == 1.5
-    line = V.edge_line(why, wg.game)
-    assert f"Texans by {why.total_points:.1f} points" in line and "flips the pick" in line and "Jaguars" in line
+    assert (why.pick, wg.game.model_pick, wg.game.note) == ("Jaguars", "Jaguars", "")  # no note flips it: notes are off
+    assert sum(r.points for r in why.reasons) == pytest.approx(why.model_points)
 
 
 def test_no_pick_gets_no_reasons(results):
@@ -173,8 +182,7 @@ def test_text_pieces(results):
     rams = _game(week, "21")
     assert [V.tier(p) for p in (0.70, 0.6999, 0.5)] == ["Strongest (70%+)", "Lean (60-70%)", "Coin flip (under 60%)"]
     assert V.kickoff(rams.game.kickoff_utc) == "Sun Oct 4, 10:00 AM"  # Phoenix time
-    noted = 1 / (1 + math.exp(-(Y.logit(nfl_p_home("21")) - 3.0 / 7.8)))  # docked 3 points by the Rams note
-    assert V.headline(rams) == f"**Rams** over Cardinals · **{100 * noted:.1f}%** · Lean (60-70%)"
+    assert V.headline(rams) == f"**Rams** over Cardinals · **{100 * nfl_p_home('21'):.1f}%** · Strongest (70%+)"
     assert "neutral site" in V.where(_game(week, "24")) and "Estadio Azteca" in V.where(_game(week, "24"))
     assert V.qb_line(_game(week, "23"), week.qbs) == (
         "QBs (last starters) · Ravens: Tyler Huntley (1 of 2 starts) · :orange[CHANGE SPLIT] · "
@@ -182,7 +190,7 @@ def test_text_pieces(results):
     )
     rows = V.qb_rows(week)
     assert rows[0]["Team"] == "Ravens" and rows[0]["Engine"] == "No pick: Starting QB unconfirmed"  # flagged first
-    assert next(r for r in rows if r["Team"] == "Rams")["Engine"] == f"Pick: Rams {100 * noted:.1f}%"
+    assert next(r for r in rows if r["Team"] == "Rams")["Engine"] == f"Pick: Rams {100 * nfl_p_home('21'):.1f}%"
     assert V.record(["W", "L", "W", ""]) == "2-1" and V.record(["W", "T"]) == "1-0-1" and V.record([]) == ""
 
 
@@ -221,7 +229,7 @@ def test_record_rows_by_week_and_tier(results):
     ]
     rows = V.record_rows(graded)
     assert rows[0]["Week"] == "2099 Week 2" and rows[-1]["Week"] == "Season so far"
-    assert rows[-1]["Official"] == "2-1" and rows[-1]["Model alone"] == "2-1"
+    assert rows[-1]["Official"] == "2-1" and "Model alone" not in rows[-1]  # the same picks while notes are off
     assert [rows[-1][t] for t in ("Strongest (70%+)", "Lean (60-70%)", "Coin flip (under 60%)")] == [
         "1-0",
         "1-0",
@@ -261,15 +269,15 @@ def _nfl_page() -> AppTest:
 def test_nfl_page_renders_every_tab(results):
     at = _nfl_page()
     assert at.title[0].value == "NFL engine"
-    assert [t.label for t in at.tabs] == ["Picks", "Team ratings", "QB check", "Track record", "Team notes", "How it works"]  # fmt: skip
+    assert [t.label for t in at.tabs] == ["Picks", "Team ratings", "QB check", "Track record", "How it works"]
     assert at.selectbox[0].value == "NFL · 2099 Week 3"
     md = [m.value for m in at.markdown]
-    heads = [m.split("**")[1] for m in md if m.startswith("**") and " over " in m]
-    assert heads == ["Rams", "Bills", "Texans"]  # still to play, in kickoff order
+    heads = [m.split("**")[1] for m in md if m.startswith("**") and " over " in m and " · **" in m]  # pick headlines
+    assert heads == ["Rams", "Bills", "Jaguars"]  # still to play, in kickoff order; no team note moves a pick
     assert any(m.startswith("**Helping the Rams**") for m in md) and "**No pick:** Ravens at Steelers" in md
-    assert any("flips the pick" in m for m in md)
+    assert not any("team note" in m.lower() for m in md)
     assert not any("Team-by-team ratings" in c.value for c in at.caption)  # every pick explained by unit
-    assert len(at.dataframe) >= 3  # team ratings, QB check, notes
+    assert len(at.dataframe) >= 3  # team ratings, QB check, backtest
 
 
 def test_nfl_page_without_ratings_or_picks(results, tmp_path, monkeypatch):

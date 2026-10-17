@@ -6,8 +6,8 @@ The engine's win chance is a logistic regression with no intercept on three numb
 
 The fitted a, b and c aren't saved, but every logged game satisfies this equation, so they are recovered exactly from
 the week's picks file by least squares (a file merged from two runs fits to within a hair). Log-odds become points on
-the engine's own scale, the one the owner's team notes use: results/team_notes.py ENGINE_PTS_PER_LOGIT (7.8 points per
-unit, the slope of the final margin on the engine's log-odds over its 2019-2025 backtest).
+the engine's own scale: results/team_notes.py ENGINE_PTS_PER_LOGIT (7.8 points per unit, the slope of the final margin
+on the engine's log-odds over its 2019-2025 backtest).
 
 With the team ratings behind the week (nfl_ui/ratings.py), each game's edge splits further into the four units that
 make it up, since net_epa = (home offense + away defense) - (away offense + home defense), and the same for success
@@ -82,7 +82,7 @@ class Why:
     opponent: str
     pick_is_home: bool
     model_points: float  # the engine alone, from the pick's side (negative if the model alone favors the opponent)
-    note_points: float  # the owner's team notes, from the pick's side
+    note_points: float  # the owner's team notes, from the pick's side (0 while they're off, since 2026-10-17)
     reasons: tuple[Reason, ...]  # biggest first, the team note included; they add up to total_points
     detailed: bool  # split by unit from the team ratings, or only into the three logged edges
 

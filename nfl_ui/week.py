@@ -1,8 +1,8 @@
 """One NFL week as the NFL engine page shows it, read from the files the engine and the check-ins save in results/.
 
 - the engine's logged picks (nfl_cfbmethod_<season>_week<NN>_picks.csv) with its own numbers for each game, and the
-  official picks with the owner's team notes applied by results/team_notes.py (through parlay_app.slates; CLAUDE.md
-  rule 6)
+  official picks from parlay_app.slates (the engine's own: the owner turned the team notes off on 2026-10-17,
+  CLAUDE.md rule 6)
 - the QB report saved with them (_qbs.csv)
 - the team ratings behind the picks, when nfl_ui/ratings.py has saved them (_ratings.csv)
 - final scores (_graded.csv), and the season's grades (nfl_scorecard.csv), whose closing lines are for grading only

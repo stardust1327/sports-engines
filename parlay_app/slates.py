@@ -1,9 +1,10 @@
 """The engines' saved picks, read as slates of games for the parlay builder.
 
 Read-only. Picks come from the files the engines save in results/ (CLAUDE.md rule 5): college picks by date
-(cfb_<date>_picks.csv) and NFL picks by week (nfl_cfbmethod_<season>_week<NN>_picks.csv). Official NFL picks have the
-owner's team notes applied by results/team_notes.py (rule 6), and the model-alone numbers stay beside them. Results
-come from the matching *_graded.csv files; only their scores are read, never their betting lines (rules 4 and 5).
+(cfb_<date>_picks.csv) and NFL picks by week (nfl_cfbmethod_<season>_week<NN>_picks.csv). The owner turned the NFL
+team notes off on 2026-10-17 (rule 6), so official picks are the engines' own; the code that applied them through
+results/team_notes.py stays behind TEAM_NOTES_ON, switched off, the way results/make_report.py keeps it. Results come
+from the matching *_graded.csv files; only their scores are read, never their betting lines (rules 4 and 5).
 """
 
 from __future__ import annotations
@@ -23,6 +24,7 @@ UTC = dt.timezone.utc
 CFB_RE = re.compile(r"^cfb_(\d{4}-\d{2}-\d{2})_picks\.csv$")
 NFL_RE = re.compile(r"^nfl_cfbmethod_(\d{4})_week(\d{2})_picks\.csv$")
 SPORT_NAMES = {"cfb": "College", "nfl": "NFL"}
+TEAM_NOTES_ON = False  # turned off by the owner 2026-10-17 ("Turn it off and drop the page"); CLAUDE.md rule 6
 
 Sport = Literal["cfb", "nfl"]
 
@@ -52,11 +54,11 @@ class Game:
     home: str
     status: str  # "PICK" or "NO PICK"
     reason: str  # why there is no pick
-    pick: str | None  # official pick (NFL: with the owner's team notes applied)
+    pick: str | None  # official pick (the engine's own while TEAM_NOTES_ON is False)
     win_prob: float | None
-    model_pick: str | None  # the model alone, before team notes
+    model_pick: str | None  # the model alone, before any team note
     model_prob: float | None
-    note: str  # team notes in force for this game, if any
+    note: str  # team notes in force for this game ('' while TEAM_NOTES_ON is False)
     away_score: int | None
     home_score: int | None
     note_pts_home: float = 0.0  # points the team notes put on the home team's margin (its note minus the away team's)
@@ -167,9 +169,9 @@ def team_notes_module(directory: Path):
 
 
 def _noted_nfl_picks(slate: Slate, directory: Path) -> dict[str, dict[str, object]] | None:
-    """{game_id: {pick, prob, note, pts}} with the owner's team notes applied, or None when there are no notes."""
+    """{game_id: {pick, prob, note, pts}} with the owner's team notes applied, or None when they're off or absent."""
     notes_path = directory / "team_notes.json"
-    if not notes_path.exists():
+    if not TEAM_NOTES_ON or not notes_path.exists():
         return None
     import pandas as pd
 

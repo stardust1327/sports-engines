@@ -107,31 +107,31 @@ record.
 ## Dashboard (NFL engine and parlay builder)
 
 `streamlit run app.py` opens a two-page dashboard for the picks the engines save in `results/`. It is read-only: it
-never runs an engine, changes a pick, a setting or a team note, or uses a betting line as an input.
+never runs an engine, changes a pick or a setting, or uses a betting line as an input. Your team notes are turned off
+(2026-10-17), so both pages show the engines' own picks, as the PDFs do.
 
 ### NFL engine page
 
 Who the NFL engine (`nfl_cfbmethod/`) picks each week, and why. Choose a logged week at the top.
 
 - **Picks:** one card per game, games still to play first. Each card shows:
-  - the official pick (your team notes applied), its win chance and tier
-  - the engine's edge in points, with the model-alone number beside any noted pick
+  - the pick, its win chance and tier
+  - the engine's edge in points
   - **what helps each team**: each side's offense and defense (with its league rank in expected points and success
-    rate per play), home field and your team note, in points on the engine's own scale. The two lists' difference is
+    rate per play) and home field, in points on the engine's own scale. The two lists' difference is
     the engine's edge.
   - both teams' QBs and any flag from the QB report, the no-pick reason, and the final score once graded
 - **Team ratings:** every team's offense and defense numbers and ranks, and a rating in points: two teams' ratings
   differ by the engine's edge between them, plus home field.
 - **QB check:** the week's QB report, flagged teams first, with each game's pick or no-pick.
-- **Track record:** official record by week and tier with the model alone beside it, the closing-line check from
+- **Track record:** official record by week and tier, the closing-line check from
   `nfl_scorecard.csv` (grading only, as `grade.py` does it) and the 2019-2025 backtest.
-- **Team notes:** your notes in force, their scorecard, and every read you've given (read-only).
 - **How it works:** the method in plain English.
 
 **How the points are figured.** The engine's win chance is a logistic regression on three logged numbers
 (`net_epa`, `net_sr`, home field). Its coefficients aren't saved, but every logged game fits them, so the page
-recovers them exactly from the week's picks file and turns log-odds into points at 7.8 per unit, the scale your team
-notes use (`results/team_notes.py`).
+recovers them exactly from the week's picks file and turns log-odds into points at 7.8 per unit, the slope of the
+final margin on the engine's log-odds over its 2019-2025 backtest (`results/team_notes.py`).
 
 **Team ratings.** The engine logs each game's edges but not the team ratings behind them.
 `python3 nfl_ui/ratings.py --season S --week W` rebuilds them with the engine's own code, loaded unchanged the way
@@ -148,13 +148,11 @@ rebuilt exactly (28 of 28 logged games).
 - the NFL picks by week (`nfl_cfbmethod_<season>_week<NN>_picks.csv`)
 - the matching `_graded.csv` files, for results
 
-NFL picks are the official ones, with your team notes applied by `results/team_notes.py`. The model-alone number is
-shown beside any pick a note moved.
+NFL picks are the engine's own: your team notes are turned off (2026-10-17), as in the PDFs.
 
 **Tabs:**
 - **Games:** every game on the chosen college day and NFL week, with:
   - the pick, its win chance and confidence tier
-  - team notes
   - no-picks with the reason
   - results once graded
 - **Build a parlay:** choose the number of legs and how to fill them (highest chances, lowest chances, a chance range, or teams you pick). It shows the parlay's chance to win and the fair odds that chance implies.
