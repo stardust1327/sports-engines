@@ -2,8 +2,9 @@
 
     streamlit run app.py
 
-Read-only. It reads the picks the engines save in results/ (or SPORTS_RESULTS_DIR) and never changes a pick, a rule or
-a team note, and never uses a betting line (CLAUDE.md rules 1-6). The data layer is in parlay_app/.
+Read-only. It reads the picks the engines save in results/ (or SPORTS_RESULTS_DIR) and never changes a pick or a rule,
+never applies the team notes the owner turned off, and never uses a betting line (CLAUDE.md rules 1-6). The data
+layer is in parlay_app/.
 """
 
 from __future__ import annotations
@@ -40,18 +41,18 @@ def game_rows(games: list[S.Game]) -> list[dict[str, Any]]:
     for g in games:
         if not g.is_pick:
             continue
-        noted = g.note and g.model_pick is not None and (g.model_pick, g.model_prob) != (g.pick, g.win_prob)
-        rows.append(
-            {
-                "Kickoff": g.kickoff_text,
-                "Matchup": f"{g.away} @ {g.home}",
-                "Pick": g.pick,
-                "Win chance": round(100 * g.win_prob, 1),
-                "Tier": S.tier(g.win_prob),
-                "Note": (g.note + f" (model alone: {g.model_pick} {_pct(g.model_prob)})") if noted else g.note,
-                "Result": g.result or ("Final" if g.final else ""),
-            }
-        )
+        row = {
+            "Kickoff": g.kickoff_text,
+            "Matchup": f"{g.away} @ {g.home}",
+            "Pick": g.pick,
+            "Win chance": round(100 * g.win_prob, 1),
+            "Tier": S.tier(g.win_prob),
+            "Result": g.result or ("Final" if g.final else ""),
+        }
+        if S.TEAM_NOTES_ON:  # off since 2026-10-17 (CLAUDE.md rule 6)
+            noted = g.note and g.model_pick is not None and (g.model_pick, g.model_prob) != (g.pick, g.win_prob)
+            row["Note"] = (g.note + f" (model alone: {g.model_pick} {_pct(g.model_prob)})") if noted else g.note
+        rows.append(row)
     return rows
 
 

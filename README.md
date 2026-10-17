@@ -111,12 +111,11 @@ record.
 - the NFL picks by week (`nfl_cfbmethod_<season>_week<NN>_picks.csv`)
 - the matching `_graded.csv` files, for results
 
-**What it never does:** change a pick, a setting or a team note, or use a betting line. NFL picks are the official ones, with your team notes applied by `results/team_notes.py`. The model-alone number is shown beside any pick a note moved.
+**What it never does:** change a pick or a setting, or use a betting line. NFL picks are the engine's own: your team notes are turned off (2026-10-17), as in the PDFs.
 
 **Tabs:**
 - **Games:** every game on the chosen college day and NFL week, with:
   - the pick, its win chance and confidence tier
-  - team notes
   - no-picks with the reason
   - results once graded
 - **Build a parlay:** choose the number of legs and how to fill them (highest chances, lowest chances, a chance range, or teams you pick). It shows the parlay's chance to win and the fair odds that chance implies.

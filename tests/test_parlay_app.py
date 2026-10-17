@@ -71,7 +71,16 @@ def test_graded_slates_report_results_for_the_official_pick(results):
     ]
 
 
-def test_nfl_official_picks_have_the_owners_team_notes_applied(results):
+def test_team_notes_are_off_so_nfl_picks_are_the_engines_own(results):
+    slate = next(s for s in S.discover_slates() if s.sport == "nfl")
+    rams = S.load_games(slate)[0]  # a Rams note is in force in team_notes.json, but notes are off (CLAUDE.md rule 6)
+    assert not S.TEAM_NOTES_ON
+    assert (rams.pick, rams.win_prob, rams.note) == ("Rams", 0.75, "")
+    assert (rams.model_pick, rams.model_prob) == ("Rams", 0.75)
+
+
+def test_the_switched_off_notes_code_still_works_if_turned_back_on(results, monkeypatch):
+    monkeypatch.setattr(S, "TEAM_NOTES_ON", True)
     slate = next(s for s in S.discover_slates() if s.sport == "nfl")
     rams = S.load_games(slate)[0]
     assert (rams.model_pick, rams.model_prob) == ("Rams", 0.75)
@@ -79,6 +88,8 @@ def test_nfl_official_picks_have_the_owners_team_notes_applied(results):
     assert "Rams" in rams.note and "unreliable" in rams.note.lower()
     bills = S.load_games(slate)[1]
     assert (bills.pick, bills.win_prob, bills.note) == (bills.model_pick, bills.model_prob, "")
+    rows = A.game_rows(S.load_games(slate))
+    assert "model alone: Rams 75.0%" in rows[0]["Note"] and rows[1]["Note"] == ""
 
 
 def test_nfl_without_a_notes_file_uses_the_model_alone(tmp_path, monkeypatch):
@@ -176,11 +187,11 @@ def _run_app() -> AppTest:
     return at
 
 
-def test_game_rows_show_the_model_alone_beside_a_noted_pick(results):
+def test_game_rows_list_the_picks_without_a_notes_column(results):
     games = S.load_games(next(s for s in S.discover_slates() if s.sport == "nfl"))
     rows = A.game_rows(games)
     assert [r["Pick"] for r in rows] == ["Rams", "Bills"]  # the no-pick is listed separately
-    assert "model alone: Rams 75.0%" in rows[0]["Note"] and rows[1]["Note"] == ""
+    assert list(rows[0]) == ["Kickoff", "Matchup", "Pick", "Win chance", "Tier", "Result"]
 
 
 def test_app_renders_every_tab(results):
