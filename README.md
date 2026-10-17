@@ -101,3 +101,30 @@ Only the high-confidence tiers have held up:
 Betting markets already price most of what these engines know, so a high win
 chance is not the same as a good bet. See `results/RESULTS.md` for the running
 record.
+
+## Parlay builder (dashboard)
+
+`streamlit run app.py` opens a dashboard for the picks the engines save in `results/`.
+
+**What it reads:**
+- the college picks by date (`cfb_<date>_picks.csv`)
+- the NFL picks by week (`nfl_cfbmethod_<season>_week<NN>_picks.csv`)
+- the matching `_graded.csv` files, for results
+
+**What it never does:** change a pick or a setting, or use a betting line. NFL picks are the engine's own: your team notes are turned off (2026-10-17), as in the PDFs.
+
+**Tabs:**
+- **Games:** every game on the chosen college day and NFL week, with:
+  - the pick, its win chance and confidence tier
+  - no-picks with the reason
+  - results once graded
+- **Build a parlay:** choose the number of legs and how to fill them (highest chances, lowest chances, a chance range, or teams you pick). It shows the parlay's chance to win and the fair odds that chance implies.
+- **Recommended parlays:** up to 25 parlays, strongest first, under a redundancy limit: how many parlays a team may appear in, and how many legs any two parlays may share. It also shows:
+  - the expected number of winning parlays
+  - the chance at least one wins
+  - for every pick, how many parlays lose if it loses
+- **Track record:** graded picks by confidence tier.
+
+**How the numbers are figured:** a parlay's chance is the product of its legs' win chances, since legs come from different games and are treated as independent. "Fair odds" are what that chance would pay with no sportsbook margin. A sportsbook pays less on every leg, and the closing line is still more accurate than the engines (see `results/RESULTS.md`), so this manages risk; it doesn't find an edge.
+
+Install with `pip install -r requirements.txt` (plus `pip install pytest` for the tests in `tests/`). To deploy on Streamlit Community Cloud, use this repository, branch `main`, and main file `app.py`. New picks appear there whenever the check-ins push them to `results/`.
