@@ -59,6 +59,8 @@ def exists(name):
 
 
 def notes_status(season, week, notes):
+    if notes is None:  # team notes turned off by the owner 2026-10-17
+        return ""
     """'team notes: ...' for a logged NFL week: picks with a noted team, and whether they're graded."""
     import pandas as pd
     import team_notes
@@ -85,26 +87,9 @@ def main():
     season = today.year if today.month >= 7 else today.year - 1
     print(f"Today (Pacific): {today}  |  season {season}")
 
-    # ---- the owner's team notes (CHECKINS.md "Team notes"); never add, change or remove one unasked
-    import team_notes
-    notes = team_notes.load()
-    live = team_notes.current(notes)
-
-    def until(e):
-        end = team_notes.expires_at(notes, e)
-        return f", runs out {team_notes.phx(end)}" if end else ""
-    print("Team notes in force (the owner's, applied to both NFL models; CHECKINS.md 'Team notes'): "
-          + ("; ".join(f"{team_notes.note_text(notes, e)} points (last read {team_notes.phx(e['_t'])}{until(e)})"
-                       for e in live) or "none"))
-    soon = [e for e in live if team_notes.expires_at(notes, e) is not None
-            and team_notes.expires_at(notes, e) - now.astimezone(datetime.timezone.utc) < datetime.timedelta(days=8)]
-    if soon:
-        print("  Running out within 8 days (ask the owner whether to renew; never renew unasked): "
-              + "; ".join(f"{e['team']} {team_notes.phx(team_notes.expires_at(notes, e))}" for e in soon))
-    gone = team_notes.expired(notes)
-    if gone:
-        print("  Expired, no longer applied: " + "; ".join(
-            f"{team_notes.note_text(notes, e)} (ran out {team_notes.phx(team_notes.expires_at(notes, e))})" for e in gone))
+    # ---- team notes: turned off by the owner 2026-10-17 (CLAUDE.md rule 6)
+    notes = None
+    print("Team notes: turned off by the owner on 10.17.2026; none apply")
 
     # ---- NFL
     weeks = nfl_weeks(season)

@@ -28,6 +28,11 @@ import pandas as pd
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import team_notes  # noqa: E402  (results/team_notes.py)
+
+
+def apply_notes(df, model):
+    """The owner's team notes on top of a picks file; a no-op while TEAM_NOTES_ON is False."""
+    return team_notes.apply(df, model, NOTES) if TEAM_NOTES_ON and df is not None else df
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import landscape, letter
 from reportlab.lib.styles import ParagraphStyle
@@ -60,6 +65,7 @@ def P(text, st):
 
 
 DIR = HERE  # --dir changes it (for tests)
+TEAM_NOTES_ON = False  # turned off by the owner 2026-10-17 ("Turn it off and drop the page")
 NOTES = None  # the owner's team notes (team_notes.json), loaded when the report has an NFL section
 
 
@@ -276,10 +282,10 @@ def graded_section(story, title, sub, eng, eng_g, frm, frm_g, neutral_word, mark
 
 def nfl_graded(story, season, week):
     ww = f"{week:02d}"
-    eng = team_notes.apply(read(f"nfl_cfbmethod_{season}_week{ww}_picks.csv"), "engine", NOTES)
+    eng = apply_notes(read(f"nfl_cfbmethod_{season}_week{ww}_picks.csv"), "engine")
     eng_g = read(f"nfl_cfbmethod_{season}_week{ww}_graded.csv")
     frm = read(f"prompt_nfl_{season}_week{ww}_picks.csv", required=False)
-    frm = team_notes.apply(frm, "framework", NOTES) if frm is not None else None
+    frm = apply_notes(frm, "framework")
     frm_g = read(f"prompt_nfl_{season}_week{ww}_graded.csv", required=frm is not None)
     graded_section(story, f"NFL Week {week} graded ({date_span(eng)})", "Engine graded with nfl_cfbmethod/grade.py, framework with "
                    "results/grade_picks.py. All times Phoenix. No betting lines go into either model.",
@@ -369,13 +375,13 @@ def notes_sentence(eng):
 
 def nfl_picks(story, season, week):
     ww = f"{week:02d}"
-    eng = team_notes.apply(read(f"nfl_cfbmethod_{season}_week{ww}_picks.csv"), "engine", NOTES)
-    frm = team_notes.apply(read(f"prompt_nfl_{season}_week{ww}_picks.csv"), "framework", NOTES)
+    eng = apply_notes(read(f"nfl_cfbmethod_{season}_week{ww}_picks.csv"), "engine")
+    frm = apply_notes(read(f"prompt_nfl_{season}_week{ww}_picks.csv"), "framework")
     picks_section(story, f"NFL Week {week} picks ({date_span(eng)})", "Engine (official) and framework side by side. All times Phoenix. "
-                  "No betting lines, records or narrative go into either model; your team notes are added on top.",
+                  "No betting lines, records or narrative go into either model.",
                   eng, frm, "neutral site",
                   "QBs: each team's expected starter; a game is a no-pick when the starting QB is out or unconfirmed, "
-                  "and any pick whose starting QB changes before kickoff is dropped." + notes_sentence(eng),
+                  "and any pick whose starting QB changes before kickoff is dropped." + (notes_sentence(eng) if TEAM_NOTES_ON else ""),
                   [P("<b>How far to trust them (NFL, same 887 games, 2022-2025).</b> Engine 64.0% of winners, "
                      "framework 62.6%, closing-line favorite 68.7%. One week is a small sample.", S_BOX)])
 
@@ -481,7 +487,7 @@ def main():
     DIR = a.dir
     story = []
     nfl = bool(a.nfl_graded or a.nfl_picks)
-    if nfl:
+    if nfl and TEAM_NOTES_ON:
         NOTES = team_notes.load()
     if a.nfl_graded:
         s, w = map(int, a.nfl_graded.split(":"))
@@ -495,7 +501,7 @@ def main():
         cfb_picks(story, sorted(a.cfb_picks))
     if not story:
         raise SystemExit("nothing to put in the report: pass at least one section")
-    if nfl and NOTES["events"]:
+    if nfl and TEAM_NOTES_ON and NOTES["events"]:
         notes_page(story)
     story = story[:-1]  # no blank page at the end
     story += [Spacer(1, 8), P("Engine: the locked college method (NFL: with the approved NFL settings), rating every "
@@ -503,7 +509,7 @@ def main():
                               "Football criteria (trenches 25%, net efficiency 25%, passing 20%, situational 15%, high "
                               "leverage 15%) scored from this season's play-by-play only." +
                               (" Team notes (NFL): your own calls, set by hand and added on top of both models' numbers."
-                               if nfl and NOTES["events"] else "") +
+                               if nfl and TEAM_NOTES_ON and NOTES["events"] else "") +
                               " Files: results/ in the sports-engines repo." +
                               f" Report made {us_date(pd.Timestamp.now(tz=PHX))} "
                               f"{pd.Timestamp.now(tz=PHX).strftime('%-I:%M %p')} Phoenix time.", S_NOTE)]

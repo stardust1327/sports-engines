@@ -326,6 +326,12 @@ at Raiders, engine **Bills 67.8%**, framework **Bills 59.7%** (was 71.8% / 64.3%
 No team notes are in force. PDF: `report_2026-10-17_nfl-week6-picks.pdf`
 (re-made).
 
+**Team notes turned off Saturday 2026-10-17, 1:10 AM Phoenix, at the owner's
+word** ("Turn it off and drop the page"). No note applies to any pick, record or
+PDF from here on, and the notes page is gone from the PDFs. Official NFL picks
+are the engine's own. `team_notes.py` and `team_notes.json` stay in the repo as
+a record. NFL Week 6 PDF re-made without the page.
+
 Week 5's Monday game (Bills 37, Rams 34) was the only Week 5 game where both
 models picked the same team and lost (the Commanders-Giants tie aside). The
 owner expected the Rams to lose, but the note was set after kickoff, so it

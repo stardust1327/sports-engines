@@ -12,23 +12,17 @@
 3. **Improvements are proposals.** Present them to the owner with backtest
    evidence and wait for approval. Never apply them silently.
 4. **Standing prediction rules.** No betting lines or odds, records, traditional
-   stats or narrative as inputs (the owner's own team notes, rule 6, are the one
-   exception). If key data is missing (for example the starting QB is out or
+   stats or narrative as inputs. If key data is missing (for example the starting QB is out or
    unconfirmed), say exactly what's missing and make no pick for that game.
 5. **Log everything.** Save every set of picks in `results/` before kickoff and
    grade it after (NFL: `nfl_cfbmethod/grade.py`, which also runs the
-   closing-line check; closing lines are for grading only, never an input; then
-   `results/team_notes.py grade`).
-6. **Team notes are the owner's alone (approved 2026-10-12).** From watching
-   the games, the owner marks an NFL team by hand, case by case
-   (`results/team_notes.json`): unreliable (docked) or max effort (slightly
-   boosted). The note moves that team's predicted margin in both NFL models,
-   official picks include it, and the model-alone numbers are always kept beside
-   it and graded so the note's accuracy is tracked. A note runs out 3 weeks
-   after the owner's last read on that team unless the owner renews it. Never
-   add, change, renew or remove a note, or its points, unless the owner says so;
-   record it with `results/team_notes.py` and the owner's words. The engines' own
-   code and numbers don't change.
+   closing-line check; closing lines are for grading only, never an input).
+6. **Team notes are turned off (owner, 2026-10-17: "Turn it off and drop the
+   page").** The owner's hand-set NFL team notes (approved 2026-10-12) no longer
+   apply to any pick, record or PDF. Don't set, apply or bring them back unless
+   the owner asks. The code (`results/team_notes.py`, switched off in
+   `make_report.py` and `whats_next.py`) and the notes history
+   (`results/team_notes.json`) stay in the repo as a record.
 
 `nfl_cfbmethod/` is the NFL version. It follows `METHOD.md` with the NFL
 settings the owner approved on 2026-10-11 (listed at the end of `METHOD.md`).

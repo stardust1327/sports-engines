@@ -103,7 +103,13 @@ The earlier quarterback version (`nfl/`) was retired: on the same 387 games of
 2024-25, a tuned version of this method picked 67.2% of winners against its
 66.1%, and averaging the two didn't pick more winners.
 
-## Owner's team notes (NFL, approved 2026-10-12)
+## Owner's team notes (NFL, approved 2026-10-12; turned off 2026-10-17)
+
+**Turned off by the owner on 2026-10-17** ("Turn it off and drop the page"),
+after the Bills and Rams notes were cleared before any noted game was played.
+No note applies to any pick, record or PDF. The description below is kept as a
+record of what ran from 2026-10-12 to 2026-10-17; it never touched the method
+above.
 
 At the owner's request, official NFL picks also carry the owner's manual team
 notes (`results/team_notes.json`, applied by `results/team_notes.py`). This sits
