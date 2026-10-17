@@ -20,6 +20,8 @@ starting QB who is out or unconfirmed, gets a no-pick with the reason.
 - `CLAUDE.md`: the owner's rules. The method doesn't change, and new models don't
   deviate from it, without the owner's approval.
 - `cfb/original_2026-10-10/`: the exact scripts as run that morning
+- `app.py` (with `nfl_ui/` and `parlay_app/`): the dashboard, an NFL engine page and a parlay builder
+  ("Dashboard" below)
 - `cfb/`: the same method packaged to run on any date
 - `nfl_cfbmethod/`: the NFL version: the same method and `cfb/` code, with three
   approved NFL settings (end of `METHOD.md`); `grade.py` grades each week and runs
@@ -102,16 +104,51 @@ Betting markets already price most of what these engines know, so a high win
 chance is not the same as a good bet. See `results/RESULTS.md` for the running
 record.
 
-## Parlay builder (dashboard)
+## Dashboard (NFL engine and parlay builder)
 
-`streamlit run app.py` opens a dashboard for the picks the engines save in `results/`.
+`streamlit run app.py` opens a two-page dashboard for the picks the engines save in `results/`. It is read-only: it
+never runs an engine, changes a pick or a setting, or uses a betting line as an input. Your team notes are turned off
+(2026-10-17), so both pages show the engines' own picks, as the PDFs do.
+
+### NFL engine page
+
+Who the NFL engine (`nfl_cfbmethod/`) picks each week, and why. Choose a logged week at the top.
+
+- **Picks:** one card per game, games still to play first. Each card shows:
+  - the pick, its win chance and tier
+  - the engine's edge in points
+  - **what helps each team**: each side's offense and defense (with its league rank in expected points and success
+    rate per play) and home field, in points on the engine's own scale. The two lists' difference is
+    the engine's edge.
+  - both teams' QBs and any flag from the QB report, the no-pick reason, and the final score once graded
+- **Team ratings:** every team's offense and defense numbers and ranks, and a rating in points: two teams' ratings
+  differ by the engine's edge between them, plus home field.
+- **QB check:** the week's QB report, flagged teams first, with each game's pick or no-pick.
+- **Track record:** official record by week and tier, the closing-line check from
+  `nfl_scorecard.csv` (grading only, as `grade.py` does it) and the 2019-2025 backtest.
+- **How it works:** the method in plain English.
+
+**How the points are figured.** The engine's win chance is a logistic regression on three logged numbers
+(`net_epa`, `net_sr`, home field). Its coefficients aren't saved, but every logged game fits them, so the page
+recovers them exactly from the week's picks file and turns log-odds into points at 7.8 per unit, the slope of the
+final margin on the engine's log-odds over its 2019-2025 backtest (`results/team_notes.py`).
+
+**Team ratings.** The engine logs each game's edges but not the team ratings behind them.
+`python3 nfl_ui/ratings.py --season S --week W` rebuilds them with the engine's own code, loaded unchanged the way
+`nfl_cfbmethod/run.py` loads the college code. It uses the same downloads, plays, settings and cutoff, and checks that
+the ratings reproduce the logged edges exactly. It saves `results/nfl_cfbmethod_<season>_week<NN>_ratings.csv`, one
+set per engine run behind the week's picks (a Friday re-run merged into Tuesday's picks is a second run). It changes no
+pick. Without that file, a card splits the edge into the three logged numbers instead. Weeks 5 and 6 of 2026 were
+rebuilt exactly (28 of 28 logged games).
+
+### Parlay builder page
 
 **What it reads:**
 - the college picks by date (`cfb_<date>_picks.csv`)
 - the NFL picks by week (`nfl_cfbmethod_<season>_week<NN>_picks.csv`)
 - the matching `_graded.csv` files, for results
 
-**What it never does:** change a pick or a setting, or use a betting line. NFL picks are the engine's own: your team notes are turned off (2026-10-17), as in the PDFs.
+NFL picks are the engine's own: your team notes are turned off (2026-10-17), as in the PDFs.
 
 **Tabs:**
 - **Games:** every game on the chosen college day and NFL week, with:
@@ -127,4 +164,8 @@ record.
 
 **How the numbers are figured:** a parlay's chance is the product of its legs' win chances, since legs come from different games and are treated as independent. "Fair odds" are what that chance would pay with no sportsbook margin. A sportsbook pays less on every leg, and the closing line is still more accurate than the engines (see `results/RESULTS.md`), so this manages risk; it doesn't find an edge.
 
-Install with `pip install -r requirements.txt` (plus `pip install pytest` for the tests in `tests/`). To deploy on Streamlit Community Cloud, use this repository, branch `main`, and main file `app.py`. New picks appear there whenever the check-ins push them to `results/`.
+### Running and deploying
+
+Install with `pip install -r requirements.txt` (plus `pip install pytest` for the tests in `tests/`). To deploy on
+Streamlit Community Cloud, use this repository, branch `main`, and main file `app.py`; both pages are in that one app.
+New picks appear there whenever the check-ins push them to `results/`.
