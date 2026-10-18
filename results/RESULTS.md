@@ -709,3 +709,21 @@ NFL games stay closer longer than college games, so 98% calls come later (4 min
 left vs 12 in college). Real-time delivery: `live/worker/` (Cloudflare Worker,
 every minute, posts to Discord), replacing the hourly scheduled checks once it's
 deployed.
+
+Our own "history says" live model (`live/backtest_situation.py`,
+`live/backtest_situation.txt`): the live score margin, time left, possession,
+field position, down and distance compared with every past game (college
+2023-2024, NFL 2018-2024), tested on 2025, which it never saw. College also tried
+with the engine's pregame win chance added. Calls at 98%:
+
+| | Right | Median time left | Games called |
+|---|---|---|---|
+| College, history + team strength | 98.5% | 14 min | 480 of 580 |
+| College, history only | 96.8% | 13 min | 495 of 580 |
+| College, ESPN | 97.2% | 12 min | 566 of 580 |
+| NFL, history only | 96.4% | 10 min | 223 of 271 |
+| NFL, ESPN | 98.1% | 5 min | 261 of 271 |
+
+Our model is about as good as ESPN's: slightly more accurate in college when it
+calls, but it holds back on more games (it never gets to 98% in some games ESPN
+does). In the NFL ours calls earlier but is wrong more often.

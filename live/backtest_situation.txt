@@ -1,0 +1,29 @@
+College 2025 weeks 4-15: 580 test games
+situation:
+  90%: called 566 of 580 games; right 493 (87.1%); median 31 min left; called before the 4th quarter: 73%
+  95%: called 548 of 580 games; right 518 (94.5%); median 19 min left; called before the 4th quarter: 53%
+  98%: called 495 of 580 games; right 479 (96.8%); median 13 min left; called before the 4th quarter: 37%
+strength:
+  90%: called 571 of 580 games; right 502 (87.9%); median 38 min left; called before the 4th quarter: 76%
+  95%: called 540 of 580 games; right 512 (94.8%); median 23 min left; called before the 4th quarter: 57%
+  98%: called 480 of 580 games; right 473 (98.5%); median 14 min left; called before the 4th quarter: 38%
+espn:
+  90%: called 578 of 580 games; right 530 (91.7%); median 31 min left; called before the 4th quarter: 71%
+  95%: called 570 of 580 games; right 540 (94.7%); median 20 min left; called before the 4th quarter: 57%
+  98%: called 566 of 580 games; right 550 (97.2%); median 12 min left; called before the 4th quarter: 42%
+end of Q1: situation 68.4%; strength 74.5%; espn 74.8%
+end of Q2: situation 76.2%; strength 76.7%; espn 78.1%
+end of Q3: situation 85.0%; strength 85.3%; espn 85.5%
+
+NFL 2025: 271 test games
+situation:
+  90%: called 265 of 271 games; right 237 (89.4%); median 23 min left; called before the 4th quarter: 62%
+  95%: called 262 of 271 games; right 241 (92.0%); median 15 min left; called before the 4th quarter: 48%
+  98%: called 223 of 271 games; right 215 (96.4%); median 10 min left; called before the 4th quarter: 27%
+espn:
+  90%: called 265 of 271 games; right 243 (91.7%); median 17 min left; called before the 4th quarter: 54%
+  95%: called 262 of 271 games; right 251 (95.8%); median 9 min left; called before the 4th quarter: 35%
+  98%: called 261 of 271 games; right 256 (98.1%); median 5 min left; called before the 4th quarter: 22%
+end of Q1: situation 66.8%; espn 65.3%
+end of Q2: situation 74.9%; espn 72.3%
+end of Q3: situation 81.2%; espn 82.7%
