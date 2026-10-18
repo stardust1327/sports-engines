@@ -169,6 +169,33 @@ def pick_text(status, pick, prob):
     return f"{escape(str(pick))} {float(prob):.0%}"
 
 
+def lean(p_home, away, home):
+    """(team, win chance) the model leans to in a no-pick game, from its saved p_home; None if it has no number."""
+    try:
+        ph = float(p_home)
+    except (TypeError, ValueError):
+        return None
+    if pd.isna(ph):
+        return None
+    return (home, ph) if ph >= 0.5 else (away, 1 - ph)
+
+
+def lean_result(ln, away, home, a_sc, h_sc):
+    if ln is None or pd.isna(h_sc) or pd.isna(a_sc):
+        return ""
+    w = home if h_sc > a_sc else away if a_sc > h_sc else "tie"
+    return "T" if w == "tie" else "W" if w == ln[0] else "L"
+
+
+def lean_words(e, f, e_res="", f_res=""):
+    """'Off record: engine X 70% (right), framework Y 65% (wrong)' for a no-pick game."""
+    parts = []
+    for name, ln, res in (("engine", e, e_res), ("framework", f, f_res)):
+        if ln is not None:
+            parts.append(f"{name} {escape(str(ln[0]))} {ln[1]:.0%}" + (f" ({ {'W': 'right', 'L': 'wrong', 'T': 'tie'}[res]})" if res in ("W", "L", "T") else ""))
+    return ("<i>Off record: " + ", ".join(parts) + "</i>") if parts else "<i>Off record: no number (not enough data)</i>"
+
+
 def note_line(note, alone_pick, alone_prob, flipped, alone_result=None):
     """Small line under a pick for a game with one of your team notes ('' for other games)."""
     if not isinstance(note, str) or not note:
@@ -205,8 +232,10 @@ def graded_section(story, title, sub, eng, eng_g, frm, frm_g, neutral_word, mark
         f = frm.set_index("game_id")
         m["f_status"], m["f_pick"], m["f_prob"] = m.game_id.map(f["status"]), m.game_id.map(f["pick"]), m.game_id.map(f["pick_prob"])
         m["f_result"] = m.game_id.map(frm_g.set_index("game_id")["result"]) if frm_g is not None else ""
+        m["f_p_home"] = m.game_id.map(f["p_home"]) if "p_home" in f.columns else None
     else:
         m["f_status"], m["f_pick"], m["f_prob"], m["f_result"] = "NOT RUN", "", None, ""
+        m["f_p_home"] = None
     e_flips = f_flips = False
     if noted:
         def results(picks, statuses):
@@ -239,12 +268,20 @@ def graded_section(story, title, sub, eng, eng_g, frm, frm_g, neutral_word, mark
               Spacer(1, 10), big_numbers(items), Spacer(1, 10)]
     rows, bg = [[P(h, S_HEAD) for h in ["Kickoff", "Game", "Final", "Engine pick", "", "Framework pick", ""]]], []
     any_note = False
+    off_e, off_f = [], []
     for i, r in enumerate(m.itertuples(), start=1):
         final = "" if pd.isna(r.home_score) else f"{r.away_name} {int(r.away_score)}, {r.home_name} {int(r.home_score)}"
         if r.status != "PICK" and r.f_status != "PICK":
             why = r.reason if isinstance(r.reason, str) and r.reason else "no pick"
+            le = lean(r.p_home, r.away_name, r.home_name)
+            lf = lean(r.f_p_home, r.away_name, r.home_name) if r.f_status != "NOT RUN" else None
+            re_ = lean_result(le, r.away_name, r.home_name, r.away_score, r.home_score)
+            rf_ = lean_result(lf, r.away_name, r.home_name, r.away_score, r.home_score)
+            off_e += [re_] if re_ else []
+            off_f += [rf_] if rf_ else []
             rows.append([kick_cell(r), P(escape(game_label(r, neutral_word)), S_CELL), P(escape(final), S_CELL),
-                         P(f"No pick (both): {escape(why)}", S_CELL), "", "", ""])
+                         [P(f"No pick (both): {escape(why)}", S_CELL), P(lean_words(le, lf, re_, rf_), S_SMALL)],
+                         "", "", ""])
             bg.append((i, NOPICK, True))
             continue
         e_extra = f_extra = ""
@@ -265,6 +302,12 @@ def graded_section(story, title, sub, eng, eng_g, frm, frm_g, neutral_word, mark
     story += [table(rows, widths, bg, span_from=3), Spacer(1, 5),
               P("Amber rows: the two models picked different teams. A tie is graded as a tie. Percentages are each "
                 "model's win chance for its pick." + (notes_sentence(eng) if any_note else ""), S_NOTE)]
+    if off_e or off_f:
+        story += [Spacer(1, 8), boxes([
+            P(f"<b>Off the record: no-pick games.</b> The team each model would have taken in the grey rows went: "
+              f"engine {rec(off_e)}, framework {rec(off_f)}. These never count in either model's record; they're "
+              f"shown so you can see whether holding these games back pays off "
+              f"(running total: results/nopick_leans.py).", S_BOX)], 10.0)]
     if market is not None and len(market):
         g = market[(market.status == "PICK") & market.market_p_home.notna()]
         if len(g):
@@ -311,8 +354,10 @@ def picks_section(story, title, sub, eng, frm, neutral_word, note, box_cells):
     are then the noted (official) ones, with the model-alone ones beside noted games."""
     noted = "pick_noted" in eng.columns and "pick_noted" in frm.columns
     extra = ["pick_noted", "pick_prob_noted", "score_noted", "note_text", "note_flips"] if noted else []
-    m = eng.merge(frm[["game_id", "status", "pick", "pick_prob", "score", "reason"] + extra], on="game_id", how="left",
-                  suffixes=("_e", "_f"))
+    cols = ["game_id", "status", "pick", "pick_prob", "score", "reason"] + (["p_home"] if "p_home" in frm.columns else [])
+    m = eng.merge(frm[cols + extra], on="game_id", how="left", suffixes=("_e", "_f"))
+    if "p_home_f" not in m.columns:
+        m["p_home_e"], m["p_home_f"] = m.get("p_home"), None
     m["status_f"] = m.status_f.fillna("NOT RUN")
     if noted:
         for side in ("e", "f"):
@@ -326,8 +371,10 @@ def picks_section(story, title, sub, eng, frm, neutral_word, note, box_cells):
     for i, r in enumerate(m.itertuples(), start=1):
         if r.status_e != "PICK" and r.status_f != "PICK":
             why = r.reason_e if isinstance(r.reason_e, str) and r.reason_e else str(r.reason_f)
+            le = lean(r.p_home_e, r.away_name, r.home_name)
+            lf = lean(r.p_home_f, r.away_name, r.home_name) if r.status_f != "NOT RUN" else None
             rows.append([kick_cell(r), P(escape(game_label(r, neutral_word)), S_CELL),
-                         P(f"No pick (both): {escape(why)}", S_CELL), "", "", ""])
+                         [P(f"No pick (both): {escape(why)}", S_CELL), P(lean_words(le, lf), S_SMALL)], "", "", ""])
             bg.append((i, NOPICK, True))
             continue
         same = r.status_e == r.status_f == "PICK" and r.pick_e == r.pick_f
@@ -356,7 +403,8 @@ def picks_section(story, title, sub, eng, frm, neutral_word, note, box_cells):
               table(rows, (1.0, 2.15, 2.1, 2.1, 2.05, 0.6) if any_note else (1.05, 2.75, 1.75, 1.75, 2.1, 0.6), bg,
                     span_from=2), Spacer(1, 5),
               P(f"They agree on {agree} of {len(made)} picks (green) and split on {len(made) - agree} (amber). "
-                f"Bold = 70%+. Grey = no pick. {note}", S_NOTE)]
+                f"Bold = 70%+. Grey = no pick; the italic \"off record\" line is the team each model would take "
+                f"and its win chance, never counted in the record. {note}", S_NOTE)]
     if box_cells:
         story += [Spacer(1, 8), boxes(box_cells, 10.0 / len(box_cells))]
     story.append(PageBreak())

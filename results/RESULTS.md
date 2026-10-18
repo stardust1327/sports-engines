@@ -727,3 +727,15 @@ with the engine's pregame win chance added. Calls at 98%:
 Our model is about as good as ESPN's: slightly more accurate in college when it
 calls, but it holds back on more games (it never gets to 98% in some games ESPN
 does). In the NFL ours calls earlier but is wrong more often.
+
+## Off-the-record no-pick leans (owner's request, 2026-10-18)
+
+No-pick rules are unchanged: no official pick and nothing in either record. The
+reports now list, separately and in italics, the team each model would have
+taken in each no-pick game (from the win chance both models already save). Graded
+pages add a separate off-the-record box. `results/nopick_leans.py` keeps the
+running total. As of 2026-10-18 (graded no-pick games so far): college engine
+8-9, college framework 10-7, NFL engine 0-2, NFL framework 0-2; 18-20 overall at
+an average stated win chance of about 70%, versus 22-12 / 19-15 (college) and
+6-6 / 10-2 (NFL) on official picks. Small sample, but holding these games back
+has been the right call so far.

@@ -138,6 +138,11 @@ python3 results/make_report.py --out results/report_<YYYY-MM-DD>_<checkin>.pdf -
 Open the PDF (render a page to an image) and check its records and picks against
 the printouts before sending it.
 
+No-pick games show an italic "Off record" line (the team each model would take, from
+its saved win chance) and graded pages add an off-the-record box. Owner's request
+(2026-10-18): list them, kept separate, never in either model's record. Running
+total: `python3 results/nopick_leans.py`.
+
 ## A. Tuesday run (Tue 7:10 AM)
 
 1. Setup. From `whats_next.py`: last NFL week W (all games final after Monday
