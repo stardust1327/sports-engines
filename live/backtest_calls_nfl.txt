@@ -1,0 +1,7 @@
+NFL 2023-2025 regular season: 816 games with ESPN live win probability (1 ties)
+  90%: called 816 of 816; right 758 (92.9%); median 16 min left; called before the 4th quarter: 53%
+  95%: called 815 of 816; right 789 (96.8%); median 8 min left; called before the 4th quarter: 35%
+  98%: called 815 of 816; right 803 (98.5%); median 4 min left; called before the 4th quarter: 23%
+end of Q1: ESPN's favorite wins 67.5%
+end of Q2: ESPN's favorite wins 75.8%
+end of Q3: ESPN's favorite wins 82.8%

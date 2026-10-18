@@ -695,3 +695,17 @@ Our tracker was overconfident (its 90% calls were right 81%). No betting lines
 are read. This tool is separate from the engines and feeds nothing into them;
 calls are logged in `results/live_calls_<date>.csv` and graded with
 `python3 live/calls.py --grade --date <date>`.
+
+NFL check (`live/backtest_espn_nfl.py`, `live/backtest_calls_nfl.txt`), ESPN's live
+win probability on every regular-season game 2023-2025 (816):
+
+| Call at | Right | Median time left | Called before the 4th quarter |
+|---|---|---|---|
+| 98% | 98.5% | 4 min | 23% of games |
+| 95% | 96.8% | 8 min | 35% |
+| 90% | 92.9% | 16 min | 53% |
+
+NFL games stay closer longer than college games, so 98% calls come later (4 min
+left vs 12 in college). Real-time delivery: `live/worker/` (Cloudflare Worker,
+every minute, posts to Discord), replacing the hourly scheduled checks once it's
+deployed.
