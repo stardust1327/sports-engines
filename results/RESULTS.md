@@ -332,6 +332,15 @@ PDF from here on, and the notes page is gone from the PDFs. Official NFL picks
 are the engine's own. `team_notes.py` and `team_notes.json` stay in the repo as
 a record. NFL Week 6 PDF re-made without the page.
 
+**Week 6 re-run Saturday 2026-10-17, 6:45 PM Pacific, at the owner's request**
+(lost copy). Both models re-run for the Sunday and Monday games (framework with
+`--refresh`) and merged: no pick and no win chance changed. Monday statuses:
+Jayden Daniels has no designation (Marcus Mariota out), Brock Purdy isn't on the
+49ers' report; 49ers pick stands. Bears at Falcons stays a no pick: NFL Network
+and ESPN sources say Caleb Williams is expected to start, but the Bears haven't
+confirmed it; Sunday's inactives settle it. Latest PDF:
+`report_2026-10-17_nfl-week6-picks-LATEST-saturday-night.pdf`.
+
 Week 5's Monday game (Bills 37, Rams 34) was the only Week 5 game where both
 models picked the same team and lost (the Commanders-Giants tie aside). The
 owner expected the Rams to lose, but the note was set after kickoff, so it
