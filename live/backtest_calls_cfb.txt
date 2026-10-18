@@ -1,0 +1,19 @@
+College 2025 weeks 4-15 (test): 580 games, 104036 plays
+score rule (8+ point lead after Q3): called 364 games, right 95.3%, 15 min left
+tracker:
+  90%: called 573 of 580 games; right 463 (80.8%); median 49 min left; called before the 4th quarter: 89%
+  95%: called 540 of 580 games; right 485 (89.8%); median 36 min left; called before the 4th quarter: 71%
+  98%: called 489 of 580 games; right 462 (94.5%); median 26 min left; called before the 4th quarter: 54%
+espn:
+  90%: called 578 of 580 games; right 530 (91.7%); median 31 min left; called before the 4th quarter: 71%
+  95%: called 570 of 580 games; right 540 (94.7%); median 20 min left; called before the 4th quarter: 57%
+  98%: called 566 of 580 games; right 550 (97.2%); median 12 min left; called before the 4th quarter: 42%
+end of Q1 (pregame): picks the winner 71.6%, Brier 0.185 (580 games)
+end of Q1 (tracker): picks the winner 71.9%, Brier 0.195 (580 games)
+end of Q1 (espn): picks the winner 74.8%, Brier 0.160 (580 games)
+end of Q2 (pregame): picks the winner 71.6%, Brier 0.185 (580 games)
+end of Q2 (tracker): picks the winner 76.2%, Brier 0.164 (580 games)
+end of Q2 (espn): picks the winner 78.1%, Brier 0.136 (580 games)
+end of Q3 (pregame): picks the winner 71.6%, Brier 0.185 (580 games)
+end of Q3 (tracker): picks the winner 83.6%, Brier 0.122 (580 games)
+end of Q3 (espn): picks the winner 85.5%, Brier 0.099 (580 games)

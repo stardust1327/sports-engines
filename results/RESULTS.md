@@ -673,3 +673,25 @@ by `compare_cfb_engine_vs_framework.py`):
 | 2026 so far (142) | 96-46 (67.6%) | 93-49 (65.5%) |
 
 The engine's picks stay the official ones.
+
+## Live winner calls (separate tool, started 2026-10-17)
+
+The owner's goal: know who wins a game as early as possible before it ends.
+`live/backtest_calls.py` replayed college 2025 weeks 4-15 (580 games, plays
+2023-2024 for training) and compared three ways of calling a game the first time
+one team's live win chance reaches a threshold (`live/backtest_calls_cfb.txt`):
+
+| Source | Call at | Right | Median time left at the call | Called before the 4th quarter |
+|---|---|---|---|---|
+| ESPN's live win probability | 98% | 97.2% | 12 min | 42% of games |
+| ESPN's live win probability | 95% | 94.7% | 20 min | 57% |
+| ESPN's live win probability | 90% | 91.7% | 31 min | 71% |
+| Our own tracker (engine pregame + score, clock, field position) | 98% | 94.5% | 26 min | 54% |
+| Score only: 8+ point lead after the 3rd quarter | | 95.3% | 15 min | 63% of games |
+
+ESPN's number (read from the same free feed the engines use) was the most
+accurate at every point of the game, so `live/calls.py` uses it, calling at 98%.
+Our tracker was overconfident (its 90% calls were right 81%). No betting lines
+are read. This tool is separate from the engines and feeds nothing into them;
+calls are logged in `results/live_calls_<date>.csv` and graded with
+`python3 live/calls.py --grade --date <date>`.
