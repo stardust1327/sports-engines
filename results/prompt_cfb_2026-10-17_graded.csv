@@ -3,29 +3,29 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401860903,Washington State,Oregon State,30,48,True,NO PICK,"Caden Pinnick benched; Owen Eshelman (redshirt freshman) makes his first career start (Spokesman-Review, Oct 16), no plays in this season's play-by-play",,,
 401856719,Auburn,Georgia,27,24,True,PICK,,Georgia,0.8741,L
 401856720,Mississippi State,LSU,0,31,True,NO PICK,"Kamario Taylor (foot) downgraded to doubtful on the SEC availability report (ESPN, Oct 16); Parker Puckett would start",,,
-401864521,New Mexico,Hawai'i,,,False,PICK,,New Mexico,0.8554,
+401864521,New Mexico,Hawai'i,21,10,True,PICK,,New Mexico,0.8554,W
 401858491,Northwestern,Michigan State,24,21,True,PICK,,Northwestern,0.8522,W
 401858264,Georgia Tech,Virginia Tech,24,34,True,PICK,,Virginia Tech,0.846,W
-401856833,Utah,Colorado,,,False,PICK,,Utah,0.8338,
-401864523,San José State,UTEP,,,False,NO PICK,"EJ Colson Jr. (concussion) questionable (Oct 15), no update since; Raymond Moore III started the last game",,,
+401856833,Utah,Colorado,27,24,True,PICK,,Utah,0.8338,W
+401864523,San José State,UTEP,24,11,True,NO PICK,"EJ Colson Jr. (concussion) questionable (Oct 15), no update since; Raymond Moore III started the last game",,,
 401866442,Massachusetts,Buffalo,18,25,True,NO PICK,"William Watson III (ankle) ruled out and Aedan McCarthy (last game's starter) also out; Logan Inagawa makes his first career start (RotoWire, Oct 16)",,,
 401862803,Charlotte,Temple,38,31,True,NO PICK,"QB changed last game (Conner Harrell started; Cole Gonzales started the first 5); starter vs Temple still not announced by Charlotte (Harrell expected per a podcast host, On3, Oct 17)",,,
-401860904,Fresno State,San Diego State,,,False,NO PICK,"San Diego State starter not named: Jayden Denegal benched Oct 10 for Draiden Trudeau, Stone Saunders (collarbone) questionable; coach Sean Lewis says 'everything's on the table' (East Village Times, Oct 17)",,,
+401860904,Fresno State,San Diego State,23,26,True,NO PICK,"San Diego State starter not named: Jayden Denegal benched Oct 10 for Draiden Trudeau, Stone Saunders (collarbone) questionable; coach Sean Lewis says 'everything's on the table' (East Village Times, Oct 17)",,,
 401858267,Pittsburgh,Boston College,21,27,True,NO PICK,Mason Heintschel (torn ACL) out for the season; Holden Geriner makes his 2nd start,,,
 401871091,Louisiana Tech,UL Monroe,24,0,True,PICK,,Louisiana Tech,0.7556,W
 401856832,TCU,Baylor,17,6,True,PICK,,Baylor,0.749,L
 401866444,Toledo,Eastern Michigan,34,14,True,PICK,,Toledo,0.7348,W
 401856724,Florida,Texas,27,24,True,NO PICK,"Aaron Philo (shoulder) questionable on Friday night's SEC availability report, a game-time decision; Tramell Jones would make his first start",,,
 401864520,Nevada,North Dakota State,17,31,True,NO PICK,"Carter Jones (undisclosed) questionable (Oct 15), no update since; Luke Duncan would start",,,
-401858492,Nebraska,Oregon,,,False,NO PICK,"Dante Moore (concussion) out again; Brock Thomas expected to start (Pete Thamel, College GameDay, Oct 17), not announced by Oregon",,,
-401866445,Ohio,Sacramento State,,,False,PICK,,Ohio,0.7213,
+401858492,Nebraska,Oregon,14,17,True,NO PICK,"Dante Moore (concussion) out again; Brock Thomas expected to start (Pete Thamel, College GameDay, Oct 17), not announced by Oregon",,,
+401866445,Ohio,Sacramento State,48,7,True,PICK,,Ohio,0.7213,W
 401862805,Tulsa,Rice,38,17,True,PICK,,Tulsa,0.7155,W
 401862806,Kent State,South Florida,2,29,True,PICK,,South Florida,0.7088,W
 401864522,Northern Illinois,Wyoming,23,41,True,PICK,,Wyoming,0.7004,W
 401856726,Arkansas,Vanderbilt,31,21,True,PICK,,Vanderbilt,0.6928,L
 401866478,Akron,Miami (OH),14,34,True,NO PICK,David McComb (upper body) out for the season (MAC availability report); Caleb Heavner has 2 starts,,,
 401856831,Oklahoma State,Houston,32,35,True,PICK,,Houston,0.6827,W
-401862804,Navy,UTSA,,,False,PICK,,UTSA,0.6638,
+401862804,Navy,UTSA,34,38,True,PICK,,UTSA,0.6638,W
 401858494,Wisconsin,UCLA,7,17,True,NO PICK,"Nico Iamaleava (season-ending injury, Oct 12) out; Ty Dieffenbach makes his first start (3 of 6 passing in relief vs Oregon, Oct 10)",,,
 401858268,Virginia,SMU,13,23,True,PICK,,SMU,0.6596,W
 401858489,Rutgers,Maryland,37,30,True,PICK,,Maryland,0.6651,L
@@ -37,7 +37,7 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401864524,UNLV,Air Force,31,41,True,NO PICK,Liam Szarka (leg) out for the season; Kemper Hodges has 1 start,,,
 401856721,Missouri,Ole Miss,3,31,True,PICK,,Missouri,0.6182,L
 401856828,Arizona State,Texas Tech,25,53,True,PICK,,Texas Tech,0.6063,W
-401858269,Wake Forest,California,,,False,NO PICK,"Jaron-Keawe Sagapolutele (concussion) listed probable on Friday's ACC report, not yet confirmed to start; Jackson Brousseau started the last 2",,,
+401858269,Wake Forest,California,41,7,True,NO PICK,"Jaron-Keawe Sagapolutele (concussion) listed probable on Friday's ACC report, not yet confirmed to start; Jackson Brousseau started the last 2",,,
 401866443,Western Michigan,Central Michigan,21,14,True,PICK,,Western Michigan,0.5832,W
 401869957,Georgia State,James Madison,22,49,True,PICK,,Georgia State,0.5535,L
 401856722,Kentucky,Oklahoma,21,13,True,PICK,,Oklahoma,0.5506,L

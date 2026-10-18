@@ -341,6 +341,22 @@ and ESPN sources say Caleb Williams is expected to start, but the Bears haven't
 confirmed it; Sunday's inactives settle it. Latest PDF:
 `report_2026-10-17_nfl-week6-picks-LATEST-saturday-night.pdf`.
 
+**Sunday check-in (F), 2026-10-18 8:45 AM Pacific (early-game inactives).**
+Caleb Williams is active and back as the Bears' starter (Bears inactives:
+Case Keenum as emergency third QB, Tyson Bagent the backup; PFT and CBS
+inactives tracker, Oct 18). **Bears at Falcons pick comes back**: both models
+re-run for the Sunday and Monday games without that no pick (framework with
+`--starter "CHI=Caleb Williams"`) and merged: engine **Falcons 69.5%**,
+framework **Falcons 61.0%** (25-22). No other pick or win chance changed
+(Texans-Jaguars was under way and stays as logged). Michael Penix Jr. (ribs)
+active and starting for the Falcons. Still no pick: Ravens (Lamar Jackson out,
+Huntley starts), Eagles (Jalen Hurts out, Tanner McKee starts), Buccaneers
+(Baker Mayfield out, Jalon Daniels starts), all confirmed by the inactives.
+Late games: no QB on the Chargers, Chiefs, Bills, Raiders, Cowboys, Packers,
+Cardinals or Rams has a game status; Jacoby Brissett stays the Cardinals'
+starter. Monday: Jayden Daniels has no designation (Marcus Mariota out);
+check-in G confirms. PDF: `report_2026-10-18_nfl-week6-sunday.pdf`.
+
 Week 5's Monday game (Bills 37, Rams 34) was the only Week 5 game where both
 models picked the same team and lost (the Commanders-Giants tie aside). The
 owner expected the Rams to lose, but the note was set after kickoff, so it
@@ -637,6 +653,15 @@ request; 29 of 33 picks final, 4 still playing).** Graded files
 - Not final at grading: Navy at UTSA, Ohio at Sacramento State, Utah at Colorado,
   New Mexico at Hawai'i. Sunday's check (F) re-runs `grade_picks.py` to finish
   them.
+
+**Saturday 2026-10-17 final, Sunday check-in (F), 2026-10-18 8:45 AM Pacific.**
+All 33 picks final; the 4 late games went right for both models (UTSA 38-34
+over Navy, Ohio 48-7 at Sacramento State, Utah 27-24 at Colorado, New Mexico
+21-10 at Hawai'i). **Final: engine (official) 22-11, framework 19-14.**
+- By win chance: engine 70%+ 10-2, 60-70% 6-3, under 60% 6-6; framework 70%+
+  11-2, 60-70% 6-6, under 60% 2-6.
+- Off the record (no-pick games, never in either record; `nopick_leans.py`
+  running total through 10-17): college engine 10-11, college framework 12-9.
 
 **Proposal backtest, returning starter (2026-10-17, owner's request; nothing
 changed in the engine).** `results/proposals/returning_starter_backtest.py`,

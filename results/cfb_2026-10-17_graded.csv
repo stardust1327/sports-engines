@@ -42,12 +42,12 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401856831,Oklahoma State,Houston,32,35,True,PICK,,Houston,0.8169484589042364,W
 401858262,Elon,Stanford,7,34,True,NO PICK,not enough play-by-play this season: Elon,,,
 401858265,Louisville,Syracuse,34,26,True,NO PICK,"Steve Angeli (Achilles) not starting; Malachi Nelson (rib bruise last game) starts (syracuse.com, Oct 16)",,,
-401862804,Navy,UTSA,,,False,PICK,,UTSA,0.6438845423583076,
+401862804,Navy,UTSA,34,38,True,PICK,,UTSA,0.6438845423583076,W
 401871091,Louisiana Tech,UL Monroe,24,0,True,PICK,,Louisiana Tech,0.7281364408211136,W
-401864523,San José State,UTEP,,,False,NO PICK,"EJ Colson Jr. (concussion) questionable (Oct 15), no update since; Raymond Moore III started the last game",,,
-401866445,Ohio,Sacramento State,,,False,PICK,,Ohio,0.6205466550916796,
-401856833,Utah,Colorado,,,False,PICK,,Utah,0.7811911227145472,
-401858269,Wake Forest,California,,,False,NO PICK,"Jaron-Keawe Sagapolutele (concussion) listed probable on Friday's ACC report, not yet confirmed to start; Jackson Brousseau started the last 2",,,
-401860904,Fresno State,San Diego State,,,False,NO PICK,"San Diego State starter not named: Jayden Denegal benched Oct 10 for Draiden Trudeau, Stone Saunders (collarbone) questionable; coach Sean Lewis says 'everything's on the table' (East Village Times, Oct 17)",,,
-401864521,New Mexico,Hawai'i,,,False,PICK,,New Mexico,0.8815263306778818,
-401858492,Nebraska,Oregon,,,False,NO PICK,"Dante Moore (concussion) out again; Brock Thomas expected to start (Pete Thamel, College GameDay, Oct 17), not announced by Oregon",,,
+401864523,San José State,UTEP,24,11,True,NO PICK,"EJ Colson Jr. (concussion) questionable (Oct 15), no update since; Raymond Moore III started the last game",,,
+401866445,Ohio,Sacramento State,48,7,True,PICK,,Ohio,0.6205466550916796,W
+401856833,Utah,Colorado,27,24,True,PICK,,Utah,0.7811911227145472,W
+401858269,Wake Forest,California,41,7,True,NO PICK,"Jaron-Keawe Sagapolutele (concussion) listed probable on Friday's ACC report, not yet confirmed to start; Jackson Brousseau started the last 2",,,
+401860904,Fresno State,San Diego State,23,26,True,NO PICK,"San Diego State starter not named: Jayden Denegal benched Oct 10 for Draiden Trudeau, Stone Saunders (collarbone) questionable; coach Sean Lewis says 'everything's on the table' (East Village Times, Oct 17)",,,
+401864521,New Mexico,Hawai'i,21,10,True,PICK,,New Mexico,0.8815263306778818,W
+401858492,Nebraska,Oregon,14,17,True,NO PICK,"Dante Moore (concussion) out again; Brock Thomas expected to start (Pete Thamel, College GameDay, Oct 17), not announced by Oregon",,,
