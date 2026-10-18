@@ -43,7 +43,7 @@ def log_path(day):
 
 def load(day):
     p = log_path(day)
-    return pd.read_csv(p, dtype={"game_id": str}) if os.path.exists(p) else pd.DataFrame(columns=COLS)
+    return pd.read_csv(p, dtype={"game_id": str, "final": str, "result": str}, keep_default_na=False) if os.path.exists(p) else pd.DataFrame(columns=COLS)
 
 
 def events(sport, day):
