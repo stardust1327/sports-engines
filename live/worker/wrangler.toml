@@ -11,7 +11,7 @@ crons = ["* * * * *"]
 
 [[kv_namespaces]]
 binding = "STATE"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "79a15b917a33475ba4e534e4802b6ac0"
 
 [vars]
 THRESHOLD_COLLEGE = "0.98"
