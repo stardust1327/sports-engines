@@ -1,0 +1,4 @@
+sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
+nfl,401872999,Bears at Falcons,10.18.2026 12:53 PM,4,9:29,"Bears 31, Falcons 15",Bears,0.9913,0.98,,
+nfl,401873001,Jets at Patriots,10.18.2026 12:53 PM,4,3:27,"Jets 16, Patriots 23",Patriots,0.999,0.98,,
+nfl,401873000,Saints at Giants,10.18.2026 12:53 PM,4,7:00,"Saints 34, Giants 18",Saints,0.9977,0.98,,
