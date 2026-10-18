@@ -624,6 +624,20 @@ models carry the same no-picks). Two reasons updated with `set_nopick.py`:
   MAC, Sun Belt, C-USA, Mountain West and independents post no league
   reports).
 
+**Saturday 2026-10-17 graded, Saturday night 8:30 PM Pacific (at the owner's
+request; 29 of 33 picks final, 4 still playing).** Graded files
+`cfb_2026-10-17_graded.csv` and `prompt_cfb_2026-10-17_graded.csv`; PDF
+`report_2026-10-17_cfb-graded.pdf`. **Engine (official) 18-11, framework 15-14.**
+- By win chance: engine 70%+ 8-2, 60-70% 4-3, under 60% 6-6; framework 70%+
+  8-2, 60-70% 5-6, under 60% 2-6.
+- The 7 splits: engine 5-2 (Army, James Madison, Ole Miss, North Carolina,
+  Arkansas State right; Kansas, Troy wrong).
+- Biggest misses (both models): Auburn 27, Georgia 24 (engine Georgia 92%,
+  framework 87%); Rutgers 37, Maryland 30 (engine Maryland 78%).
+- Not final at grading: Navy at UTSA, Ohio at Sacramento State, Utah at Colorado,
+  New Mexico at Hawai'i. Sunday's check (F) re-runs `grade_picks.py` to finish
+  them.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
