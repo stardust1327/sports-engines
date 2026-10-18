@@ -638,6 +638,24 @@ request; 29 of 33 picks final, 4 still playing).** Graded files
   New Mexico at Hawai'i. Sunday's check (F) re-runs `grade_picks.py` to finish
   them.
 
+**Proposal backtest, returning starter (2026-10-17, owner's request; nothing
+changed in the engine).** `results/proposals/returning_starter_backtest.py`,
+output `returning_starter_backtest.txt` and `_games.csv`. Question: when a
+team's regular QB plays, does it help to stop its backup's earlier games from
+dragging its offense rating down? Graded on the games the engine would actually
+pick (both regular starters playing), 2023-2025 weeks 4-15 and 2026 weeks 4-7,
+1,207 games, each week fit only on earlier plays:
+- Locked engine 843-364 (69.8%), Brier 0.194. Dropping backup games' offensive
+  plays: 838-369 (69.4%). A league-wide backup-QB term in the fit: 839-368
+  (69.5%).
+- On the 642 games where a team's backup had started earlier: engine 70.2%,
+  drop 70.1%, term 69.8%. Backups do play worse (about -0.08 EPA per play), but
+  correcting for it picks no more winners: the 70% prior and opponent adjustment
+  already absorb most of it.
+- Saturday 10-17: engine 20-12 on these games, drop 18-14, term 20-12. Rutgers at
+  Maryland stays Maryland under both (77% engine, 75% drop, 77% term).
+Recommendation: no change to the locked method.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same

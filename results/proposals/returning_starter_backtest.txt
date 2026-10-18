@@ -1,0 +1,50 @@
+All games with both regular starters: 1207 games
+  base  843-364 (69.8%), Brier 0.1944
+  drop  838-369 (69.4%), Brier 0.1956
+  flag  839-368 (69.5%), Brier 0.1947
+  drop vs base: 67 picks differ; drop right on 31 of them
+  flag vs base: 22 picks differ; flag right on 9 of them
+
+Affected games (a team's backup started earlier this season): 642 games
+  base  451-191 (70.2%), Brier 0.1927
+  drop  450-192 (70.1%), Brier 0.1928
+  flag  448-194 (69.8%), Brier 0.1924
+  drop vs base: 47 picks differ; drop right on 23 of them
+  flag vs base: 15 picks differ; flag right on 6 of them
+
+Unaffected games: 565 games
+  base  392-173 (69.4%), Brier 0.1965
+  drop  388-177 (68.7%), Brier 0.1987
+  flag  391-174 (69.2%), Brier 0.1972
+  drop vs base: 20 picks differ; drop right on 8 of them
+  flag vs base: 7 picks differ; flag right on 3 of them
+
+2023 affected: 208 games
+  base  151-57 (72.6%), Brier 0.1830
+  drop  153-55 (73.6%), Brier 0.1808
+  flag  150-58 (72.1%), Brier 0.1807
+  drop vs base: 18 picks differ; drop right on 10 of them
+  flag vs base: 9 picks differ; flag right on 4 of them
+
+2024 affected: 205 games
+  base  136-69 (66.3%), Brier 0.2106
+  drop  137-68 (66.8%), Brier 0.2138
+  flag  136-69 (66.3%), Brier 0.2124
+  drop vs base: 21 picks differ; drop right on 11 of them
+  flag vs base: 2 picks differ; flag right on 1 of them
+
+2025 affected: 190 games
+  base  137-53 (72.1%), Brier 0.1789
+  drop  135-55 (71.1%), Brier 0.1778
+  flag  136-54 (71.6%), Brier 0.1784
+  drop vs base: 6 picks differ; drop right on 2 of them
+  flag vs base: 3 picks differ; flag right on 1 of them
+
+2026 affected: 39 games
+  base  27-12 (69.2%), Brier 0.2168
+  drop  25-14 (64.1%), Brier 0.2201
+  flag  26-13 (66.7%), Brier 0.2187
+  drop vs base: 2 picks differ; drop right on 0 of them
+  flag vs base: 1 picks differ; flag right on 0 of them
+
+League-wide backup-QB term (EPA per play, flag variant): median -0.076
