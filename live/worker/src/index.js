@@ -6,6 +6,13 @@
 // Also posts if a called team later drops below 50% ("call in doubt"), and the
 // final score of every called game with whether the call was right.
 // No betting lines or odds are read. Separate from the prediction engines.
+//
+// Watch my bets (owner's request, 2026-10-18): bets added on the /bets page
+// (team to win + full payout) get their own alerts when that team's ESPN live
+// win chance crosses a level (75%, 50%, 25%, 10% by default), with the fair
+// value of the payout at that moment (win chance x payout) to compare with a
+// cash-out offer. Only "team to win" bets; the sportsbook's odds are never read.
+import { betsPage, handleBetsPost, watchBets, matchTeam } from "./bets.js";
 
 const SPORTS = [
   { key: "college", path: "college-football", q: "?groups=80&limit=400" },
@@ -48,6 +55,8 @@ export async function run(env, io = {}) {
   const msgs = [];
   let changed = false;
   const live = [];
+  const seen = []; // every scoreboard event, for the bets watcher
+  const bets = JSON.parse((await env.STATE.get("bets")) || "[]");
 
   for (const s of SPORTS) {
     let sb;
@@ -74,12 +83,17 @@ export async function run(env, io = {}) {
         changed = true;
         if ((env.SEND_FINALS || "true") === "true") msgs.push(`FINAL: ${score} (called ${g.call}: ${g.result})`);
       }
-      if (st === "in") live.push({ s, e, hn, an, score, th, g });
+      seen.push({ s, e, home, away, hn, an, score });
+      const forBet = bets.some((b) => !b.done && (!b.sport || b.sport === s.key) &&
+        (matchTeam(b.team, home.team) || matchTeam(b.team, away.team)));
+      if (st === "in") live.push({ s, e, hn, an, score, th, g, forBet });
     }
   }
 
   // uncalled games first, then re-check called ones for a collapse
-  live.sort((x, y) => (x.g ? 1 : 0) - (y.g ? 1 : 0));
+  // games with one of your bets first, then uncalled games, then called ones (checked for a collapse)
+  live.sort((x, y) => (y.forBet ? 1 : 0) - (x.forBet ? 1 : 0) || (x.g ? 1 : 0) - (y.g ? 1 : 0));
+  const wpById = {};
   for (const x of live) {
     if (budget <= 0) {
       log("request budget used up; remaining games wait for the next minute");
@@ -95,6 +109,7 @@ export async function run(env, io = {}) {
     const wp = d.winprobability || [];
     if (!wp.length) continue;
     const ph = +wp[wp.length - 1].homeWinPercentage;
+    wpById[x.e.id] = ph;
     const when = clockText(x.e.status);
     if (!x.g) {
       if (Math.max(ph, 1 - ph) < x.th) continue;
@@ -112,6 +127,10 @@ export async function run(env, io = {}) {
       }
     }
   }
+
+  const betMsgs = watchBets(bets, seen, wpById, { pct, clockText, nowPT });
+  if (betMsgs.changed) await env.STATE.put("bets", JSON.stringify(bets.filter((b) => !b.drop)));
+  msgs.unshift(...betMsgs.msgs);
 
   for (const [id, g] of Object.entries(games)) {
     if (Date.now() - (g.t || 0) > KEEP_MS) {
@@ -154,6 +173,14 @@ export default {
   // GET /calls: the calls kept for the last 3 days, as JSON (for grading and the log)
   async fetch(req, env) {
     const u = new URL(req.url);
+    if (u.pathname === "/bets") {
+      if (!env.BETS_KEY || (u.searchParams.get("key") || "") !== env.BETS_KEY) {
+        return new Response("Not allowed. Open /bets?key=<your BETS_KEY>.\n", { status: 403 });
+      }
+      if (req.method === "POST") await handleBetsPost(req, env);
+      const bets = JSON.parse((await env.STATE.get("bets")) || "[]");
+      return new Response(betsPage(bets, env.BETS_KEY), { headers: { "content-type": "text/html; charset=utf-8" } });
+    }
     if (u.pathname === "/calls") {
       return new Response((await env.STATE.get("state")) || '{"games":{}}', {
         headers: { "content-type": "application/json" } });

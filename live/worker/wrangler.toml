@@ -1,6 +1,7 @@
 # Live winner calls -> Discord, every minute (Cloudflare Workers free plan).
 # Setup: see live/worker/README.md. The Discord webhook URL is a secret
-# (wrangler secret put DISCORD_WEBHOOK), never stored in this repo.
+# (wrangler secret put DISCORD_WEBHOOK), never stored in this repo. Same for the
+# /bets page password (wrangler secret put BETS_KEY).
 name = "football-live-calls"
 main = "src/index.js"
 compatibility_date = "2025-09-01"

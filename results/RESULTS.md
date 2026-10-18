@@ -739,3 +739,12 @@ running total. As of 2026-10-18 (graded no-pick games so far): college engine
 an average stated win chance of about 70%, versus 22-12 / 19-15 (college) and
 6-6 / 10-2 (NFL) on official picks. Small sample, but holding these games back
 has been the right call so far.
+
+## Watch my bets (live/worker, owner's request 2026-10-18)
+
+The Discord worker also watches the owner's own team-to-win bets, added on its
+`/bets` page (team + full payout). Alerts when that team's ESPN live win chance
+crosses 75/50/25/10%, each with the fair value of the payout (win chance x
+payout) to compare with a cash-out offer. No sportsbook odds are read; the
+payout is typed in by the owner. Separate from the engines. Offline test:
+`node live/worker/test_bets.mjs`.
