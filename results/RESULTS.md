@@ -362,6 +362,39 @@ models picked the same team and lost (the Commanders-Giants tie aside). The
 owner expected the Rams to lose, but the note was set after kickoff, so it
 doesn't count for that game; a read sent before kickoff would have.
 
+### 2026 Week 6 graded through Sunday (Monday 2026-10-19; Commanders at 49ers pending)
+
+Graded Monday 7:50 AM Phoenix at the owner's request. PDF:
+`report_2026-10-19_week6-graded.pdf`. ESPN's server was unreachable from that
+session, so the final scores came from nflverse's schedule file (`games.csv`,
+the same file `grade.py` reads the closing lines from); the grading itself is
+the repo's `nfl_cfbmethod/grade.py` and `results/grade_picks.py`, unchanged. The
+Tuesday run re-grades the whole week with ESPN after Monday night.
+
+**Engine (official): 4-6.** Won: Bills 68%, Patriots 67%, Chiefs 62%, Packers
+59%. Lost: Rams 75% (Cardinals 18, Rams 16), Colts 73% (Titans 26, Colts 20),
+Falcons 69% (Bears 31, Falcons 23), Giants 60% (Saints 34, Giants 27), Jaguars
+57% (Texans 34, Jaguars 31, London) and Seahawks 53% (Thursday; Broncos 17,
+Seahawks 14, OT). Pending: 49ers 82%.
+
+**Framework: 5-5.** Won: Broncos (Thursday, the only split), Patriots, Bills,
+Chiefs, Packers. Lost: Jaguars, Falcons, Giants, Colts, Rams. Pending: 49ers
+79%.
+
+Closing-line check (grading only): the closing-line favorite also went 4-6 on
+the engine's 10 graded games. Brier: engine 0.3073, closing line 0.2843. The
+engine picked the market underdog twice (Packers won, Falcons lost); picks 5+
+points more confident than the close went 1-2. All graded weeks: engine
+10-11-1, closing-line favorite 13-8-1; Brier 0.2570 vs 0.2147.
+
+Off the record (never in either record): both models would have taken the
+Panthers (right; Panthers 25, Eagles 14), the Ravens (wrong; Browns 13, Ravens
+10) and the Buccaneers (wrong; Steelers 26, Buccaneers 19), 1-2 each. Running
+NFL total (`nopick_leans.py`): engine 1-4, framework 1-4.
+
+Week 7 picks were not run in that session (the engine's play-by-play comes from
+ESPN).
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
