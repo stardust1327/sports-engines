@@ -1,0 +1,2 @@
+game_id,kickoff_utc,state,away_id,home_id,away_name,home_name,neutral,venue,home_plays,away_plays,net_epa,net_sr,is_home,p_home,pick,pick_prob,status,reason,kickoff
+401871070,2026-10-22T00:00Z,pre,166,2534,New Mexico State,Sam Houston,False,Elliott T. Bowers Stadium,326,343,-0.051557984719326544,0.037166097342361544,1.0,0.6321928234026547,Sam Houston,0.6321928234026547,PICK,,Wed 5:00 PM

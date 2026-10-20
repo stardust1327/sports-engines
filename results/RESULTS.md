@@ -479,11 +479,50 @@ found for the other starters (Rodgers, Purdy, Burrow, Young, Stroud, Murray,
 Geno Smith, Watson, Ward, Nix, Brissett, Love, Goff, Stafford, Cousins,
 Prescott).
 
-**For the next check-in:** run the engine for 2026-10-22, 10-25 and 10-26 once
-ESPN is reachable (its first Week 7 run goes straight into `results/`), then
-re-run the framework into `/tmp/rerun` with the engine's `_qbs.csv` and merge.
-Wednesday's reports settle Jackson and Mayfield (practice), the Giants' starter,
-Penix, and the Thursday game's statuses for Maye and Williams.
+### 2026 Week 7 engine (official), Tuesday 2026-10-20, about 3:10 PM Phoenix
+
+ESPN became reachable at about 3:02 PM (the owner allowed it in the account's
+network settings), so the engine ran for 2026-10-22, 10-25 and 10-26 with the
+four no-picks above (its first Week 7 run, straight into `results/`). Its QB
+report gives the same expected starter for all 28 teams as the framework's run,
+and the framework re-run with the engine's `_qbs.csv` (into `/tmp/rerun`) came
+out byte-identical to the logged file, so nothing needed merging. Engine
+backtest with today's data: 961-561 (70%+ 272-92, 60-70% 296-164, under 60%
+393-305); 2026 so far out of sample 24-19.
+
+Files: `nfl_cfbmethod_2026_week07_picks.csv` and `_qbs.csv` (engine),
+`prompt_nfl_2026_week07_picks.csv` (framework). Splits in bold.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Patriots at Bears (Thu 5:15 PM) | Bears 50.1% | Bears 63% (26-22) |
+| Steelers vs Saints (Paris, Sun 6:30 AM) | Steelers 60.5% | Steelers 63% (24-20) |
+| 49ers at Falcons (10:00 AM) | 49ers 63.6% | 49ers 64% (26-21) |
+| Browns at Titans (10:00 AM) | **Titans 50.7%** | **Browns 51%** (23-22) |
+| Colts at Vikings (10:00 AM) | Vikings 58.0% | Vikings 82% (27-15) |
+| Dolphins at Jets (10:00 AM) | Jets 75.6% | Jets 69% (26-20) |
+| Broncos at Cardinals (1:05 PM) | **Cardinals 57.7%** | **Broncos 62%** (25-21) |
+| Packers at Lions (1:25 PM) | Lions 58.0% | Lions 67% (28-22) |
+| Rams at Raiders (1:25 PM) | Rams 79.3% | Rams 63% (26-22) |
+| Chiefs at Seahawks (5:20 PM) | Chiefs 52.7% | Chiefs 63% (24-20) |
+
+No pick (both), reasons as above: Bengals at Ravens, Buccaneers at Panthers,
+Giants at Texans, Cowboys at Eagles. Off the record: engine Ravens 61%, Panthers
+60%, Texans 73%, Cowboys 54%; framework Ravens 53%, Panthers 59%, Texans 70%,
+Cowboys 51%.
+
+The models agree on 8 of the 10 picks. The engine has two picks at 70%+ (Rams,
+Jets); the framework has one (Vikings).
+
+PDF: `report_2026-10-20_tuesday-run.pdf` (NFL Week 6 graded, last week's college
+games graded 10-13 to 10-17, NFL Week 7 picks, college picks 10-20 to 10-23),
+made with `make_report.py`.
+
+**For the next check-ins:** Wednesday's practice reports settle Jackson and
+Mayfield, plus the Giants' starter and Penix; Wednesday's report for the
+Thursday game gives Maye's and Williams's statuses. A pick comes back only by
+re-running both models without that no-pick (into `/tmp/rerun`, then
+`merge_rerun.py`).
 
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
@@ -831,6 +870,54 @@ No pick (both):
 QB check: FIU's JJ Kohl and Middle Tennessee's Roman Gagliano have started every
 game, with no injury news. South Alabama's Jared Hollins (LOW ATTEMPTS: 10 passes
 in his last game) has no injury news; that game is a no-pick for Marshall anyway.
+
+**Wednesday to Friday, 10-21 to 10-23** (engine `cfb_2026-10-21_picks.csv`
+through `cfb_2026-10-23_picks.csv`, framework `prompt_cfb_2026-10-21_picks.csv`
+through `prompt_cfb_2026-10-23_picks.csv`; logged Tuesday about 3:15 PM Phoenix).
+Splits in bold.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| New Mexico State at Sam Houston (Wed 5:00 PM) | **Sam Houston 63%** | **New Mexico State 54%** (23-22) |
+| Liberty at Kennesaw State (Thu 4:00 PM) | Liberty 71% | Liberty 68% (31-23) |
+| East Carolina at Memphis (Thu 4:30 PM) | Memphis 73% | Memphis 51% (27-26) |
+| Duke at Virginia (Fri 4:00 PM) | **Virginia 61%** | **Duke 57%** (30-27) |
+| Army at Tulsa (Fri 5:30 PM) | Tulsa 58% | Tulsa 60% (33-29) |
+| NC State at Stanford (Fri 7:30 PM) | NC State 57% | NC State 63% (34-28) |
+
+No pick (both):
+- James Madison at App State (Thu): Malachi Singleton (ankle) questionable for
+  Thursday (Rotowire, Oct 19): hurt again in the Oct 17 win over Coastal
+  Carolina, where Henry Hasselbeck played the 2nd half.
+- Massachusetts at UConn (Fri): William "Pop" Watson III (ankle) a game-time
+  decision: missed the last 2 games, practiced Monday, status to be decided
+  Friday afternoon and in pregame warmups (Minuteman Command, Oct 19); Logan
+  Inagawa made his first career start Oct 17.
+- Air Force at Wyoming (Fri): Liam Szarka (leg) out for the season (KRDO, Oct 5);
+  sophomore Evan Medders has started in his place since Oct 10.
+
+Midweek totals: 7 picks in both models, 5 no-picks; they split on 2 (Sam Houston
+/ New Mexico State, Virginia / Duke).
+
+QB check (flags from the engine's QB report, news through Tuesday afternoon):
+- New Mexico State (CHANGE SPLIT): Trey Hedden was pulled for performance, not
+  injury, in the Sep 26 loss to New Mexico, Tony Sanchez opened the job (KFOX,
+  Sep 28), and Adam Damante has started the 3 games since. That's a coach's
+  choice with no injury news, so the pick stands.
+- Liberty (LOW ATTEMPTS, 14 passes): Deshawn Purdie is the named starter; Ethan
+  Vasko takes the short-yardage snaps (Liberty Champion, Oct 11). No injury
+  news, so the pick stands.
+- East Carolina (SPLIT): Emory Williams has started the last 3 and leads in
+  attempts; no injury news (AP preview, Oct 18). James Madison (SPLIT): Camden
+  Coleman has started 6 straight. Tulsa (SPLIT): Baylor Hayes is back from his
+  September knee injury and has started the last 3. Army (LOW ATTEMPTS): option
+  offense, Cale Hellums has started every game.
+- No injury news found for Landyn Locke (Sam Houston), Rickie Collins (Kennesaw
+  State), Marcus Stokes (Memphis), Beau Pribula (Virginia, listed starter Oct
+  20), Walker Eget (Duke), CJ Bailey (NC State) or Davis Warren (Stanford).
+- To recheck before kickoff: Singleton (App State, Thursday) and Watson (UMass,
+  Friday warmups). A pick comes back only by re-running both models without the
+  no-pick (into `/tmp/rerun`, then `merge_rerun.py`).
 
 ## College Prompt Football framework (built 2026-10-11)
 
