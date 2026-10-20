@@ -395,6 +395,96 @@ NFL total (`nopick_leans.py`): engine 1-4, framework 1-4.
 Week 7 picks were not run in that session (the engine's play-by-play comes from
 ESPN).
 
+### 2026 Week 6 final (Tuesday run, 2026-10-20)
+
+Graded Tuesday about 2:50 PM Phoenix at the owner's request. ESPN was still
+unreachable (this session's network blocks `site.api.espn.com`, and PyPI too), so
+the final scores again came from nflverse's `games.csv` through a wrapper that
+hands them to the repo's `grade.py` and `grade_picks.py`, both unchanged. Only
+the Monday game was new; the Sunday grades came out identical.
+
+**Monday night: 49ers 23, Commanders 17.** Engine 49ers 82%: won. Framework
+49ers 79%: won.
+
+**Final: engine (official) 5-6, framework 6-5.** The framework's edge is the
+Thursday split (Broncos).
+
+Closing-line check (grading only): the closing-line favorite also went 5-6 on the
+engine's 11 games. Brier: engine 0.2822, closing line 0.2635. The engine picked
+the market underdog twice (1-1); picks 5+ points more confident than the close
+went 2-2 (-0.79 units, -19.9% per bet). All graded weeks: engine 11-11-1,
+closing-line favorite 14-8-1; Brier 0.2472 vs 0.2077; picks against the market
+favorite 1-4; 5+ points more confident than the close 3-6 (-4.24 units).
+
+Off the record: unchanged (Monday's game was a pick). Running NFL total
+(`nopick_leans.py`): engine 1-4, framework 1-4.
+
+Re-graded with ESPN's scores once ESPN was reachable again (about 3:02 PM): the
+same 5-6 and 6-5, file for file.
+
+### 2026 Week 7 (Tuesday run, 2026-10-20): framework first run (engine to follow)
+
+Run Tuesday about 3 PM Phoenix at the owner's request. **The engine (official)
+could not run**: its play-by-play comes from ESPN, which this session's network
+blocks. The framework ran on nflverse data as usual, with two plumbing changes,
+both outside `prompt_football/` (unchanged):
+- pyarrow couldn't be installed (PyPI blocked), so the framework read nflverse's
+  CSV releases of the same play-by-play and FTN charting tables instead of the
+  parquet ones. Check: it reproduced the 2022-2025 backtest exactly (558-335,
+  62.5%, Brier 0.2230).
+- With no engine `_qbs.csv`, each team's expected starter is its last starter
+  from nflverse play-by-play (most pass attempts in its last game, the same rule
+  as `cfb/qbs.py`), passed with `--qbs`.
+
+File: `prompt_nfl_2026_week07_picks.csv` (first run of the week, straight into
+`results/`).
+
+| Game (Phoenix kickoff) | Framework |
+|---|---|
+| Patriots at Bears (Thu 5:15 PM) | Bears 63% (26-22) |
+| Steelers vs Saints (Paris, Sun 6:30 AM) | Steelers 63% (24-20) |
+| 49ers at Falcons | 49ers 64% (26-21) |
+| Browns at Titans | Browns 51% (23-22) |
+| Colts at Vikings | Vikings 82% (27-15) |
+| Dolphins at Jets | Jets 69% (26-20) |
+| Broncos at Cardinals | Broncos 62% (25-21) |
+| Packers at Lions | Lions 67% (28-22) |
+| Rams at Raiders | Rams 63% (26-22) |
+| Chiefs at Seahawks (Sun night) | Chiefs 63% (24-20) |
+
+No pick (both models; the engine gets the same no-picks when it runs):
+- Bengals at Ravens: Lamar Jackson (left ankle) Week 7 status unconfirmed:
+  day-to-day, hasn't practiced since the Oct 4 injury; Jesse Minter says he could
+  "potentially" practice this week (Oct 19). Tyler Huntley started the last 2.
+- Buccaneers at Panthers: Baker Mayfield (dislocated right thumb) return
+  unconfirmed: hasn't practiced since the injury, to be evaluated at Wednesday's
+  practice; the Bucs are preparing for Jalon Daniels to start a 4th straight game
+  (Oct 19).
+- Giants at Texans: starter not named. Jameis Winston was benched for J.J.
+  McCarthy during the Week 6 loss; John Harbaugh says the team is "honing in on a
+  decision" (Oct 19).
+- Cowboys at Eagles (Mon): Jalen Hurts (blood clots) on IR, expected to miss the
+  rest of the season (NFL Network/ESPN, Oct 19); Tanner McKee makes his 2nd start.
+
+QB check (news through Tuesday afternoon; the only report out is Monday's
+estimate for the Thursday game): Drake Maye (right shoulder) full on the
+Patriots' Monday estimate; Caleb Williams off the Bears' report. Daniel Jones
+stays the Colts' starter (Shane Steichen, Oct 19; performance question, no
+injury). Malik Willis (minor, undisclosed) "should be good" and was throwing
+Monday (Jeff Hafley, Oct 19). Michael Penix Jr. visited the injury tent in Week
+6, returned and finished ("Just say I am good"). Tyler Shough is playing through
+two broken bones in his non-throwing hand. Patrick Mahomes played through his
+knee listing in Week 6; Mike Macdonald kept Sam Darnold as QB1. No injury news
+found for the other starters (Rodgers, Purdy, Burrow, Young, Stroud, Murray,
+Geno Smith, Watson, Ward, Nix, Brissett, Love, Goff, Stafford, Cousins,
+Prescott).
+
+**For the next check-in:** run the engine for 2026-10-22, 10-25 and 10-26 once
+ESPN is reachable (its first Week 7 run goes straight into `results/`), then
+re-run the framework into `/tmp/rerun` with the engine's `_qbs.csv` and merge.
+Wednesday's reports settle Jackson and Mayfield (practice), the Giants' starter,
+Penix, and the Thursday game's statuses for Maye and Williams.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -713,6 +803,34 @@ pick (both regular starters playing), 2023-2025 weeks 4-15 and 2026 weeks 4-7,
 - Saturday 10-17: engine 20-12 on these games, drop 18-14, term 20-12. Rutgers at
   Maryland stays Maryland under both (77% engine, 75% drop, 77% term).
 Recommendation: no change to the locked method.
+
+## College football midweek, 2026-10-20 to 10-23 (Tuesday run, 2026-10-20)
+
+ESPN became reachable from the session at about 3:02 PM Phoenix (the owner
+allowed it in the account's network settings), so both college models ran.
+Engine file `cfb_2026-10-20_picks.csv`, framework file
+`prompt_cfb_2026-10-20_picks.csv` (Wednesday to Friday follow below). No-picks
+applied to both with `set_nopick.py`.
+
+**Tuesday 10-20 (logged before the 4:00 PM kickoffs):**
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Middle Tennessee at Florida International (4:00 PM) | FIU 78% | FIU 69% (29-22) |
+
+No pick (both):
+- Missouri State at Delaware: Delaware's starter unconfirmed: Nick Minicucci
+  (season leader) is sidelined and true freshman Tyler Bell, who made his first
+  start Oct 13, isn't confirmed for Tuesday (CBS, Oct 20). Missouri State also
+  changed QBs last game (Henry Belin IV started Oct 14; Skyler Locklear started
+  the first 5).
+- South Alabama at Marshall: Marshall's starter unconfirmed: Zion Turner replaced
+  Carlos Del Rio-Wilson (started every game) in the last game and Marshall is
+  considering a change (WV MetroNews, Oct 20).
+
+QB check: FIU's JJ Kohl and Middle Tennessee's Roman Gagliano have started every
+game, with no injury news. South Alabama's Jared Hollins (LOW ATTEMPTS: 10 passes
+in his last game) has no injury news; that game is a no-pick for Marshall anyway.
 
 ## College Prompt Football framework (built 2026-10-11)
 
