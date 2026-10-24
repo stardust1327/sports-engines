@@ -13,6 +13,33 @@ college framework (2022-2026, 2,356) -3.4%. That's about what betting every
 favorite returns. All four pick fewer winners than the moneyline favorite, and
 the closing line's win chances are more accurate than every model's.
 
+## Backtest audit (owner's request, 2026-10-24)
+
+The owner asked for at least 4-5 seasons of backtesting for both sports after
+recent results looked off. Details, scripts and per-game files:
+`audit_2026-10-24/README.md`. Nothing in the engines or frameworks changed.
+
+- Multi-season backtests, every game predicted only from earlier plays: college
+  engine 2021-2025 1945-834 (70.0%; weeks 4-8 67.3%), college framework
+  2021-2025 1873-906 (67.4%; weeks 4-8 64.4%), NFL engine 2016-2025 1332-809
+  (62.2%; 2016-2018, never used to pick its settings, 60.9%), NFL framework
+  2022-2025 558-335 (62.5%; weeks 4-8 57.1%). Stated win chances match how often
+  picks won in every tier.
+- The college engine's earlier backtest covered only 2025, the season its
+  ridge penalty was tuned on (2025: 71.7%; the four untuned seasons: 69.6%).
+- The frameworks' backtests use the QB who actually played most in each game.
+  With the previous game's starter instead (what live picks use): NFL 558-335
+  either way, college 67.4% vs 67.5%. No material effect.
+- Live picks match the backtest code: NFL engine 28 of 28 picks identical,
+  college engine 70 of 71 (one 50.7% / 49.3% coin flip). Every logged grade
+  re-checked against ESPN: no differences.
+- Live so far vs expected (sum of win chances): NFL engine 11-11-1 vs 14.8,
+  NFL framework 15-7-1 vs 14.5, college engine 39-25 vs 43.5, college framework
+  27-18 vs 30.0. At each model's early-season backtest rate, the NFL and
+  college engine records (or worse) come up about 1 time in 6. Verdict: no bug
+  found; normal early-season variance, with the framework's 9-2-1 Week 5 the
+  lucky outlier.
+
 ## College football
 
 ### 2026-10-10 (23 games from the 12:30 PM Phoenix kickoffs on)

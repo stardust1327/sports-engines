@@ -1,0 +1,205 @@
+model,slate,sport,game_id,away,home,status,pick,pick_prob,logged_result,espn_state,espn_away,espn_home,regraded
+college engine,2026-10-13,college-football,401871067,Delaware,Middle Tennessee,NO PICK,,,,post,30,33,
+college engine,2026-10-13,college-football,401871053,Florida International,Jacksonville State,PICK,Jacksonville State,0.6289449081224606,W,post,24,27,W
+college engine,2026-10-14,college-football,401871054,Kennesaw State,Missouri State,PICK,Missouri State,0.5433690322316024,W,post,21,24,W
+college engine,2026-10-14,college-football,401871068,Western Kentucky,Sam Houston,NO PICK,,,,post,16,3,
+college engine,2026-10-15,college-football,401862800,East Carolina,UAB,PICK,East Carolina,0.5928908749374482,L,post,17,30,L
+college engine,2026-10-15,college-football,401869950,Georgia Southern,Old Dominion,PICK,Georgia Southern,0.7485824748271295,W,post,23,15,W
+college engine,2026-10-15,college-football,401860923,Colorado State,Texas State,PICK,Texas State,0.8342211058828981,W,post,27,66,W
+college engine,2026-10-16,college-football,401862801,Memphis,Tulane,NO PICK,,,,post,17,31,
+college engine,2026-10-16,college-football,401858493,Washington,Purdue,NO PICK,,,,post,38,26,
+college engine,2026-10-16,college-football,401869844,App State,Coastal Carolina,NO PICK,,,,post,35,32,
+college engine,2026-10-17,college-football,401858488,Ohio State,Indiana,PICK,Indiana,0.5079234187061037,L,post,19,15,L
+college engine,2026-10-17,college-football,401856724,Florida,Texas,NO PICK,,,,post,27,24,
+college engine,2026-10-17,college-football,401856720,Mississippi State,LSU,NO PICK,,,,post,0,31,
+college engine,2026-10-17,college-football,401858268,Virginia,SMU,PICK,SMU,0.7524898931604405,W,post,13,23,W
+college engine,2026-10-17,college-football,401858491,Northwestern,Michigan State,PICK,Northwestern,0.6952221113714642,W,post,24,21,W
+college engine,2026-10-17,college-football,401856829,Cincinnati,West Virginia,PICK,Cincinnati,0.5199966278231019,L,post,42,45,L
+college engine,2026-10-17,college-football,401856830,Kansas,Kansas State,PICK,Kansas,0.5067557177955708,L,post,24,35,L
+college engine,2026-10-17,college-football,401858261,Charleston Southern,Clemson,NO PICK,,,,post,0,37,
+college engine,2026-10-17,college-football,401858267,Pittsburgh,Boston College,NO PICK,,,,post,21,27,
+college engine,2026-10-17,college-football,401862802,Florida Atlantic,Army,PICK,Army,0.6332409238466008,W,post,24,56,W
+college engine,2026-10-17,college-football,401866441,Ball State,Bowling Green,PICK,Bowling Green,0.5072611013920811,L,post,32,31,L
+college engine,2026-10-17,college-football,401869957,Georgia State,James Madison,PICK,James Madison,0.7030681590264616,W,post,22,49,W
+college engine,2026-10-17,college-football,401858489,Rutgers,Maryland,PICK,Maryland,0.7810570252087822,L,post,37,30,L
+college engine,2026-10-17,college-football,401856725,The Citadel,Texas A&M,NO PICK,,,,post,0,41,
+college engine,2026-10-17,college-football,401862803,Charlotte,Temple,NO PICK,,,,post,38,31,
+college engine,2026-10-17,college-football,401866442,Massachusetts,Buffalo,NO PICK,,,,post,18,25,
+college engine,2026-10-17,college-football,401866443,Western Michigan,Central Michigan,PICK,Western Michigan,0.5232349327538643,W,post,21,14,W
+college engine,2026-10-17,college-football,401856719,Auburn,Georgia,PICK,Georgia,0.9180560979228428,L,post,27,24,L
+college engine,2026-10-17,college-football,401856723,Alabama,Tennessee,NO PICK,,,,post,10,26,
+college engine,2026-10-17,college-football,401856721,Missouri,Ole Miss,PICK,Ole Miss,0.5374953814801888,W,post,3,31,W
+college engine,2026-10-17,college-football,401856828,Arizona State,Texas Tech,PICK,Texas Tech,0.8196302830272659,W,post,25,53,W
+college engine,2026-10-17,college-football,401858264,Georgia Tech,Virginia Tech,PICK,Virginia Tech,0.8230123580390855,W,post,24,34,W
+college engine,2026-10-17,college-football,401858266,North Carolina,Duke,PICK,North Carolina,0.5658767453822402,W,post,24,20,W
+college engine,2026-10-17,college-football,401858490,Penn State,Michigan,PICK,Michigan,0.6612924873433761,W,post,18,21,W
+college engine,2026-10-17,college-football,401864522,Northern Illinois,Wyoming,PICK,Wyoming,0.5485444254466862,W,post,23,41,W
+college engine,2026-10-17,college-football,401864524,UNLV,Air Force,NO PICK,,,,post,31,41,
+college engine,2026-10-17,college-football,401866444,Toledo,Eastern Michigan,PICK,Toledo,0.6735024393185011,W,post,34,14,W
+college engine,2026-10-17,college-football,401866478,Akron,Miami (OH),NO PICK,,,,post,14,34,
+college engine,2026-10-17,college-football,401862805,Tulsa,Rice,PICK,Tulsa,0.527056374704584,W,post,38,17,W
+college engine,2026-10-17,college-football,401869966,Troy,Louisiana,PICK,Troy,0.5185376183615874,L,post,6,33,L
+college engine,2026-10-17,college-football,401860903,Washington State,Oregon State,NO PICK,,,,post,30,48,
+college engine,2026-10-17,college-football,401858263,Florida State,Miami,PICK,Miami,0.9077834495926064,W,post,35,43,W
+college engine,2026-10-17,college-football,401856726,Arkansas,Vanderbilt,PICK,Vanderbilt,0.6398944043366398,L,post,31,21,L
+college engine,2026-10-17,college-football,401856832,TCU,Baylor,PICK,Baylor,0.6413601120043145,L,post,17,6,L
+college engine,2026-10-17,college-football,401862806,Kent State,South Florida,PICK,South Florida,0.8644549302203169,W,post,2,29,W
+college engine,2026-10-17,college-football,401864520,Nevada,North Dakota State,NO PICK,,,,post,17,31,
+college engine,2026-10-17,college-football,401869934,Arkansas State,Southern Miss,PICK,Arkansas State,0.5224458268244664,W,post,23,13,W
+college engine,2026-10-17,college-football,401856809,Notre Dame,BYU,PICK,Notre Dame,0.5864645872965533,L,post,24,28,L
+college engine,2026-10-17,college-football,401858494,Wisconsin,UCLA,NO PICK,,,,post,7,17,
+college engine,2026-10-17,college-football,401856722,Kentucky,Oklahoma,PICK,Oklahoma,0.6561813812856571,L,post,21,13,L
+college engine,2026-10-17,college-football,401856831,Oklahoma State,Houston,PICK,Houston,0.8169484589042364,W,post,32,35,W
+college engine,2026-10-17,college-football,401858262,Elon,Stanford,NO PICK,,,,post,7,34,
+college engine,2026-10-17,college-football,401858265,Louisville,Syracuse,NO PICK,,,,post,34,26,
+college engine,2026-10-17,college-football,401862804,Navy,UTSA,PICK,UTSA,0.6438845423583076,W,post,34,38,W
+college engine,2026-10-17,college-football,401871091,Louisiana Tech,UL Monroe,PICK,Louisiana Tech,0.7281364408211136,W,post,24,0,W
+college engine,2026-10-17,college-football,401864523,San José State,UTEP,NO PICK,,,,post,24,11,
+college engine,2026-10-17,college-football,401866445,Ohio,Sacramento State,PICK,Ohio,0.6205466550916796,W,post,48,7,W
+college engine,2026-10-17,college-football,401856833,Utah,Colorado,PICK,Utah,0.7811911227145472,W,post,27,24,W
+college engine,2026-10-17,college-football,401858269,Wake Forest,California,NO PICK,,,,post,41,7,
+college engine,2026-10-17,college-football,401860904,Fresno State,San Diego State,NO PICK,,,,post,23,26,
+college engine,2026-10-17,college-football,401864521,New Mexico,Hawai'i,PICK,New Mexico,0.8815263306778818,W,post,21,10,W
+college engine,2026-10-17,college-football,401858492,Nebraska,Oregon,NO PICK,,,,post,14,17,
+college engine,2026-10-20,college-football,401871055,Middle Tennessee,Florida International,PICK,Florida International,0.7798242398257328,L,post,26,23,L
+college engine,2026-10-20,college-football,401871069,Missouri State,Delaware,NO PICK,,,,post,38,61,
+college engine,2026-10-20,college-football,401871092,South Alabama,Marshall,NO PICK,,,,post,13,20,
+college engine,2026-10-21,college-football,401871070,New Mexico State,Sam Houston,PICK,Sam Houston,0.6321928234026547,L,post,30,24,L
+college engine,2026-10-22,college-football,401869845,James Madison,App State,NO PICK,,,,post,31,34,
+college engine,2026-10-22,college-football,401871056,Liberty,Kennesaw State,PICK,Liberty,0.7121887686583694,W,post,34,6,W
+college engine,2026-10-22,college-football,401862807,East Carolina,Memphis,PICK,Memphis,0.7309891768290889,W,post,34,41,W
+college engine,2026-10-23,college-football,401858271,Duke,Virginia,PICK,Virginia,0.6149251712911054,L,post,19,16,L
+college engine,2026-10-23,college-football,401861965,Massachusetts,UConn,NO PICK,,,,post,16,35,
+college engine,2026-10-23,college-football,401862808,Army,Tulsa,PICK,Tulsa,0.5750383371610311,L,post,38,35,L
+college engine,2026-10-23,college-football,401864525,Air Force,Wyoming,NO PICK,,,,post,14,28,
+college engine,2026-10-23,college-football,401858272,NC State,Stanford,PICK,NC State,0.5689468989434519,L,post,28,31,L
+college framework,2026-10-13,college-football,401871053,Florida International,Jacksonville State,PICK,Jacksonville State,0.5097,W,post,24,27,W
+college framework,2026-10-13,college-football,401871067,Delaware,Middle Tennessee,NO PICK,,,,post,30,33,
+college framework,2026-10-14,college-football,401871054,Kennesaw State,Missouri State,PICK,Missouri State,0.5953,W,post,21,24,W
+college framework,2026-10-14,college-football,401871068,Western Kentucky,Sam Houston,NO PICK,,,,post,16,3,
+college framework,2026-10-15,college-football,401869950,Georgia Southern,Old Dominion,PICK,Georgia Southern,0.8516,W,post,23,15,W
+college framework,2026-10-15,college-football,401862800,East Carolina,UAB,PICK,East Carolina,0.769,L,post,17,30,L
+college framework,2026-10-15,college-football,401860923,Colorado State,Texas State,PICK,Texas State,0.6997,W,post,27,66,W
+college framework,2026-10-16,college-football,401862801,Memphis,Tulane,NO PICK,,,,post,17,31,
+college framework,2026-10-16,college-football,401869844,App State,Coastal Carolina,NO PICK,,,,post,35,32,
+college framework,2026-10-16,college-football,401858493,Washington,Purdue,NO PICK,,,,post,38,26,
+college framework,2026-10-17,college-football,401858263,Florida State,Miami,PICK,Miami,0.9214,W,post,35,43,W
+college framework,2026-10-17,college-football,401860903,Washington State,Oregon State,NO PICK,,,,post,30,48,
+college framework,2026-10-17,college-football,401856719,Auburn,Georgia,PICK,Georgia,0.8741,L,post,27,24,L
+college framework,2026-10-17,college-football,401856720,Mississippi State,LSU,NO PICK,,,,post,0,31,
+college framework,2026-10-17,college-football,401864521,New Mexico,Hawai'i,PICK,New Mexico,0.8554,W,post,21,10,W
+college framework,2026-10-17,college-football,401858491,Northwestern,Michigan State,PICK,Northwestern,0.8522,W,post,24,21,W
+college framework,2026-10-17,college-football,401858264,Georgia Tech,Virginia Tech,PICK,Virginia Tech,0.846,W,post,24,34,W
+college framework,2026-10-17,college-football,401856833,Utah,Colorado,PICK,Utah,0.8338,W,post,27,24,W
+college framework,2026-10-17,college-football,401864523,San José State,UTEP,NO PICK,,,,post,24,11,
+college framework,2026-10-17,college-football,401866442,Massachusetts,Buffalo,NO PICK,,,,post,18,25,
+college framework,2026-10-17,college-football,401862803,Charlotte,Temple,NO PICK,,,,post,38,31,
+college framework,2026-10-17,college-football,401860904,Fresno State,San Diego State,NO PICK,,,,post,23,26,
+college framework,2026-10-17,college-football,401858267,Pittsburgh,Boston College,NO PICK,,,,post,21,27,
+college framework,2026-10-17,college-football,401871091,Louisiana Tech,UL Monroe,PICK,Louisiana Tech,0.7556,W,post,24,0,W
+college framework,2026-10-17,college-football,401856832,TCU,Baylor,PICK,Baylor,0.749,L,post,17,6,L
+college framework,2026-10-17,college-football,401866444,Toledo,Eastern Michigan,PICK,Toledo,0.7348,W,post,34,14,W
+college framework,2026-10-17,college-football,401856724,Florida,Texas,NO PICK,,,,post,27,24,
+college framework,2026-10-17,college-football,401864520,Nevada,North Dakota State,NO PICK,,,,post,17,31,
+college framework,2026-10-17,college-football,401858492,Nebraska,Oregon,NO PICK,,,,post,14,17,
+college framework,2026-10-17,college-football,401866445,Ohio,Sacramento State,PICK,Ohio,0.7213,W,post,48,7,W
+college framework,2026-10-17,college-football,401862805,Tulsa,Rice,PICK,Tulsa,0.7155,W,post,38,17,W
+college framework,2026-10-17,college-football,401862806,Kent State,South Florida,PICK,South Florida,0.7088,W,post,2,29,W
+college framework,2026-10-17,college-football,401864522,Northern Illinois,Wyoming,PICK,Wyoming,0.7004,W,post,23,41,W
+college framework,2026-10-17,college-football,401856726,Arkansas,Vanderbilt,PICK,Vanderbilt,0.6928,L,post,31,21,L
+college framework,2026-10-17,college-football,401866478,Akron,Miami (OH),NO PICK,,,,post,14,34,
+college framework,2026-10-17,college-football,401856831,Oklahoma State,Houston,PICK,Houston,0.6827,W,post,32,35,W
+college framework,2026-10-17,college-football,401862804,Navy,UTSA,PICK,UTSA,0.6638,W,post,34,38,W
+college framework,2026-10-17,college-football,401858494,Wisconsin,UCLA,NO PICK,,,,post,7,17,
+college framework,2026-10-17,college-football,401858268,Virginia,SMU,PICK,SMU,0.6596,W,post,13,23,W
+college framework,2026-10-17,college-football,401858489,Rutgers,Maryland,PICK,Maryland,0.6651,L,post,37,30,L
+college framework,2026-10-17,college-football,401866441,Ball State,Bowling Green,PICK,Bowling Green,0.6614,L,post,32,31,L
+college framework,2026-10-17,college-football,401858266,North Carolina,Duke,PICK,Duke,0.6572,L,post,24,20,L
+college framework,2026-10-17,college-football,401858488,Ohio State,Indiana,PICK,Indiana,0.6241,L,post,19,15,L
+college framework,2026-10-17,college-football,401858490,Penn State,Michigan,PICK,Michigan,0.6277,W,post,18,21,W
+college framework,2026-10-17,college-football,401856830,Kansas,Kansas State,PICK,Kansas State,0.6352,W,post,24,35,W
+college framework,2026-10-17,college-football,401864524,UNLV,Air Force,NO PICK,,,,post,31,41,
+college framework,2026-10-17,college-football,401856721,Missouri,Ole Miss,PICK,Missouri,0.6182,L,post,3,31,L
+college framework,2026-10-17,college-football,401856828,Arizona State,Texas Tech,PICK,Texas Tech,0.6063,W,post,25,53,W
+college framework,2026-10-17,college-football,401858269,Wake Forest,California,NO PICK,,,,post,41,7,
+college framework,2026-10-17,college-football,401866443,Western Michigan,Central Michigan,PICK,Western Michigan,0.5832,W,post,21,14,W
+college framework,2026-10-17,college-football,401869957,Georgia State,James Madison,PICK,Georgia State,0.5535,L,post,22,49,L
+college framework,2026-10-17,college-football,401856722,Kentucky,Oklahoma,PICK,Oklahoma,0.5506,L,post,21,13,L
+college framework,2026-10-17,college-football,401856829,Cincinnati,West Virginia,PICK,Cincinnati,0.5578,L,post,42,45,L
+college framework,2026-10-17,college-football,401858265,Louisville,Syracuse,NO PICK,,,,post,34,26,
+college framework,2026-10-17,college-football,401869934,Arkansas State,Southern Miss,PICK,Southern Miss,0.5287,L,post,23,13,L
+college framework,2026-10-17,college-football,401856723,Alabama,Tennessee,NO PICK,,,,post,10,26,
+college framework,2026-10-17,college-football,401856809,Notre Dame,BYU,PICK,Notre Dame,0.5152,L,post,24,28,L
+college framework,2026-10-17,college-football,401862802,Florida Atlantic,Army,PICK,Florida Atlantic,0.5197,L,post,24,56,L
+college framework,2026-10-17,college-football,401869966,Troy,Louisiana,PICK,Louisiana,0.5054,W,post,6,33,W
+college framework,2026-10-17,college-football,401858261,Charleston Southern,Clemson,NO PICK,,,,post,0,37,
+college framework,2026-10-17,college-football,401856725,The Citadel,Texas A&M,NO PICK,,,,post,0,41,
+college framework,2026-10-17,college-football,401858262,Elon,Stanford,NO PICK,,,,post,7,34,
+college framework,2026-10-20,college-football,401871055,Middle Tennessee,Florida International,PICK,Florida International,0.6887,L,post,26,23,L
+college framework,2026-10-20,college-football,401871092,South Alabama,Marshall,NO PICK,,,,post,13,20,
+college framework,2026-10-20,college-football,401871069,Missouri State,Delaware,NO PICK,,,,post,38,61,
+college framework,2026-10-21,college-football,401871070,New Mexico State,Sam Houston,PICK,New Mexico State,0.5357,W,post,30,24,W
+college framework,2026-10-22,college-football,401871056,Liberty,Kennesaw State,PICK,Liberty,0.6826,W,post,34,6,W
+college framework,2026-10-22,college-football,401869845,James Madison,App State,NO PICK,,,,post,31,34,
+college framework,2026-10-22,college-football,401862807,East Carolina,Memphis,PICK,Memphis,0.5136,W,post,34,41,W
+college framework,2026-10-23,college-football,401861965,Massachusetts,UConn,NO PICK,,,,post,16,35,
+college framework,2026-10-23,college-football,401864525,Air Force,Wyoming,NO PICK,,,,post,14,28,
+college framework,2026-10-23,college-football,401858272,NC State,Stanford,PICK,NC State,0.6271,L,post,28,31,L
+college framework,2026-10-23,college-football,401862808,Army,Tulsa,PICK,Tulsa,0.5956,L,post,38,35,L
+college framework,2026-10-23,college-football,401858271,Duke,Virginia,PICK,Duke,0.5737,W,post,19,16,W
+NFL engine,week 5,nfl,401872981,Eagles,Jaguars,PICK,Jaguars,0.7445680419949536,W,post,17,19,W
+NFL engine,week 5,nfl,401872990,Bears,Packers,NO PICK,,,,post,7,31,
+NFL engine,week 5,nfl,401872984,Texans,Titans,PICK,Texans,0.6378928809840401,W,post,26,3,W
+NFL engine,week 5,nfl,401872982,Bengals,Dolphins,PICK,Bengals,0.7415235776494429,W,post,31,24,W
+NFL engine,week 5,nfl,401872986,Raiders,Patriots,PICK,Patriots,0.6978614172191826,W,post,17,45,W
+NFL engine,week 5,nfl,401872987,Vikings,Saints,PICK,Vikings,0.5858384997150177,W,post,23,13,W
+NFL engine,week 5,nfl,401872983,Browns,Jets,PICK,Jets,0.5626009540806377,W,post,12,17,W
+NFL engine,week 5,nfl,401872985,Colts,Steelers,PICK,Colts,0.5846859355250722,L,post,22,34,L
+NFL engine,week 5,nfl,401872988,Giants,Commanders,PICK,Commanders,0.5592780302432079,T,post,27,27,T
+NFL engine,week 5,nfl,401872989,Broncos,Chargers,PICK,Chargers,0.5562299030533243,L,post,23,17,L
+NFL engine,week 5,nfl,401872991,Lions,Cardinals,PICK,Cardinals,0.587679361427288,L,post,45,21,L
+NFL engine,week 5,nfl,401872992,49ers,Seahawks,PICK,Seahawks,0.5554201567300516,L,post,32,29,L
+NFL engine,week 5,nfl,401872993,Ravens,Falcons,NO PICK,,,,post,30,23,
+NFL engine,week 5,nfl,401872994,Bills,Rams,PICK,Rams,0.7450058617909711,L,post,37,34,L
+NFL engine,week 6,nfl,401872995,Seahawks,Broncos,PICK,Seahawks,0.5348078412689792,L,post,14,17,L
+NFL engine,week 6,nfl,401872996,Texans,Jaguars,PICK,Jaguars,0.5659446327752723,L,post,34,31,L
+NFL engine,week 6,nfl,401872999,Bears,Falcons,PICK,Falcons,0.6949564963522276,L,post,31,23,L
+NFL engine,week 6,nfl,401872997,Ravens,Browns,NO PICK,,,,post,10,13,
+NFL engine,week 6,nfl,401873003,Titans,Colts,PICK,Colts,0.726243835555572,L,post,26,20,L
+NFL engine,week 6,nfl,401873001,Jets,Patriots,PICK,Patriots,0.6653433478572329,W,post,19,26,W
+NFL engine,week 6,nfl,401873000,Saints,Giants,PICK,Giants,0.5987806748209981,L,post,34,27,L
+NFL engine,week 6,nfl,401872998,Panthers,Eagles,NO PICK,,,,post,25,14,
+NFL engine,week 6,nfl,401873002,Steelers,Buccaneers,NO PICK,,,,post,26,19,
+NFL engine,week 6,nfl,401873004,Cardinals,Rams,PICK,Rams,0.7503953977593862,L,post,18,16,L
+NFL engine,week 6,nfl,401873006,Chargers,Chiefs,PICK,Chiefs,0.6161137757622089,W,post,6,22,W
+NFL engine,week 6,nfl,401873005,Bills,Raiders,PICK,Bills,0.677947233334079,W,post,33,30,W
+NFL engine,week 6,nfl,401873007,Cowboys,Packers,PICK,Packers,0.585478316474768,W,post,13,23,W
+NFL engine,week 6,nfl,401873008,Commanders,49ers,PICK,49ers,0.8243952478339147,W,post,17,23,W
+NFL framework,week 5,nfl,401872981,Eagles,Jaguars,PICK,Jaguars,0.8534,W,post,17,19,W
+NFL framework,week 5,nfl,401872987,Vikings,Saints,PICK,Vikings,0.7642,W,post,23,13,W
+NFL framework,week 5,nfl,401872982,Bengals,Dolphins,PICK,Bengals,0.6873,W,post,31,24,W
+NFL framework,week 5,nfl,401872986,Raiders,Patriots,PICK,Raiders,0.6409,L,post,17,45,L
+NFL framework,week 5,nfl,401872988,Giants,Commanders,PICK,Commanders,0.6275,T,post,27,27,T
+NFL framework,week 5,nfl,401872985,Colts,Steelers,PICK,Steelers,0.6013,W,post,22,34,W
+NFL framework,week 5,nfl,401872992,49ers,Seahawks,PICK,49ers,0.5703,W,post,32,29,W
+NFL framework,week 5,nfl,401872983,Browns,Jets,PICK,Jets,0.5699,W,post,12,17,W
+NFL framework,week 5,nfl,401872991,Lions,Cardinals,PICK,Lions,0.5563,W,post,45,21,W
+NFL framework,week 5,nfl,401872989,Broncos,Chargers,PICK,Broncos,0.5469,W,post,23,17,W
+NFL framework,week 5,nfl,401872984,Texans,Titans,PICK,Texans,0.5337,W,post,26,3,W
+NFL framework,week 5,nfl,401872994,Bills,Rams,PICK,Rams,0.5267,L,post,37,34,L
+NFL framework,week 5,nfl,401872990,Bears,Packers,NO PICK,,,,post,7,31,
+NFL framework,week 5,nfl,401872993,Ravens,Falcons,NO PICK,,,,post,30,23,
+NFL framework,week 6,nfl,401873006,Chargers,Chiefs,PICK,Chiefs,0.7953,W,post,6,22,W
+NFL framework,week 6,nfl,401873008,Commanders,49ers,PICK,49ers,0.7874,W,post,17,23,W
+NFL framework,week 6,nfl,401873004,Cardinals,Rams,PICK,Rams,0.7502,L,post,18,16,L
+NFL framework,week 6,nfl,401872996,Texans,Jaguars,PICK,Jaguars,0.7183,L,post,34,31,L
+NFL framework,week 6,nfl,401872998,Panthers,Eagles,NO PICK,,,,post,25,14,
+NFL framework,week 6,nfl,401873005,Bills,Raiders,PICK,Bills,0.5972,W,post,33,30,W
+NFL framework,week 6,nfl,401873000,Saints,Giants,PICK,Giants,0.615,L,post,34,27,L
+NFL framework,week 6,nfl,401873003,Titans,Colts,PICK,Colts,0.5797,L,post,26,20,L
+NFL framework,week 6,nfl,401873007,Cowboys,Packers,PICK,Packers,0.5559,W,post,13,23,W
+NFL framework,week 6,nfl,401873001,Jets,Patriots,PICK,Patriots,0.5276,W,post,19,26,W
+NFL framework,week 6,nfl,401872995,Seahawks,Broncos,PICK,Broncos,0.5108,W,post,14,17,W
+NFL framework,week 6,nfl,401872999,Bears,Falcons,PICK,Falcons,0.6101,L,post,31,23,L
+NFL framework,week 6,nfl,401872997,Ravens,Browns,NO PICK,,,,post,10,13,
+NFL framework,week 6,nfl,401873002,Steelers,Buccaneers,NO PICK,,,,post,26,19,
