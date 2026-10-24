@@ -1,0 +1,4 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401869845,James Madison,App State,31,34,True,NO PICK,"Malachi Singleton (ankle) questionable for Thursday (Rotowire, Oct 19): hurt again in the Oct 17 win over Coastal Carolina, where Henry Hasselbeck played the 2nd half",,,
+401871056,Liberty,Kennesaw State,34,6,True,PICK,,Liberty,0.7121887686583694,W
+401862807,East Carolina,Memphis,34,41,True,PICK,,Memphis,0.7309891768290889,W

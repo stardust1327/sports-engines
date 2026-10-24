@@ -524,6 +524,78 @@ Thursday game gives Maye's and Williams's statuses. A pick comes back only by
 re-running both models without that no-pick (into `/tmp/rerun`, then
 `merge_rerun.py`).
 
+### 2026 Week 7 locked Saturday 2026-10-24 (owner's request; after Friday's game statuses)
+
+Run Saturday about 4:30 AM Phoenix at the owner's request, as the Friday lock
+(check-in C) for Sunday's games; no midweek or Friday check-in had been logged
+since Tuesday. ESPN, nflverse and PyPI were all reachable. Both models re-run for
+2026-10-25 and 10-26 with the current no-picks (engine re-run; framework with
+`--refresh` and the engine's `_qbs.csv` from the same run) into `/tmp/rerun` and
+merged with `merge_rerun.py` (13 games, none started; Thursday's game kept as
+logged). Engine backtest with today's data: 968-554 (70%+ 272-93, 60-70%
+303-162, under 60% 393-299); 2026 so far out of sample 24-19. The framework
+reproduced its 2022-2025 backtest (558-335, Brier 0.2230); 2026 out of sample
+27-18.
+
+**Pick back: Giants at Texans** (engine Texans 73.3%, framework Texans 66.4%).
+John Harbaugh named J.J. McCarthy the starter after Wednesday's practice: "this
+is going to be our direction" (Giants.com, Oct 22). Jameis Winston is healthy and
+the backup. A coach's choice going forward, not an injury fill-in, and McCarthy
+has 10 career starts (Vikings), so the pick stands; framework re-run with
+`--starter "NYG=J.J. McCarthy"`.
+
+Locked picks, splits in bold:
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Steelers vs Saints (Paris, Sun 6:30 AM) | Steelers 60.5% | Steelers 63.0% (24-20) |
+| 49ers at Falcons (10:00 AM) | 49ers 63.7% | 49ers 63.3% (26-22) |
+| Browns at Titans (10:00 AM) | **Titans 50.6%** | **Browns 50.9%** (23-22) |
+| Colts at Vikings (10:00 AM) | Vikings 58.1% | Vikings 82.3% (27-15) |
+| Dolphins at Jets (10:00 AM) | Jets 75.7% | Jets 69.4% (26-20) |
+| Giants at Texans (10:00 AM) | Texans 73.3% | Texans 66.4% (26-21) |
+| Broncos at Cardinals (1:05 PM) | **Cardinals 57.0%** | **Broncos 62.0%** (25-21) |
+| Packers at Lions (1:25 PM) | Lions 58.0% | Lions 67.2% (28-22) |
+| Rams at Raiders (1:25 PM) | Rams 79.3% | Rams 63.5% (26-22) |
+| Chiefs at Seahawks (5:20 PM) | Chiefs 52.9% | Chiefs 62.7% (24-20) |
+
+No pick (both), from Friday's official game statuses:
+- Bengals at Ravens: Lamar Jackson (ankle) questionable: limited in practice
+  Wed-Fri, says he's trending toward playing (CBS, Oct 23); Tyler Huntley started
+  the last 2.
+- Buccaneers at Panthers: Baker Mayfield (right thumb) questionable: full practice
+  Wed-Fri and Todd Bowles expects him to start (Field Level Media, Oct 23), not
+  yet confirmed; Jalon Daniels started the last 3.
+- Cowboys at Eagles (Mon): unchanged, Jalen Hurts (blood clots) on IR; Tanner
+  McKee makes his 2nd start.
+
+Off the record: engine Ravens 61.1%, Panthers 59.7%, Cowboys 53.4%; framework
+Ravens 53.3%, Panthers 58.6%, Cowboys 51.0%.
+
+QB check (Friday's game statuses, NFL.com and CBS, Oct 23): no other starting QB
+has a game status. On the report without one: Patrick Mahomes (knee, full all
+week), Bryce Young (knee, full all week), Jordan Love (back). Backups with
+statuses: Dillon Gabriel (Browns, out), Carson Beck (Cardinals, questionable),
+Drew Lock (Seahawks, questionable). Monday's statuses come later Saturday; that
+game stays a no pick either way.
+
+Changes from Tuesday: Giants at Texans is back as a pick; every other win chance
+moved less than a point (largest: engine Cardinals 57.7% to 57.0%) and no pick
+flipped. The models agree on 8 of 10 picks. Engine 70%+: Rams, Jets, Texans;
+framework 70%+: Vikings.
+
+PDF: `report_2026-10-24_cfb-saturday-nfl-sunday.pdf` (college graded 10-20 to
+10-23, NFL picks, college picks 10-24). At the owner's request ("the NFL games
+for tomorrow") its NFL page shows Sunday's 12 games only, made with
+`make_report.py --dir` pointed at copies of the logged files with the NFL week
+filtered to Sunday; the logged files keep all 14 games (Thursday's is final and
+gets graded with the week on Tuesday).
+
+**For the next check-ins:** Sunday's check (F) settles Jackson and Mayfield at
+the early-game inactives (about 8:30 AM Phoenix); a pick comes back only by
+re-running both models without that no-pick (into `/tmp/rerun`, then
+`merge_rerun.py`). Monday's check (G) covers Cowboys at Eagles.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -918,6 +990,125 @@ QB check (flags from the engine's QB report, news through Tuesday afternoon):
 - To recheck before kickoff: Singleton (App State, Thursday) and Watson (UMass,
   Friday warmups). A pick comes back only by re-running both models without the
   no-pick (into `/tmp/rerun`, then `merge_rerun.py`).
+
+**Midweek graded Saturday 2026-10-24 (with the Saturday run).** No midweek
+check-in was logged, so the no-picks above stood as logged. All 7 picks final;
+graded files `cfb_2026-10-20_graded.csv` through `cfb_2026-10-23_graded.csv`
+and the matching `prompt_cfb_*_graded.csv`. **Engine (official) 2-5, framework
+4-3.**
+- By win chance: engine 70%+ 2-1 (Liberty and Memphis right, FIU wrong), 60-70%
+  0-2, under 60% 0-2; framework 60-70% 1-2, under 60% 3-1.
+- Both splits went to the framework: New Mexico State won 30-24 at Sam Houston,
+  Duke won 19-16 at Virginia.
+- Missed by both: Middle Tennessee 26-23 at FIU (engine 78%), Army 38-35 at Tulsa,
+  Stanford 31-28 over NC State.
+- Off the record (no-pick games): engine 3-2, framework 1-4. Running total
+  (`nopick_leans.py`): college engine 13-13, college framework 13-13.
+
+## College football Saturday 2026-10-24 (engine and framework)
+
+Saturday college run (check-in D), started about 4:10 AM Phoenix at the owner's
+request. The engine ran first into `results/` (all 44 FBS games, none started),
+then the QB check; the engine was re-run with the no-picks into `/tmp/rerun` and
+merged (`merge_rerun.py`, all 44 refreshed), and the framework's first run went
+straight into `results/` with the same no-picks. Files `cfb_2026-10-24_picks.csv`
+(official) and `prompt_cfb_2026-10-24_picks.csv`. Engine: 2025 backtest weeks 4-8
+70%+ 102-22, 60-70% 25-24, under 60% 31-26; 2026 so far out of sample 134-67.
+Framework: 2022-2025 replay 1525-718 (68.0%); 2026 weeks 4-7 129-72. PDF:
+`report_2026-10-24_cfb-saturday-nfl-sunday.pdf`.
+
+44 games: **28 picks in both models, 16 no picks.** The models disagree on 4 (in
+bold). The engine has 14 picks at 70% or more.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework (score) |
+|---|---|---|
+| LSU at Auburn (9:00 AM) | LSU 77% | LSU 83% (33-18) |
+| Rice at Florida Atlantic (9:00 AM) | Florida Atlantic 67% | Florida Atlantic 79% (36-22) |
+| Rutgers at Northwestern (9:00 AM) | Northwestern 88% | Northwestern 79% (36-23) |
+| Texas Tech at Cincinnati (9:00 AM) | Texas Tech 66% | Texas Tech 51% (31-30) |
+| West Virginia at TCU (9:00 AM) | TCU 85% | TCU 60% (31-27) |
+| Western Michigan at Toledo (9:00 AM) | Toledo 73% | Toledo 76% (32-21) |
+| Akron at Kent State (10:00 AM) | Kent State 64% | Kent State 67% (28-21) |
+| Baylor at Kansas (10:00 AM) | **Kansas 64%** | **Baylor 55%** (27-25) |
+| BYU at UCF (12:30 PM) | BYU 80% | BYU 80% (32-19) |
+| Boston College at Georgia Tech (12:30 PM) | Georgia Tech 67% | Georgia Tech 52% (28-27) |
+| Bowling Green at Buffalo (12:30 PM) | **Buffalo 62%** | **Bowling Green 52%** (24-23) |
+| Iowa at Minnesota (12:30 PM) | Iowa 71% | Iowa 65% (30-24) |
+| North Texas at Navy (12:30 PM) | **Navy 57%** | **North Texas 63%** (35-29) |
+| Sacramento State at Ball State (12:30 PM) | Ball State 77% | Ball State 75% (32-21) |
+| Texas A&M at Alabama (12:30 PM) | Alabama 85% | Alabama 77% (33-21) |
+| Eastern Michigan at Ohio (1:00 PM) | Ohio 83% | Ohio 71% (33-24) |
+| Louisiana at Southern Miss (2:00 PM) | Louisiana 55% | Louisiana 58% (28-25) |
+| Boise State at Washington State (3:00 PM) | Boise State 70% | Boise State 80% (35-21) |
+| Colorado at Oklahoma State (4:00 PM) | Oklahoma State 67% | Oklahoma State 63% (29-24) |
+| Georgia State at Arkansas State (4:00 PM) | Georgia State 58% | Georgia State 77% (36-24) |
+| Virginia Tech at Clemson (4:00 PM) | Virginia Tech 58% | Virginia Tech 83% (32-17) |
+| Iowa State at Arizona (4:30 PM) | Arizona 81% | Arizona 78% (35-22) |
+| Ole Miss at Texas (4:30 PM) | **Texas 64%** | **Ole Miss 52%** (27-26) |
+| USC at Wisconsin (4:30 PM) | Wisconsin 63% | Wisconsin 51% (29-28) |
+| Utah State at Texas State (4:30 PM) | Texas State 76% | Texas State 77% (33-21) |
+| Vanderbilt at Kentucky (4:30 PM) | Kentucky 81% | Kentucky 67% (32-25) |
+| North Dakota State at New Mexico (7:00 PM) | New Mexico 71% | New Mexico 65% (25-19) |
+| Houston at Utah (7:15 PM) | Utah 73% | Utah 66% (35-28) |
+
+No pick (both):
+- Regular starter out: Pittsburgh at Miami (Mason Heintschel, torn ACL, out for
+  the season; Holden Geriner expected to start), Miami (OH) at Central Michigan
+  (David McComb out for the season), Oregon at Illinois (Dante Moore,
+  concussion, out a 3rd straight game; Illinois' Katin Houser, broken hand, out),
+  Michigan State at UCLA (Nico Iamaleava out for the season; Michigan State's
+  Alessio Milivojevic questionable), Old Dominion at Louisiana Tech (Quinn
+  Henicle out on the Sun Belt report).
+- Starter questionable or doubtful: Oklahoma at Mississippi State (Kamario
+  Taylor, toe, questionable), Hawai'i at Northern Illinois (Taron Dickens
+  questionable), Kansas State at Arizona State (Avery Johnson doubtful on the Big
+  12 report), UL Monroe at Troy (Goose Crowder, shoulder, questionable), San José
+  State at Nevada (Carter Jones and AJ Bianco both questionable), San Diego State
+  at Colorado State (Jayden Denegal, lower leg, questionable, no starter named),
+  Syracuse at North Carolina (Steve Angeli, Achilles, questionable Oct 21;
+  expected back as the starter but not confirmed; Amari Odom and Malachi Nelson
+  out).
+- Starter not named: Indiana at Michigan (Kyle Whittingham won't say; Bryce
+  Underwood benched, Tommy Carr would make his first career start), California at
+  SMU (Jaron-Keawe Sagapolutele expected back from a concussion, Tosh Lupoi hasn't
+  named a starter), Tennessee at South Carolina (Josh Heupel declined to name one;
+  CBS reports George MacIntyre while Faizon Brandon returns from a shoulder
+  injury), UTSA at Tulane (QB changed last game, Trace Johnson for Kadin Semonza;
+  Johnson expected again, no announcement or reason).
+- The full reasons, with sources and dates, are in both picks files and the PDF.
+
+How the QB rule was applied (news through Saturday about 4:30 AM Phoenix:
+Rotowire's QB notes from the conference availability reports Oct 21-23, team and
+local reports):
+- Coach's choice with the old starter healthy keeps the pick: Iowa (Kirk Ferentz
+  named Jeremy Hecklinski, who won at Washington, over a now-healthy Hank Brown,
+  Oct 20), Washington State (Owen Eshelman named the starter after Caden Pinnick
+  was benched; now his 2nd start, so no longer a first start), Colorado (Isaac
+  Wilson; no change news since Deion Sanders named him over Julian Lewis), Texas
+  (Steve Sarkisian sticking with Arch Manning, AP).
+- SPLIT teams whose last starter also leads in attempts keep their picks, as on
+  10-17: Clemson (Tait Reynolds starts; Christopher Vizzina, elbow, is the backup,
+  SI Oct 20), UCF (Keyone Jenkins' 5th straight start; Alonza Barnett III,
+  hamstring, questionable), Southern Miss (Landry Lyddy; Ethan Hampton, hand,
+  out), Akron (Brayden Roggow; Cibastian Broughton, knee, questionable), Buffalo
+  (Jason Wright; Elijah Holmes out for the season), Rutgers, Baylor, Ball State,
+  Sacramento State, Vanderbilt, Utah State: no injury news.
+- LOW ATTEMPTS: Rice and Navy run option offenses with the same starters; Western
+  Michigan's Broc Lowry threw 8 times in a 21-14 win, Texas A&M's Marcel Reed 13
+  in a blowout of The Citadel, Ohio's Nick Poulos 14 in a 48-7 win; New Mexico's
+  Toa Fa'avae is "our guy moving forward" (Jason Eck). No injury news for any.
+- Every other picked team: no QB injury or change news found.
+
+Splits (engine official vs framework): Baylor at Kansas (Kansas 64% / Baylor
+55%), Bowling Green at Buffalo (Buffalo 62% / Bowling Green 52%), North Texas at
+Navy (Navy 57% / North Texas 63%), Ole Miss at Texas (Texas 64% / Ole Miss 52%).
+
+**For the Saturday afternoon check (E):** Mississippi State's Taylor (the SEC's
+final report at 11 AM Phoenix), Syracuse's Angeli, Troy's Crowder, Northern
+Illinois' Dickens, Nevada's and San Diego State's starters and Tulane's could
+all settle before kickoff; a pick comes back only by re-running both models
+without that no-pick (into `/tmp/rerun`, then `merge_rerun.py`). The 9 AM games
+(California, Michigan) start before that check.
 
 ## College Prompt Football framework (built 2026-10-11)
 

@@ -1,0 +1,6 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401858271,Duke,Virginia,19,16,True,PICK,,Virginia,0.6149251712911054,L
+401861965,Massachusetts,UConn,16,35,True,NO PICK,"William 'Pop' Watson III (ankle) a game-time decision: missed the last 2 games, practiced Monday, status to be decided Friday afternoon and in pregame warmups (Minuteman Command, Oct 19); Logan Inagawa made his first career start Oct 17",,,
+401862808,Army,Tulsa,38,35,True,PICK,,Tulsa,0.5750383371610311,L
+401864525,Air Force,Wyoming,14,28,True,NO PICK,"Liam Szarka (leg) out for the season (KRDO, Oct 5); sophomore Evan Medders has started in his place since Oct 10",,,
+401858272,NC State,Stanford,28,31,True,PICK,,NC State,0.5689468989434519,L
