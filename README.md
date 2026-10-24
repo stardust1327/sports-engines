@@ -90,14 +90,27 @@ regular starter is out or unconfirmed.
 
 ## How far to trust it
 
-Only the high-confidence tiers have held up:
+Multi-season backtests from the 2026-10-24 audit (`results/audit_2026-10-24/`),
+every game predicted only from what was known before it (approved by the owner
+2026-10-24):
 
-- **College:** 2025 backtest, weeks 4-8: 70%+ picks 100-21, 60-70% picks 31-25,
-  under-60% picks 25-28. Live on 2026-10-10: 70%+ 6-1, 60-70% 3-5, coin flips 2-2.
-- **NFL:** 2019-2025 backtest (1,522 games): 963-559 overall; 70%+ picks 271-93,
-  60-70% 305-161, under 60% 387-305. The closing line was still more accurate,
-  and the engine's picks against the market favorite went 119-180.
+| Model | Record | Weeks 4-8 | 70%+ picks | 60-70% picks | Under 60% |
+|---|---|---|---|---|---|
+| College engine, 2021-2025 | 1945-834 (70.0%) | 771-375 (67.3%) | 1043-247 (80.9%) | 473-258 (64.7%) | 429-329 (56.6%) |
+| College framework, 2021-2025 | 1873-906 (67.4%) | 738-408 (64.4%) | 879-228 (79.4%) | 507-256 (66.4%) | 487-422 (53.6%) |
+| NFL engine, 2016-2025 | 1332-809 (62.2%) | 437-278 (61.1%) | 374-123 (75.3%) | 445-223 (66.6%) | 513-463 (52.6%) |
+| NFL framework, 2022-2025 | 558-335 (62.5%) | 169-127 (57.1%) | 172-59 (74.5%) | 197-102 (65.9%) | 189-174 (52.1%) |
 
-Betting markets already price most of what these engines know, so a high win
-chance is not the same as a good bet. See `results/RESULTS.md` for the running
-record.
+- The college engine is run the way it picks live (calibrated on the season
+  before). The NFL engine is each season calibrated on the other nine; on
+  2016-2018, seasons never used to choose its settings, it went 60.9%. The
+  frameworks use each team's previous starter at QB, as live picks do.
+- Weeks 4-8 are the hardest part of the year for every model, so judge
+  October results against that column.
+- Only the 70%+ picks are reliably better than a lean; under 60% is close to a
+  coin flip.
+- The closing line is still more accurate (NFL 2019-2025: the closing-line
+  favorite went 1024-498 on the engine's games), and the engine's picks
+  against the market favorite went 119-180. Betting markets already price most
+  of what these engines know, so a high win chance is not the same as a good
+  bet. See `results/RESULTS.md` for the running record.

@@ -40,6 +40,18 @@ recent results looked off. Details, scripts and per-game files:
   found; normal early-season variance, with the framework's 9-2-1 Week 5 the
   lucky outlier.
 
+README "How far to trust it" now shows these multi-season numbers (owner
+approved, 2026-10-24).
+
+**Improvement tests (owner's question, same day):**
+`proposals/improvement_tests_2026-10-24/README.md`. Tested on the same seasons:
+college recency weighting, FCS-opponent down-weighting, separate pass and run
+ratings (both sports), two-season calibration (college) and a 50/50
+engine-framework blend (both sports). None picked more winners; two-season
+calibration and the NFL blend made the win chances slightly more accurate with
+the same picks. Nothing proposed for the locked method. When the two models
+split, the engine has been right more often (college 57%, NFL 55%).
+
 ## College football
 
 ### 2026-10-10 (23 games from the 12:30 PM Phoenix kickoffs on)

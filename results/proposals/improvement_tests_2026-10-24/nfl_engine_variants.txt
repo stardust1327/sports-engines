@@ -1,0 +1,12 @@
+2016-2025, each season calibrated on the other nine:
+base                   1333-808 (62.26%)  wks4-8 61.12%  wks9+ 62.83%  Brier 0.2262
+split                  1332-809 (62.21%)  wks4-8 61.82%  wks9+ 62.41%  Brier 0.2262
+2017-2025, each season calibrated only on earlier seasons:
+base                   1223-712 (63.20%)  wks4-8 62.17%  wks9+ 63.72%  Brier 0.2254
+split                  1219-716 (63.00%)  wks4-8 62.33%  wks9+ 63.33%  Brier 0.2268
+2022-2025 games both rated (887):
+engine                 570-317 (64.26%)  wks4-8 61.03%  wks9+ 65.83%  Brier 0.2240
+framework              554-333 (62.46%)  wks4-8 56.90%  wks9+ 65.16%  Brier 0.2236
+blend (50/50)          570-317 (64.26%)  wks4-8 58.97%  wks9+ 66.83%  Brier 0.2216
+   models agree: 711 games; engine right 66.7%, framework right 66.7%
+   models split: 176 games; engine right 54.5%, framework right 45.5%

@@ -1,0 +1,6 @@
+2021-2025 games both rated: 2779 (engine file 2779, framework file 2785)
+engine         1945-834 (69.99%)  wks4-8 67.28%  wks9+ 71.89%  Brier 0.1967 | 2021:71.1% 2022:68.0% 2023:69.1% 2024:70.1% 2025:71.7%
+framework      1873-906 (67.40%)  wks4-8 64.40%  wks9+ 69.50%  Brier 0.2060 | 2021:66.0% 2022:64.3% 2023:68.0% 2024:70.1% 2025:68.4%
+blend (50/50)  1937-842 (69.70%)  wks4-8 66.84%  wks9+ 71.71%  Brier 0.1973 | 2021:69.4% 2022:66.5% 2023:70.1% 2024:71.1% 2025:71.2%
+   models agree: 2293 games; engine right 72.7%, framework right 72.7%
+   models split: 486 games; engine right 57.4%, framework right 42.6%
