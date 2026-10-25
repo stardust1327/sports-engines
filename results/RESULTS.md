@@ -649,6 +649,24 @@ page (owner, 2026-10-24): act on Rams 79%, Jets 76%, Texans 73%; lean 49ers
 Titans (under 60% and split). All seven check-ins in `CHECKINS.md` are now
 scheduled tasks (owner, 2026-10-24).
 
+**Sunday check (F), 2026-10-25, about 8:50 AM Phoenix.** Saturday's college
+slate was already graded (engine 20-8, framework 18-10, entry above).
+Early-game inactives: **Baker Mayfield (thumb) is active** for the Buccaneers
+at Carolina (NBC Sports/Rotoworld, Oct 25, 15:34 UTC) and Todd Bowles said
+Friday he returns as the starter (NFL.com, ESPN's Jenna Laine, Oct 23).
+Pick back: both models re-run without that no-pick (engine for 10-25 and
+10-26; framework with `--starter "TB=Baker Mayfield"` and
+`--starter "NYG=J.J. McCarthy"`) into `/tmp/rerun` and merged (Steelers vs
+Saints, under way in Paris, kept as logged). **Buccaneers at Panthers: engine
+Panthers 59.7%, framework Panthers 60.9%** (both agree; under 60% for the
+engine, so a pass on the "What to act on" page). No other pick or win chance
+changed. Other early-game QBs: no starting QB inactive (FantasyPros inactives
+list: only Dillon Gabriel, a Browns backup, already out); no news on the late
+or night starters since Friday's statuses (none had a game status). Still no
+pick (both): Bengals at Ravens (Lamar Jackson ruled out; Tyler Huntley starts)
+and Cowboys at Eagles (Jalen Hurts on IR; Tanner McKee starts; Monday's check
+G). PDF: `report_2026-10-25_nfl-sunday-check.pdf`.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
