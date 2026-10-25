@@ -1,0 +1,45 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401858274,Pittsburgh,Miami,23,52,True,NO PICK,"Mason Heintschel (torn ACL) out for the season; Holden Geriner expected to start at Miami after Corey Dailey started Oct 17 (Rotowire, Oct 22)",,,
+401858496,Indiana,Michigan,13,6,True,NO PICK,Starter not named: Kyle Whittingham won't say who starts (ESPN); Bryce Underwood was benched vs Penn State and reports say Tommy Carr makes his first career start (On3),,,
+401856840,Texas Tech,Cincinnati,24,37,True,PICK,,Texas Tech,0.6646700770675127,L
+401856728,LSU,Auburn,38,17,True,PICK,,LSU,0.7726911748645735,W
+401858270,California,SMU,20,59,True,NO PICK,"Jaron-Keawe Sagapolutele (concussion) expected back, but Tosh Lupoi hasn't named a starter (SI, Oct 23); Jackson Brousseau started the last 3",,,
+401858498,Rutgers,Northwestern,14,42,True,PICK,,Northwestern,0.881289194815614,W
+401856841,West Virginia,TCU,24,20,True,PICK,,TCU,0.8457878669523587,L
+401862809,Rice,Florida Atlantic,49,51,True,PICK,,Florida Atlantic,0.6741846777856386,W
+401866450,Western Michigan,Toledo,38,45,True,PICK,,Toledo,0.7255948792511272,W
+401856834,Baylor,Kansas,24,25,True,PICK,,Kansas,0.6354949645212585,W
+401866446,Akron,Kent State,20,35,True,PICK,,Kent State,0.6372980079516143,W
+401866476,Miami (OH),Central Michigan,28,27,True,NO PICK,David McComb (upper body) out for the season; Caleb Heavner makes his 4th start,,,
+401858495,Oregon,Illinois,10,21,True,NO PICK,"Dante Moore (concussion) ruled out for a 3rd straight game; Dylan Raiola expected to start (Rotowire, Oct 22). Illinois: Katin Houser (broken hand) out, Michael Clayton and Carson Boyd to split snaps (Rotowire, Oct 23)",,,
+401856835,BYU,UCF,31,39,True,PICK,,BYU,0.799065093344469,L
+401858499,Michigan State,UCLA,10,28,True,NO PICK,"Nico Iamaleava (knee) out for the season; Ty Dieffenbach makes his 2nd start. Michigan State: Alessio Milivojevic questionable on the Big Ten report, backup Cam Fancher (knee) out",,,
+401856731,Tennessee,South Carolina,24,27,True,NO PICK,Starter not named: Josh Heupel declined to name one; CBS reports George MacIntyre starts a 3rd straight game while Faizon Brandon comes back from a shoulder injury (Oct 20),,,
+401856727,Texas A&M,Alabama,20,31,True,PICK,,Alabama,0.8484933113378428,W
+401858497,Iowa,Minnesota,10,13,True,PICK,,Iowa,0.7133136009831256,L
+401856730,Oklahoma,Mississippi State,23,15,True,NO PICK,"Kamario Taylor (toe) questionable on the SEC availability report, expected to try to play; Parker Puckett started the last game. The SEC's final report comes at 11 AM Phoenix",,,
+401858273,Boston College,Georgia Tech,49,27,True,PICK,,Georgia Tech,0.6705081708236872,L
+401862810,North Texas,Navy,49,39,True,PICK,,Navy,0.5736421546686852,L
+401864526,Hawai'i,Northern Illinois,56,21,True,NO PICK,"Taron Dickens (undisclosed) questionable for Hawai'i (Rotowire, Oct 21); no update found",,,
+401866447,Sacramento State,Ball State,17,34,True,PICK,,Ball State,0.7690470541351957,W
+401866448,Bowling Green,Buffalo,24,31,True,PICK,,Buffalo,0.619835061745637,W
+401856839,Kansas State,Arizona State,17,28,True,NO PICK,"Avery Johnson (undisclosed) doubtful on the Big 12 availability report (Rotowire, Oct 23). Arizona State starts Mikey Keene after benching Cutter Boley (started the first 5)",,,
+401866449,Eastern Michigan,Ohio,20,24,True,PICK,,Ohio,0.8303068639716766,W
+401871094,UL Monroe,Troy,21,14,True,NO PICK,"Goose Crowder (shoulder) questionable on the Sun Belt availability report (Oct 21), day-to-day after leaving the Oct 17 game",,,
+401864528,San José State,Nevada,13,28,True,NO PICK,"Nevada's starter unconfirmed: Carter Jones (arm) and AJ Bianco (ankle) both questionable; Jeff Choate says health decides (Nevada Sports Net, Oct 20). San José State: Luke Weaver available, Daniel Rolovich starts again (Rotowire, Oct 23)",,,
+401869967,Louisiana,Southern Miss,31,35,True,PICK,,Louisiana,0.5526446443917041,L
+401871093,Old Dominion,Louisiana Tech,0,26,True,NO PICK,"Quinn Henicle (undisclosed) out on the Sun Belt availability report; Ryan Huff also questionable (Rotowire, Oct 21-22)",,,
+401860907,Boise State,Washington State,31,10,True,PICK,,Boise State,0.6964959874034555,W
+401860905,San Diego State,Colorado State,49,56,True,NO PICK,"Jayden Denegal (right lower leg) questionable on Thursday's availability report and no starter named; Stone Saunders finished the last game (East Village Times, Oct 23). Colorado State: Hauss Hejny back as the starter (Jim Mora)",,,
+401856836,Colorado,Oklahoma State,24,57,True,PICK,,Oklahoma State,0.6653988545442956,W
+401858276,Virginia Tech,Clemson,20,16,True,PICK,,Virginia Tech,0.575280440093221,W
+401869935,Georgia State,Arkansas State,32,38,True,PICK,,Georgia State,0.5755419772202097,L
+401856732,Ole Miss,Texas,27,34,True,PICK,,Texas,0.6406995157394026,W
+401856729,Vanderbilt,Kentucky,17,34,True,PICK,,Kentucky,0.8103689328780154,W
+401858500,USC,Wisconsin,7,24,True,PICK,,Wisconsin,0.6306765035895735,W
+401856838,Iowa State,Arizona,3,39,True,PICK,,Arizona,0.806950769898279,W
+401858275,Syracuse,North Carolina,31,30,True,NO PICK,"Steve Angeli (Achilles) questionable on the ACC report (Oct 21); Fran Brown expects him back as the starter (Oct 22), not confirmed. Amari Odom (shoulder surgery) out for the season, Malachi Nelson (ankle surgery) out",,,
+401860906,Utah State,Texas State,17,20,True,PICK,,Texas State,0.7612163218832219,W
+401862811,UTSA,Tulane,42,19,True,NO PICK,"QB changed last game (Trace Johnson started Oct 16; Kadin Semonza started the first 5); Johnson expected to start again (SI, Oct 22) but Tulane hasn't announced a starter or why",,,
+401864527,North Dakota State,New Mexico,16,21,True,PICK,,New Mexico,0.7115742069240296,W
+401856837,Houston,Utah,13,21,True,PICK,,Utah,0.7345128752371256,W

@@ -6,10 +6,12 @@ dates, and new NFL and college picks, engine and framework side by side.
   python3 results/make_report.py --out results/report_2026-10-17.pdf \
       --cfb-graded 2026-10-13 --cfb-graded 2026-10-16 --cfb-picks 2026-10-17
 
-Each section gets its own page, in this order: NFL graded, college graded, NFL
-picks, college picks, and (with any NFL section, once the owner has set a team
-note) the team notes scorecard. Every number is read from the logged files in
-results/:
+Each section gets its own page, in this order: "What to act on" (when there are
+picks: the engine's picks for games not yet started, grouped as act on / lean /
+pass by their backtest hit rates; owner's request 2026-10-24, --no-glance leaves
+it out), NFL graded, college graded, NFL picks, college picks, and (with any NFL
+section, once the owner has set a team note) the team notes scorecard. Every
+number is read from the logged files in results/:
   NFL graded   nfl_cfbmethod_<S>_week<WW>_picks.csv and _graded.csv (nfl_cfbmethod/grade.py),
                prompt_nfl_<S>_week<WW>_picks.csv and _graded.csv (results/grade_picks.py)
   college      cfb_<date>_picks.csv / _graded.csv, prompt_cfb_<date>_picks.csv / _graded.csv
@@ -421,6 +423,74 @@ def notes_sentence(eng):
             "a pick shows each model alone.")
 
 
+# ------------------------------------------------------------ what to act on
+# Owner's request (2026-10-24): every picks PDF opens with the engine's picks for
+# games not yet started, grouped by how often that kind of pick has won. The
+# hit rates are the engines' multi-season backtests (results/audit_2026-10-24:
+# college 2021-2025, NFL 2016-2025) and the agree/split rates from
+# results/proposals/improvement_tests_2026-10-24. This page only ranks picks;
+# the official record still counts every pick (METHOD.md section 7).
+HIT = {"nfl": {"act": "75%", "lean": "68%", "pass": "53-58%"},
+       "cfb": {"act": "81%", "lean": "66%", "pass": "57-59%"}}
+
+
+def glance_lists(eng, frm, now):
+    """(act, lean, pass, no_pick) lines for engine picks whose kickoff is after `now`."""
+    m = eng.merge(frm[["game_id", "status", "pick", "pick_prob"]], on="game_id", how="left", suffixes=("_e", "_f"))
+    m = m[pd.to_datetime(m.kickoff_utc, utc=True) > now].sort_values(["kickoff_utc", "away_name"])
+    act, lean_, pas, nop = [], [], [], []
+    for r in m.itertuples():
+        t = kick_dt(r)
+        when = f"{t.strftime('%a %-I:%M %p')}" if t is not None else escape(str(r.kickoff))
+        if r.status_e != "PICK":
+            nop.append(f"{escape(r.away_name)} at {escape(r.home_name)}")
+            continue
+        opp = r.home_name if r.pick_e == r.away_name else r.away_name
+        agree = r.status_f == "PICK" and r.pick_f == r.pick_e
+        line = f"<b>{escape(str(r.pick_e))}</b> over {escape(opp)} {float(r.pick_prob_e):.0%} <font color='#6B7280'>{when}</font>"
+        if float(r.pick_prob_e) >= 0.7:
+            act.append(line + ("" if agree or r.status_f != "PICK" else f" <font color='{FLIP}'>(framework: {escape(str(r.pick_f))})</font>"))
+        elif float(r.pick_prob_e) >= 0.6 and agree:
+            lean_.append(line)
+        else:
+            pas.append(line + (f" <font color='{FLIP}'>(split)</font>" if r.status_f == "PICK" and not agree else ""))
+    return act, lean_, pas, nop
+
+
+def glance_page(story, sections, now):
+    """sections: [(label, key 'nfl'/'cfb', engine picks, framework picks)]. Adds nothing if no game is upcoming."""
+    blocks = []
+    for label, key, eng, frm in sections:
+        act, lean_, pas, nop = glance_lists(eng, frm, now)
+        if not (act or lean_ or pas or nop):
+            continue
+        h = HIT[key]
+        head = [P(f"Act on: 70%+ (has won {h['act']})", S_HEAD),
+                P(f"Lean: 60-70%, both models agree (has won {h['lean']})", S_HEAD),
+                P(f"Pass: under 60% or the models split (has won {h['pass']})", S_HEAD)]
+        body = [P("<br/>".join(x) if x else "<i>none</i>", S_TCELL) for x in (act, lean_, pas)]
+        t = Table([head, body], colWidths=[3.34 * inch] * 3)
+        t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), INK), ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                               ("BACKGROUND", (0, 1), (0, 1), AGREE), ("BACKGROUND", (2, 1), (2, 1), NOPICK),
+                               ("TOPPADDING", (0, 0), (-1, -1), 4), ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+                               ("BOX", (0, 0), (-1, -1), 0.6, RULE), ("LINEAFTER", (0, 0), (-2, -1), 0.6, RULE)]))
+        blocks += [P(label, S_H), Spacer(1, 4), t, Spacer(1, 3),
+                   P(("<b>No pick:</b> " + "; ".join(nop) + " (reasons on the detail pages).") if nop else "", S_NOTE),
+                   Spacer(1, 10)]
+    if not blocks:
+        return
+    stamp = pd.Timestamp(now).tz_convert(PHX)
+    story += [P("What to act on", S_TITLE), Spacer(1, 3),
+              P(f"The engine's (official) picks for games not started as of {us_date(stamp)} {stamp.strftime('%-I:%M %p')} "
+                "Phoenix, grouped by how often that kind of pick has won in the multi-season backtests. The official "
+                "record still counts every pick; this page only ranks them. Full details follow.", S_SUB),
+              Spacer(1, 10)] + blocks + [
+              P("Hit rates: engine picks in the 2021-2025 college and 2016-2025 NFL backtests "
+                "(results/audit_2026-10-24); agree/split rates from results/proposals/improvement_tests_2026-10-24. "
+                "When the models split, the engine has been right 57% of the time in college and 55% in the NFL.",
+                S_NOTE), PageBreak()]
+
+
 def nfl_picks(story, season, week):
     ww = f"{week:02d}"
     eng = apply_notes(read(f"nfl_cfbmethod_{season}_week{ww}_picks.csv"), "engine")
@@ -530,6 +600,7 @@ def main():
     ap.add_argument("--cfb-picks", action="append", default=[], help="YYYY-MM-DD (repeat)")
     ap.add_argument("--title", default="Picks and results")
     ap.add_argument("--dir", default=HERE, help="folder with the logged files (default: results/)")
+    ap.add_argument("--no-glance", action="store_true", help="leave out the opening 'What to act on' page")
     a = ap.parse_args()
     global DIR, NOTES
     DIR = a.dir
@@ -537,6 +608,19 @@ def main():
     nfl = bool(a.nfl_graded or a.nfl_picks)
     if nfl and TEAM_NOTES_ON:
         NOTES = team_notes.load()
+    if not a.no_glance and (a.nfl_picks or a.cfb_picks):
+        glance = []
+        if a.nfl_picks:
+            s, w = map(int, a.nfl_picks.split(":"))
+            e = apply_notes(read(f"nfl_cfbmethod_{s}_week{w:02d}_picks.csv"), "engine")
+            glance.append((f"NFL Week {w} ({date_span(e)})", "nfl", e,
+                           apply_notes(read(f"prompt_nfl_{s}_week{w:02d}_picks.csv"), "framework")))
+        if a.cfb_picks:
+            ds = sorted(a.cfb_picks)
+            e = pd.concat([read(f"cfb_{d}_picks.csv") for d in ds], ignore_index=True)
+            f = pd.concat([read(f"prompt_cfb_{d}_picks.csv") for d in ds], ignore_index=True)
+            glance.append((f"College football ({date_span(e)})", "cfb", e, f))
+        glance_page(story, glance, pd.Timestamp.now(tz="UTC"))
     if a.nfl_graded:
         s, w = map(int, a.nfl_graded.split(":"))
         nfl_graded(story, s, w)

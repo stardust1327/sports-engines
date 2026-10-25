@@ -138,6 +138,13 @@ python3 results/make_report.py --out results/report_<YYYY-MM-DD>_<checkin>.pdf -
 Open the PDF (render a page to an image) and check its records and picks against
 the printouts before sending it.
 
+Every picks PDF opens with a "What to act on" page (owner, 2026-10-24): the
+engine's picks for games not yet started, grouped as act on (70%+), lean (60-70%
+with both models agreeing) and pass (under 60%, or the models split), each with
+the hit rate that kind of pick has had in the multi-season backtests
+(`results/audit_2026-10-24`, `results/proposals/improvement_tests_2026-10-24`).
+It only ranks picks; the official record still counts every pick.
+
 No-pick games show an italic "Off record" line (the team each model would take, from
 its saved win chance) and graded pages add an off-the-record box. Owner's request
 (2026-10-18): list them, kept separate, never in either model's record. Running
@@ -240,6 +247,7 @@ total: `python3 results/nopick_leans.py`.
 - Commit messages say what the check-in did ("Tuesday run: Week 6 graded 9-5,
   Week 7 picks logged"), with the session's attribution lines. Fetch and rebase
   before pushing.
-- Messages to the owner are short: records first, then picks that changed or
-  where the models disagree, then every no-pick with exactly what's
-  missing. Send the PDF when the check-in makes one.
+- Messages to the owner are short: records first, then the 70%+ picks to act on
+  (games not yet started), then picks that changed or where the models
+  disagree, then every no-pick with exactly what's missing. Send the PDF when
+  the check-in makes one.

@@ -635,6 +635,20 @@ the early-game inactives (about 8:30 AM Phoenix); a pick comes back only by
 re-running both models without that no-pick (into `/tmp/rerun`, then
 `merge_rerun.py`). Monday's check (G) covers Cowboys at Eagles.
 
+**Sunday 2026-10-25, about 2:45 AM Phoenix (owner's request):** Saturday's news
+applied with `set_nopick.py` (both models; still no picks, reasons updated):
+Lamar Jackson (ankle) ruled out Saturday afternoon (Adam Schefter, Jeff
+Zrebiec), Tyler Huntley makes his 3rd straight start; Baker Mayfield still
+questionable on the official report though Todd Bowles says he'll return
+Sunday, so the pick waits for the inactives at check-in F (8:40 AM Pacific),
+which re-runs both models if he's active and starting. No other quarterback
+news. PDF: `report_2026-10-25_cfb-graded-nfl-weekend.pdf` (Saturday's college
+games graded, NFL Sunday-Monday picks), the first with the "What to act on"
+page (owner, 2026-10-24): act on Rams 79%, Jets 76%, Texans 73%; lean 49ers
+64%, Steelers 60%; pass Vikings, Lions, Chiefs (under 60%), Cardinals and
+Titans (under 60% and split). All seven check-ins in `CHECKINS.md` are now
+scheduled tasks (owner, 2026-10-24).
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -1148,6 +1162,32 @@ Illinois' Dickens, Nevada's and San Diego State's starters and Tulane's could
 all settle before kickoff; a pick comes back only by re-running both models
 without that no-pick (into `/tmp/rerun`, then `merge_rerun.py`). The 9 AM games
 (California, Michigan) start before that check.
+
+**Troy pick not logged in time (Saturday ~9:33 AM Phoenix).** Goose Crowder was
+cleared on the Sun Belt availability report ("will play," Rotowire, Oct 24), and
+both models were re-run with Troy's no-pick removed before the 1:00 PM kickoff
+(engine merged locally, framework re-run into `/tmp/rerun`), but the session
+stopped before anything was committed or pushed, and the framework file was
+never updated. Under the log-before-kickoff rule, Troy stays an official no-pick
+in both files as pushed. It lost (UL Monroe 21, Troy 14; engine 81%, framework
+74%), so counting it would make Saturday engine 20-9 and framework 18-11. It is
+in the off-the-record count below. Old Dominion stays a no-pick (Ryan Huff was
+also ruled out Saturday).
+
+**Saturday 2026-10-24 graded, Sunday 2026-10-25 about 2:45 AM Phoenix (owner's
+request).** All 44 games final. Graded files `cfb_2026-10-24_graded.csv` and
+`prompt_cfb_2026-10-24_graded.csv`; PDF
+`report_2026-10-25_cfb-graded-nfl-weekend.pdf`. **Engine (official) 20-8,
+framework 18-10.**
+- By win chance: engine 70%+ 11-3, 60-70% 8-2, under 60% 1-3; framework 70%+
+  11-2, 60-70% 6-2, under 60% 1-6.
+- The 4 splits: engine 3-1 (Kansas 25-24 over Baylor, Buffalo 31-24 over
+  Bowling Green, Texas 34-27 over Ole Miss right; Navy wrong, North Texas won
+  49-39).
+- Biggest misses: West Virginia 24-20 at TCU (engine TCU 85%), UCF 39-31 over
+  BYU (engine 80%), Minnesota 13-10 over Iowa (engine 71%).
+- Off the record (no-pick games): engine 9-7, framework 10-6. Running total
+  (`nopick_leans.py`): college engine 22-20, college framework 23-19.
 
 ## College Prompt Football framework (built 2026-10-11)
 
