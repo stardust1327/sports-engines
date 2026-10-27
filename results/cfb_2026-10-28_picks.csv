@@ -1,0 +1,3 @@
+game_id,kickoff_utc,state,away_id,home_id,away_name,home_name,neutral,venue,home_plays,away_plays,net_epa,net_sr,is_home,p_home,pick,pick_prob,status,reason,kickoff
+401871058,2026-10-28T23:00Z,pre,338,2393,Kennesaw State,Middle Tennessee,False,"Johnny ""Red"" Floyd Stadium",397,383,0.03289701569378617,-0.05866519576269409,1.0,0.4981149481445488,Kennesaw State,0.5018850518554512,PICK,,Wed 4:00 PM
+401871057,2026-10-29T00:00Z,pre,55,166,Jacksonville State,New Mexico State,False,Aggie Memorial Stadium,413,394,-0.033172971920318234,-0.019207373913547873,1.0,0.5174405276276979,New Mexico State,0.5174405276276979,PICK,,Wed 5:00 PM

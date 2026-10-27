@@ -1,0 +1,15 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401873014,Colts,Vikings,10,16,True,PICK,,Vikings,0.8235,W
+401873015,Dolphins,Jets,28,25,True,PICK,,Jets,0.6942,L
+401873020,Packers,Lions,17,20,True,PICK,,Lions,0.6722,W
+401873017,49ers,Falcons,20,29,True,PICK,,49ers,0.6329,L
+401873021,Rams,Raiders,35,21,True,PICK,,Rams,0.6346,W
+401873010,Patriots,Bears,24,30,True,PICK,,Bears,0.6331,W
+401873011,Steelers,Saints,16,10,True,PICK,,Steelers,0.6305,W
+401873022,Chiefs,Seahawks,3,20,True,PICK,,Chiefs,0.6273,L
+401873019,Broncos,Cardinals,30,16,True,PICK,,Broncos,0.62,W
+401873013,Browns,Titans,27,24,True,PICK,,Browns,0.5091,W
+401873012,Bengals,Ravens,35,13,True,NO PICK,"Lamar Jackson (ankle) ruled out Saturday (Adam Schefter, Jeff Zrebiec, Oct 24); Tyler Huntley makes his 3rd straight start",,,
+401873018,Buccaneers,Panthers,43,13,True,PICK,,Panthers,0.609,L
+401873016,Giants,Texans,27,21,True,PICK,,Texans,0.6636,L
+401873009,Cowboys,Eagles,38,21,True,NO PICK,"Jalen Hurts (blood clots) on IR, expected to miss the rest of the season (NFL Network/ESPN, Oct 19); Tanner McKee makes his 2nd start",,,

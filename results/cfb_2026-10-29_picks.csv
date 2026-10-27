@@ -1,0 +1,3 @@
+game_id,kickoff_utc,state,away_id,home_id,away_name,home_name,neutral,venue,home_plays,away_plays,net_epa,net_sr,is_home,p_home,pick,pick_prob,status,reason,kickoff
+401862812,2026-10-29T23:30Z,pre,2226,249,Florida Atlantic,North Texas,False,DATCU Stadium,405,411,0.4736685448211666,0.04276469311870115,1.0,0.8752939134764455,North Texas,0.8752939134764455,PICK,,Thu 4:30 PM
+401869963,2026-10-29T23:30Z,pre,2653,256,Troy,James Madison,False,Bridgeforth Stadium,507,476,0.2514361982862344,0.0968489274151513,1.0,0.8423266426373649,James Madison,0.8423266426373649,PICK,,Thu 4:30 PM

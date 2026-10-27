@@ -667,6 +667,86 @@ pick (both): Bengals at Ravens (Lamar Jackson ruled out; Tyler Huntley starts)
 and Cowboys at Eagles (Jalen Hurts on IR; Tanner McKee starts; Monday's check
 G). PDF: `report_2026-10-25_nfl-sunday-check.pdf`.
 
+### 2026 Week 7 final (Tuesday run, 2026-10-27)
+
+Graded Tuesday about 7:20 AM Pacific (scheduled check-in A), all 14 games final.
+Files `nfl_cfbmethod_2026_week07_graded.csv` and `prompt_nfl_2026_week07_graded.csv`.
+
+**Engine (official) 5-7, framework 7-5** (no pick: 2 in both).
+- Engine right: Rams, Steelers, Vikings, Lions, Bears. Wrong: Jets (76%),
+  Texans (73%), 49ers, Panthers, Cardinals, Chiefs, Titans. 70%+ went 1-2.
+- The 2 splits both went to the framework: Broncos 30-16 at Cardinals, Browns
+  27-24 at Titans.
+- Missed by both: Dolphins 28-25 at Jets, Giants 27-21 at Texans, Falcons 29-20
+  over the 49ers, Buccaneers 43-13 at Panthers, Seahawks 20-3 over the Chiefs.
+
+Closing-line check (grading only): on the engine's 12 games the closing-line
+favorite went 8-4. Brier: engine 0.2945, closing line 0.2463. The engine picked
+the market underdog 3 times (0-3); picks 5+ points more confident than the close
+went 1-4 (-3.44 units). All graded weeks: engine 16-18-1, closing-line favorite
+22-12-1; Brier 0.2634 vs 0.2210; against the market favorite 1-7; 5+ points more
+confident than the close 4-10 (-7.68 units).
+
+Off the record (no-pick games): Bengals 35-13 at Ravens (both leaned Ravens:
+wrong), Cowboys 38-21 at Eagles (both leaned Cowboys: right). Running NFL total
+(`nopick_leans.py`): engine 2-5, framework 2-5.
+
+### 2026 Week 8 (Tuesday run, 2026-10-27)
+
+Both models' first run of the week, straight into `results/`, about 7:30 AM
+Pacific: engine for 2026-10-29, 11-01 and 11-02; framework with `--refresh` and
+the engine's `_qbs.csv`. No-picks applied to both with `set_nopick.py`. Engine
+backtest with today's data: 963-559 (70%+ 271-89, 60-70% 298-167, under 60%
+394-303); 2026 out of sample 30-27. Framework backtest reproduced (558-335, Brier
+0.2230); 2026 out of sample 34-24.
+
+Files: `nfl_cfbmethod_2026_week08_picks.csv` and `_qbs.csv` (engine),
+`prompt_nfl_2026_week08_picks.csv` (framework). Kickoffs in Phoenix time as the
+engine writes them (the framework's file shows the Nov 1 games an hour earlier:
+it doesn't apply the end of Eastern daylight time that morning; display only).
+Splits in bold.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Panthers at Packers (Thu 5:15 PM) | **Panthers 53.7%** | **Packers 50.2%** (25-24) |
+| Titans at Bengals (Sun 11:00 AM) | Bengals 78.7% | Bengals 79.0% (28-18) |
+| Cardinals at Cowboys (11:00 AM) | Cowboys 58.6% | Cowboys 63.5% (27-23) |
+| Vikings at Lions (11:00 AM) | **Lions 59.2%** | **Vikings 59.2%** (24-22) |
+| Raiders at Jets (11:00 AM) | Jets 75.2% | Jets 63.6% (26-21) |
+| Browns at Steelers (11:00 AM) | Steelers 54.0% | Steelers 63.6% (24-20) |
+| Falcons at Buccaneers (11:00 AM) | **Buccaneers 52.8%** | **Falcons 51.3%** (22-21) |
+| Colts at Jaguars (11:00 AM) | Jaguars 66.3% | Jaguars 85.0% (30-17) |
+| Chargers at Rams (2:05 PM) | Rams 82.0% | Rams 78.8% (27-17) |
+| Chiefs at Broncos (2:25 PM) | Chiefs 53.5% | Chiefs 52.3% (24-23) |
+| Patriots at Dolphins (2:25 PM) | Patriots 70.2% | Patriots 64.5% (27-22) |
+| Bears at Seahawks (Mon 6:15 PM) | **Seahawks 70.8%** | **Bears 50.3%** (24-23) |
+
+No pick (both):
+- Ravens at Bills: Lamar Jackson (ankle) return unconfirmed: out the last 3
+  games; Jesse Minter says he's in a "decent spot" to play vs. the Bills, more
+  clarity Wednesday (NFL.com, Oct 26). Tyler Huntley started the last 3.
+- Eagles at Commanders (Sun night): Jalen Hurts (blood clots) on season-ending
+  IR (FantasyPros, Oct 26); Tanner McKee makes his 3rd start.
+
+Off the record: engine Bills 51.5%, Commanders 51.2%; framework Bills 57.2%,
+Commanders 67.0%.
+
+The models agree on 8 of 12 picks. Engine 70%+: Rams, Bengals, Jets, Seahawks,
+Patriots; framework 70%+: Jaguars, Bengals, Rams.
+
+QB check (news through Tuesday morning; no official reports yet): Bryce Young
+(knee) full participant after Monday's walkthrough; Klint Kubiak says Kirk
+Cousins stays the Raiders' starter (NFL.com roundup, Oct 26). Flagged teams with
+their regular starter in place and no injury news: Vikings (Kyler Murray, last
+4), Buccaneers (Baker Mayfield, back from the thumb injury Week 7), Falcons
+(Michael Penix Jr.), Commanders (Jayden Daniels), Seahawks (Sam Darnold), Bears
+(Caleb Williams). ESPN's injury list shows no other starting QB. No news found
+for the other starters.
+
+**For the next check-ins:** Wednesday's report settles Jackson (a pick comes
+back only by re-running both models without the no-pick into `/tmp/rerun`, then
+`merge_rerun.py`) and gives Young's and Love's statuses for Thursday.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -1206,6 +1286,58 @@ framework 18-10.**
   BYU (engine 80%), Minnesota 13-10 over Iowa (engine 71%).
 - Off the record (no-pick games): engine 9-7, framework 10-6. Running total
   (`nopick_leans.py`): college engine 22-20, college framework 23-19.
+
+## College football midweek, 2026-10-27 to 10-30 (Tuesday run, 2026-10-27)
+
+Both models' first runs, straight into `results/`, about 7:30 AM Pacific (before
+Tuesday's 4:00 PM kickoffs). Engine `cfb_2026-10-27_picks.csv` through
+`cfb_2026-10-30_picks.csv`, framework `prompt_cfb_2026-10-27_picks.csv` through
+`prompt_cfb_2026-10-30_picks.csv`. No no-picks. Splits in bold.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Delaware at Western Kentucky (Tue 4:00 PM) | **Western Kentucky 55%** | **Delaware 60%** (29-26) |
+| Sam Houston at Missouri State (Tue 5:00 PM) | Missouri State 54% | Missouri State 57% (27-24) |
+| Kennesaw State at Middle Tennessee (Wed 4:00 PM) | **Kennesaw State 50%** | **Middle Tennessee 66%** (33-26) |
+| Jacksonville State at New Mexico State (Wed 5:00 PM) | New Mexico State 52% | New Mexico State 56% (27-25) |
+| Florida Atlantic at North Texas (Thu 4:30 PM) | North Texas 88% | North Texas 70% (38-30) |
+| Troy at James Madison (Thu 4:30 PM) | James Madison 84% | James Madison 77% (32-20) |
+| Tulane at Charlotte (Fri 4:00 PM) | Tulane 67% | Tulane 62% (30-25) |
+| Baylor at UCF (Fri 4:30 PM) | **UCF 63%** | **Baylor 50%** (25-24) |
+| Kent State at Sacramento State (Fri 7:30 PM) | **Sacramento State 52%** | **Kent State 69%** (28-20) |
+
+The models agree on 5 of 9. Engine 70%+: North Texas, James Madison.
+
+QB check (flags from the engine's QB report, news through Tuesday morning):
+- Western Kentucky (SPLIT): the coach benched Rodney Tisdale Jr. for Brock
+  Glenn, who started the last 2 wins and leads in attempts (Yahoo,
+  Oct 27; "Brock Glenn is likely to start", The Towel Rack, Oct 27). Coach's
+  choice, no injury: pick stands.
+- Delaware (SPLIT): Nick Minicucci back from his leg injury for a 2nd straight
+  start (Yahoo and The Towel Rack, Oct 27).
+- Missouri State (SPLIT): Henry Belin IV replaced Skyler Locklear as the starter
+  (March2ThePod preview, Oct 26); no injury news.
+- New Mexico State (CHANGE SPLIT): Adam Damante, 4 straight starts since Trey
+  Hedden was pulled for performance (as on 10-20); no injury news.
+- James Madison (SPLIT): Camden Coleman, 7 straight starts. Troy (LOW ATTEMPTS):
+  Goose Crowder (shoulder) probable on the Sun Belt availability report
+  (RotoWire, Oct 26); he played last game.
+- Tulane (CHANGE SPLIT): Trace Johnson has started the last 2 in place of Kadin
+  Semonza, a coach's choice ("the quarterback we think gives us the best chance
+  to win", Will Hall); no injury; Hall backed him after the UTSA loss ("I
+  thought Trace played tough", Oct 25). Pick stands.
+- Charlotte (CHANGE SPLIT): Conner Harrell has started the last 2 after Cole
+  Gonzales was benched (RotoWire, Oct 12: "appears set to stay under center");
+  no injury. Pick stands; the Friday lock re-checks.
+- UCF (SPLIT): Scott Frost confirmed Keyone Jenkins starts ("Keyone's going to
+  start again"); evaluated after the BYU game and cleared ("He's fine. The
+  trainers cleared him", 247Sports/On3, Oct 26). Baylor (SPLIT): DJ Lagway, 4
+  straight starts, no injury news (interim coach Joe Klanderman after Dave
+  Aranda's firing).
+- No injury news found for Landyn Locke (Sam Houston), Rickie Collins (Kennesaw
+  State), Roman Gagliano (Middle Tennessee), Caden Creel (Jacksonville State),
+  Tayven Jackson (North Texas), Caden Veltkamp (Florida Atlantic), Dru DeShields
+  (Kent State) or Jackson Sharman (Sacramento State).
 
 ## College Prompt Football framework (built 2026-10-11)
 

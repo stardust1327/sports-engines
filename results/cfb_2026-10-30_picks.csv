@@ -1,0 +1,4 @@
+game_id,kickoff_utc,state,away_id,home_id,away_name,home_name,neutral,venue,home_plays,away_plays,net_epa,net_sr,is_home,p_home,pick,pick_prob,status,reason,kickoff
+401862813,2026-10-30T23:00Z,pre,2655,2429,Tulane,Charlotte,False,Jerry Richardson Stadium,348,413,-0.2299611034286007,-0.04775742104778174,1.0,0.33400846608028717,Tulane,0.6659915339197129,PICK,,Fri 4:00 PM
+401856844,2026-10-30T23:30Z,pre,239,2116,Baylor,UCF,False,Acrisure Bounce House,413,490,0.021355032340598046,0.02522085693443709,1.0,0.6289931368340929,UCF,0.6289931368340929,PICK,,Fri 4:30 PM
+401866451,2026-10-31T02:30Z,pre,2309,16,Kent State,Sacramento State,False,Hornet Stadium,369,438,-0.1555370657015278,0.03153825441744868,1.0,0.5154012012721455,Sacramento State,0.5154012012721455,PICK,,Fri 7:30 PM

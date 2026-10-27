@@ -1,0 +1,29 @@
+team,games,season_leader,season_att,last_game,last_starter,last_att,starters_by_game,flag
+Packers,7,Jordan Love,271,2026-10-25,Jordan Love,45,Jordan Love > Jordan Love > Jordan Love > Jordan Love > Jordan Love > Jordan Love > Jordan Love,
+Panthers,6,Bryce Young,228,2026-10-25,Bryce Young,27,Bryce Young > Bryce Young > Bryce Young > Bryce Young > Bryce Young > Bryce Young,
+Bills,6,Josh Allen,171,2026-10-18,Josh Allen,33,Josh Allen > Josh Allen > Josh Allen > Josh Allen > Josh Allen > Josh Allen,
+Ravens,7,Tyler Huntley,106,2026-10-25,Tyler Huntley,34,Lamar Jackson > Lamar Jackson > Lamar Jackson > Lamar Jackson > Tyler Huntley > Tyler Huntley > Tyler Huntley,SPLIT
+Bengals,6,Joe Burrow,219,2026-10-25,Joe Burrow,30,Joe Burrow > Joe Burrow > Joe Burrow > Joe Burrow > Joe Burrow > Joe Burrow,
+Titans,7,Cam Ward,208,2026-10-25,Cam Ward,31,Cam Ward > Cam Ward > Cam Ward > Cam Ward > Cam Ward > Cam Ward > Cam Ward,
+Cowboys,7,Dak Prescott,273,2026-10-27,Dak Prescott,27,Dak Prescott > Dak Prescott > Dak Prescott > Dak Prescott > Dak Prescott > Dak Prescott > Dak Prescott,
+Cardinals,7,Jacoby Brissett,282,2026-10-25,Jacoby Brissett,48,Jacoby Brissett > Jacoby Brissett > Jacoby Brissett > Jacoby Brissett > Jacoby Brissett > Jacoby Brissett > Jacoby Brissett,
+Lions,6,Jared Goff,223,2026-10-25,Jared Goff,32,Jared Goff > Jared Goff > Jared Goff > Jared Goff > Jared Goff > Jared Goff,
+Vikings,6,Kyler Murray,125,2026-10-25,Kyler Murray,24,Carson Wentz > Carson Wentz > Kyler Murray > Kyler Murray > Kyler Murray > Kyler Murray,SPLIT
+Jets,7,Geno Smith,207,2026-10-25,Geno Smith,30,Geno Smith > Geno Smith > Geno Smith > Geno Smith > Geno Smith > Geno Smith > Geno Smith,
+Raiders,7,Kirk Cousins,257,2026-10-25,Kirk Cousins,44,Kirk Cousins > Kirk Cousins > Kirk Cousins > Kirk Cousins > Kirk Cousins > Kirk Cousins > Kirk Cousins,
+Steelers,7,Aaron Rodgers,263,2026-10-25,Aaron Rodgers,30,Aaron Rodgers > Aaron Rodgers > Aaron Rodgers > Aaron Rodgers > Aaron Rodgers > Aaron Rodgers > Aaron Rodgers,
+Browns,7,Deshaun Watson,210,2026-10-25,Deshaun Watson,36,Deshaun Watson > Deshaun Watson > Deshaun Watson > Deshaun Watson > Deshaun Watson > Deshaun Watson > Deshaun Watson,
+Buccaneers,7,Baker Mayfield,107,2026-10-25,Baker Mayfield,11,Baker Mayfield > Baker Mayfield > Baker Mayfield > Jalon Daniels > Jalon Daniels > Jalon Daniels > Baker Mayfield,LOW ATTEMPTS SPLIT
+Falcons,7,Michael Penix Jr.,144,2026-10-25,Michael Penix Jr.,34,Cooper Rush > Cooper Rush > Michael Penix Jr. > Michael Penix Jr. > Michael Penix Jr. > Michael Penix Jr. > Michael Penix Jr.,SPLIT
+Jaguars,6,Trevor Lawrence,184,2026-10-18,Trevor Lawrence,41,Trevor Lawrence > Trevor Lawrence > Trevor Lawrence > Trevor Lawrence > Trevor Lawrence > Trevor Lawrence,
+Colts,7,Daniel Jones,240,2026-10-25,Daniel Jones,22,Daniel Jones > Daniel Jones > Daniel Jones > Daniel Jones > Daniel Jones > Daniel Jones > Daniel Jones,
+Rams,7,Matthew Stafford,278,2026-10-25,Matthew Stafford,29,Matthew Stafford > Matthew Stafford > Matthew Stafford > Matthew Stafford > Matthew Stafford > Matthew Stafford > Matthew Stafford,
+Chargers,6,Justin Herbert,180,2026-10-18,Justin Herbert,37,Justin Herbert > Justin Herbert > Justin Herbert > Justin Herbert > Justin Herbert > Justin Herbert,
+Broncos,7,Bo Nix,218,2026-10-25,Bo Nix,29,Bo Nix > Bo Nix > Bo Nix > Bo Nix > Bo Nix > Bo Nix > Bo Nix,
+Chiefs,6,Patrick Mahomes,191,2026-10-26,Patrick Mahomes,33,Patrick Mahomes > Patrick Mahomes > Patrick Mahomes > Patrick Mahomes > Patrick Mahomes > Patrick Mahomes,
+Dolphins,6,Malik Willis,151,2026-10-25,Malik Willis,21,Malik Willis > Malik Willis > Malik Willis > Malik Willis > Malik Willis > Malik Willis,
+Patriots,7,Drake Maye,214,2026-10-23,Drake Maye,31,Drake Maye > Drake Maye > Drake Maye > Drake Maye > Drake Maye > Drake Maye > Drake Maye,
+Commanders,6,Jayden Daniels,116,2026-10-20,Jayden Daniels,40,Jayden Daniels > Jayden Daniels > Marcus Mariota > Athan Kaliakmanis > Jayden Daniels > Jayden Daniels,SPLIT
+Eagles,7,Jalen Hurts,154,2026-10-27,Tanner McKee,35,Jalen Hurts > Jalen Hurts > Jalen Hurts > Jalen Hurts > Jalen Hurts > Tanner McKee > Tanner McKee,CHANGE SPLIT
+Seahawks,7,Sam Darnold,177,2026-10-26,Sam Darnold,28,Drew Lock > Drew Lock > Sam Darnold > Sam Darnold > Sam Darnold > Sam Darnold > Sam Darnold,SPLIT
+Bears,7,Caleb Williams,124,2026-10-23,Caleb Williams,33,Caleb Williams > Caleb Williams > Case Keenum > Tyson Bagent > Tyson Bagent > Caleb Williams > Caleb Williams,SPLIT
