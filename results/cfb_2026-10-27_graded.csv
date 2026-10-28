@@ -1,0 +1,3 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401871071,Delaware,Western Kentucky,35,21,True,PICK,,Western Kentucky,0.5458766581373787,L
+401871072,Sam Houston,Missouri State,3,24,True,PICK,,Missouri State,0.5430360292681052,W
