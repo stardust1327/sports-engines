@@ -761,6 +761,62 @@ Tuesday run's.
   27, FantasyPros Oct 26). Eagles at Commanders stays a no-pick (Jalen Hurts on
   season-ending IR).
 
+### 2026 Week 8 locked Friday 2026-10-30 (check-in C, after the 1 PM Pacific game statuses)
+
+Run about 1:45 PM Pacific. ESPN, nflverse and PyPI were reachable. Both models
+re-run for 2026-11-01 and 11-02 with the current no-pick (engine re-run;
+framework with `--refresh`, the engine's `_qbs.csv` from the same run and
+`--starter "BAL=Lamar Jackson"`) into `/tmp/rerun` and merged with
+`merge_rerun.py` (13 games refreshed, none started; Thursday's Panthers at
+Packers kept as logged). Engine backtest with today's data: 964-558 (70%+
+273-94, 60-70% 301-163, under 60% 390-301); 2026 out of sample 30-27. Framework
+backtest reproduced (558-335, Brier 0.2230); 2026 out of sample 35-24.
+
+**Pick back: Ravens at Bills** (engine Bills 51.6%, framework Bills 52.3%; the
+models agree). Lamar Jackson (ankle) has no injury designation and is set to play
+Sunday, full participant this week (Ravens injury report, Oct 30; baltimoreravens.com
+"Lamar Jackson Set to Play vs. Bills"; NFL.com Friday roundup: "will play Sunday
+against the Bills after missing the past three contests"). He's the regular
+starter returning (started the first 4), so the pick stands; framework re-run
+with `--starter "BAL=Lamar Jackson"` (it had assumed Tyler Huntley, the last
+starter).
+
+No other pick changed sides. Probability moves of note: engine Patriots 70.2% ->
+69.5% (now a lean, under 70%); framework Cowboys 63.5% -> 65.3%.
+
+Locked picks (Phoenix kickoff), splits in bold:
+
+| Game | Engine (official) | Framework |
+|---|---|---|
+| Ravens at Bills (Sun 11:00 AM) | Bills 51.6% | Bills 52.3% (27-26) |
+| Titans at Bengals (11:00 AM) | Bengals 78.2% | Bengals 78.9% (28-18) |
+| Cardinals at Cowboys (11:00 AM) | Cowboys 58.7% | Cowboys 65.3% (28-23) |
+| Vikings at Lions (11:00 AM) | **Lions 59.3%** | **Vikings 59.2%** (24-22) |
+| Raiders at Jets (11:00 AM) | Jets 74.8% | Jets 63.6% (26-21) |
+| Browns at Steelers (11:00 AM) | Steelers 53.9% | Steelers 63.5% (24-20) |
+| Falcons at Buccaneers (11:00 AM) | **Buccaneers 53.2%** | **Falcons 51.3%** (22-21) |
+| Colts at Jaguars (11:00 AM) | Jaguars 66.4% | Jaguars 85.0% (30-17) |
+| Chargers at Rams (2:05 PM) | Rams 81.7% | Rams 78.7% (27-17) |
+| Chiefs at Broncos (2:25 PM) | Chiefs 53.6% | Chiefs 52.3% (24-23) |
+| Patriots at Dolphins (2:25 PM) | Patriots 69.5% | Patriots 64.5% (27-22) |
+| Bears at Seahawks (Mon 6:15 PM) | **Seahawks 70.6%** | **Bears 50.3%** (24-23) |
+
+No pick (both): Eagles at Commanders (Sun night): Jalen Hurts (blood clots) on
+season-ending IR (FantasyPros, Oct 26); Tanner McKee makes his 3rd start. Off the
+record: engine Commanders 51.7%, framework Commanders 68.1%.
+
+Engine 70%+: Rams, Bengals, Jets, Seahawks. Framework 70%+: Jaguars, Bengals, Rams.
+The models agree on 9 of the 12 Sunday-Monday picks (13 of the week with Thursday: 9 agree, 4 split).
+
+QB check (Friday game statuses): NFL.com's Week 8 injury page lists no starting QB
+as out, doubtful or questionable. QBs on the reports: Lamar Jackson (full, no
+designation), Baker Mayfield (full), Drake Maye (full), Malik Willis (full),
+Jayden Daniels and Marcus Mariota (full), Carson Beck (Cardinals backup,
+limited). Flagged teams with their regular starter in place and no injury news:
+Vikings (Kyler Murray), Buccaneers (Mayfield), Falcons (Michael Penix Jr.),
+Commanders (Daniels), Seahawks (Sam Darnold), Bears (Caleb Williams). Bears at
+Seahawks statuses come Saturday; check-in G has the final word on Monday.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -1368,6 +1424,17 @@ request).** Both games final. Graded files `cfb_2026-10-27_graded.csv` and
   picks stand as logged. Rotowire lists UCF's Alonza Barnett questionable for
   Friday; he's the backup (Keyone Jenkins starts). Check-ins B and C recheck
   each day's games.
+
+**Friday 10-30 QB check (Friday lock, about 1:45 PM Pacific).** No change; the
+three Friday picks stand as logged.
+- Tulane at Charlotte: Trace Johnson starts again for Tulane (first road start;
+  Will Hall: "now we're with Trace Johnson", SI, Oct 28; Crescent City Sports and
+  DraftKings Network previews, Oct 29-30); no QB injury reported. Conner Harrell
+  starts for Charlotte (3rd straight, DraftKings Network, Oct 30).
+- Baylor at UCF: DJ Lagway (Baylor) and Keyone Jenkins (UCF) named as the QBs in
+  Friday previews (SI, RotoWire, Oct 30); no injury news on either.
+- Kent State at Sacramento State: Dru DeShields and Jackson Sharman, every start
+  this season for both; no injury news (AP preview).
 
 ## College football Saturday 2026-10-31 (engine and framework)
 
