@@ -1,7 +1,9 @@
 sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
-college,401858279,Boston College at Duke,10.31.2026 10:53 AM,2,0:00,"Boston College 2, Duke 27",Duke,0.9843,0.98,,
-college,401859185,Notre Dame at Navy,10.31.2026 11:53 AM,4,5:58,"Notre Dame 35, Navy 13",Notre Dame,0.999,0.98,,
-college,401858502,Wisconsin at Iowa,10.31.2026 11:53 AM,4,8:26,"Wisconsin 0, Iowa 30",Iowa,0.999,0.98,,
-college,401858277,California at NC State,10.31.2026 11:53 AM,4,8:09,"California 10, NC State 31",NC State,0.9986,0.98,,
-college,401862816,UAB at South Florida,10.31.2026 11:53 AM,4,12:28,"UAB 10, South Florida 27",South Florida,0.9966,0.98,,
-college,401866452,Bowling Green at Western Michigan,10.31.2026 11:53 AM,4,3:09,"Bowling Green 10, Western Michigan 20",Western Michigan,0.999,0.98,,
+college,401858279,Boston College at Duke,10.31.2026 10:53 AM,2,0:00,"Boston College 2, Duke 27",Duke,0.9843,0.98,"Boston College 2, Duke 47",W
+college,401859185,Notre Dame at Navy,10.31.2026 11:53 AM,4,5:58,"Notre Dame 35, Navy 13",Notre Dame,0.999,0.98,"Notre Dame 35, Navy 13",W
+college,401858502,Wisconsin at Iowa,10.31.2026 11:53 AM,4,8:26,"Wisconsin 0, Iowa 30",Iowa,0.999,0.98,"Wisconsin 0, Iowa 30",W
+college,401858277,California at NC State,10.31.2026 11:53 AM,4,8:09,"California 10, NC State 31",NC State,0.9986,0.98,"California 10, NC State 31",W
+college,401862816,UAB at South Florida,10.31.2026 11:53 AM,4,12:28,"UAB 10, South Florida 27",South Florida,0.9966,0.98,"UAB 10, South Florida 30",W
+college,401866452,Bowling Green at Western Michigan,10.31.2026 11:53 AM,4,3:09,"Bowling Green 10, Western Michigan 20",Western Michigan,0.999,0.98,"Bowling Green 10, Western Michigan 23",W
+college,401856735,Auburn at Ole Miss,10.31.2026 12:53 PM,4,7:14,"Auburn 15, Ole Miss 38",Ole Miss,0.999,0.98,,
+college,401858283,Stanford at Louisville,10.31.2026 12:53 PM,1,2:52,"Stanford 0, Louisville 7",Louisville,0.9849,0.98,,
