@@ -1668,6 +1668,19 @@ Changes:
   UTEP's season starter, is listed to play on the Mountain West availability
   report and set to start (RotoWire, Oct 31). Engine North Dakota State 94%,
   framework North Dakota State 95% (39-10).
+- Checked, still no picks: Florida at Georgia (RotoWire, Oct 31: the SEC
+  availability report clears Aaron Philo to play; his start still rests on
+  sources (ESPN, GatorsOnline, a team source to TV20), no announcement from Jon
+  Sumrall or the team), Kansas at TCU (Isaiah Marshall still a game-time
+  decision; no game-day update found), Arizona State at BYU (Mikey Keene limited
+  in pregame warmups, game-time decision, Jake Fette expected to start;
+  RotoWire via 247Sports, Oct 31), Washington at Nebraska (game-time decision,
+  CBS Sports), New Mexico at San José State (Luke Weaver's start still only per
+  ESPN sources), App State at Georgia Southern (Max Johnson still probable, not
+  confirmed), Nevada at UCLA, Ohio State at USC, Washington State at San Diego
+  State, Air Force, East Carolina, Oregon, Texas, Pittsburgh.
+- Picked teams: no new QB injury or change news found (SI Week 9 tracker,
+  RotoWire, team news searches).
 
 ## College Prompt Football framework (built 2026-10-11)
 
