@@ -1436,6 +1436,24 @@ three Friday picks stand as logged.
 - Kent State at Sacramento State: Dru DeShields and Jackson Sharman, every start
   this season for both; no injury news (AP preview).
 
+**Wednesday to Friday 10-28 to 10-30 graded, Saturday run (D), 2026-10-31 about
+6:45 AM Pacific.** All 7 games final. Graded files `cfb_2026-10-28_graded.csv`
+to `cfb_2026-10-30_graded.csv` and the `prompt_cfb_` versions. **Engine
+(official) 4-3, framework 3-4.**
+- Kennesaw State 44-28 at Middle Tennessee: the split went to the engine
+  (Kennesaw State 50%; framework Middle Tennessee 66%).
+- Jacksonville State 24-0 at New Mexico State: both wrong (engine 52%, framework
+  56%).
+- North Texas 48-41 over Florida Atlantic: both right (88%, 70%).
+- Troy 24-21 at James Madison: both wrong (engine 84%, framework 77%).
+- Tulane 38-31 at Charlotte: both right (67%, 62%).
+- Baylor 41-9 at UCF: the split went to the framework (engine UCF 63%,
+  framework Baylor 50%). UCF benched Keyone Jenkins for Alonza Barnett III during
+  the game.
+- Sacramento State 31-10 over Kent State: the split went to the engine
+  (Sacramento State 52%; framework Kent State 69%).
+- **Midweek 10-27 to 10-30 total: engine 5-4, framework 5-4.**
+
 ## College football Saturday 2026-10-31 (engine and framework)
 
 Owner's request, Wednesday 2026-10-28: an early first run of Saturday's 47-game
@@ -1555,6 +1573,90 @@ State, UTEP, Georgia Southern, Florida, Michigan, Georgia State, Washington and
 the others. A pick comes back only by re-running both models without that
 no-pick (into a scratch folder, then `merge_rerun.py`); the Saturday run
 re-runs everything anyway.
+
+**Saturday run (D), 2026-10-31, about 6:45-7:15 AM Pacific: QBs re-checked, both
+models re-run with Wednesday to Friday's games and merged.** Engine re-run into
+`/tmp/rerun`, merged with `merge_rerun.py` (all 47 games still "pre"); framework
+the same, with `--starter "Iowa State=Jaylen Raynor"`. News checked: Friday's
+Big Ten/ACC/SEC/Big 12/Sun Belt availability reports as reported by On3,
+247Sports, RotoWire and SI's Week 9 QB injury tracker (Oct 31), DraftEdge's
+injury list (Oct 30, 9 PM), team previews. Win chances moved by 0-2 points; no
+pick flipped.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Arizona at Texas Tech (9:00 AM) | **Texas Tech 52%** | **Arizona 59%** (29-25) |
+| Boston College at Duke (9:00 AM) | Duke 59% | Duke 71% (31-22) |
+| Bowling Green at Western Michigan (9:00 AM) | Western Michigan 81% | Western Michigan 68% (29-22) |
+| California at NC State (9:00 AM) | NC State 71% | NC State 67% (33-26) |
+| Notre Dame at Navy (9:00 AM) | Notre Dame 94% | Notre Dame 82% (36-21) |
+| SMU at Syracuse (9:00 AM) | SMU 68% | SMU 73% (33-23) |
+| UAB at South Florida (9:00 AM) | South Florida 72% | South Florida 76% (32-20) |
+| Wisconsin at Iowa (9:00 AM) | Iowa 56% | Iowa 60% (27-23) |
+| Auburn at Ole Miss (9:45 AM) | Ole Miss 76% | Ole Miss 75% (33-22) |
+| Louisiana Tech at South Alabama (12:00 PM) | Louisiana Tech 79% | Louisiana Tech 65% (33-27) |
+| Stanford at Louisville (12:15 PM) | Louisville 95% | Louisville 82% (40-25) |
+| Colorado State at Utah State (12:30 PM) | Utah State 68% | Utah State 52% (32-31) |
+| Florida International at Liberty (12:30 PM) | Liberty 88% | Liberty 69% (27-20) |
+| Minnesota at Indiana (12:30 PM) | Indiana 93% | Indiana 85% (34-17) |
+| Southern Miss at UL Monroe (12:30 PM) | **UL Monroe 59%** | **Southern Miss 54%** (27-26) |
+| Utah at Cincinnati (12:45 PM) | Utah 85% | Utah 67% (33-26) |
+| Virginia at Wake Forest (12:45 PM) | Wake Forest 82% | Wake Forest 76% (34-23) |
+| Purdue at Penn State (1:15 PM) | Penn State 69% | Penn State 68% (33-26) |
+| South Carolina at Oklahoma (1:15 PM) | Oklahoma 72% | Oklahoma 55% (25-23) |
+| Clemson at Florida State (4:00 PM) | Florida State 68% | Florida State 60% (29-25) |
+| Oklahoma State at Iowa State (4:00 PM) | Oklahoma State 63% | Oklahoma State 65% (32-26) |
+| Miami at North Carolina (4:30 PM) | Miami 77% | Miami 81% (35-20) |
+| Missouri at Arkansas (4:45 PM) | Missouri 67% | Missouri 75% (31-20) |
+| Army at Memphis (5:00 PM) | Memphis 72% | Memphis 73% (37-27) |
+| Texas State at Boise State (7:00 PM) | Boise State 75% | Boise State 76% (35-24) |
+| Northern Illinois at UNLV (7:30 PM) | UNLV 91% | UNLV 87% (38-19) |
+| Oregon State at Fresno State (8:00 PM) | Oregon State 65% | Oregon State 58% (32-29) |
+
+27 picks in both models, 20 no-picks; they agree on 25 of 27. Engine 70%+ (16):
+Louisville, Notre Dame, Indiana, UNLV, Liberty, Utah, Wake Forest, Western
+Michigan, Louisiana Tech, Miami, Ole Miss, Boise State, South Florida, Memphis,
+Oklahoma, NC State.
+
+Changes since Wednesday:
+- **Kansas at TCU: now a no-pick (both models).** Kansas' Isaiah Marshall was
+  downgraded from probable to questionable on Thursday's Big 12 report, a
+  game-time decision (On3 via RotoWire, Oct 30); Cole Ballard would start. Was
+  TCU 59% (engine) / 57% (framework).
+- Reasons updated, still no picks: Illinois at Maryland (Houser upgraded to
+  questionable, not confirmed), Michigan at Rutgers (Lonergan ruled out on
+  Friday's report; Michigan's starter still not confirmed by the team), Marshall
+  at Old Dominion (Henicle doubtful, Huff in line; Marshall unnamed), Kansas State
+  at Colorado (Avery Johnson ruled out, Knuth doubtful, starter not named),
+  Coastal Carolina at Georgia State (Cameran Brown doubtful, Pereira expected),
+  Temple at East Carolina (no on-record starter; Temple's Sheppard listed
+  questionable), Florida at Georgia (ESPN sources say Philo starts; not
+  confirmed by Sumrall), Arizona State at BYU (Keene a game-time decision), UTEP
+  at North Dakota State (Colson questionable), New Mexico at San José State (ESPN
+  sources say Luke Weaver starts; not announced), Nevada at UCLA, App State at
+  Georgia Southern (Max Johnson probable, not confirmed), Washington State at San
+  Diego State, Ohio State at USC (Fahey expected to start; Sayin out), Washington
+  at Nebraska (Williams probable, no word on role). Unchanged: Air Force,
+  Oregon, Texas, Pittsburgh.
+
+How the QB rule was applied to picked teams with news:
+- Syracuse (SMU at Syracuse): Steve Angeli was questionable on Wednesday's ACC
+  report; on Friday's report his status improved and he's expected to play
+  (RotoWire, Oct 30); he isn't on DraftEdge's Oct 30 night list and he played
+  last game. Pick stands (same as Troy's Crowder on 10-29). SI's Saturday tracker
+  still says questionable (from the earlier report).
+- Duke: Walker Eget (finger) carries no designation on the final ACC report (SI,
+  Oct 31). Pick stands.
+- Indiana: Josh Hoover probable and expected to start (SI tracker; Cignetti
+  expects him "to be fine"); he played last game. Pick stands. Minnesota's
+  Michael Merdinger (out for the year) is the backup.
+- Iowa State: Jaylen Raynor expected to start, Connor Moberly questionable;
+  framework uses Raynor.
+- Southern Miss: Ethan Hampton (hand) probable but in an emergency role; Landry
+  Lyddy starts again (SI, Oct 29). Pick stands.
+- Every other picked team: no QB injury or change news found. Check-in E
+  (11:50 AM) re-checks the noon-and-later games, including Kansas at TCU,
+  Florida at Georgia, San José State and Georgia Southern.
 
 ## College Prompt Football framework (built 2026-10-11)
 

@@ -1,0 +1,4 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401862813,Tulane,Charlotte,38,31,True,PICK,,Tulane,0.6659915339197129,W
+401856844,Baylor,UCF,41,9,True,PICK,,UCF,0.6289931368340929,L
+401866451,Kent State,Sacramento State,10,31,True,PICK,,Sacramento State,0.5154012012721455,W

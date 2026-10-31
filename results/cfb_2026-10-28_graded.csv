@@ -1,0 +1,3 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401871058,Kennesaw State,Middle Tennessee,44,28,True,PICK,,Kennesaw State,0.5018850518554512,W
+401871057,Jacksonville State,New Mexico State,24,0,True,PICK,,New Mexico State,0.5174405276276979,L

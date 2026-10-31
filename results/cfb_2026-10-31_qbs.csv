@@ -19,7 +19,7 @@ Western Michigan,8,Broc Lowry,176,2026-10-24,Broc Lowry,29,Broc Lowry > Broc Low
 Bowling Green,8,Jay Kastantin,194,2026-10-24,Jay Kastantin,27,Jay Kastantin > Jay Kastantin > Jay Kastantin > Jay Kastantin > Jay Kastantin > Jay Kastantin > Jay Kastantin > Jay Kastantin,
 Rutgers,7,Dylan Lonergan,127,2026-10-24,AJ Surace,18,Dylan Lonergan > AJ Surace > Dylan Lonergan > Dylan Lonergan > AJ Surace > Dylan Lonergan > AJ Surace,CHANGE SPLIT
 Michigan,7,Bryce Underwood,124,2026-10-24,Tommy Carr,32,Bryce Underwood > Bryce Underwood > Bryce Underwood > Bryce Underwood > Bryce Underwood > Bryce Underwood > Tommy Carr,CHANGE SPLIT
-Ole Miss,6,Trinidad Chambliss,226,2026-10-24,Trinidad Chambliss,52,Trinidad Chambliss > Trinidad Chambliss > Trinidad Chambliss > Trinidad Chambliss > Trinidad Chambliss > Trinidad Chambliss,
+Ole Miss,7,Trinidad Chambliss,262,2026-10-24,Trinidad Chambliss,52,Trinidad Chambliss > Trinidad Chambliss > Trinidad Chambliss > Trinidad Chambliss > Trinidad Chambliss > Trinidad Chambliss > Trinidad Chambliss,
 Auburn,7,Byrum Brown,209,2026-10-24,Byrum Brown,24,Byrum Brown > Byrum Brown > Byrum Brown > Byrum Brown > Byrum Brown > Byrum Brown > Byrum Brown,
 Old Dominion,8,Quinn Henicle,98,2026-10-24,Jaxon Potter,34,Quinn Henicle > Quinn Henicle > Quinn Henicle > Ryan Huff > Quinn Henicle > Quinn Henicle > Ryan Huff > Jaxon Potter,CHANGE SPLIT
 Marshall,7,Carlos Del Rio-Wilson,140,2026-10-20,Zion Turner,33,Carlos Del Rio-Wilson > Zion Turner > Carlos Del Rio-Wilson > Carlos Del Rio-Wilson > Carlos Del Rio-Wilson > Zion Turner > Zion Turner,CHANGE SPLIT
@@ -47,7 +47,7 @@ TCU,7,Jaden Craig,240,2026-10-24,Jaden Craig,47,Jaden Craig > Jaden Craig > Jade
 Kansas,7,Isaiah Marshall,196,2026-10-24,Isaiah Marshall,29,Isaiah Marshall > Isaiah Marshall > Isaiah Marshall > Isaiah Marshall > Isaiah Marshall > Isaiah Marshall > Isaiah Marshall,
 Utah State,7,Grady Brosterhous,178,2026-10-24,Grady Brosterhous,36,McCae Hillstead > Grady Brosterhous > Grady Brosterhous > Grady Brosterhous > Grady Brosterhous > Grady Brosterhous > Grady Brosterhous,SPLIT
 Colorado State,7,K'saan Farrar,144,2026-10-24,Hauss Hejny,31,Hauss Hejny > Hauss Hejny > K'saan Farrar > K'saan Farrar > K'saan Farrar > K'saan Farrar > Hauss Hejny,CHANGE SPLIT
-North Dakota State,7,Nathan Hayes,163,2026-10-17,Nathan Hayes,25,Nathan Hayes > Nathan Hayes > Nathan Hayes > Nathan Hayes > Nathan Hayes > Nathan Hayes > Nathan Hayes,
+North Dakota State,8,Nathan Hayes,196,2026-10-25,Nathan Hayes,33,Nathan Hayes > Nathan Hayes > Nathan Hayes > Nathan Hayes > Nathan Hayes > Nathan Hayes > Nathan Hayes > Nathan Hayes,
 UTEP,7,EJ Colson Jr.,83,2026-10-18,Raymond Moore III,28,EJ Colson Jr. > EJ Colson Jr. > EJ Colson Jr. > EJ Colson Jr. > EJ Colson Jr. > Raymond Moore III > Raymond Moore III,CHANGE SPLIT
 Liberty,7,Deshawn Purdie,133,2026-10-22,Deshawn Purdie,19,Deshawn Purdie > Deshawn Purdie > Deshawn Purdie > Deshawn Purdie > Deshawn Purdie > Deshawn Purdie > Deshawn Purdie,
 Florida International,7,JJ Kohl,227,2026-10-20,JJ Kohl,28,JJ Kohl > JJ Kohl > JJ Kohl > JJ Kohl > JJ Kohl > JJ Kohl > JJ Kohl,
@@ -58,7 +58,7 @@ Utah,7,Devon Dampier,198,2026-10-25,Devon Dampier,26,Devon Dampier > Devon Dampi
 Wake Forest,7,Gio Lopez,207,2026-10-18,Gio Lopez,23,Gio Lopez > Gio Lopez > Gio Lopez > Gio Lopez > Gio Lopez > Gio Lopez > Gio Lopez,
 Virginia,8,Beau Pribula,183,2026-10-23,Beau Pribula,24,Beau Pribula > Beau Pribula > Beau Pribula > Beau Pribula > Beau Pribula > Beau Pribula > Beau Pribula > Beau Pribula,
 San José State,8,Luke Weaver,219,2026-10-24,Robert McDaniel,13,Luke Weaver > Luke Weaver > Luke Weaver > Luke Weaver > Luke Weaver > Luke Weaver > Daniel Rolovich > Robert McDaniel,CHANGE LOW ATTEMPTS SPLIT
-New Mexico,6,Toa Fa'avae,73,2026-10-18,Toa Fa'avae,10,Luke Moga > Toa Fa'avae > Toa Fa'avae > Toa Fa'avae > Toa Fa'avae > Toa Fa'avae,LOW ATTEMPTS SPLIT
+New Mexico,7,Toa Fa'avae,87,2026-10-25,Toa Fa'avae,14,Luke Moga > Toa Fa'avae > Toa Fa'avae > Toa Fa'avae > Toa Fa'avae > Toa Fa'avae > Toa Fa'avae,LOW ATTEMPTS SPLIT
 UCLA,7,Nico Iamaleava,116,2026-10-24,Ty Dieffenbach,31,Nico Iamaleava > Nico Iamaleava > Nico Iamaleava > Nico Iamaleava > Nico Iamaleava > Ty Dieffenbach > Ty Dieffenbach,CHANGE SPLIT
 Nevada,7,Carter Jones,89,2026-10-24,Luke Duncan,29,Carter Jones > AJ Bianco > Carter Jones > Carter Jones > Carter Jones > AJ Bianco > Luke Duncan,CHANGE SPLIT
 Oklahoma,7,John Mateer,204,2026-10-24,John Mateer,29,John Mateer > John Mateer > John Mateer > John Mateer > John Mateer > John Mateer > John Mateer,
@@ -82,7 +82,7 @@ Mississippi State,7,Kamario Taylor,159,2026-10-24,Parker Puckett,24,Kamario Tayl
 Pittsburgh,8,Mason Heintschel,148,2026-10-24,Holden Geriner,32,Mason Heintschel > Mason Heintschel > Mason Heintschel > Mason Heintschel > Mason Heintschel > Holden Geriner > Corey Dailey > Holden Geriner,CHANGE SPLIT
 Georgia Tech,7,Alberto Mendoza,215,2026-10-24,Alberto Mendoza,24,Alberto Mendoza > Alberto Mendoza > Alberto Mendoza > Alberto Mendoza > Alberto Mendoza > Alberto Mendoza > Alberto Mendoza,
 Arkansas,7,KJ Jackson,215,2026-10-17,KJ Jackson,31,KJ Jackson > KJ Jackson > KJ Jackson > KJ Jackson > KJ Jackson > KJ Jackson > KJ Jackson,
-Missouri,6,Austin Simmons,165,2026-10-10,Austin Simmons,28,Austin Simmons > Austin Simmons > Austin Simmons > Austin Simmons > Austin Simmons > Austin Simmons,
+Missouri,7,Austin Simmons,209,2026-10-17,Austin Simmons,44,Austin Simmons > Austin Simmons > Austin Simmons > Austin Simmons > Austin Simmons > Austin Simmons > Austin Simmons,
 Nebraska,7,Anthony Colandrea,219,2026-10-18,Anthony Colandrea,33,Anthony Colandrea > Anthony Colandrea > Anthony Colandrea > Anthony Colandrea > Anthony Colandrea > Anthony Colandrea > Anthony Colandrea,
 Washington,7,Demond Williams Jr.,174,2026-10-17,Elijah Brown,27,Demond Williams Jr. > Demond Williams Jr. > Demond Williams Jr. > Demond Williams Jr. > Demond Williams Jr. > Elijah Brown > Elijah Brown,CHANGE SPLIT
 Memphis,8,Marcus Stokes,224,2026-10-22,Marcus Stokes,43,Marcus Stokes > Marcus Stokes > Marcus Stokes > Marcus Stokes > Marcus Stokes > Marcus Stokes > Marcus Stokes > Marcus Stokes,
