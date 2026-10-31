@@ -1658,6 +1658,17 @@ How the QB rule was applied to picked teams with news:
   (11:50 AM) re-checks the noon-and-later games, including Kansas at TCU,
   Florida at Georgia, San José State and Georgia Southern.
 
+**Saturday afternoon check (E), 2026-10-31, from 11:50 AM Pacific: QB news for
+the noon-and-later games.** Both models re-run into `/tmp/rerun` with the
+remaining no-picks (framework also `--starter "Iowa State=Jaylen Raynor"
+--starter "UTEP=EJ Colson Jr."`) and merged with `merge_rerun.py`.
+
+Changes:
+- **UTEP at North Dakota State: pick back (both models).** EJ Colson Jr. (hand),
+  UTEP's season starter, is listed to play on the Mountain West availability
+  report and set to start (RotoWire, Oct 31). Engine North Dakota State 94%,
+  framework North Dakota State 95% (39-10).
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
