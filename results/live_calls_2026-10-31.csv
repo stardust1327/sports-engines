@@ -1,0 +1,2 @@
+sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
+college,401858279,Boston College at Duke,10.31.2026 10:53 AM,2,0:00,"Boston College 2, Duke 27",Duke,0.9843,0.98,,
