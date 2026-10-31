@@ -1,0 +1,2 @@
+sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
+college,401856844,Baylor at UCF,10.30.2026 7:53 PM,4,3:19,"Baylor 41, UCF 9",Baylor,0.999,0.98,,
