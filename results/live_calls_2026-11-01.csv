@@ -1,0 +1,2 @@
+sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
+nfl,401873028,Colts at Jaguars,11.01.2026 11:53 AM,3,12:38,"Colts 0, Jaguars 28",Jaguars,0.995,0.98,,
