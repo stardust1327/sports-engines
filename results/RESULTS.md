@@ -853,8 +853,8 @@ the picks are the Friday lock's.**
   inactives list no QB for any early game. ESPN's injury page lists no starting
   QB in a Week 8 game as out or questionable (Hurts on IR aside).
 - Late and night games: no new QB news since Saturday (Chargers, Rams, Chiefs,
-  Broncos, Patriots, Dolphins: no QB with a status; Rams, Chiefs, Broncos and
-  Patriots inactives list only their emergency QBs). Eagles at Commanders stays a
+  Broncos, Patriots, Dolphins: no QB with a status; their inactives come about
+  90 minutes before kickoff, after this check). Eagles at Commanders stays a
   no-pick in both models (Jalen Hurts on season-ending IR; Tanner McKee starts).
   Bears at Seahawks: check-in G (Drew Lock, the backup, questionable).
 
