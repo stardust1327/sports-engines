@@ -817,6 +817,31 @@ Vikings (Kyler Murray), Buccaneers (Mayfield), Falcons (Michael Penix Jr.),
 Commanders (Daniels), Seahawks (Sam Darnold), Bears (Caleb Williams). Bears at
 Seahawks statuses come Saturday; check-in G has the final word on Monday.
 
+**Saturday night 2026-10-31, about 7:25 PM Phoenix (owner's request: run both
+engines, PDF of results so far and upcoming picks).**
+- Thursday graded (`nfl_cfbmethod_2026_week08_graded.csv`,
+  `prompt_nfl_2026_week08_graded.csv`): Packers 27, Panthers 19. **Engine 0-1**
+  (Panthers 54%), **framework 1-0** (Packers 50%): the split went to the
+  framework. Closing-line check: the close had the Packers (engine picked the
+  market underdog). All graded weeks: engine 16-19-1, closing-line favorite
+  23-12-1; Brier 0.2641 vs 0.2186.
+- Both models re-run for 2026-11-01 and 11-02 with the current no-pick (engine;
+  framework with `--refresh`, the engine's `_qbs.csv` from the same run and
+  `--starter "BAL=Lamar Jackson"`) into `/tmp/rerun` and merged with
+  `merge_rerun.py`: 13 games refreshed, **no pick or win chance changed** (engine
+  backtest 964-558, 2026 out of sample 30-27; framework 558-335, Brier 0.2230,
+  2026 out of sample 35-24). The picks are the Friday lock's.
+- Monday statuses (released Saturday): Caleb Williams isn't on the Bears' final
+  report (chicagobears.com, Oct 31: T.J. Edwards returns; Malik Muhammad and
+  D'Marco Jackson questionable). Sam Darnold isn't on the Seahawks' report; the
+  backup Drew Lock (right elbow) is questionable (Seattle Sports, Oct 31). Both
+  picks stand; check-in G confirms with the inactives.
+- Sunday games: no starting QB listed out, doubtful or questionable (Sharp
+  Football's all-32-teams report, Oct 31; Yahoo's Week 8 tracker); Saturday's
+  moves were non-QBs (Patriots downgraded A.J. Brown and TreVeyon Henderson to
+  out). Eagles at Commanders stays a no-pick (Jalen Hurts on season-ending IR).
+  Check-in F confirms the early-game inactives Sunday morning.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -1681,6 +1706,53 @@ Changes:
   State, Air Force, East Carolina, Oregon, Texas, Pittsburgh.
 - Picked teams: no new QB injury or change news found (SI Week 9 tracker,
   RotoWire, team news searches).
+
+## College football midweek, 2026-11-03 to 11-06 (owner's request, Saturday night 2026-10-31)
+
+Owner's request, Saturday 2026-10-31 about 7:20 PM Phoenix: run both engines and
+make a PDF of results so far and upcoming picks. Both models' first runs of next
+week's midweek games, straight into `results/` (engine about 7:25 PM; framework
+with the no-picks). The models use every game final by then; the Tuesday run
+(check-in A) re-runs them through `/tmp/rerun` and `merge_rerun.py` with
+Tuesday's news. Engine 2026 out of sample 203-98; framework 2026 weeks 4-9
+195-106 (64.8%). Files `cfb_2026-11-03_picks.csv` to `cfb_2026-11-05_picks.csv`
+(engine) and the `prompt_cfb_` versions. Splits in bold.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Ohio at Akron (Tue 5:00 PM) | Ohio 75% | Ohio 77% (34-22) |
+| Ball State at Massachusetts (Wed 5:00 PM) | Massachusetts 57% | Massachusetts 79% (33-20) |
+| Toledo at Sacramento State (Wed 5:00 PM) | Toledo 84% | Toledo 89% (34-14) |
+| UTSA at Florida Atlantic (Thu 5:30 PM) | UTSA 64% | UTSA 53% (33-32) |
+| James Madison at Southern Miss (Thu 6:00 PM) | James Madison 82% | James Madison 70% (30-22) |
+
+No pick (both):
+- Buffalo at Miami (OH): David McComb out for the season (injured vs UConn in
+  Week 4; The Miami Student, Oct 11); Caleb Heavner makes his 5th straight
+  start (as on 10-17 and 10-24).
+- Central Michigan at Eastern Michigan: Central Michigan's Angel Flores out for
+  the season, Jadyn Glasser starts (Mitten Football, Oct 30); Eastern Michigan's
+  Noah Kim (undisclosed injury) status for Nov 4 unclear, Brogan McCaughey
+  started the last game (Mitten Football, Oct 28).
+
+Off the record: engine Miami (OH) 78%, Eastern Michigan 52%; framework Miami
+(OH) 65%, Central Michigan 50%.
+
+QB check (news through Saturday night; the MAC and Sun Belt availability reports
+come out the day before each game):
+- Ohio (SPLIT): Nick Poulos, the named starter, back from his early-October
+  concussion for 3 straight starts (RotoWire, Oct 25). Akron (SPLIT): Brayden
+  Roggow, 6 straight starts, no injury news (Akron Zipped Up, Oct 25).
+- Massachusetts (SPLIT): William Watson III back from his ankle injury and
+  started Oct 23 at UConn (RotoWire; 38 attempts); no news since. Ball State
+  (SPLIT): Keldric Luster, no injury news since Oct 18.
+- Sacramento State (SPLIT): Jackson Sharman started again Oct 30. Toledo (John
+  Alan Richter), UTSA (Owen McCown), Florida Atlantic (Caden Veltkamp): not
+  flagged, no injury news found.
+- James Madison (SPLIT): Camden Coleman, 8 straight starts; JC Evans also plays
+  in the team's two-quarterback system (Daily News-Record, Oct 30). Southern
+  Miss (SPLIT): Landry Lyddy started and threw a TD in the 35-21 win at UL
+  Monroe on 10-31 (WLBT); no injury reported.
 
 ## College Prompt Football framework (built 2026-10-11)
 

@@ -1,0 +1,48 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401859185,Notre Dame,Navy,35,13,True,PICK,,Notre Dame,0.9351830784532906,W
+401856842,Arizona,Texas Tech,26,34,True,PICK,,Texas Tech,0.523875756283555,W
+401858278,SMU,Syracuse,27,30,True,PICK,,SMU,0.6842028985958322,L
+401858502,Wisconsin,Iowa,0,30,True,PICK,,Iowa,0.562931293173889,W
+401858277,California,NC State,10,31,True,PICK,,NC State,0.7058146730232996,W
+401858279,Boston College,Duke,2,47,True,PICK,,Duke,0.5949105398051426,W
+401858503,Illinois,Maryland,20,17,True,NO PICK,"Illinois' Katin Houser (broken throwing hand) upgraded to questionable, not confirmed to play; Michael Clayton II starts if he can't (SI QB tracker, Oct 31)",,,
+401862816,UAB,South Florida,10,30,True,PICK,,South Florida,0.7201229300126918,W
+401866452,Bowling Green,Western Michigan,10,23,True,PICK,,Western Michigan,0.8057321675207767,W
+401858507,Michigan,Rutgers,28,21,True,NO PICK,"Rutgers' Dylan Lonergan (head) ruled out on Friday's Big Ten report, AJ Surace expected to start; Michigan's starter not confirmed by the team (Tommy Carr per On3/SB Nation reports, Oct 28; Whittingham 'to be determined')",,,
+401856735,Auburn,Ole Miss,15,45,True,PICK,,Ole Miss,0.7618395732473372,W
+401871096,Marshall,Old Dominion,36,23,True,NO PICK,"Old Dominion's Quinn Henicle doubtful (Sun Belt report), Ryan Huff in line to start (RotoWire, Oct 28); Marshall's starter not named, Gibson expects Zion Turner, Carlos Del Rio-Wilson and Khalil Wilkins all to play (WV MetroNews, Oct 28 and 31)",,,
+401856846,Kansas State,Colorado,24,27,True,NO PICK,"Kansas State's Avery Johnson ruled out (KSNT, On3); Jacob Knuth (ankle) doubtful; Blake Barnett or Dillon Duff to start, not named (SI QB tracker, Oct 31)",,,
+401869944,Coastal Carolina,Georgia State,31,20,True,NO PICK,"Georgia State's Cameran Brown (season leader, lower body) doubtful; Ayden Pereira expected to start (SI QB tracker, Oct 31)",,,
+401861966,UConn,Air Force,26,35,True,NO PICK,"Liam Szarka out for the season (knee); Evan Medders (toe) off the depth chart; Josh Johnson or Howard Fisher IV to start, not named (Colorado Springs Gazette, Oct 26)",,,
+401862815,Temple,East Carolina,9,17,True,NO PICK,"QB changed last game (Emory Williams benched for Mitch Griffis); Blake Harrell hasn't named a starter on record (previews expect Griffis; Williams listed questionable); Temple's Ajani Sheppard listed questionable (DraftEdge injury report, Oct 30)",,,
+401871097,Louisiana Tech,South Alabama,35,20,True,PICK,,Louisiana Tech,0.7928780259952062,W
+401858283,Stanford,Louisville,24,52,True,PICK,,Louisville,0.9469599021873883,W
+401856734,Florida,Georgia,8,27,True,NO PICK,"Florida's starter not confirmed by the team: ESPN sources say Aaron Philo (back from a shoulder injury) starts over Tramell Jones Jr. (Pete Thamel, Oct 30); Jon Sumrall hasn't named one; both listed probable",,,
+401858501,Minnesota,Indiana,16,23,True,PICK,,Indiana,0.9327503227010668,W
+401856843,Arizona State,BYU,20,27,True,NO PICK,"Arizona State's Mikey Keene (undisclosed) questionable, game-time decision (RotoWire, Oct 30); freshman Jake Fette starts if he can't",,,
+401858505,Northwestern,Oregon,26,34,True,NO PICK,"Dante Moore (concussion) out for the season (Dan Lanning, CBS Sports); Dylan Raiola or Brock Thomas, starter not stated (AP, Oct 28)",,,
+401856845,Kansas,TCU,16,22,True,NO PICK,"Kansas' Isaiah Marshall downgraded from probable to questionable on Thursday's Big 12 report, a game-time decision (On3 via RotoWire, Oct 30); Cole Ballard would start",,,
+401860910,Colorado State,Utah State,14,31,True,PICK,,Utah State,0.6765134976465249,W
+401864531,UTEP,North Dakota State,7,31,True,PICK,,North Dakota State,0.944483609629074,W
+401871059,Florida International,Liberty,10,49,True,PICK,,Liberty,0.884857630990908,W
+401871095,Southern Miss,UL Monroe,35,21,True,PICK,,UL Monroe,0.58875427458645,L
+401856848,Utah,Cincinnati,49,25,True,PICK,,Utah,0.8453165693617036,W
+401858284,Virginia,Wake Forest,7,51,True,PICK,,Wake Forest,0.8234255868712141,W
+401864529,New Mexico,San José State,21,16,True,NO PICK,"San José State's starter not confirmed by the team: ESPN sources say Luke Weaver starts (Pete Thamel, Oct 30) after Daniel Rolovich (hurt) and Robert McDaniel started the last 2; no announcement from Ken Niumatalolo",,,
+401858508,Nevada,UCLA,0,27,True,NO PICK,"UCLA's Nico Iamaleava (knee) out, Ty Dieffenbach starts (listed questionable); Nevada's Carter Jones and AJ Bianco questionable, Jeff Choate hasn't named a starter (Luke Duncan started last game)",,,
+401856736,South Carolina,Oklahoma,42,25,True,PICK,,Oklahoma,0.7210849937633171,L
+401858506,Purdue,Penn State,17,31,True,PICK,,Penn State,0.6895334022929221,W
+401869846,App State,Georgia Southern,3,19,True,NO PICK,"Max Johnson (hurt Oct 15) probable on the Sun Belt report, expected but not confirmed to start (RotoWire, Oct 28); Turner Helton started the last game",,,
+401856847,Oklahoma State,Iowa State,,,False,PICK,,Oklahoma State,0.6281934981296093,
+401858280,Clemson,Florida State,,,False,PICK,,Florida State,0.683155125982809,
+401860909,Washington State,San Diego State,20,26,True,NO PICK,"Jayden Denegal (ankle) questionable and won't start; Sean Lewis: 'Stone will start this week' (AP, Oct 26); Stone Saunders starts again",,,
+401858282,Miami,North Carolina,,,False,PICK,,Miami,0.7711508225506059,
+401858509,Ohio State,USC,,,False,NO PICK,"Ohio State's Julian Sayin (throwing arm) out; true freshman Luke Fahey expected to start over Tavien St. Clair (SI QB tracker, Oct 31)",,,
+401856737,Mississippi State,Texas,,,False,NO PICK,"Mississippi State's Kamario Taylor out for the season (toe surgery, CBS Sports); Parker Puckett has started the last 2",,,
+401858281,Georgia Tech,Pittsburgh,,,False,NO PICK,Mason Heintschel (torn ACL) out for the season; Holden Geriner started 2 of the last 3,,,
+401856733,Missouri,Arkansas,,,False,PICK,,Missouri,0.6670972555745492,
+401858504,Washington,Nebraska,,,False,NO PICK,Washington's Demond Williams Jr. (fractured rib Oct 9) probable but no word on his role; Jedd Fisch won't name a starter (Williams or Elijah Brown) until game time,,,
+401862814,Army,Memphis,,,False,PICK,,Memphis,0.7190403527610335,
+401860908,Texas State,Boise State,,,False,PICK,,Boise State,0.7456497538590038,
+401864530,Northern Illinois,UNLV,,,False,PICK,,UNLV,0.9115120175582077,
+401860924,Oregon State,Fresno State,,,False,PICK,,Oregon State,0.6522204720334098,

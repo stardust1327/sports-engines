@@ -133,8 +133,12 @@ python3 results/grade_picks.py results/cfb_2026-10-17_picks.csv results/prompt_c
 PDF (sections in this order: NFL graded, college graded, NFL picks, college picks):
 ```
 python3 results/make_report.py --out results/report_<YYYY-MM-DD>_<checkin>.pdf --title "<title>" \
-    [--nfl-graded 2026:6] [--cfb-graded 2026-10-13 ...] [--nfl-picks 2026:7] [--cfb-picks 2026-10-17 ...]
+    [--season-summary 2026] [--nfl-graded 2026:6] [--cfb-graded 2026-10-13 ...] [--nfl-picks 2026:7] [--cfb-picks 2026-10-17 ...]
 ```
+(`--season-summary 2026` adds a "Season so far" page after "What to act on":
+every graded pick this season for both sports and both models, by week and by
+win-chance tier next to the backtests. Owner's request 2026-10-31, for "results
+so far" PDFs.)
 Open the PDF (render a page to an image) and check its records and picks against
 the printouts before sending it.
 

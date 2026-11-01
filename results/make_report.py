@@ -9,7 +9,10 @@ dates, and new NFL and college picks, engine and framework side by side.
 Each section gets its own page, in this order: "What to act on" (when there are
 picks: the engine's picks for games not yet started, grouped as act on / lean /
 pass by their backtest hit rates; owner's request 2026-10-24, --no-glance leaves
-it out), NFL graded, college graded, NFL picks, college picks, and (with any NFL
+it out), "Season so far" (with --season-summary 2026: every graded pick this
+season, both sports and both models, by week and by win-chance tier next to the
+backtests; owner's request 2026-10-31), NFL graded, college graded, NFL picks,
+college picks, and (with any NFL
 section, once the owner has set a team note) the team notes scorecard. Every
 number is read from the logged files in results/:
   NFL graded   nfl_cfbmethod_<S>_week<WW>_picks.csv and _graded.csv (nfl_cfbmethod/grade.py),
@@ -491,6 +494,210 @@ def glance_page(story, sections, now):
                 S_NOTE), PageBreak()]
 
 
+# ------------------------------------------------------------- season so far
+# Owner's request (2026-10-31: "a pdf of results so far and upcoming
+# predictions"): one page with every graded pick this season, both sports and
+# both models, by week and by win-chance tier next to the multi-season
+# backtests, plus the running off-the-record and live-call tallies. Read-only:
+# it re-reads the logged picks and graded files in results/ and changes nothing.
+# Backtest hit rates: README "How far to trust it" (results/audit_2026-10-24).
+TIER_BACKTEST = {
+    ("NFL", "engine"): {"70%+": "75.3%", "60-70%": "66.6%", "Under 60%": "52.6%", "All": "62.2% (wks 4-8: 61.1%)"},
+    ("NFL", "framework"): {"70%+": "74.5%", "60-70%": "65.9%", "Under 60%": "52.1%", "All": "62.5% (wks 4-8: 57.1%)"},
+    ("College", "engine"): {"70%+": "80.9%", "60-70%": "64.7%", "Under 60%": "56.6%", "All": "70.0% (wks 4-8: 67.3%)"},
+    ("College", "framework"): {"70%+": "79.4%", "60-70%": "66.4%", "Under 60%": "53.6%", "All": "67.4% (wks 4-8: 64.4%)"},
+}
+
+
+def tier_of(p):
+    return "70%+" if p >= 0.7 else "60-70%" if p >= 0.6 else "Under 60%"
+
+
+def season_picks(season, now):
+    """One row per model and game for every logged game that has kicked off by `now`:
+    sport, model, slate (sort key, label), status, pick, win chance, result (W/L/T, '' = not final)."""
+    import glob
+    import re
+    rows = []
+
+    def add(sport, model, key, picks, graded, gfinal=None):
+        res = graded.set_index("game_id")["result"] if graded is not None else pd.Series(dtype=object)
+        for r in picks.itertuples():
+            k = getattr(r, "kickoff_utc", None)
+            if isinstance(k, str) and k and pd.Timestamp(k) > now:
+                continue  # not started: it's on the picks pages
+            out = res.get(r.game_id, "") if r.status == "PICK" else ""
+            rows.append({"sport": sport, "model": model, "key": key, "game_id": r.game_id, "kickoff_utc": k,
+                         "status": r.status, "pick": r.pick if r.status == "PICK" else "",
+                         "prob": float(r.pick_prob) if r.status == "PICK" else None,
+                         "result": out if isinstance(out, str) and out in ("W", "L", "T") else ""})
+
+    for f in sorted(glob.glob(path(f"nfl_cfbmethod_{season}_week*_picks.csv"))):
+        ww = re.search(r"week(\d+)_picks", f).group(1)
+        eng = read(os.path.basename(f))
+        add("NFL", "engine", int(ww), eng, read(f"nfl_cfbmethod_{season}_week{ww}_graded.csv", required=False))
+        fr = read(f"prompt_nfl_{season}_week{ww}_picks.csv", required=False)
+        if fr is not None:  # kickoff times from the engine's file (same games)
+            fr = fr.assign(kickoff_utc=fr.game_id.map(eng.set_index("game_id")["kickoff_utc"]))
+            add("NFL", "framework", int(ww), fr, read(f"prompt_nfl_{season}_week{ww}_graded.csv", required=False))
+    for f in sorted(glob.glob(path(f"cfb_{season}-*_picks.csv"))):
+        d = re.search(r"cfb_(\d{4}-\d\d-\d\d)_picks", f).group(1)
+        ts = pd.Timestamp(d)
+        sat = ts + pd.Timedelta(days=(5 - ts.weekday()) % 7)  # the Saturday that week's slate leads up to
+        eng = read(os.path.basename(f))
+        add("College", "engine", sat, eng, read(f"cfb_{d}_graded.csv", required=False))
+        fr = read(f"prompt_cfb_{d}_picks.csv", required=False)
+        if fr is not None:
+            fr = fr.assign(kickoff_utc=fr.game_id.map(eng.set_index("game_id")["kickoff_utc"]))
+            add("College", "framework", sat, fr, read(f"prompt_cfb_{d}_graded.csv", required=False))
+    old = read(f"cfb_{season}-10-10.csv", required=False) if season == 2026 else None
+    if old is not None:  # the first logged college slate (engine only, older file format without game ids)
+        for i, r in enumerate(old.itertuples()):
+            rows.append({"sport": "College", "model": "engine", "key": pd.Timestamp("2026-10-10"),
+                         "game_id": f"2026-10-10-{i}", "kickoff_utc": None, "status": r.status,
+                         "pick": r.pick if r.status == "PICK" else "", "prob": float(r.win_prob) if r.status == "PICK" else None,
+                         "result": r.result if r.status == "PICK" and r.result in ("W", "L", "T") else ""})
+    return pd.DataFrame(rows)
+
+
+def rec_pct(results):
+    r = pd.Series(list(results)).fillna("")
+    w, l = int((r == "W").sum()), int((r == "L").sum())
+    if not (w or l or (r == "T").any()):
+        return "-"
+    return f"{rec(r)} ({w / (w + l):.0%})" if w + l else rec(r)
+
+
+def season_page(story, season, now):
+    S = season_picks(season, now)
+    if not len(S):
+        return
+    picks = S[S.status == "PICK"]
+    graded = picks[picks.result != ""]
+    stamp = pd.Timestamp(now).tz_convert(PHX)
+
+    def g(sport, model):
+        return graded[(graded.sport == sport) & (graded.model == model)]
+
+    items = []
+    for sport, model, label in (("NFL", "engine", "NFL engine (official)"), ("NFL", "framework", "NFL framework"),
+                                ("College", "engine", "College engine (official)"),
+                                ("College", "framework", "College framework")):
+        x = g(sport, model)
+        dec = x[x.result != "T"]
+        pct = f"{(dec.result == 'W').mean():.1%}" if len(dec) else "-"
+        items.append((rec(x.result), f"{label}<br/>{pct} right; expected {x.prob.sum():.1f} wins"))
+
+    # by week / slate
+    head = ["Slate (Phoenix dates)", "Engine (official)", "Framework", "Splits won: engine / framework",
+            "Engine 70%+", "No picks", "Not final"]
+    rows, bg = [[P(h, S_HEAD) for h in head]], []
+    for sport in ("NFL", "College"):
+        sub = S[S.sport == sport]
+        for key in sorted(sub.key.unique()):
+            s = sub[sub.key == key]
+            e, f = s[s.model == "engine"], s[s.model == "framework"]
+            ep, fp = e[e.status == "PICK"], f[f.status == "PICK"]
+            both = ep.merge(fp[["game_id", "pick", "result"]], on="game_id", suffixes=("", "_f"))
+            spl = both[both.pick != both.pick_f]
+            ks = pd.to_datetime(e.kickoff_utc.dropna(), utc=True).dt.tz_convert(PHX).dt.normalize()
+            span = (f"{us_date(ks.min())} to {us_date(ks.max())}" if len(ks) and ks.min() != ks.max()
+                    else us_date(ks.min()) if len(ks) else us_date(key))
+            name = f"NFL Week {key}" if sport == "NFL" else "College"
+            if sport == "College" and not len(f):
+                span += " (engine only)"
+            pend = len(set(ep[ep.result == ""].game_id) | set(fp[fp.result == ""].game_id))
+            rows.append([P(f"<b>{name}</b> {span}", S_TCELL), P(rec_pct(ep.result), S_TCELL),
+                         P(rec_pct(fp.result) if len(f) else "not run", S_TCELL),
+                         P(f"{(spl.result == 'W').sum()} / {(spl.result_f == 'W').sum()} of {len(spl)}" if len(spl) else "-", S_TCELL),
+                         P(rec_pct(ep[ep.prob >= 0.7].result), S_TCELL),
+                         P(str(int((e.status != "PICK").sum())), S_TCELL), P(str(pend) if pend else "", S_TCELL)])
+            bg.append((len(rows) - 1, None, False))
+        e, f = sub[(sub.model == "engine") & (sub.status == "PICK")], sub[(sub.model == "framework") & (sub.status == "PICK")]
+        both = e.merge(f[["game_id", "pick", "result"]], on="game_id", suffixes=("", "_f"))
+        spl = both[both.pick != both.pick_f]
+        pend = len(set(e[e.result == ""].game_id) | set(f[f.result == ""].game_id))
+        rows.append([P(f"<b>{sport} season</b>", S_TCELLB), P(f"<b>{rec_pct(e.result)}</b>", S_TCELL),
+                     P(f"<b>{rec_pct(f.result)}</b>", S_TCELL),
+                     P(f"<b>{(spl.result == 'W').sum()} / {(spl.result_f == 'W').sum()} of {len(spl)}</b>", S_TCELL),
+                     P(f"<b>{rec_pct(e[e.prob >= 0.7].result)}</b>", S_TCELL),
+                     P(f"<b>{int((sub[sub.model == 'engine'].status != 'PICK').sum())}</b>", S_TCELL),
+                     P(f"<b>{pend}</b>" if pend else "", S_TCELL)])
+        bg.append((len(rows) - 1, AGREE, False))
+    t_week = table(rows, (2.45, 1.35, 1.35, 1.75, 1.25, 0.8, 0.8), bg)
+    t_week.setStyle(TableStyle([("TOPPADDING", (0, 0), (-1, -1), 2), ("BOTTOMPADDING", (0, 0), (-1, -1), 2)]))
+
+    # by win-chance tier, next to the multi-season backtests
+    cols = [("NFL", "engine"), ("NFL", "framework"), ("College", "engine"), ("College", "framework")]
+    head = [P("Win chance of the pick", S_HEAD)]
+    for sport, model in cols:
+        head += [P(f"{sport} {model}: 2026", S_HEAD), P("backtest", S_HEAD)]
+    trows = [head]
+    for tier in ("70%+", "60-70%", "Under 60%", "All"):
+        line = [P(f"<b>{tier}</b>" if tier != "All" else "<b>All picks</b>", S_TCELL)]
+        for sport, model in cols:
+            x = g(sport, model)
+            x = x if tier == "All" else x[x.prob.map(tier_of) == tier]
+            line += [P(rec_pct(x.result), S_TCELL), P(TIER_BACKTEST[(sport, model)][tier], S_SMALL)]
+        trows.append(line)
+    t_tier = Table(trows, colWidths=[1.0 * inch] + [1.15 * inch, 1.1 * inch] * 4, repeatRows=1)
+    t_tier.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), INK), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                                ("TOPPADDING", (0, 0), (-1, -1), 2), ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
+                                ("LINEBELOW", (0, 1), (-1, -1), 0.4, RULE), ("BACKGROUND", (0, 4), (-1, 4), AGREE)]))
+
+    # side tallies
+    cells = []
+    try:
+        import nopick_leans  # results/nopick_leans.py (off the record, never in a record)
+        L = nopick_leans.rows()
+        if len(L):
+            parts = [f"{sp} engine {rec(L[(L.sport == sp) & (L.model == 'engine')].result)}, "
+                     f"framework {rec(L[(L.sport == sp) & (L.model == 'framework')].result)}" for sp in ("College", "NFL")]
+            cells.append(P("<b>Off the record (no-pick games, never in a record).</b> The team each model would "
+                           "have taken went " + "; ".join(parts) + ".", S_BOX))
+    except Exception:  # noqa: BLE001  (the tally is a side note; the page doesn't depend on it)
+        pass
+    card = read("nfl_scorecard.csv", required=False)
+    if card is not None:
+        c = card[(card.season == season) & (card.status == "PICK") & card.market_p_home.notna()]
+        if len(c):
+            y = c.home_win.astype(float)
+            fav = ["T" if yy == 0.5 else "W" if (pm > .5) == (yy == 1) else "L" for pm, yy in zip(c.market_p_home, y)]
+            cells.append(P(f"<b>NFL against the closing line (grading only, never an input).</b> Same {len(c)} games: "
+                           f"engine {rec(c.result)}, closing-line favorite {rec(fav)}. Brier (lower is better): engine "
+                           f"{((c.p_home - y) ** 2).mean():.3f}, closing line {((c.market_p_home - y) ** 2).mean():.3f}.", S_BOX))
+    import glob
+    lc = [pd.read_csv(x) for x in sorted(glob.glob(path(f"live_calls_{season}-*.csv")))]
+    if lc:
+        lc = pd.concat(lc, ignore_index=True)
+        r = lc["result"].fillna("")
+        cells.append(P(f"<b>Live winner calls (separate tool, not part of the picks).</b> Called at ESPN's 98% "
+                       f"live win chance: {rec(r[r.isin(['W', 'L', 'T'])])}"
+                       + (f", {int((~r.isin(['W', 'L', 'T'])).sum())} not final" if (~r.isin(['W', 'L', 'T'])).any() else "")
+                       + ".", S_BOX))
+
+    top = Table([[P(v, style("sbg", 17, True, align=1, lead=19)) for v, _ in items], [P(l, S_BIGL) for _, l in items]],
+                colWidths=[10.0 / len(items) * inch] * len(items))
+    top.setStyle(TableStyle([("BOX", (0, 0), (-1, -1), 0.6, RULE), ("LINEAFTER", (0, 0), (-2, -1), 0.6, RULE),
+                             ("TOPPADDING", (0, 0), (-1, 0), 5), ("BOTTOMPADDING", (0, 0), (-1, 0), 1),
+                             ("BOTTOMPADDING", (0, 1), (-1, 1), 5)]))
+    story += [P(f"Season so far ({season})", S_TITLE), Spacer(1, 3),
+              P(f"Every logged pick graded against ESPN final scores, through {us_date(stamp)} "
+                f"{stamp.strftime('%-I:%M %p')} Phoenix. The engine's picks are the official record; the framework "
+                f"is the comparison. A tie counts as a tie; percentages leave ties out. Games not started yet are on "
+                f"the picks pages.", S_SUB),
+              Spacer(1, 6), top, Spacer(1, 7), P("By week", S_H), Spacer(1, 3), t_week, Spacer(1, 7),
+              P("By the pick's win chance, next to the multi-season backtests", S_H), Spacer(1, 3), t_tier,
+              Spacer(1, 3),
+              P("Backtests: college 2021-2025 (engine and framework), NFL engine 2016-2025, NFL framework 2022-2025; "
+                "every game predicted only from what was known before it (results/audit_2026-10-24). October (weeks "
+                "4-8) is the hardest stretch of the year for every model. Expected wins: the sum of the win chances of "
+                "the graded picks.", S_NOTE)]
+    if cells:
+        story += [Spacer(1, 6), boxes(cells, 10.0 / len(cells))]
+    story.append(PageBreak())
+
+
 def nfl_picks(story, season, week):
     ww = f"{week:02d}"
     eng = apply_notes(read(f"nfl_cfbmethod_{season}_week{ww}_picks.csv"), "engine")
@@ -601,6 +808,8 @@ def main():
     ap.add_argument("--title", default="Picks and results")
     ap.add_argument("--dir", default=HERE, help="folder with the logged files (default: results/)")
     ap.add_argument("--no-glance", action="store_true", help="leave out the opening 'What to act on' page")
+    ap.add_argument("--season-summary", type=int, metavar="SEASON",
+                    help="add the 'Season so far' page (every graded pick this season, both sports and models)")
     a = ap.parse_args()
     global DIR, NOTES
     DIR = a.dir
@@ -621,6 +830,8 @@ def main():
             f = pd.concat([read(f"prompt_cfb_{d}_picks.csv") for d in ds], ignore_index=True)
             glance.append((f"College football ({date_span(e)})", "cfb", e, f))
         glance_page(story, glance, pd.Timestamp.now(tz="UTC"))
+    if a.season_summary:
+        season_page(story, a.season_summary, pd.Timestamp.now(tz="UTC"))
     if a.nfl_graded:
         s, w = map(int, a.nfl_graded.split(":"))
         nfl_graded(story, s, w)

@@ -1,0 +1,15 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401873028,Colts,Jaguars,,,False,PICK,,Jaguars,0.8498,
+401873031,Titans,Bengals,,,False,PICK,,Bengals,0.7891,
+401873032,Chargers,Rams,,,False,PICK,,Rams,0.7872,
+401873035,Eagles,Commanders,,,False,NO PICK,"Jalen Hurts (blood clots) on season-ending IR (FantasyPros, Oct 26); Tanner McKee makes his 3rd start",,,
+401873034,Patriots,Dolphins,,,False,PICK,,Patriots,0.6449,
+401873029,Raiders,Jets,,,False,PICK,,Jets,0.6358,
+401873027,Browns,Steelers,,,False,PICK,,Steelers,0.6355,
+401873024,Cardinals,Cowboys,,,False,PICK,,Cowboys,0.6526,
+401873030,Vikings,Lions,,,False,PICK,,Vikings,0.5923,
+401873026,Ravens,Bills,,,False,PICK,,Bills,0.5233,
+401873033,Chiefs,Broncos,,,False,PICK,,Chiefs,0.5226,
+401873025,Falcons,Buccaneers,,,False,PICK,,Falcons,0.5131,
+401873036,Bears,Seahawks,,,False,PICK,,Bears,0.5031,
+401873023,Panthers,Packers,19,27,True,PICK,,Packers,0.5022,W
