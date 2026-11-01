@@ -842,6 +842,22 @@ engines, PDF of results so far and upcoming picks).**
   out). Eagles at Commanders stays a no-pick (Jalen Hurts on season-ending IR).
   Check-in F confirms the early-game inactives Sunday morning.
 
+**Sunday check (F), 2026-11-01, about 8:45-9:05 AM Pacific. No pick changed;
+the picks are the Friday lock's.**
+- Early games: no starting QB inactive. Lamar Jackson is active for the Ravens
+  at Buffalo (Ravens inactives, NBC Sports/Rotoworld, Nov 1 16:32 UTC: QB Joe
+  Fagnano the only QB out); Colts inactives list Riley Leonard as the third QB
+  (colts.com, Nov 1); the other early-game QBs listed inactive are backups
+  (Cardinals Carson Beck; Browns Taylen Green, Dillon Gabriel; Steelers Drew
+  Allar, Will Howard; Fantasy Alarm, Nov 1 11:40 AM ET). FantasyPros' Week 8
+  inactives list no QB for any early game. ESPN's injury page lists no starting
+  QB in a Week 8 game as out or questionable (Hurts on IR aside).
+- Late and night games: no new QB news since Saturday (Chargers, Rams, Chiefs,
+  Broncos, Patriots, Dolphins: no QB with a status; Rams, Chiefs, Broncos and
+  Patriots inactives list only their emergency QBs). Eagles at Commanders stays a
+  no-pick in both models (Jalen Hurts on season-ending IR; Tanner McKee starts).
+  Bears at Seahawks: check-in G (Drew Lock, the backup, questionable).
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -1721,6 +1737,15 @@ State not final (check-in F finishes the grading).
 - Off the record (19 no-pick games): engine leans 14-5, framework 13-6. Running
   totals (`nopick_leans.py`): college engine 36-25, framework 36-25.
 - Midweek plus Saturday (10-27 to 10-31) so far: engine 25-9, framework 25-9.
+
+**Final grade, Sunday check (F), 2026-11-01 about 8:45 AM Pacific: all 28 picks
+final.** `grade_picks.py` re-run on both files. **Engine (official) 22-6,
+framework 22-6.** The 3 late games: Boise State 46-45 over Texas State (engine
+75%: W), UNLV 31-24 over Northern Illinois (engine 91%: W), Fresno State 38-22
+over Oregon State (both picked Oregon State: L).
+- Engine 70%+: 16-1. Framework 70%+: 13-1 (SMU 73% lost).
+- Missed by both: SMU, Oklahoma, Oklahoma State, Florida State, Oregon State.
+- Midweek plus Saturday (10-27 to 10-31): engine 27-10, framework 27-10.
 
 ## College football midweek, 2026-11-03 to 11-06 (owner's request, Saturday night 2026-10-31)
 

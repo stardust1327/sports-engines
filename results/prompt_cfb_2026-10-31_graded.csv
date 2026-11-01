@@ -1,5 +1,5 @@
 game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
-401864530,Northern Illinois,UNLV,,,False,PICK,,UNLV,0.8736,
+401864530,Northern Illinois,UNLV,24,31,True,PICK,,UNLV,0.8736,W
 401858501,Minnesota,Indiana,16,23,True,PICK,,Indiana,0.8536,W
 401859185,Notre Dame,Navy,35,13,True,PICK,,Notre Dame,0.824,W
 401858283,Stanford,Louisville,24,52,True,PICK,,Louisville,0.818,W
@@ -7,7 +7,7 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401862816,UAB,South Florida,10,30,True,PICK,,South Florida,0.7648,W
 401858284,Virginia,Wake Forest,7,51,True,PICK,,Wake Forest,0.7561,W
 401856733,Missouri,Arkansas,34,10,True,PICK,,Missouri,0.7505,W
-401860908,Texas State,Boise State,,,False,PICK,,Boise State,0.7596,
+401860908,Texas State,Boise State,45,46,True,PICK,,Boise State,0.7596,W
 401856735,Auburn,Ole Miss,15,45,True,PICK,,Ole Miss,0.7497,W
 401858278,SMU,Syracuse,27,30,True,PICK,,SMU,0.7345,L
 401862814,Army,Memphis,22,49,True,PICK,,Memphis,0.7333,W
@@ -22,7 +22,7 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401858280,Clemson,Florida State,36,24,True,PICK,,Florida State,0.6037,L
 401856842,Arizona,Texas Tech,26,34,True,PICK,,Arizona,0.5872,L
 401858502,Wisconsin,Iowa,0,30,True,PICK,,Iowa,0.602,W
-401860924,Oregon State,Fresno State,,,False,PICK,,Oregon State,0.5781,
+401860924,Oregon State,Fresno State,22,38,True,PICK,,Oregon State,0.5781,L
 401856845,Kansas,TCU,16,22,True,NO PICK,"Kansas' Isaiah Marshall downgraded from probable to questionable on Thursday's Big 12 report, a game-time decision (On3 via RotoWire, Oct 30); Cole Ballard would start",,,
 401856736,South Carolina,Oklahoma,42,25,True,PICK,,Oklahoma,0.5501,L
 401871095,Southern Miss,UL Monroe,35,21,True,PICK,,Southern Miss,0.5413,W

@@ -43,6 +43,6 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401856733,Missouri,Arkansas,34,10,True,PICK,,Missouri,0.6670972555745492,W
 401858504,Washington,Nebraska,17,10,True,NO PICK,Washington's Demond Williams Jr. (fractured rib Oct 9) probable but no word on his role; Jedd Fisch won't name a starter (Williams or Elijah Brown) until game time,,,
 401862814,Army,Memphis,22,49,True,PICK,,Memphis,0.7190403527610335,W
-401860908,Texas State,Boise State,,,False,PICK,,Boise State,0.7456497538590038,
-401864530,Northern Illinois,UNLV,,,False,PICK,,UNLV,0.9115120175582077,
-401860924,Oregon State,Fresno State,,,False,PICK,,Oregon State,0.6522204720334098,
+401860908,Texas State,Boise State,45,46,True,PICK,,Boise State,0.7456497538590038,W
+401864530,Northern Illinois,UNLV,24,31,True,PICK,,UNLV,0.9115120175582077,W
+401860924,Oregon State,Fresno State,22,38,True,PICK,,Oregon State,0.6522204720334098,L
