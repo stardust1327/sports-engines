@@ -3,10 +3,10 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401858501,Minnesota,Indiana,16,23,True,PICK,,Indiana,0.8536,W
 401859185,Notre Dame,Navy,35,13,True,PICK,,Notre Dame,0.824,W
 401858283,Stanford,Louisville,24,52,True,PICK,,Louisville,0.818,W
-401858282,Miami,North Carolina,,,False,PICK,,Miami,0.8131,
+401858282,Miami,North Carolina,38,35,True,PICK,,Miami,0.8131,W
 401862816,UAB,South Florida,10,30,True,PICK,,South Florida,0.7648,W
 401858284,Virginia,Wake Forest,7,51,True,PICK,,Wake Forest,0.7561,W
-401856733,Missouri,Arkansas,,,False,PICK,,Missouri,0.7505,
+401856733,Missouri,Arkansas,34,10,True,PICK,,Missouri,0.7505,W
 401860908,Texas State,Boise State,,,False,PICK,,Boise State,0.7596,
 401856735,Auburn,Ole Miss,15,45,True,PICK,,Ole Miss,0.7497,W
 401858278,SMU,Syracuse,27,30,True,PICK,,SMU,0.7345,L
@@ -17,9 +17,9 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401858277,California,NC State,10,31,True,PICK,,NC State,0.668,W
 401856848,Utah,Cincinnati,49,25,True,PICK,,Utah,0.6732,W
 401866452,Bowling Green,Western Michigan,10,23,True,PICK,,Western Michigan,0.6801,W
-401856847,Oklahoma State,Iowa State,,,False,PICK,,Oklahoma State,0.6506,
+401856847,Oklahoma State,Iowa State,49,51,True,PICK,,Oklahoma State,0.6506,L
 401871097,Louisiana Tech,South Alabama,35,20,True,PICK,,Louisiana Tech,0.6494,W
-401858280,Clemson,Florida State,,,False,PICK,,Florida State,0.6037,
+401858280,Clemson,Florida State,36,24,True,PICK,,Florida State,0.6037,L
 401856842,Arizona,Texas Tech,26,34,True,PICK,,Arizona,0.5872,L
 401858502,Wisconsin,Iowa,0,30,True,PICK,,Iowa,0.602,W
 401860924,Oregon State,Fresno State,,,False,PICK,,Oregon State,0.5781,
@@ -42,7 +42,7 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401858508,Nevada,UCLA,0,27,True,NO PICK,"UCLA's Nico Iamaleava (knee) out, Ty Dieffenbach starts (listed questionable); Nevada's Carter Jones and AJ Bianco questionable, Jeff Choate hasn't named a starter (Luke Duncan started last game)",,,
 401869846,App State,Georgia Southern,3,19,True,NO PICK,"Max Johnson (hurt Oct 15) probable on the Sun Belt report, expected but not confirmed to start (RotoWire, Oct 28); Turner Helton started the last game",,,
 401860909,Washington State,San Diego State,20,26,True,NO PICK,"Jayden Denegal (ankle) questionable and won't start; Sean Lewis: 'Stone will start this week' (AP, Oct 26); Stone Saunders starts again",,,
-401858509,Ohio State,USC,,,False,NO PICK,"Ohio State's Julian Sayin (throwing arm) out; true freshman Luke Fahey expected to start over Tavien St. Clair (SI QB tracker, Oct 31)",,,
-401856737,Mississippi State,Texas,,,False,NO PICK,"Mississippi State's Kamario Taylor out for the season (toe surgery, CBS Sports); Parker Puckett has started the last 2",,,
+401858509,Ohio State,USC,18,30,True,NO PICK,"Ohio State's Julian Sayin (throwing arm) out; true freshman Luke Fahey expected to start over Tavien St. Clair (SI QB tracker, Oct 31)",,,
+401856737,Mississippi State,Texas,3,31,True,NO PICK,"Mississippi State's Kamario Taylor out for the season (toe surgery, CBS Sports); Parker Puckett has started the last 2",,,
 401858281,Georgia Tech,Pittsburgh,,,False,NO PICK,Mason Heintschel (torn ACL) out for the season; Holden Geriner started 2 of the last 3,,,
 401858504,Washington,Nebraska,,,False,NO PICK,Washington's Demond Williams Jr. (fractured rib Oct 9) probable but no word on his role; Jedd Fisch won't name a starter (Williams or Elijah Brown) until game time,,,

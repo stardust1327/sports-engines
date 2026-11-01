@@ -33,14 +33,14 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401856736,South Carolina,Oklahoma,42,25,True,PICK,,Oklahoma,0.7210849937633171,L
 401858506,Purdue,Penn State,17,31,True,PICK,,Penn State,0.6895334022929221,W
 401869846,App State,Georgia Southern,3,19,True,NO PICK,"Max Johnson (hurt Oct 15) probable on the Sun Belt report, expected but not confirmed to start (RotoWire, Oct 28); Turner Helton started the last game",,,
-401856847,Oklahoma State,Iowa State,,,False,PICK,,Oklahoma State,0.6281934981296093,
-401858280,Clemson,Florida State,,,False,PICK,,Florida State,0.683155125982809,
+401856847,Oklahoma State,Iowa State,49,51,True,PICK,,Oklahoma State,0.6281934981296093,L
+401858280,Clemson,Florida State,36,24,True,PICK,,Florida State,0.683155125982809,L
 401860909,Washington State,San Diego State,20,26,True,NO PICK,"Jayden Denegal (ankle) questionable and won't start; Sean Lewis: 'Stone will start this week' (AP, Oct 26); Stone Saunders starts again",,,
-401858282,Miami,North Carolina,,,False,PICK,,Miami,0.7711508225506059,
-401858509,Ohio State,USC,,,False,NO PICK,"Ohio State's Julian Sayin (throwing arm) out; true freshman Luke Fahey expected to start over Tavien St. Clair (SI QB tracker, Oct 31)",,,
-401856737,Mississippi State,Texas,,,False,NO PICK,"Mississippi State's Kamario Taylor out for the season (toe surgery, CBS Sports); Parker Puckett has started the last 2",,,
+401858282,Miami,North Carolina,38,35,True,PICK,,Miami,0.7711508225506059,W
+401858509,Ohio State,USC,18,30,True,NO PICK,"Ohio State's Julian Sayin (throwing arm) out; true freshman Luke Fahey expected to start over Tavien St. Clair (SI QB tracker, Oct 31)",,,
+401856737,Mississippi State,Texas,3,31,True,NO PICK,"Mississippi State's Kamario Taylor out for the season (toe surgery, CBS Sports); Parker Puckett has started the last 2",,,
 401858281,Georgia Tech,Pittsburgh,,,False,NO PICK,Mason Heintschel (torn ACL) out for the season; Holden Geriner started 2 of the last 3,,,
-401856733,Missouri,Arkansas,,,False,PICK,,Missouri,0.6670972555745492,
+401856733,Missouri,Arkansas,34,10,True,PICK,,Missouri,0.6670972555745492,W
 401858504,Washington,Nebraska,,,False,NO PICK,Washington's Demond Williams Jr. (fractured rib Oct 9) probable but no word on his role; Jedd Fisch won't name a starter (Williams or Elijah Brown) until game time,,,
 401862814,Army,Memphis,,,False,PICK,,Memphis,0.7190403527610335,
 401860908,Texas State,Boise State,,,False,PICK,,Boise State,0.7456497538590038,
