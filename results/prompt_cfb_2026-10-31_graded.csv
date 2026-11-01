@@ -10,7 +10,7 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401860908,Texas State,Boise State,,,False,PICK,,Boise State,0.7596,
 401856735,Auburn,Ole Miss,15,45,True,PICK,,Ole Miss,0.7497,W
 401858278,SMU,Syracuse,27,30,True,PICK,,SMU,0.7345,L
-401862814,Army,Memphis,,,False,PICK,,Memphis,0.7333,
+401862814,Army,Memphis,22,49,True,PICK,,Memphis,0.7333,W
 401858279,Boston College,Duke,2,47,True,PICK,,Duke,0.7146,W
 401858506,Purdue,Penn State,17,31,True,PICK,,Penn State,0.682,W
 401871059,Florida International,Liberty,10,49,True,PICK,,Liberty,0.691,W
@@ -44,5 +44,5 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401860909,Washington State,San Diego State,20,26,True,NO PICK,"Jayden Denegal (ankle) questionable and won't start; Sean Lewis: 'Stone will start this week' (AP, Oct 26); Stone Saunders starts again",,,
 401858509,Ohio State,USC,18,30,True,NO PICK,"Ohio State's Julian Sayin (throwing arm) out; true freshman Luke Fahey expected to start over Tavien St. Clair (SI QB tracker, Oct 31)",,,
 401856737,Mississippi State,Texas,3,31,True,NO PICK,"Mississippi State's Kamario Taylor out for the season (toe surgery, CBS Sports); Parker Puckett has started the last 2",,,
-401858281,Georgia Tech,Pittsburgh,,,False,NO PICK,Mason Heintschel (torn ACL) out for the season; Holden Geriner started 2 of the last 3,,,
-401858504,Washington,Nebraska,,,False,NO PICK,Washington's Demond Williams Jr. (fractured rib Oct 9) probable but no word on his role; Jedd Fisch won't name a starter (Williams or Elijah Brown) until game time,,,
+401858281,Georgia Tech,Pittsburgh,11,34,True,NO PICK,Mason Heintschel (torn ACL) out for the season; Holden Geriner started 2 of the last 3,,,
+401858504,Washington,Nebraska,17,10,True,NO PICK,Washington's Demond Williams Jr. (fractured rib Oct 9) probable but no word on his role; Jedd Fisch won't name a starter (Williams or Elijah Brown) until game time,,,

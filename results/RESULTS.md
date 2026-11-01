@@ -1707,16 +1707,34 @@ Changes:
 - Picked teams: no new QB injury or change news found (SI Week 9 tracker,
   RotoWire, team news searches).
 
+**Graded Saturday night, 2026-10-31 about 8:35 PM Phoenix (owner's request), 25 of
+28 picks final.** Graded files `cfb_2026-10-31_graded.csv` and
+`prompt_cfb_2026-10-31_graded.csv`. **Engine (official) 20-5, framework 20-5**;
+Texas State at Boise State, Northern Illinois at UNLV and Oregon State at Fresno
+State not final (check-in F finishes the grading).
+- Engine 70%+: 14-1 (Oklahoma 72% lost 42-25 to South Carolina); Boise State
+  and UNLV pending.
+- Missed by both: SMU 27-30 at Syracuse, South Carolina 42-25 at Oklahoma,
+  Oklahoma State 49-51 at Iowa State, Clemson 36-24 at Florida State.
+- The 2 splits went 1-1: Texas Tech 34-26 over Arizona (engine), Southern Miss
+  35-21 at UL Monroe (framework).
+- Off the record (19 no-pick games): engine leans 14-5, framework 13-6. Running
+  totals (`nopick_leans.py`): college engine 36-25, framework 36-25.
+- Midweek plus Saturday (10-27 to 10-31) so far: engine 25-9, framework 25-9.
+
 ## College football midweek, 2026-11-03 to 11-06 (owner's request, Saturday night 2026-10-31)
 
 Owner's request, Saturday 2026-10-31 about 7:20 PM Phoenix: run both engines and
 make a PDF of results so far and upcoming picks. Both models' first runs of next
-week's midweek games, straight into `results/` (engine about 7:25 PM; framework
-with the no-picks). The models use every game final by then; the Tuesday run
-(check-in A) re-runs them through `/tmp/rerun` and `merge_rerun.py` with
-Tuesday's news. Engine 2026 out of sample 203-98; framework 2026 weeks 4-9
-195-106 (64.8%). Files `cfb_2026-11-03_picks.csv` to `cfb_2026-11-05_picks.csv`
-(engine) and the `prompt_cfb_` versions. Splits in bold.
+week's midweek games, straight into `results/`: Tuesday to Thursday about 7:25 PM
+(engine 2026 out of sample 203-98; framework 2026 weeks 4-9 195-106), Friday
+after Washington at Nebraska went final, about 8:30 PM (engine 210-100;
+framework 202-108), since Nebraska plays Friday. The models use every game final
+when they ran (Tuesday to Thursday: before the 4 PM and later Saturday games
+ended); the Tuesday run (check-in A) re-runs all of them through `/tmp/rerun` and
+`merge_rerun.py` with complete data and Tuesday's news. Files
+`cfb_2026-11-03_picks.csv` to `cfb_2026-11-06_picks.csv` (engine) and the
+`prompt_cfb_` versions. They agree on all 7 picks.
 
 | Game (Phoenix kickoff) | Engine (official) | Framework |
 |---|---|---|
@@ -1725,8 +1743,33 @@ Tuesday's news. Engine 2026 out of sample 203-98; framework 2026 weeks 4-9
 | Toledo at Sacramento State (Wed 5:00 PM) | Toledo 84% | Toledo 89% (34-14) |
 | UTSA at Florida Atlantic (Thu 5:30 PM) | UTSA 64% | UTSA 53% (33-32) |
 | James Madison at Southern Miss (Thu 6:00 PM) | James Madison 82% | James Madison 70% (30-22) |
+| Virginia Tech at SMU (Fri 5:00 PM) | SMU 71% | SMU 59% (30-26) |
+| TCU at Arizona (Fri 8:15 PM) | Arizona 67% | Arizona 68% (30-22) |
+
+Engine 70%+: Toledo, James Madison, Ohio, SMU.
+
+**Data gap found:** ESPN's summary for Washington at Nebraska (10-31, final
+17-10) had no play-by-play and no player stats when the Friday run downloaded it
+(re-checked about 8:35 PM: still none), so neither model's ratings include that
+game. It's the only 2026 game in the cache without plays. The engine caches
+finished games for good, so a later re-run in the same session must delete
+`cfb/cache/summary/401858504.json` first; fresh sessions download it again.
 
 No pick (both):
+- Nebraska at Illinois (Fri): ESPN has no play-by-play yet for Nebraska's 10-31
+  game vs Washington (box score only), so neither model's ratings include it.
+  Katin Houser (Illinois) returned from his hand surgery and started 10-31 (On3).
+- South Florida at East Carolina (Fri): South Florida's Michael Van Buren Jr. left
+  the 10-31 game vs UAB in the 1st quarter after a hit near the head, status
+  unknown; Luke Kromenhoek finished (WUSF, RotoWire, Oct 31). East Carolina's
+  starter is also unsettled: Emory Williams (hurt Oct 22) didn't play 10-31
+  despite being listed ready on the AAC availability report; Mitch Griffis
+  started.
+- New Mexico at Nevada (Fri): Nevada's starter not settled: Carter Jones (season
+  leader) and AJ Bianco were questionable for 10-31 with no starter named by Jeff
+  Choate; Bianco, Luke Duncan and Reeve Slone all threw passes in the 27-0 loss
+  at UCLA (ESPN box score). New Mexico's Toa Fa'avae (LOW ATTEMPTS, option-style)
+  started again.
 - Buffalo at Miami (OH): David McComb out for the season (injured vs UConn in
   Week 4; The Miami Student, Oct 11); Caleb Heavner makes his 5th straight
   start (as on 10-17 and 10-24).
@@ -1735,8 +1778,9 @@ No pick (both):
   Noah Kim (undisclosed injury) status for Nov 4 unclear, Brogan McCaughey
   started the last game (Mitten Football, Oct 28).
 
-Off the record: engine Miami (OH) 78%, Eastern Michigan 52%; framework Miami
-(OH) 65%, Central Michigan 50%.
+Off the record: engine Miami (OH) 78%, Eastern Michigan 52%, East Carolina 60%,
+Nebraska 79%, New Mexico 70%; framework Miami (OH) 65%, Central Michigan 50%,
+East Carolina 58%, Nebraska 78%, New Mexico 72%.
 
 QB check (news through Saturday night; the MAC and Sun Belt availability reports
 come out the day before each game):
@@ -1753,6 +1797,15 @@ come out the day before each game):
   in the team's two-quarterback system (Daily News-Record, Oct 30). Southern
   Miss (SPLIT): Landry Lyddy started and threw a TD in the 35-21 win at UL
   Monroe on 10-31 (WLBT); no injury reported.
+- Friday's picked teams: SMU (Kevin Jennings), Virginia Tech (Ethan
+  Grunkemeyer, idle 10-31), Arizona (Noah Fifita), TCU (Jaden Craig): not
+  flagged, every start this season, no injury news found.
+
+PDF: `report_2026-10-31_results-and-picks.pdf`, with a new "Season so far" page
+(`make_report.py --season-summary 2026`, owner's request): every graded pick
+this season for both sports and models, by week and by win-chance tier next to
+the multi-season backtests, plus the off-the-record, closing-line and live-call
+tallies. Read-only; nothing in the engines or frameworks changed.
 
 ## College Prompt Football framework (built 2026-10-11)
 

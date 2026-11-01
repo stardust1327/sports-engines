@@ -39,10 +39,10 @@ game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,resul
 401858282,Miami,North Carolina,38,35,True,PICK,,Miami,0.7711508225506059,W
 401858509,Ohio State,USC,18,30,True,NO PICK,"Ohio State's Julian Sayin (throwing arm) out; true freshman Luke Fahey expected to start over Tavien St. Clair (SI QB tracker, Oct 31)",,,
 401856737,Mississippi State,Texas,3,31,True,NO PICK,"Mississippi State's Kamario Taylor out for the season (toe surgery, CBS Sports); Parker Puckett has started the last 2",,,
-401858281,Georgia Tech,Pittsburgh,,,False,NO PICK,Mason Heintschel (torn ACL) out for the season; Holden Geriner started 2 of the last 3,,,
+401858281,Georgia Tech,Pittsburgh,11,34,True,NO PICK,Mason Heintschel (torn ACL) out for the season; Holden Geriner started 2 of the last 3,,,
 401856733,Missouri,Arkansas,34,10,True,PICK,,Missouri,0.6670972555745492,W
-401858504,Washington,Nebraska,,,False,NO PICK,Washington's Demond Williams Jr. (fractured rib Oct 9) probable but no word on his role; Jedd Fisch won't name a starter (Williams or Elijah Brown) until game time,,,
-401862814,Army,Memphis,,,False,PICK,,Memphis,0.7190403527610335,
+401858504,Washington,Nebraska,17,10,True,NO PICK,Washington's Demond Williams Jr. (fractured rib Oct 9) probable but no word on his role; Jedd Fisch won't name a starter (Williams or Elijah Brown) until game time,,,
+401862814,Army,Memphis,22,49,True,PICK,,Memphis,0.7190403527610335,W
 401860908,Texas State,Boise State,,,False,PICK,,Boise State,0.7456497538590038,
 401864530,Northern Illinois,UNLV,,,False,PICK,,UNLV,0.9115120175582077,
 401860924,Oregon State,Fresno State,,,False,PICK,,Oregon State,0.6522204720334098,
