@@ -2,4 +2,4 @@ sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,
 nfl,401873028,Colts at Jaguars,11.01.2026 11:53 AM,3,12:38,"Colts 0, Jaguars 28",Jaguars,0.995,0.98,"Colts 7, Jaguars 42",W
 nfl,401873026,Ravens at Bills,11.01.2026 12:53 PM,4,12:18,"Ravens 10, Bills 29",Bills,0.9913,0.98,"Ravens 10, Bills 36",W
 nfl,401873027,Browns at Steelers,11.01.2026 12:53 PM,4,5:23,"Browns 6, Steelers 27",Steelers,0.999,0.98,"Browns 6, Steelers 27",W
-nfl,401873032,Chargers at Rams,11.01.2026 3:53 PM,4,1:54,"Chargers 9, Rams 24",Rams,0.999,0.98,,
+nfl,401873032,Chargers at Rams,11.01.2026 3:53 PM,4,1:54,"Chargers 9, Rams 24",Rams,0.999,0.98,"Chargers 9, Rams 24",W
