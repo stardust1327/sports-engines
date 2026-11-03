@@ -1,3 +1,3 @@
 game_id,kickoff_utc,state,away_id,home_id,away_name,home_name,neutral,venue,home_plays,away_plays,net_epa,net_sr,is_home,p_home,pick,pick_prob,status,reason,kickoff
-401862817,2026-11-06T00:30Z,pre,2636,2226,UTSA,Florida Atlantic,False,Flagler Credit Union Stadium,496,510,-0.23346762363693557,-0.032315036360075454,1.0,0.360970215021959,UTSA,0.6390297849780411,PICK,,Thu 5:30 PM
-401869964,2026-11-06T01:00Z,pre,256,2572,James Madison,Southern Miss,False,M. M. Roberts Stadium,496,578,-0.3718789294189235,-0.11294445770780843,1.0,0.18059143800198732,James Madison,0.8194085619980127,PICK,,Thu 6:00 PM
+401862817,2026-11-06T00:30Z,pre,2636,2226,UTSA,Florida Atlantic,False,Flagler Credit Union Stadium,496,510,-0.2513737606995172,-0.033221934366211424,1.0,0.343315021540047,UTSA,0.656684978459953,PICK,,Thu 5:30 PM
+401869964,2026-11-06T01:00Z,pre,256,2572,James Madison,Southern Miss,False,M. M. Roberts Stadium,496,578,-0.381230030079196,-0.11322861806388398,1.0,0.1737633789819731,James Madison,0.8262366210180269,PICK,,Thu 6:00 PM
