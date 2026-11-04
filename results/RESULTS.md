@@ -942,6 +942,14 @@ QB check (news through Tuesday morning; no official reports yet):
 regular starter is out) and the first practice reports for Stafford and Murray. Friday's lock (C) settles Stafford; Murray's Monday status
 comes Saturday (final word at check-in G).
 
+**Midweek check (check-in B), Wednesday 2026-11-04.** Jaguars at Ravens stays
+a no-pick (both models); reason refreshed with `set_nopick.py`: Lamar Jackson
+(right thumb) ruled out, headed to IR; Joe Fagnano starts (Jesse Minter, Nov 3;
+Fagnano off the final injury report, FantasyPros Nov 4); Tyler Huntley (toe)
+out. One unconfirmed report (FantasyPros, Nov 4) says Baltimore traded for
+Jacoby Brissett; doesn't change the no-pick. Trevor Lawrence: no designation
+found on the Jaguars' report. Thursday's check-in B confirms inactives.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -1966,6 +1974,18 @@ Sacramento State, Toledo, UTSA, Florida Atlantic, James Madison, Southern Miss,
 SMU, Virginia Tech, TCU or Arizona. The MAC, Sun Belt and Big Ten availability
 reports come the day before or the day of each game: check-in B (Wed, Thu) and
 C (Fri) check them.
+
+**Midweek check (check-in B), Wednesday 2026-11-04, about 3:50 PM Pacific.**
+No pick changed. Reason refreshed in both models (`set_nopick.py`):
+- Central Michigan at Eastern Michigan (Wed): Noah Kim (undisclosed injury)
+  ruled out (MAC availability report, Nov 4, via RotoWire; Mitten Football
+  live blog); Brogan McCaughey starts; Central Michigan's Angel Flores out for
+  the season, Jadyn Glasser starts. Still no pick: Eastern Michigan's regular
+  starter is out.
+
+Picks stand: Ball State at Massachusetts (Keldric Luster, William Watson III)
+and Toledo at Sacramento State (John Alan Richter, Jackson Sharman): no QB
+injury or change news found (ESPN preview Nov 1, game previews Nov 4).
 
 ## College Prompt Football framework (built 2026-10-11)
 
