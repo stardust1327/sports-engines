@@ -1,0 +1,3 @@
+sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
+college,401866457,Toledo at Sacramento State,11.04.2026 6:52 PM,4,5:31,"Toledo 20, Sacramento State 10",Toledo,0.9872,0.98,,
+college,401866456,Central Michigan at Eastern Michigan,11.04.2026 6:52 PM,3,4:26,"Central Michigan 28, Eastern Michigan 0",Central Michigan,0.999,0.98,,
