@@ -950,6 +950,14 @@ out. One unconfirmed report (FantasyPros, Nov 4) says Baltimore traded for
 Jacoby Brissett; doesn't change the no-pick. Trevor Lawrence: no designation
 found on the Jaguars' report. Thursday's check-in B confirms inactives.
 
+**Midweek check (check-in B), Thursday 2026-11-05 (second run of the check).**
+Jaguars at Ravens stays a no-pick (both models); reason refreshed with
+`set_nopick.py`: the Ravens put Lamar Jackson (right thumb, out at least 4 games)
+and Tyler Huntley (turf toe, out for the season) on IR on Nov 5; Joe Fagnano
+starts, Austin Reed (signed to the 53 that day) backs up (Yardbarker, Nov 5).
+College: see the Thursday entry in the 2026-11-03 to 11-06 section (James
+Madison at Southern Miss is a no-pick under METHOD.md section 6).
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
