@@ -1987,6 +1987,19 @@ Picks stand: Ball State at Massachusetts (Keldric Luster, William Watson III)
 and Toledo at Sacramento State (John Alan Richter, Jackson Sharman): no QB
 injury or change news found (ESPN preview Nov 1, game previews Nov 4).
 
+**Midweek check (check-in B), Thursday 2026-11-05, about 3:50 PM Pacific.**
+- **New no pick: James Madison at Southern Miss** (was James Madison in both,
+  engine 83%, framework 69%): Landry Lyddy (last 6 starts) benched; John White
+  makes his first start of the season with 2 passes this season (SI, Nov 5;
+  RotoWire via PineBelt Sports, Nov 5). First start with very little playing
+  time (METHOD.md section 6). Applied to both models with `set_nopick.py`.
+  Off the record: engine James Madison 83%, framework James Madison 69%.
+- Pick stands: UTSA at Florida Atlantic (Owen McCown, Caden Veltkamp): no QB
+  injury or change news found (CBS12 preview Nov 5, game previews Nov 5).
+- NFL Thursday, Jaguars at Ravens: still no pick (Lamar Jackson out, IR; Joe
+  Fagnano starts; Tyler Huntley out). Inactives not yet posted at check time;
+  no news against Trevor Lawrence starting.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
