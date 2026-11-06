@@ -958,6 +958,63 @@ starts, Austin Reed (signed to the 53 that day) backs up (Yardbarker, Nov 5).
 College: see the Thursday entry in the 2026-11-03 to 11-06 section (James
 Madison at Southern Miss is a no-pick under METHOD.md section 6).
 
+**Friday lock (check-in C), 2026-11-06, about 1:45 PM Pacific. Week 9 picks
+locked Friday.** Both models re-run for 2026-11-08 and 11-09 with the current
+no-picks (engine; framework with `--refresh` and the engine's `_qbs.csv` from the
+same run) into `/tmp/rerun` and merged with `merge_rerun.py` (14 games
+refreshed in each file). Framework backtest 558-335 (Brier 0.2230); 2026 out of
+sample 44-29.
+
+Changes:
+- **Pick back: Rams at Commanders** (engine Rams 83.0%, framework Rams 67.6%,
+  26-20). Matthew Stafford practiced fully Wednesday and Thursday with no
+  designation (NFL.com Week 9 report; Yahoo, Nov 5: "I haven't missed a rep");
+  not listed on the final report (SI game preview injury list).
+- **New no pick: Cardinals at Seahawks** (was Seahawks, engine 66.1%, framework
+  70.8%): Sam Darnold (quad; also a cracked rib) ruled out, week to week; Drew
+  Lock (elbow) starts (Mike Macdonald, NFL.com, Nov 4). Announced Wednesday; the
+  midweek checks looked only at Thursday's game, so this is the first check to
+  catch it. Corrected before kickoff.
+- **New no pick: Browns at Saints** (was Saints, engine 52.3%, framework 52.4%):
+  Deshaun Watson (concussion) in protocol, won't start; Shedeur Sanders starts
+  (Browns, ESPN/AP, Nov 6).
+- Reasons refreshed (still no picks): Bills at Vikings: Kyler Murray
+  (hamstring) ruled out, week to week; Carson Wentz starts (Kevin O'Connell,
+  Vikings.com, Nov 5). Giants at Eagles: Jalen Hurts on season-ending IR;
+  Tanner McKee (chest) starts.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Bengals at Falcons (Sun 7:30 AM, neutral site) | Bengals 58.7% | Bengals 58.9% (24-22) |
+| Cowboys at Colts (11:00 AM) | Cowboys 53.8% | Cowboys 61.3% (26-23) |
+| Jets at Chiefs (11:00 AM) | Chiefs 68.0% | Chiefs 68.3% (27-21) |
+| Lions at Dolphins (11:00 AM) | Lions 69.6% | Lions 67.8% (28-22) |
+| Rams at Commanders (11:00 AM) | Rams 83.0% | Rams 67.6% (26-20) |
+| Broncos at Panthers (11:00 AM) | Broncos 51.8% | Broncos 58.6% (25-22) |
+| Texans at Chargers (2:05 PM) | Texans 62.8% | Texans 68.6% (25-19) |
+| Packers at Patriots (2:25 PM) | Patriots 62.1% | Patriots 57.7% (25-22) |
+| Raiders at 49ers (2:25 PM) | 49ers 85.9% | 49ers 82.7% (31-19) |
+| Buccaneers at Bears (6:20 PM) | Bears 55.5% | Bears 60.6% (23-20) |
+
+The models agree on all 10 picks. Engine 70%+: 49ers, Rams. Framework 70%+:
+49ers.
+
+No pick (both): Jaguars at Ravens (played Thursday), Browns at Saints, Giants
+at Eagles, Cardinals at Seahawks, Bills at Vikings (reasons above). Off the
+record: engine Saints 52.3%, Giants 52.6%, Seahawks 66.0%, Bills 55.9%;
+framework Saints 52.4%, Giants 62.6%, Seahawks 69.7%, Vikings 57.2%.
+
+QB check (Friday statuses): no other starting QB in a Sunday game is out,
+doubtful or questionable. On the reports with full practices and no
+designation: Bryce Young, Patrick Mahomes, Malik Willis (groin), Jayden Daniels,
+Drake Maye (right shoulder), Baker Mayfield (NFL.com Week 9 report). Jordan Love
+not on the Packers' final report (packers.com, Nov 6). Gardner Minshew starts for
+the Cardinals (named Nov 2; game is a no-pick for Seattle's QB anyway). No news
+against Burrow, Penix, Prescott, Daniel Jones, Geno Smith, Goff, Shough, Nix,
+Stroud, Herbert, Purdy, Cousins or Caleb Williams. Monday: Josh Allen no news;
+check-in G confirms with the inactives. London game (Bengals-Falcons) kicks off
+before check-in F: settled here.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -2007,6 +2064,20 @@ injury or change news found (ESPN preview Nov 1, game previews Nov 4).
 - NFL Thursday, Jaguars at Ravens: still no pick (Lamar Jackson out, IR; Joe
   Fagnano starts; Tyler Huntley out). Inactives not yet posted at check time;
   no news against Trevor Lawrence starting.
+
+**Friday lock (check-in C), 2026-11-06, about 1:50 PM Pacific: Friday's
+college QB check.** No pick changed.
+- Picks stand: Virginia Tech at SMU (Ethan Grunkemeyer, Kevin Jennings: neither
+  on the ACC availability report, Nov 6), Nebraska at Illinois (Anthony
+  Colandrea, no injury news; Katin Houser no designation, Huskers Today preview
+  Nov 6; final Big Ten report due before kickoff), TCU at Arizona (Jaden Craig,
+  Noah Fifita: neither on the injury lists, Nov 6).
+- Still no pick, reason refreshed (`set_nopick.py`): South Florida at East
+  Carolina: Michael Van Buren Jr. unconfirmed, no official word as of midday
+  Friday, AAC availability report pending, Luke Kromenhoek the likely
+  alternative (Heavy, Nov 6); East Carolina's starter also unsettled.
+- Still no pick: New Mexico at Nevada: no Nevada starter named in any news found
+  through Friday.
 
 ## College Prompt Football framework (built 2026-10-11)
 
