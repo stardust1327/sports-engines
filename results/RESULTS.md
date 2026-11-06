@@ -2079,6 +2079,22 @@ college QB check.** No pick changed.
 - Still no pick: New Mexico at Nevada: no Nevada starter named in any news found
   through Friday.
 
+**Friday lock, second session (same check-in, about 2:30 PM Pacific).** A
+duplicate run of check-in C reached the same picks and no-picks independently
+(NFL: Rams pick back; Seahawks and Browns no-picks; college: no change). Two
+no-pick reasons corrected with `set_nopick.py` (no pick changed):
+- Giants at Eagles: Jalen Hurts (blood clots) on season-ending IR; Joe Milton
+  named the starter over Tanner McKee (NFL Network/ESPN, Nov 4; NFL.com, CBS,
+  Inquirer). The earlier reason said McKee starts.
+- New Mexico at Nevada: Carter Jones (season leader, 4 starts) out with injury;
+  AJ Bianco (ankle) gets his 2nd start (Nevada Sports Net pre-game, Nov 6;
+  Albuquerque Journal depth chart lists Bianco first). Still no pick: the
+  regular starter is out.
+Stafford: the Rams' own Friday report page couldn't be read from this session
+either; NFL.com shows him a full participant with no game status. Check-in F
+confirms with the inactives (8:30 AM Pacific, before the 10 AM kickoff).
+PDF re-made with the corrected reasons.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
