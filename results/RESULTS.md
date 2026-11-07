@@ -2231,6 +2231,22 @@ probable, but SI/Yahoo still list him questionable), Northern Illinois at San
 José State and West Virginia at Texas Tech. Now 26 picks, 25 no-picks. PDF
 re-made.
 
+**Saturday afternoon check (check-in E, about 11:50 AM Pacific).** QB news for
+the 37 games kicking off at noon Pacific or later. Two picks became no-picks in
+both models (`set_nopick.py`, pushed before their 12:30 PM Pacific kickoffs):
+- **Temple at Navy: now a no-pick** (was Navy). Temple's Ajani Sheppard
+  (undisclosed) questionable on the American availability report, likely a
+  game-time decision (RotoWire, Nov 7); Jaxon Smolik starts if he can't.
+- **Marshall at Georgia Southern: now a no-pick** (was Georgia Southern).
+  Marshall's Carlos Del Rio-Wilson (undisclosed) a game-time decision on the
+  Sun Belt availability report (RotoWire, Nov 7); Marshall used three QBs last
+  game.
+Picks stand: Alabama at LSU (game-day availability report: Keelon Russell and
+Sam Leavitt not listed; backup Jett Thomalla a game-time decision), Kentucky at
+Tennessee (no new Tennessee injuries on the SEC report), and every other picked
+game (no QB injury news found). No pick came back (no earlier no-pick's QB was
+confirmed in this check). Now 24 picks, 27 no-picks.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
