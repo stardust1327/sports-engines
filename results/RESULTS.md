@@ -2211,6 +2211,26 @@ E (11:50 AM) re-checks the noon-and-later games (Big Ten 2-hour reports:
 Washington, Michigan State, Northwestern, Wisconsin; also Kansas, Texas Tech,
 Florida, Utah State, San José State, Troy, Sam Houston).
 
+**Saturday run, second session (same check-in D, about 6:45-7:58 AM Pacific).**
+A duplicate run of check-in D graded the midweek games the same (engine 5-2,
+framework 5-2) and did its own QB check of all 51 games. It agreed on 46 games.
+Two picks became no-picks in both models (`set_nopick.py`; both games kick off
+at 5:30 PM Phoenix):
+- **Louisville at Georgia Tech: now a no-pick** (was Louisville in both, engine
+  85%). Georgia Tech's starter isn't announced: Alberto Mendoza (benched in the
+  4th quarter Oct 31 after 4 fumbles) or Grady Adamson. Brent Key's staff
+  decision isn't public (SI Nov 4 and its game-day preview Nov 7; AJC Nov 6).
+- **Colorado at Arizona State: now a no-pick** (was Arizona State in both).
+  Mikey Keene (right knee, hurt Oct 24) started the 2 games before and is still
+  rehabbing. Jake Fette starts in his place (Arizona Sports, "ASU starts Jake
+  Fette with Mikey Keene injured"). He is an injury fill-in, the same call as
+  Keene/Fette on 10-31.
+Left as logged (the stricter call stands): Clemson at Syracuse (the second check
+found RotoWire's Nov 6 note that the ACC report upgraded Steve Angeli to
+probable, but SI/Yahoo still list him questionable), Northern Illinois at San
+José State and West Virginia at Texas Tech. Now 26 picks, 25 no-picks. PDF
+re-made.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
