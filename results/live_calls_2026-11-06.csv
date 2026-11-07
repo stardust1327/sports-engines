@@ -1,2 +1,3 @@
 sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
 college,401858288,Virginia Tech at SMU,11.06.2026 6:52 PM,4,9:21,"Virginia Tech 14, SMU 37",SMU,0.999,0.98,"Virginia Tech 28, SMU 51",W
+college,401864533,New Mexico at Nevada,11.06.2026 8:52 PM,4,11:00,"New Mexico 28, Nevada 3",New Mexico,0.999,0.98,,
