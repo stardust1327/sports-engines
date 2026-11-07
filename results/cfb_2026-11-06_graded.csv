@@ -1,0 +1,6 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401858288,Virginia Tech,SMU,28,51,True,PICK,,SMU,0.717591505631377,W
+401862818,South Florida,East Carolina,17,20,True,NO PICK,"Michael Van Buren Jr. (left 10-31 game early, undisclosed injury) unconfirmed: no official word as of midday Friday, AAC availability report pending, Luke Kromenhoek the likely alternative (Heavy, Nov 6); East Carolina's starter also unsettled (Emory Williams hurt Oct 22, Mitch Griffis started 10-31)",,,
+401858510,Nebraska,Illinois,13,24,True,PICK,,Nebraska,0.7638235005737507,L
+401864533,New Mexico,Nevada,31,3,True,NO PICK,"Carter Jones (season leader, 4 starts) out with injury; AJ Bianco (ankle) gets his 2nd start (Nevada Sports Net, Nov 6; Albuquerque Journal depth chart)",,,
+401856855,TCU,Arizona,28,29,True,PICK,,Arizona,0.6773615070658882,W

@@ -1,0 +1,4 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401866455,Ball State,Massachusetts,30,31,True,PICK,,Massachusetts,0.6046961217414809,W
+401866457,Toledo,Sacramento State,20,17,True,PICK,,Toledo,0.8447268631260731,W
+401866456,Central Michigan,Eastern Michigan,35,7,True,NO PICK,"Noah Kim (undisclosed injury) ruled out (MAC availability report, Nov 4); Brogan McCaughey starts; Central Michigan's Angel Flores out for the season, Jadyn Glasser starts",,,
