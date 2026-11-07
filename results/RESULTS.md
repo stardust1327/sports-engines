@@ -2095,6 +2095,122 @@ either; NFL.com shows him a full participant with no game status. Check-in F
 confirms with the inactives (8:30 AM Pacific, before the 10 AM kickoff).
 PDF re-made with the corrected reasons.
 
+**Midweek graded (Saturday run, check-in D, 2026-11-07 about 7:00 AM Pacific).**
+Graded files `cfb_2026-11-03_graded.csv` to `cfb_2026-11-06_graded.csv` and the
+`prompt_cfb_` versions. **Engine (official) 5-2, framework 5-2** (no splits).
+- Wins (both): Ohio 28-20 at Akron, Massachusetts 31-30 over Ball State, Toledo
+  20-17 at Sacramento State, SMU 51-28 over Virginia Tech, Arizona 29-28 over TCU.
+- Losses (both): UTSA (lost 60-29 at Florida Atlantic), Nebraska (lost 24-13 at
+  Illinois).
+- Engine 70%+: 3-1 (Ohio, Toledo, SMU won; Nebraska 76% lost).
+- Off the record (5 no-pick games): engine 3-2, framework 3-2 (Miami (OH) and
+  Eastern Michigan wrong; James Madison, East Carolina, New Mexico right).
+  Running totals (`nopick_leans.py`): college engine 39-27, framework 39-27.
+## College football Saturday 2026-11-07 (engine and framework)
+
+Saturday run (check-in D), about 6:45-7:55 AM Pacific. Engine first run straight
+into `results/`, then re-run with the no-picks into `/tmp/rerun` and merged with
+`merge_rerun.py` (51 games refreshed, none started); framework first run with the
+same no-picks and `--starter "Marshall=Zion Turner"` straight into `results/`.
+Files `cfb_2026-11-07_picks.csv` and `_qbs.csv` (engine),
+`prompt_cfb_2026-11-07_picks.csv` (framework). Engine: 2025 backtest weeks 4-8,
+70%+ 103-22; 2026 out of sample 209-104. Framework: 2026 weeks 4-9 202-111.
+Splits in bold.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| BYU at Utah (10:00 AM) | Utah 77% | Utah 62% (30-25) |
+| Texas at Missouri (10:00 AM) | **Texas 62%** | **Missouri 62%** (25-20) |
+| Iowa State at Baylor (10:00 AM) | Baylor 79% | Baylor 83% (34-19) |
+| Florida State at Boston College (10:00 AM) | **Florida State 56%** | **Boston College 61%** (31-27) |
+| North Carolina at UConn (10:00 AM) | **North Carolina 74%** | **UConn 52%** (29-28) |
+| Tulsa at Tulane (10:00 AM) | Tulsa 72% | Tulsa 68% (30-23) |
+| Duke at NC State (10:30 AM) | **NC State 52%** | **Duke 64%** (32-26) |
+| Maryland at Purdue (10:30 AM) | Purdue 67% | Purdue 51% (29-28) |
+| Arkansas at Auburn (10:45 AM) | Auburn 67% | Auburn 59% (28-24) |
+| Texas A&M at South Carolina (1:00 PM) | South Carolina 60% | South Carolina 71% (31-22) |
+| UL Monroe at Arkansas State (1:00 PM) | Arkansas State 70% | Arkansas State 57% (30-27) |
+| Delaware at Kennesaw State (1:00 PM) | **Kennesaw State 60%** | **Delaware 55%** (29-27) |
+| Alabama at LSU (1:30 PM) | LSU 74% | LSU 79% (33-20) |
+| Cincinnati at Houston (1:30 PM) | Houston 84% | Houston 65% (35-29) |
+| Charlotte at UAB (1:30 PM) | UAB 80% | UAB 63% (30-25) |
+| Temple at Navy (1:30 PM) | Navy 84% | Navy 62% (34-29) |
+| Marshall at Georgia Southern (1:30 PM) | Georgia Southern 83% | Georgia Southern 86% (36-18) |
+| Western Kentucky at Middle Tennessee (1:30 PM) | Middle Tennessee 54% | Middle Tennessee 67% (31-24) |
+| Missouri State at Florida International (2:00 PM) | Florida International 60% | Florida International 64% (28-23) |
+| South Alabama at Louisiana (3:00 PM) | Louisiana 70% | Louisiana 63% (32-27) |
+| Kentucky at Tennessee (4:15 PM) | Tennessee 63% | Tennessee 72% (30-20) |
+| Miami at Notre Dame (5:30 PM) | **Notre Dame 66%** | **Miami 53%** (30-28) |
+| Georgia at Ole Miss (5:30 PM) | Georgia 62% | Georgia 66% (30-24) |
+| Colorado at Arizona State (5:30 PM) | Arizona State 58% | Arizona State 55% (27-25) |
+| Louisville at Georgia Tech (5:30 PM) | Louisville 85% | Louisville 78% (38-25) |
+| Hawai'i at UTEP (7:30 PM) | Hawai'i 63% | Hawai'i 72% (31-22) |
+| Texas State at Oregon State (8:30 PM) | Oregon State 66% | Oregon State 64% (33-28) |
+| Wyoming at UNLV (8:30 PM) | UNLV 69% | UNLV 63% (30-25) |
+
+28 picks in both models, 23 no-picks; they agree on 22 of 28. Engine 70%+ (12):
+Louisville, Navy, Houston, Georgia Southern, UAB, Baylor, Utah, North Carolina,
+LSU, Tulsa, Louisiana, Arkansas State. Splits (6): Texas/Missouri, Florida
+State/Boston College, NC State/Duke, Kennesaw State/Delaware, Notre Dame/Miami
+(engine first), and North Carolina 74% (framework UConn 52%).
+
+No pick (both; full reasons with sources in both picks files and the PDF):
+- Regular starter out: UCLA at Minnesota (Iamaleava out for the season),
+  Oklahoma State at Kansas State (Avery Johnson out, Knuth unavailable), Georgia
+  State at App State (Cameran Brown out), Oregon at Ohio State (Sayin out
+  indefinitely), UCF at Kansas (Keyone Jenkins out; Kansas' Marshall also not
+  confirmed), Vanderbilt at Mississippi State (Kamario Taylor out for the season;
+  AJ Swann hurt Oct 31, not confirmed), Rutgers at Wisconsin (Lonergan out;
+  Wisconsin's true freshman Ryan Hopkins reported to make his first start over
+  Colton Joseph), Boise State at Colorado State (Madsen, knee, won't play;
+  Cutforth starts), Iowa at Northwestern (Chiles out per ESPN; Marchiol starts),
+  Air Force at Army (Szarka out for the season; no starter named), Fresno State
+  at Utah State (Brosterhous hurt Oct 31, no update; Hillstead not named).
+- Starter questionable: Clemson at Syracuse (Angeli questionable on the ACC
+  report), Michigan State at Michigan (Milivojevic questionable), Merrimack at
+  Wake Forest (also no Merrimack data; Gio Lopez day-to-day).
+- Starter not named or confirmed: Old Dominion at Coastal Carolina (Henicle
+  probable or Potter), Penn State at Washington (Demond Williams Jr. expected
+  back, not confirmed), Rice at North Texas (Brown or Ochoa), Northern Illinois
+  at San José State (Rolovich over Weaver per ESPN sources only), Louisiana Tech
+  at Troy (Kilcrease reported over Crowder), Sam Houston at Jacksonville State
+  (Locke's status unknown), Oklahoma at Florida (Jones Jr. per CBS, no
+  announcement), Liberty at New Mexico State (open competition), West Virginia at
+  Texas Tech (Castellanos expected, McGuire undecided).
+
+Off the record (no-pick games; never in either record): UCLA at Minnesota: engine UCLA 73%, framework UCLA 79%; Clemson at Syracuse: engine Syracuse 52%, framework Syracuse 60%; Oklahoma State at Kansas State: engine Oklahoma State 55%, framework Kansas State 51%; Old Dominion at Coastal Carolina: engine Coastal Carolina 68%, framework Coastal Carolina 71%; Georgia State at App State: engine Georgia State 55%, framework Georgia State 60%; Oregon at Ohio State: engine Ohio State 81%, framework Ohio State 61%; Merrimack at Wake Forest: engine none, framework none; Penn State at Washington: engine Penn State 51%, framework Washington 52%; UCF at Kansas: engine Kansas 66%, framework Kansas 55%; Rice at North Texas: engine North Texas 85%, framework North Texas 85%; Northern Illinois at San José State: engine San José State 81%, framework San José State 82%; Louisiana Tech at Troy: engine Louisiana Tech 66%, framework Louisiana Tech 66%; Vanderbilt at Mississippi State: engine Mississippi State 71%, framework Vanderbilt 51%; Rutgers at Wisconsin: engine Wisconsin 86%, framework Wisconsin 81%; Boise State at Colorado State: engine Boise State 87%, framework Boise State 82%; Sam Houston at Jacksonville State: engine Jacksonville State 74%, framework Jacksonville State 74%; Iowa at Northwestern: engine Northwestern 65%, framework Northwestern 58%; Michigan State at Michigan: engine Michigan 78%, framework Michigan 87%; Air Force at Army: engine Army 61%, framework Air Force 54%; Oklahoma at Florida: engine Florida 58%, framework Oklahoma 50%; Liberty at New Mexico State: engine Liberty 87%, framework Liberty 72%; West Virginia at Texas Tech: engine Texas Tech 87%, framework Texas Tech 73%; Fresno State at Utah State: engine Utah State 51%, framework Fresno State 60%.
+
+How the QB rule was applied to picked teams (news through Saturday morning:
+SEC, ACC, Big 12, Sun Belt availability reports via Hook 'Em Headlines, SI,
+Yahoo, On3, RotoWire, Fox Sports game pages; SI's Week 10 QB tracker):
+- Coach named the starter, pick stands: Michigan (Kyle Whittingham named Tommy
+  Carr "for the foreseeable future", Nov 2; Underwood benched, not hurt; game is
+  a no-pick anyway for Michigan State), Arizona State (Kenny Dillingham named
+  Jake Fette; Cutter Boley healthy, benched), Marshall (Tony Gibson named Zion
+  Turner Tuesday, his 3rd straight start, WV MetroNews Nov 4; framework re-run
+  with `--starter`).
+- Settled QB change, pick stands: Tulane (Trace Johnson won the reopened
+  competition, 4th straight start; Semonza not hurt), Charlotte (Conner Harrell,
+  starter since Week 6).
+- Regular starter back or cleared, pick stands: Houston (Conner Weigman, ankle,
+  no designation, "full-go" after the bye), Iowa State (Jaylen Raynor), Georgia
+  Southern (Max Johnson started last game).
+- SPLIT or LOW ATTEMPTS with the season leader starting and no injury news, pick
+  stands: Baylor (DJ Lagway), Clemson (Tait Reynolds, not on the report), Tulsa
+  (Baylor Hayes), UL Monroe, Delaware, Navy, Temple, Western Kentucky, Missouri
+  State (Henry Belin IV), Louisiana Tech, South Alabama, Tennessee (George
+  MacIntyre), Iowa, Colorado (Isaac Wilson), Army, UTEP (EJ Colson Jr.).
+- Every other picked team: no QB injury or change news found.
+- Data notes: news says Marshall's Oct 31 starter was Zion Turner (play-by-play
+  shows Carlos Del Rio-Wilson), Michigan State's Oct 24 starter was Kayd Coffman
+  (play-by-play shows Leo Hannan) and Florida's Oct 31 starter was Aaron Philo
+  (play-by-play shows Tramell Jones Jr.). ESPN has 1 Merrimack game this season.
+
+PDF: `report_2026-11-07_saturday.pdf` (midweek graded, today's picks). Check-in
+E (11:50 AM) re-checks the noon-and-later games (Big Ten 2-hour reports:
+Washington, Michigan State, Northwestern, Wisconsin; also Kansas, Texas Tech,
+Florida, Utah State, San José State, Troy, Sam Houston).
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
