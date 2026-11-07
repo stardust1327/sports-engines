@@ -1,6 +1,7 @@
 sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
 college,401862822,Tulsa at Tulane,11.07.2026 10:53 AM,2,0:00,"Tulsa 32, Tulane 0",Tulsa,0.9935,0.98,"Tulsa 60, Tulane 10",W
 college,401858292,North Carolina at UConn,11.07.2026 11:52 AM,4,7:15,"North Carolina 31, UConn 21",North Carolina,0.9879,0.98,"North Carolina 38, UConn 21",W
-college,401858286,Duke at NC State,11.07.2026 11:52 AM,3,11:33,"Duke 31, NC State 3",Duke,0.9978,0.98,,
-college,401856854,Oklahoma State at Kansas State,11.07.2026 11:52 AM,2,0:10,"Oklahoma State 49, Kansas State 14",Oklahoma State,0.9952,0.98,,
+college,401858286,Duke at NC State,11.07.2026 11:52 AM,3,11:33,"Duke 31, NC State 3",Duke,0.9978,0.98,"Duke 41, NC State 3",W
+college,401856854,Oklahoma State at Kansas State,11.07.2026 11:52 AM,2,0:10,"Oklahoma State 49, Kansas State 14",Oklahoma State,0.9952,0.98,"Oklahoma State 66, Kansas State 28",W
 college,401858290,Merrimack at Wake Forest,11.07.2026 12:53 PM,1,8:28,"Merrimack 0, Wake Forest 6",Wake Forest,0.9985,0.98,,
+college,401862820,Temple at Navy,11.07.2026 1:53 PM,2,0:44,"Temple 0, Navy 28",Navy,0.996,0.98,,
