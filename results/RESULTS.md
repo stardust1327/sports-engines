@@ -1015,6 +1015,24 @@ Stroud, Herbert, Purdy, Cousins or Caleb Williams. Monday: Josh Allen no news;
 check-in G confirms with the inactives. London game (Bengals-Falcons) kicks off
 before check-in F: settled here.
 
+**Sunday check (F), 2026-11-08, about 8:45 AM Pacific. No pick changed; the
+picks are the Friday lock's.**
+- Early games: no starting QB inactive. FantasyPros' Week 9 inactives list no
+  QB for Cowboys, Colts, Chiefs, Jets, Lions, Dolphins, Rams, Commanders,
+  Broncos or Panthers (Prescott, Jones, Mahomes, Goff, Willis, Stafford,
+  Daniels, Nix, Young all off the lists); NFL.com and CBS Sports' Week 9
+  inactive trackers (Nov 8) report no QB change for those games.
+- Still no picks (both): Browns at Saints (Deshaun Watson expected inactive
+  despite clearing the concussion protocol, Shedeur Sanders starts; NFL.com,
+  Rapoport, Nov 8), Giants at Eagles (Tanner McKee active as Joe Milton III's
+  backup; NFL.com, Rapoport), Cardinals at Seahawks (Sam Darnold inactive, Drew
+  Lock starts; FantasyPros, ESPN), Bills at Vikings (Kyler Murray ruled out,
+  Carson Wentz starts; ESPN).
+- Late and night games: no new QB news since the Friday lock (Stroud, Herbert,
+  Love, Maye, Purdy, Mayfield, Caleb Williams: no status or report; their
+  inactives come about 90 minutes before kickoff, after this check). Monday:
+  Josh Allen no news; check-in G confirms with the inactives.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -2246,6 +2264,22 @@ Sam Leavitt not listed; backup Jett Thomalla a game-time decision), Kentucky at
 Tennessee (no new Tennessee injuries on the SEC report), and every other picked
 game (no QB injury news found). No pick came back (no earlier no-pick's QB was
 confirmed in this check). Now 24 picks, 27 no-picks.
+
+**Final grade, Sunday check (F), 2026-11-08 about 8:45 AM Pacific: all 51
+games final.** `grade_picks.py` on both files. **Engine (official) 18-6,
+framework 14-10** (27 no-picks in both).
+- Engine 70%+: 7-2 (missed Arkansas State 70%, 17-19 to UL Monroe; LSU 74%,
+  13-31 to Alabama). Framework 70%+: 4-1 (LSU 79% lost).
+- Missed by both: Purdue (29-34 to Maryland), Arkansas State, LSU, Oregon State
+  (21-42 to Texas State), UNLV (35-41 to Wyoming).
+- The 6 splits went 5-1 for the engine: engine won Texas 34-20 at Missouri,
+  Florida State 31-24 at Boston College, North Carolina 38-21 at UConn,
+  Kennesaw State 42-40 over Delaware and Notre Dame 31-24 over Miami; framework
+  won Duke 41-3 at NC State.
+- Off the record (27 no-pick games): engine leans 17-9, framework 17-9 (1 game
+  without a number). Running totals (`nopick_leans.py`): college engine 56-36,
+  framework 56-36.
+- Midweek plus Saturday (11-03 to 11-07): engine 23-8, framework 19-12.
 
 ## College Prompt Football framework (built 2026-10-11)
 

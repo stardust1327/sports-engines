@@ -1,0 +1,52 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401869951,Marshall,Georgia Southern,13,49,True,NO PICK,"Marshall's Carlos Del Rio-Wilson (undisclosed) a game-time decision on the Sun Belt availability report (RotoWire, Nov 7); Marshall used three QBs last game; starter not confirmed",,,
+401856853,Iowa State,Baylor,31,42,True,PICK,,Baylor,0.8312,W
+401856740,Alabama,LSU,31,13,True,PICK,,LSU,0.7882,L
+401858287,Louisville,Georgia Tech,44,17,True,NO PICK,Georgia Tech starter not announced: Alberto Mendoza (benched in the 4th quarter Oct 31 after 4 fumbles) or Grady Adamson; Brent Key's staff decision not made public (SI Nov 4 and game-day preview Nov 7; AJC Nov 6),,,
+401856745,Kentucky,Tennessee,6,34,True,PICK,,Tennessee,0.7197,W
+401864532,Hawai'i,UTEP,17,14,True,PICK,,Hawai'i,0.7173,W
+401856744,Texas A&M,South Carolina,9,17,True,PICK,,South Carolina,0.7051,W
+401862822,Tulsa,Tulane,60,10,True,PICK,,Tulsa,0.6806,W
+401871076,Western Kentucky,Middle Tennessee,42,51,True,PICK,,Middle Tennessee,0.6749,W
+401856741,Georgia,Ole Miss,42,7,True,PICK,,Georgia,0.6558,W
+401856851,Cincinnati,Houston,24,31,True,PICK,,Houston,0.6548,W
+401860912,Texas State,Oregon State,42,21,True,PICK,,Oregon State,0.6443,L
+401858286,Duke,NC State,41,3,True,PICK,,Duke,0.6432,W
+401871074,Missouri State,Florida International,20,23,True,PICK,,Florida International,0.6394,W
+401864535,Wyoming,UNLV,41,35,True,PICK,,UNLV,0.6346,L
+401862819,Charlotte,UAB,12,23,True,PICK,,UAB,0.6288,W
+401869968,South Alabama,Louisiana,26,28,True,PICK,,Louisiana,0.6252,W
+401856849,BYU,Utah,20,28,True,PICK,,Utah,0.6231,W
+401856743,Texas,Missouri,34,20,True,PICK,,Missouri,0.6173,L
+401862820,Temple,Navy,35,42,True,NO PICK,"Temple's Ajani Sheppard (undisclosed) questionable on the American availability report, likely a game-time decision (RotoWire, Nov 7); Jaxon Smolik starts if he can't; starter not confirmed",,,
+401858289,Florida State,Boston College,31,24,True,PICK,,Boston College,0.6101,L
+401856738,Arkansas,Auburn,23,26,True,PICK,,Auburn,0.5898,W
+401869936,UL Monroe,Arkansas State,19,17,True,PICK,,Arkansas State,0.57,L
+401856852,Colorado,Arizona State,10,20,True,NO PICK,"Mikey Keene (right knee, hurt Oct 24; started the 2 games before) out and rehabbing; Jake Fette starts in his place, 2nd start (Arizona Sports 'ASU starts Jake Fette with Mikey Keene injured', Nov 2-3)",,,
+401871073,Delaware,Kennesaw State,40,42,True,PICK,,Delaware,0.5453,L
+401858291,Miami,Notre Dame,24,31,True,PICK,,Miami,0.5309,L
+401858292,North Carolina,UConn,38,21,True,PICK,,UConn,0.5237,L
+401858515,Maryland,Purdue,34,29,True,PICK,,Purdue,0.5142,L
+401858512,UCLA,Minnesota,34,20,True,NO PICK,"UCLA's Nico Iamaleava (torn ACL Oct 10) out for the season; fill-in Ty Dieffenbach makes his 4th straight start (Field Level Media, Nov 4)",,,
+401858285,Clemson,Syracuse,18,13,True,NO PICK,"Syracuse's Steve Angeli questionable on the ACC availability report (Achilles-area discomfort; SI and Yahoo, Nov 6), not confirmed to play; backups Amari Odom out and Malachi Nelson out or doubtful",,,
+401856854,Oklahoma State,Kansas State,66,28,True,NO PICK,"Kansas State's Avery Johnson out (Collin Klein: unlikely to play, KCTV5, Nov 2-3); Jacob Knuth unavailable on the Big 12 report; Blake Barnett expected (3rd QB), not named",,,
+401869945,Old Dominion,Coastal Carolina,21,8,True,NO PICK,"Old Dominion's starter not named: Quinn Henicle (season leader) probable on the Sun Belt availability report after missing games; Jaxon Potter started the last 2 (Fox Sports game page, Nov 6)",,,
+401869927,Georgia State,App State,39,23,True,NO PICK,"Georgia State's Cameran Brown (season leader, undisclosed injury) out on the Sun Belt availability report, return est. Nov 14; Ayden Pereira expected to start (RotoWire, Nov 4)",,,
+401858514,Oregon,Ohio State,41,28,True,NO PICK,"Ohio State's Julian Sayin (throwing arm, Oct 17) out indefinitely; freshman Luke Fahey expected to make his 2nd start (Field Level Media, Nov 4)",,,
+401858290,Merrimack,Wake Forest,0,77,True,NO PICK,"not enough play-by-play this season: Merrimack (1 game in ESPN's data); Wake Forest's Gio Lopez (right leg) day-to-day, uncertain to play (On3 via Fox Sports; Field Level Media, Nov 4)",,,
+401858516,Penn State,Washington,28,25,True,NO PICK,"Washington's starter not confirmed: Demond Williams Jr. (fractured rib Oct 9) expected back over Elijah Brown, 'if Demond is feeling good' (Jedd Fisch, Fox News Nov 3; CBS Nov 5); final Big Ten report not found",,,
+401856850,UCF,Kansas,33,32,True,NO PICK,"UCF's Keyone Jenkins (ankle) out on Thursday's report, Alonza Barnett III (back from a hamstring injury) trending to start (SI, 107.5 The Game, Nov 5); Kansas' Isaiah Marshall (lower leg) probable, expected to start per ESPN sources (Nov 6), not confirmed by Lance Leipold",,,
+401862821,Rice,North Texas,23,52,True,NO PICK,"Rice's starter not named: Jacurri Brown (ankle, missed Oct 24) expected healthy, but Scott Abell said 'everything is on the table'; Gael Ochoa started the last game (At The Roost, Nov 3; Yahoo, Nov 6)",,,
+401864534,Northern Illinois,San José State,19,30,True,NO PICK,"San José State's starter not confirmed by the team: Daniel Rolovich (cleared from an undisclosed injury) to start over Luke Weaver per ESPN sources (Pete Thamel via RotoWire, Nov 6)",,,
+401871098,Louisiana Tech,Troy,41,17,True,NO PICK,"Troy's starter not confirmed: Tucker Kilcrease reported to start over Goose Crowder (season leader, probable with an undisclosed injury on the Sun Belt report) (RotoWire, Nov 4); no announcement",,,
+401856742,Vanderbilt,Mississippi State,25,23,True,NO PICK,"Mississippi State's Kamario Taylor out for the season (toe surgery); AJ Swann (arm in a sling Oct 31) not on the report, 'would likely' start, not confirmed (WLOX Nov 1; CBS, Clarion Ledger Nov 5)",,,
+401858517,Rutgers,Wisconsin,10,31,True,NO PICK,"Rutgers' Dylan Lonergan (head) out, AJ Surace likely starts (Yahoo, Nov 5); Wisconsin's true freshman Ryan Hopkins expected to make his first career start (13 passes this season) over Colton Joseph, not confirmed by Luke Fickell (CBS/Matt Zenitz via SI, RotoWire, Nov 6)",,,
+401860911,Boise State,Colorado State,64,38,True,NO PICK,"Boise State's Maddux Madsen (knee) won't play; Max Cutforth starts (ESPN/Pete Thamel, Nov 6)",,,
+401871075,Sam Houston,Jacksonville State,14,47,True,NO PICK,"Sam Houston's starter unknown: Landyn Locke (season leader, undisclosed injury) missed the last game, no designation found; DJ Bailey started it (March2thePod, Nov 6)",,,
+401858513,Iowa,Northwestern,24,10,True,NO PICK,"Northwestern's Aidan Chiles (upper body) out per ESPN; Nicco Marchiol starts (FOX 32 Chicago, Nov 6)",,,
+401858511,Michigan State,Michigan,15,6,True,NO PICK,"Michigan State's Alessio Milivojevic (undisclosed) questionable on the Big Ten report, no game-day update; Cam Fancher out; freshman Kayd Coffman would start if he can't (RotoWire Nov 4; SI Nov 5)",,,
+401862823,Air Force,Army,24,21,True,NO PICK,"Air Force's Liam Szarka out for the season; Evan Medders (turf toe) not cleared; no starter named among Kemper Hodges, Howard Fisher IV and Josh Johnson (Colorado Springs Gazette, Nov 3; Yahoo, Nov 6)",,,
+401856739,Oklahoma,Florida,23,7,True,NO PICK,Florida's starter not confirmed by the team: Tramell Jones Jr. expected per CBS/Matt Zenitz (Nov 5); Jon Sumrall won't announce one; Aaron Philo healthy,,,
+401870795,Liberty,New Mexico State,30,14,True,NO PICK,"New Mexico State's starter not named: Tony Sanchez 'wouldn't be surprised if somebody else started' over Adam Damante; Trey Hedden and Kalani McLeod also took first-team reps (Albuquerque Journal, Nov 6)",,,
+401856856,West Virginia,Texas Tech,48,53,True,NO PICK,"Texas Tech's starter not confirmed: Thomas Castellanos (1 start, Oct 31) expected over Will Hammond (season leader, benched); Joey McGuire hadn't decided (Yahoo, Nov 2)",,,
+401860913,Fresno State,Utah State,10,17,True,NO PICK,"Utah State's Grady Brosterhous (season starter) out with an injury Oct 31 (Bronco Mendenhall, Deseret); no update; McCae Hillstead likely, not named (Deseret, Nov 6)",,,
