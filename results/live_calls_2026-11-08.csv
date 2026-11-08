@@ -1,0 +1,2 @@
+sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
+nfl,401873045,Jets at Chiefs,11.08.2026 12:53 PM,4,5:09,"Jets 12, Chiefs 28",Chiefs,0.999,0.98,,
