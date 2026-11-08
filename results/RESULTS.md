@@ -1032,6 +1032,7 @@ picks are the Friday lock's.**
   Love, Maye, Purdy, Mayfield, Caleb Williams: no status or report; their
   inactives come about 90 minutes before kickoff, after this check). Monday:
   Josh Allen no news; check-in G confirms with the inactives.
+
 **Sunday check, second session (same check-in F, about 8:45 AM Pacific).** A
 duplicate run graded the college slate the same (engine 18-6, framework 14-10)
 and found no pick to change. It also read ESPN's league injury feed (about 8:44
