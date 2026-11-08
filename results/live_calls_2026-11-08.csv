@@ -1,2 +1,5 @@
 sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
 nfl,401873045,Jets at Chiefs,11.08.2026 12:53 PM,4,5:09,"Jets 12, Chiefs 28",Chiefs,0.999,0.98,"Jets 12, Chiefs 35",W
+nfl,401873046,Texans at Chargers,11.08.2026 3:52 PM,4,12:41,"Texans 38, Chargers 15",Texans,0.9988,0.98,,
+nfl,401873049,Packers at Patriots,11.08.2026 3:52 PM,3,4:03,"Packers 42, Patriots 14",Packers,0.9972,0.98,,
+nfl,401873047,Raiders at 49ers,11.08.2026 3:52 PM,4,5:28,"Raiders 17, 49ers 35",49ers,0.999,0.98,,
