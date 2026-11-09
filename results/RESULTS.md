@@ -1044,6 +1044,38 @@ its reason is refreshed in both models with `set_nopick.py`: Deshaun Watson
 Akron Beacon Journal/Yahoo, ESPN, NBC Sports, Nov 8). No no-pick was waiting on a
 questionable starter, so no pick came back; no re-run or PDF.
 
+### 2026 Week 9 graded through Sunday (owner's request, Sunday night 2026-11-08; Bills at Vikings, a no-pick, pending)
+
+Owner's request: run this weekend's college and NFL games and make a PDF of the
+results. Worked on about 9:40-10:40 PM Phoenix, after Buccaneers at Bears went
+final. Every picked game of the weekend was over and its picks had been logged
+before kickoff (NFL locked Friday, college Saturday morning), so nothing was
+re-run; the picks were graded with the repo's scripts, unchanged
+(`nfl_cfbmethod/grade.py`, `results/grade_picks.py`). Files
+`nfl_cfbmethod_2026_week09_graded.csv`, `prompt_nfl_2026_week09_graded.csv`.
+Monday's game is a no-pick in both models; the Tuesday run re-grades the whole
+week after it.
+
+**Engine (official): 9-1. Framework: 9-1** (the same 10 picks, no splits). The
+only miss: Patriots (engine 62%, framework 58%; Packers 45, Patriots 27). Engine
+70%+: 2-0 (49ers 86%, Rams 83%).
+
+Closing-line check (grading only): the closing-line favorite also went 9-1 on
+the engine's 10 games. Brier: engine 0.1581, closing line 0.1298. The engine
+didn't pick a market underdog this week; picks 5+ points more confident than
+the close went 2-0 (+0.69 units). All graded weeks: engine 33-24-1,
+closing-line favorite 41-16-1; Brier 0.2396 vs 0.1979; picks against the market
+favorite 1-9; 5+ points more confident than the close 7-13 (-9.64 units).
+
+Off the record (never in either record): both models would have taken the
+Jaguars (33-10 at Baltimore), Saints (23-22 in OT over Cleveland), Giants (19-11
+at Philadelphia) and Seahawks (17-3 over Arizona), 4-0 each. Bills at Vikings
+pending (engine Bills 56%, framework Vikings 57%). Running NFL total
+(`nopick_leans.py`): engine 7-5, framework 7-5.
+
+PDF: `report_2026-11-08_weekend-results.pdf` (season so far, NFL Week 9 graded,
+college graded 11-06 and 11-07: engine 20-7, framework 16-11).
+
 
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 

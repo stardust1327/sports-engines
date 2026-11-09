@@ -1,0 +1,16 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401873047,Raiders,49ers,17,38,True,PICK,,49ers,0.8268,W
+401873037,Jaguars,Ravens,33,10,True,NO PICK,"Lamar Jackson (right thumb) on IR, out at least 4 games; Tyler Huntley (turf toe) on IR; Joe Fagnano starts, Austin Reed backup (Yardbarker, Nov 5)",,,
+401873048,Cardinals,Seahawks,3,17,True,NO PICK,"Sam Darnold (quad; also a cracked rib) ruled out, week to week; Drew Lock (elbow) starts (Mike Macdonald, NFL.com, Nov 4)",,,
+401873046,Texans,Chargers,44,22,True,PICK,,Texans,0.6856,W
+401873045,Jets,Chiefs,12,35,True,PICK,,Chiefs,0.6829,W
+401873042,Lions,Dolphins,19,9,True,PICK,,Lions,0.6775,W
+401873043,Rams,Commanders,20,13,True,PICK,,Rams,0.6757,W
+401873044,Giants,Eagles,19,11,True,NO PICK,"Jalen Hurts (blood clots) on season-ending IR; Joe Milton named the starter over Tanner McKee (NFL Network/ESPN, Nov 4)",,,
+401873040,Cowboys,Colts,27,23,True,PICK,,Cowboys,0.6127,W
+401873050,Buccaneers,Bears,24,27,True,PICK,,Bears,0.6058,W
+401873038,Bengals,Falcons,34,17,True,PICK,,Bengals,0.5894,W
+401873041,Broncos,Panthers,26,21,True,PICK,,Broncos,0.586,W
+401873049,Packers,Patriots,45,27,True,PICK,,Patriots,0.5774,L
+401873051,Bills,Vikings,,,False,NO PICK,"Kyler Murray (hamstring) ruled out, week to week; Carson Wentz starts (Kevin O'Connell, Vikings.com, Nov 5)",,,
+401873039,Browns,Saints,22,23,True,NO PICK,"Deshaun Watson (concussion) cleared protocol but inactive; Shedeur Sanders starts (Browns, Akron Beacon Journal/Yahoo, ESPN, NBC Sports, Nov 8)",,,
