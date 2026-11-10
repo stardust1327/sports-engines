@@ -1,0 +1,4 @@
+game_id,kickoff_utc,state,away_id,home_id,away_name,home_name,neutral,venue,home_plays,away_plays,net_epa,net_sr,is_home,p_home,pick,pick_prob,status,reason,kickoff
+401866458,2026-11-11T00:00Z,pre,2711,2006,Western Michigan,Akron,False,InfoCision Stadium,527,487,-0.28034338157888083,-0.02891799191548867,1.0,0.3301559662169424,Western Michigan,0.6698440337830576,PICK,,Tue 5:00 PM
+401866459,2026-11-11T00:00Z,pre,2309,189,Kent State,Bowling Green,False,Doyt L. Perry Stadium,465,500,0.009253709968965407,0.03497998020862647,1.0,0.6342842561870647,Bowling Green,0.6342842561870647,PICK,,Tue 5:00 PM
+401866460,2026-11-11T01:00Z,pre,195,193,Ohio,Miami (OH),False,Yager Stadium,485,487,-0.07228558343006519,-0.05468863346935643,1.0,0.4323830136011619,Ohio,0.5676169863988381,NO PICK,"David McComb out for the season; Caleb Heavner starts (Miami athletics, Nov 6)",Tue 6:00 PM

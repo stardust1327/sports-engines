@@ -69,3 +69,4 @@ season,week,game_id,away,home,away_score,home_score,winner,status,reason,pick,pi
 2026,9,401873047,Raiders,49ers,17,38,49ers,PICK,,49ers,0.8585540887269999,0.8585540887269999,W,-410.0,320.0,0.771505376344086,0.771505376344086,1.0,0.0870487123829139
 2026,9,401873048,Cardinals,Seahawks,3,17,Seahawks,NO PICK,"Sam Darnold (quad; also a cracked rib) ruled out, week to week; Drew Lock (elbow) starts (Mike Macdonald, NFL.com, Nov 4)",,,0.6602616578455505,,-455.0,350.0,0.7867435158501441,,1.0,
 2026,9,401873050,Buccaneers,Bears,24,27,Bears,PICK,,Bears,0.5554977047482957,0.5554977047482957,W,-290.0,235.0,0.7135512302607419,0.7135512302607419,1.0,-0.1580535255124461
+2026,9,401873051,Bills,Vikings,23,6,Bills,NO PICK,"Kyler Murray (hamstring) ruled out, week to week; Carson Wentz starts (Kevin O'Connell, Vikings.com, Nov 5)",,,0.4413503146047915,,154.0,-185.0,0.3775334481388264,,0.0,

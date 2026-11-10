@@ -1,0 +1,29 @@
+team,games,season_leader,season_att,last_game,last_starter,last_att,starters_by_game,flag
+Giants,8,Jameis Winston,166,2026-11-08,J.J. McCarthy,19,Jaxson Dart > Jameis Winston > Jameis Winston > Jameis Winston > Jameis Winston > Jameis Winston > J.J. McCarthy > J.J. McCarthy,CHANGE SPLIT
+Commanders,8,Jayden Daniels,180,2026-11-08,Jayden Daniels,35,Jayden Daniels > Jayden Daniels > Marcus Mariota > Athan Kaliakmanis > Jayden Daniels > Jayden Daniels > Jayden Daniels > Jayden Daniels,SPLIT
+Lions,8,Jared Goff,273,2026-11-08,Jared Goff,25,Jared Goff > Jared Goff > Jared Goff > Jared Goff > Jared Goff > Jared Goff > Jared Goff > Jared Goff,
+Patriots,9,Drake Maye,272,2026-11-08,Drake Maye,38,Drake Maye > Drake Maye > Drake Maye > Drake Maye > Drake Maye > Drake Maye > Drake Maye > Drake Maye > Drake Maye,
+Falcons,9,Michael Penix Jr.,199,2026-11-08,Michael Penix Jr.,31,Cooper Rush > Cooper Rush > Michael Penix Jr. > Michael Penix Jr. > Michael Penix Jr. > Michael Penix Jr. > Michael Penix Jr. > Michael Penix Jr. > Michael Penix Jr.,SPLIT
+Chiefs,8,Patrick Mahomes,263,2026-11-08,Patrick Mahomes,31,Patrick Mahomes > Patrick Mahomes > Patrick Mahomes > Patrick Mahomes > Patrick Mahomes > Patrick Mahomes > Patrick Mahomes > Patrick Mahomes,
+Browns,9,Deshaun Watson,249,2026-11-08,Shedeur Sanders,31,Deshaun Watson > Deshaun Watson > Deshaun Watson > Deshaun Watson > Deshaun Watson > Deshaun Watson > Deshaun Watson > Deshaun Watson > Shedeur Sanders,CHANGE SPLIT
+Texans,8,C.J. Stroud,282,2026-11-08,C.J. Stroud,35,C.J. Stroud > C.J. Stroud > C.J. Stroud > C.J. Stroud > C.J. Stroud > C.J. Stroud > C.J. Stroud > C.J. Stroud,
+Packers,9,Jordan Love,341,2026-11-08,Jordan Love,29,Jordan Love > Jordan Love > Jordan Love > Jordan Love > Jordan Love > Jordan Love > Jordan Love > Jordan Love > Jordan Love,
+Vikings,8,Kyler Murray,154,2026-11-10,Carson Wentz,25,Carson Wentz > Carson Wentz > Kyler Murray > Kyler Murray > Kyler Murray > Kyler Murray > Kyler Murray > Carson Wentz,CHANGE SPLIT
+Titans,8,Cam Ward,248,2026-11-01,Cam Ward,40,Cam Ward > Cam Ward > Cam Ward > Cam Ward > Cam Ward > Cam Ward > Cam Ward > Cam Ward,
+Jaguars,8,Trevor Lawrence,224,2026-11-06,Trevor Lawrence,26,Trevor Lawrence > Trevor Lawrence > Trevor Lawrence > Trevor Lawrence > Trevor Lawrence > Trevor Lawrence > Trevor Lawrence > Trevor Lawrence,
+Colts,9,Daniel Jones,302,2026-11-08,Daniel Jones,34,Daniel Jones > Daniel Jones > Daniel Jones > Daniel Jones > Daniel Jones > Daniel Jones > Daniel Jones > Daniel Jones > Daniel Jones,
+Dolphins,8,Malik Willis,208,2026-11-08,Malik Willis,25,Malik Willis > Malik Willis > Malik Willis > Malik Willis > Malik Willis > Malik Willis > Malik Willis > Malik Willis,
+Saints,8,Tyler Shough,308,2026-11-08,Tyler Shough,35,Tyler Shough > Tyler Shough > Tyler Shough > Tyler Shough > Tyler Shough > Tyler Shough > Tyler Shough > Tyler Shough,
+Panthers,8,Bryce Young,308,2026-11-08,Bryce Young,39,Bryce Young > Bryce Young > Bryce Young > Bryce Young > Bryce Young > Bryce Young > Bryce Young > Bryce Young,
+Jets,9,Geno Smith,271,2026-11-08,Geno Smith,32,Geno Smith > Geno Smith > Geno Smith > Geno Smith > Geno Smith > Geno Smith > Geno Smith > Geno Smith > Geno Smith,
+Bills,8,Josh Allen,236,2026-11-10,Josh Allen,31,Josh Allen > Josh Allen > Josh Allen > Josh Allen > Josh Allen > Josh Allen > Josh Allen > Josh Allen,
+Raiders,9,Kirk Cousins,315,2026-11-08,Kirk Cousins,32,Kirk Cousins > Kirk Cousins > Kirk Cousins > Kirk Cousins > Kirk Cousins > Kirk Cousins > Kirk Cousins > Kirk Cousins > Kirk Cousins,
+Seahawks,9,Sam Darnold,211,2026-11-08,Drew Lock,28,Drew Lock > Drew Lock > Sam Darnold > Sam Darnold > Sam Darnold > Sam Darnold > Sam Darnold > Sam Darnold > Drew Lock,CHANGE SPLIT
+Cardinals,9,Jacoby Brissett,305,2026-11-08,Gardner Minshew II,30,Jacoby Brissett > Jacoby Brissett > Jacoby Brissett > Jacoby Brissett > Jacoby Brissett > Jacoby Brissett > Jacoby Brissett > Gardner Minshew II > Gardner Minshew II,CHANGE SPLIT
+Rams,9,Matthew Stafford,346,2026-11-08,Matthew Stafford,43,Matthew Stafford > Matthew Stafford > Matthew Stafford > Matthew Stafford > Matthew Stafford > Matthew Stafford > Matthew Stafford > Matthew Stafford > Matthew Stafford,
+Cowboys,9,Dak Prescott,336,2026-11-08,Dak Prescott,34,Dak Prescott > Dak Prescott > Dak Prescott > Dak Prescott > Dak Prescott > Dak Prescott > Dak Prescott > Dak Prescott > Dak Prescott,
+49ers,8,Brock Purdy,236,2026-11-08,Brock Purdy,25,Brock Purdy > Brock Purdy > Brock Purdy > Brock Purdy > Brock Purdy > Brock Purdy > Brock Purdy > Brock Purdy,
+Bengals,8,Joe Burrow,296,2026-11-08,Joe Burrow,29,Joe Burrow > Joe Burrow > Joe Burrow > Joe Burrow > Joe Burrow > Joe Burrow > Joe Burrow > Joe Burrow,
+Steelers,8,Aaron Rodgers,288,2026-11-01,Aaron Rodgers,25,Aaron Rodgers > Aaron Rodgers > Aaron Rodgers > Aaron Rodgers > Aaron Rodgers > Aaron Rodgers > Aaron Rodgers > Aaron Rodgers,
+Ravens,9,Tyler Huntley,110,2026-11-06,Joe Fagnano,18,Lamar Jackson > Lamar Jackson > Lamar Jackson > Lamar Jackson > Tyler Huntley > Tyler Huntley > Tyler Huntley > Joe Fagnano > Joe Fagnano,CHANGE SPLIT
+Chargers,8,Justin Herbert,235,2026-11-08,Justin Herbert,23,Justin Herbert > Justin Herbert > Justin Herbert > Justin Herbert > Justin Herbert > Justin Herbert > Justin Herbert > Justin Herbert,
