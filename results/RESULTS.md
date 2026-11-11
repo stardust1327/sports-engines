@@ -1160,6 +1160,24 @@ into `/tmp/rerun` and merging. Seahawks, Cardinals, Vikings and Ravens stay
 no-picks while their regular starters are out. Monday's statuses come Saturday
 (final word at check-in G).
 
+**Midweek check (B), Wednesday 2026-11-11, about 3:50-4:10 PM Pacific.**
+Thursday's game statuses (Giants and Commanders reports, Nov 11): J.J. McCarthy
+(hip) no game designation, limited Monday then full Tuesday and Wednesday
+(Giants.com report; SI, Nov 11); he was named the starter going forward, not an
+injury fill-in, so the pick comes back. Jayden Daniels (left elbow) no
+designation, full all week. Both models re-run into `/tmp/rerun` (engine for
+11-12, 11-15, 11-16; framework with a freshly downloaded nflverse cache) and only
+the Commanders-Giants row merged with `merge_rerun.py`; every other game stays as
+logged Tuesday (the Friday lock refreshes them).
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Commanders at Giants (Thu 6:15 PM) | Giants 59.8% | Giants 53.1% (24-23) |
+
+The models agree; under 60%, so a pass on the "What to act on" page. The other
+seven Week 10 no-picks stand; their statuses come Friday (check-in C).
+Thursday's check (B) confirms McCarthy and Daniels on the inactive lists.
+
 
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
@@ -2469,6 +2487,16 @@ each game; check-in B (Wed, Thu) checks Wednesday's and Thursday's games
 (Sharman's status, Van Buren's status), and C (Fri) the Friday games (ACC and
 Big Ten reports). Today's Tuesday games kick off at 4:00 PM Pacific, before the
 next check-in.
+
+**Midweek check (B), Wednesday 2026-11-11 (games kick off 4:30 PM Pacific).**
+No changes. Sacramento State at Central Michigan stays a no-pick: Jackson
+Sharman's availability "remains uncertain" (Yahoo preview, Nov 11), no clearance
+found; Brian Salazar Jr. would start if he can't (Carson Conklin, throwing arm,
+also out); Angel Flores still out for Central Michigan, Jadyn Glasser starts.
+Picks stand, no QB injury news in Nov 11 previews: Ball State (Keldric Luster),
+Buffalo (Jason Wright), Toledo (John Alan Richter), Massachusetts (William
+"Pop" Watson III, MAC weekly honor Nov 9, no injury reported). No MAC
+availability report found online.
 
 
 ## College Prompt Football framework (built 2026-10-11)
