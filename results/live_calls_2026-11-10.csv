@@ -1,2 +1,2 @@
 sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
-college,401866458,Western Michigan at Akron,11.10.2026 6:52 PM,4,5:35,"Western Michigan 42, Akron 14",Western Michigan,0.999,0.98,,
+college,401866458,Western Michigan at Akron,11.10.2026 6:52 PM,4,5:35,"Western Michigan 42, Akron 14",Western Michigan,0.999,0.98,"Western Michigan 42, Akron 14",W
