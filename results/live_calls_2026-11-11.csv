@@ -1,3 +1,4 @@
 sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
-college,401866462,Sacramento State at Central Michigan,11.11.2026 6:52 PM,4,14:13,"Sacramento State 7, Central Michigan 21",Central Michigan,0.9895,0.98,,
-college,401866463,Massachusetts at Toledo,11.11.2026 6:52 PM,3,9:10,"Massachusetts 0, Toledo 24",Toledo,0.9962,0.98,,
+college,401866462,Sacramento State at Central Michigan,11.11.2026 6:52 PM,4,14:13,"Sacramento State 7, Central Michigan 21",Central Michigan,0.9895,0.98,"Sacramento State 7, Central Michigan 28",W
+college,401866463,Massachusetts at Toledo,11.11.2026 6:52 PM,3,9:10,"Massachusetts 0, Toledo 24",Toledo,0.9962,0.98,"Massachusetts 0, Toledo 24",W
+college,401866461,Buffalo at Ball State,11.11.2026 7:52 PM,4,1:52,"Buffalo 28, Ball State 7",Buffalo,0.999,0.98,,
