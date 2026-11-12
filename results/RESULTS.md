@@ -1178,6 +1178,15 @@ The models agree; under 60%, so a pass on the "What to act on" page. The other
 seven Week 10 no-picks stand; their statuses come Friday (check-in C).
 Thursday's check (B) confirms McCarthy and Daniels on the inactive lists.
 
+**Midweek check (B), Thursday 2026-11-12, about 3:50-4:00 PM Pacific.** No
+pick changed. Commanders at Giants stays Giants (engine 59.8%, framework
+53.1%): J.J. McCarthy (hip) and Jayden Daniels (left elbow) had no game
+designation on the final injury reports (Giants.com and SI, Nov 11); both are
+named starters for tonight (AP via WRAL, Nov 11; Yahoo/Athlon, Nov 12). The
+full inactive lists weren't posted online yet at check time; the only
+Commanders inactive listed (FantasyPros) was TE Colson Yankoff, ruled out
+Wednesday, and no report had either QB inactive.
+
 
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
@@ -2498,6 +2507,14 @@ Buffalo (Jason Wright), Toledo (John Alan Richter), Massachusetts (William
 "Pop" Watson III, MAC weekly honor Nov 9, no injury reported). No MAC
 availability report found online.
 
+
+**Midweek check (B), Thursday 2026-11-12 (games kick off 5:00 and 6:00 PM
+Pacific).** No pick changed. Memphis at South Florida stays a no-pick; reason
+updated in both files with `set_nopick.py`: Michael Van Buren Jr. (undisclosed
+injury) ruled out for Thursday on the American availability report (RotoWire,
+Nov 12); Luke Kromenhoek starts. Louisiana at UL Monroe: Louisiana pick stands
+(engine 61%, framework 64%); no QB injury news found for Lunch Winfield or
+Aidan Armenta in Nov 12 previews.
 
 ## College Prompt Football framework (built 2026-10-11)
 
