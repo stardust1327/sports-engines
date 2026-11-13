@@ -1187,6 +1187,65 @@ full inactive lists weren't posted online yet at check time; the only
 Commanders inactive listed (FantasyPros) was TE Colson Yankoff, ruled out
 Wednesday, and no report had either QB inactive.
 
+**Friday lock (C), 2026-11-13, about 1:40-2:30 PM Pacific: Week 10 picks
+locked Friday.** Sunday's game statuses checked on the teams' final reports
+(Nov 13). Both models re-run into `/tmp/rerun` (engine for 11-15 and 11-16;
+framework with `--refresh` and `--starter "CLE=Deshaun Watson"`) with the five
+remaining no-picks, and merged with `merge_rerun.py` (13 games refreshed;
+Thursday's final game untouched). Engine 2026 out of sample 53-33; framework
+56-32.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Patriots at Lions (Sun 7:30 AM, Munich) | Lions 55.8% | Lions 56.6% (26-24) |
+| Chiefs at Falcons (11:00 AM) | Chiefs 68.7% | Chiefs 61.8% (25-21) |
+| Texans at Browns (11:00 AM) | Texans 69.8% | Texans 62.6% (25-21) |
+| Jaguars at Titans (11:00 AM) | Jaguars 79.1% | Jaguars 83.2% (29-17) |
+| Panthers at Saints (11:00 AM) | Panthers 50.9% | Panthers 52.1% (24-23) |
+| Bills at Jets (11:00 AM) | Bills 65.4% | Bills 66.7% (27-22) |
+| 49ers at Cowboys (2:25 PM) | 49ers 61.9% | 49ers 72.4% (29-22) |
+| Steelers at Bengals (6:20 PM) | Bengals 63.6% | Bengals 53.2% (24-23) |
+
+Changes:
+- **Chiefs at Falcons: pick back, Chiefs in both.** Patrick Mahomes (knee,
+  elbow) full participant Wednesday to Friday, no game designation on the final
+  report (Yardbarker, Nov 13). Regular starter confirmed.
+- **Texans at Browns: pick back, Texans in both.** Todd Monken confirmed
+  Deshaun Watson, the regular starter (8 of 9 starts), starts; cleared
+  concussion protocol, off the Week 10 injury report (Draft Sharks, Nov 11;
+  Monken: "I anticipate him being our starter... he's been our starter",
+  Yahoo, Nov 12). Framework re-run with `--starter "CLE=Deshaun Watson"`
+  (Shedeur Sanders started Week 9).
+- Other picks moved by less than 1.5 points with the refreshed data; no pick
+  changed sides. The models agree on all 8 picks. Engine 70%+: Jaguars.
+  Framework 70%+: Jaguars, 49ers.
+
+No pick (both), 5 games (reasons updated in both files):
+- Vikings at Packers: Kyler Murray (hamstring) ruled out on Friday's report;
+  Kirk Cousins (traded from Las Vegas Nov 10) starts (Kevin O'Connell via Yahoo,
+  Nov 13).
+- Dolphins at Colts: Malik Willis (groin) on injured reserve, placed Nov 10,
+  out at least 4 games; Kyle McCord starts (AP via WPTV, Nov 10).
+- Seahawks at Raiders: Sam Darnold (quad, ribs) out; Drew Lock (elbow,
+  oblique) starts, off the final report (NBC Sports, Nov 13). Raiders: Kirk
+  Cousins traded to Minnesota; rookie Fernando Mendoza named starter.
+- Rams at Cardinals: Gardner Minshew (throwing elbow, UCL surgery) on IR, out
+  for the season; Carson Beck starts (Mike LaFleur, Nov 11).
+- Chargers at Ravens (Mon): Lamar Jackson (right thumb) on IR; Jacoby Brissett
+  starts. Monday's statuses come Saturday; final word at check-in G (Justin
+  Herbert, left middle finger, shows no designation so far).
+
+Off the record (engine): Packers 64.8%, Colts 66.6%, Seahawks 76.0%, Rams
+76.7%, Ravens 63.7%.
+
+QB check, picked teams (final reports Nov 13 and the Nov 12 Patriots-Lions
+report): no game designation found for Drake Maye (shoulder, full all week),
+Jared Goff (chest, full Thursday and Friday), Patrick Mahomes, Michael Penix
+Jr., C.J. Stroud, Deshaun Watson, Trevor Lawrence, Cam Ward, Bryce Young,
+Tyler Shough, Josh Allen, Geno Smith, Brock Purdy, Dak Prescott, Aaron
+Rodgers, Joe Burrow. The Munich game kicks off before check-in F, so
+its QBs are settled here.
+
 
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
@@ -2515,6 +2574,18 @@ injury) ruled out for Thursday on the American availability report (RotoWire,
 Nov 12); Luke Kromenhoek starts. Louisiana at UL Monroe: Louisiana pick stands
 (engine 61%, framework 64%); no QB injury news found for Lunch Winfield or
 Aidan Armenta in Nov 12 previews.
+
+**Friday lock (C), 2026-11-13 (Friday games kick off 4:00 to 7:15 PM
+Pacific).** No pick changed.
+- Houston at Colorado: Houston pick stands (engine 64%, framework 65%). No
+  quarterback on either team's injury list (SI game preview, Nov 13); Conner
+  Weigman starts for Houston; Isaac Wilson (SPLIT; named over Julian Lewis in
+  October, 6 straight starts) for Colorado, no injury news.
+- Florida State at Pittsburgh stays a no-pick; reason updated in both files
+  with `set_nopick.py`: Mason Heintschel (torn ACL) out for the season; Holden
+  Geriner, his fill-in, questionable on Thursday's ACC availability report
+  (247Sports). Florida State lists no quarterback.
+- Illinois at UCLA stays a no-pick (Nico Iamaleava out for the season).
 
 ## College Prompt Football framework (built 2026-10-11)
 
