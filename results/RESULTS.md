@@ -1246,6 +1246,18 @@ Tyler Shough, Josh Allen, Geno Smith, Brock Purdy, Dak Prescott, Aaron
 Rodgers, Joe Burrow. The Munich game kicks off before check-in F, so
 its QBs are settled here.
 
+**Friday lock, second session (same check-in C, about 1:40-2:20 PM Pacific).**
+A duplicate run of check-in C did its own status check and re-ran both models
+into `/tmp/rerun`. It reached the same calls on every game (Chiefs and Texans
+picks back; the same 5 no-picks; Pittsburgh's reason updated) and identical
+win chances, so the files pushed by the first session stand unchanged. Extra
+sources it found: Mahomes "will carry no injury designation into Sunday's
+game" (Athlon, Nov 13); Kyler Murray out for Week 10 (NBC Sports, Nov 13);
+Lamar Jackson after thumb surgery expected to miss 6-10 weeks (NFL.com, Nov
+13); Justin Herbert (left middle finger) listed probable (Lineups, Nov 13);
+Brock Purdy not on any Week 10 list (a 2025 article about Purdy missing "Week
+10" with turf toe surfaced in searches and was not used).
+
 
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
