@@ -1,0 +1,4 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401858293,Florida State,Pittsburgh,16,10,True,NO PICK,"Mason Heintschel (torn ACL) out for the season; Holden Geriner, his fill-in, questionable on Thursday's ACC availability report (247Sports, Nov 12)",,,
+401858526,Illinois,UCLA,14,22,True,NO PICK,"Nico Iamaleava (knee) out for the season; Ty Dieffenbach starts (UCLA athletics, Nov 9)",,,
+401856860,Houston,Colorado,32,42,True,PICK,,Houston,0.6390468209611129,L

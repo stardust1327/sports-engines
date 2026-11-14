@@ -1,0 +1,2 @@
+game_id,kickoff_utc,state,away_id,home_id,away_name,home_name,neutral,venue,home_plays,away_plays,net_epa,net_sr,is_home,p_home,pick,pick_prob,status,reason,kickoff
+401856887,2026-11-15T18:00Z,pre,145,201,Ole Miss,Oklahoma,False,"Memorial Stadium (Norman, OK)",529,555,-0.07470386354068373,-0.042322042659653225,1.0,0.4508859300486367,Ole Miss,0.5491140699513632,PICK,,Sun 11:00 AM

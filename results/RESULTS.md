@@ -2700,6 +2700,119 @@ Saturday picks). NFL Week 10 note: Thursday's Commanders at Giants went final,
 Commanders 24-21 (both models had the Giants); the week is graded at Tuesday's
 check-in.
 
+**Check-in D, Saturday 2026-11-14 about 7:00-8:00 AM Phoenix.**
+
+Midweek graded: Friday 11-13 (`grade_picks.py`, both files): **engine 0-1,
+framework 0-1** (2 no-picks). Houston (engine 64%, framework 65%) lost 32-42 at
+Colorado. Week's midweek college total (11-10 to 11-13): **engine 4-2,
+framework 4-2** (5 no-picks). No-pick games: Florida State won 16-10 at Pittsburgh
+and UCLA beat Illinois 22-14.
+
+Ole Miss at Oklahoma moved to **Sunday 11-15, 1:00 PM ET** (FAA ground stop
+kept Ole Miss in Oxford Friday night; SEC decision, KOCO/KTUL Nov 14). Its row
+was taken out of the 11-14 files and both models were run fresh for 11-15
+(`cfb_2026-11-15_picks.csv`, `prompt_cfb_2026-11-15_picks.csv`), so the game is
+graded once. Chambliss was taken off the SEC report (cleared); Mateer not listed.
+
+Morning QB check, then both models re-run into `/tmp/rerun` with every no-pick
+and merged (framework with `--starter "Wake Forest=Gio Lopez"`). Friday's 11-13
+results moved every win chance a little; no pick flipped.
+
+Changes from Friday night:
+- **Pick back: Wake Forest at SMU** (Wake Forest, engine 54%, framework 55%).
+  Gio Lopez "will be available" per Friday's ACC availability report
+  (RotoWire, Nov 13; probable on Thursday's).
+- **New no-pick: Alabama at Vanderbilt.** Keelon Russell (ankle) expected to be
+  held out, Austin Mack expected to start (ESPN, Nov 13).
+- **New no-pick: USC at Indiana.** Curt Cignetti would not say whether Josh
+  Hoover (throwing arm, hurt Oct 24) or Grant Wilson starts.
+- **New no-pick: Purdue at Iowa.** Depth chart lists Hank Brown OR Jeremy
+  Hecklinski; no starter named. (Check-in E can bring it back if Brown is
+  confirmed.)
+- No-pick reasons updated with this week's news (Rutgers: Lonergan out, Surace
+  questionable; UTEP: Colson out, Wyoming's Hughes out; Rice: Brown hurt, Ochoa
+  QB1; Kennesaw State: Collins questionable; Oregon State/Boise State: Atkinson
+  out, Madsen questionable; Kansas State: Johnson and Knuth out, starter open;
+  Florida: Philo reported, not confirmed; Marshall: starter not settled; others
+  in the files).
+
+Picks now (Phoenix kickoffs as ESPN lists them this morning; several moved). Splits in bold.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Duke at Miami (Sat 10:00 AM) | Miami 88% | Miami 62% (Miami 31 - Duke 27) |
+| Wake Forest at SMU (Sat 10:00 AM) | Wake Forest 54% | Wake Forest 55% (Wake Forest 31 - SMU 29) |
+| Cincinnati at Iowa State (Sat 10:00 AM) | **Iowa State 62%** | **Cincinnati 56% (Cincinnati 33 - Iowa State 30)** |
+| Syracuse at NC State (Sat 10:00 AM) | NC State 59% | NC State 64% (NC State 32 - Syracuse 27) |
+| Georgia Tech at Clemson (Sat 10:30 AM) | Clemson 72% | Clemson 69% (Clemson 28 - Georgia Tech 20) |
+| Arkansas State at Coastal Carolina (Sat 11:00 AM) | Coastal Carolina 52% | Coastal Carolina 55% (Coastal Carolina 29 - Arkansas State 27) |
+| East Carolina at Charlotte (Sat 11:00 AM) | East Carolina 85% | East Carolina 82% (East Carolina 34 - Charlotte 19) |
+| Tennessee at Texas A&M (Sat 1:00 PM) | Tennessee 56% | Tennessee 75% (Tennessee 31 - Texas A&M 20) |
+| New Mexico State at Missouri State (Sat 1:00 PM) | **Missouri State 52%** | **New Mexico State 59% (New Mexico State 26 - Missouri State 23)** |
+| Florida International at Delaware (Sat 1:00 PM) | Delaware 61% | Delaware 52% (Delaware 25 - Florida International 24) |
+| Kansas at West Virginia (Sat 1:30 PM) | Kansas 66% | Kansas 55% (Kansas 30 - West Virginia 28) |
+| Middle Tennessee at Liberty (Sat 1:30 PM) | Liberty 93% | Liberty 83% (Liberty 35 - Middle Tennessee 20) |
+| Jacksonville State at Western Kentucky (Sat 1:30 PM) | Jacksonville State 65% | Jacksonville State 71% (Jacksonville State 34 - Western Kentucky 25) |
+| California at Virginia (Sat 1:30 PM) | Virginia 76% | Virginia 67% (Virginia 30 - California 23) |
+| Nevada at Northern Illinois (Sat 1:30 PM) | Nevada 71% | Nevada 68% (Nevada 31 - Northern Illinois 23) |
+| Boston College at Notre Dame (Sat 1:30 PM) | Notre Dame 95% | Notre Dame 85% (Notre Dame 35 - Boston College 18) |
+| Missouri at Georgia (Sat 1:30 PM) | Georgia 89% | Georgia 79% (Georgia 31 - Missouri 18) |
+| Michigan at Oregon (Sat 1:30 PM) | **Oregon 69%** | **Michigan 51% (Michigan 25 - Oregon 24)** |
+| Fresno State at Texas State (Sat 2:00 PM) | Texas State 75% | Texas State 55% (Texas State 29 - Fresno State 27) |
+| Southern Miss at Louisiana Tech (Sat 3:00 PM) | Louisiana Tech 90% | Louisiana Tech 79% (Louisiana Tech 32 - Southern Miss 19) |
+| Washington at Michigan State (Sat 3:30 PM) | **Michigan State 52%** | **Washington 64% (Washington 28 - Michigan State 23)** |
+| Minnesota at Penn State (Sat 5:00 PM) | Penn State 75% | Penn State 68% (Penn State 29 - Minnesota 22) |
+| Louisville at North Carolina (Sat 5:00 PM) | Louisville 66% | Louisville 62% (Louisville 33 - North Carolina 28) |
+| Baylor at BYU (Sat 5:00 PM) | BYU 80% | BYU 67% (BYU 29 - Baylor 22) |
+| Florida Atlantic at Tulsa (Sat 5:15 PM) | Tulsa 77% | Tulsa 72% (Tulsa 35 - Florida Atlantic 26) |
+| Texas at LSU (Sat 5:30 PM) | LSU 74% | LSU 79% (LSU 29 - Texas 16) |
+| Stanford at Virginia Tech (Sat 5:30 PM) | Virginia Tech 84% | Virginia Tech 86% (Virginia Tech 38 - Stanford 20) |
+| UNLV at New Mexico (Sat 5:30 PM) | New Mexico 86% | New Mexico 80% (New Mexico 29 - UNLV 16) |
+| South Carolina at Arkansas (Sat 5:45 PM) | South Carolina 52% | South Carolina 68% (South Carolina 29 - Arkansas 22) |
+| North Texas at UTSA (Sat 7:00 PM) | North Texas 55% | North Texas 61% (North Texas 35 - UTSA 31) |
+| Texas Tech at Oklahoma State (Sat 7:30 PM) | Oklahoma State 64% | Oklahoma State 56% (Oklahoma State 30 - Texas Tech 28) |
+| Utah at Arizona (Sat 8:30 PM) | Utah 80% | Utah 65% (Utah 32 - Arizona 25) |
+| Colorado State at Washington State (Sat 8:30 PM) | Washington State 71% | Washington State 52% (Washington State 34 - Colorado State 33) |
+| North Dakota State at Hawai'i (Sat 9:00 PM) | North Dakota State 75% | North Dakota State 78% (North Dakota State 31 - Hawai'i 18) |
+| Ole Miss at Oklahoma (Sun 11:00 AM) | Ole Miss 55% | Ole Miss 50% (Ole Miss 26 - Oklahoma 25) |
+
+35 picks in both models (34 Saturday, 1 Sunday), 21 no-picks; they agree on 31
+of 35. Splits (4): Iowa State/Cincinnati, Missouri State/New Mexico State,
+Oregon/Michigan, Michigan State/Washington (engine first). Ole Miss/Oklahoma is
+no longer a split (framework now Ole Miss 50%).
+
+No pick (both models):
+- Northwestern at Ohio State (Sat 10:00 AM): Aidan Chiles (upper body) ruled out (Big Ten availability report, Nov 12); Nicco Marchiol starts. Ohio State: Julian Sayin (throwing arm) out; Luke Fahey starts
+- Wisconsin at Maryland (Sat 10:00 AM): Ryan Hopkins starts again; Luke Fickell said Colton Joseph was 'banged up' (Field Level Media, Nov 13); Hopkins named for this week only, not as the starter going forward
+- James Madison at UConn (Sat 10:00 AM): JC Evans started last game after Camden Coleman started 8; JMU has rotated the two and has not named a starter for UConn (Daily Campus, Nov 13)
+- Nebraska at Rutgers (Sat 10:30 AM): Dylan Lonergan (head) out per the Big Ten availability report; AJ Surace expected to start but listed questionable (Nebraska On SI, Nov 12)
+- Alabama at Vanderbilt (Sat 10:45 AM): Keelon Russell (ankle) expected to be held out; Austin Mack expected to start (ESPN, Nov 13); Russell listed probable on Friday's SEC report
+- UAB at Temple (Sat 11:00 AM): Ajani Sheppard (ankle/foot) missed last game; Keeler says he may return; no starter announced, Jaxon Smolik started last game (The Temple News, Nov 14)
+- Kansas State at TCU (Sat 12:00 PM): Avery Johnson and Jacob Knuth out; Blake Barnett and Dillon Duff competing, no starter named (Collin Klein via Field Level Media, Nov 13)
+- Kennesaw State at Sam Houston (Sat 12:00 PM): Rickie Collins (undisclosed) injured last game, day-to-day and questionable (RotoWire, Nov 10); Landon Varnes finished the game; starter not confirmed
+- Georgia Southern at Georgia State (Sat 1:30 PM): Cameran Brown (undisclosed) doubtful (Sun Belt availability report via RotoWire, Nov 11); Ayden Pereira expected to start
+- USC at Indiana (Sat 1:30 PM): Josh Hoover hurt his throwing arm Oct 24; Curt Cignetti would not say whether Hoover or Grant Wilson starts (Yahoo / Inside the Hall, Nov 13); starter not confirmed
+- Auburn at Mississippi State (Sat 2:15 PM): Mississippi State: Kamario Taylor (leg) out for the season; AJ Swann starts (AP via National Football Post, Nov 13)
+- Tulane at Rice (Sat 2:30 PM): Jacurri Brown (ankle) lost the job while hurt; Gael Ochoa confirmed QB1 by Scott Abell (Crescent City Sports, Nov 12); regular starter out
+- Arizona State at UCF (Sat 3:30 PM): Mikey Keene (right knee) out of the last 2 games; Jake Fette the fill-in (AP, Nov 13). UCF: Keyone Jenkins (ankle) out indefinitely; Alonza Barnett III starts
+- Oregon State at Boise State (Sat 4:00 PM): Boise State: Maddux Madsen (knee) questionable, no final status found; Oregon State: Braden Atkinson (hand) ruled out, Maalik Murphy likely but not confirmed (OregonLive, Nov 14)
+- App State at Marshall (Sat 4:00 PM): Coach Gibson had not settled on a starter between Zion Turner and Carlos Del Rio-Wilson, who is cleared to play (WMUL, Nov 13)
+- Florida at Kentucky (Sat 4:15 PM): Aaron Philo reported to start over Tramell Jones Jr., who started the last 2 (Saturday Down South / WRUF, Nov 12); Jon Sumrall has not confirmed it
+- Troy at South Alabama (Sat 5:00 PM): Tucker Kilcrease started the last 2 over Goose Crowder (available) with no reason given; South Alabama: Bishop Davenport back after 6 missed games vs Jared Hollins; neither starter confirmed
+- San José State at Air Force (Sat 5:00 PM): Liam Szarka out; Air Force rotates Kemper Hodges and Evan Medders, no starter named (Colorado Springs Gazette, Nov 11). San Jose State: Daniel Rolovich implied, not announced
+- Purdue at Iowa (Sat 5:30 PM): Iowa's depth chart lists Hank Brown OR Jeremy Hecklinski at QB (Nov 9); no starter named for this game; starter not confirmed
+- Utah State at San Diego State (Sat 7:30 PM): McCae Hillstead back as starter over season leader Grady Brosterhous, reason not found (Deseret News, Nov 13); San Diego State: Stone Saunders starts after Jayden Denegal's injury ('as of right now')
+- Wyoming at UTEP (Sat 8:00 PM): EJ Colson (injury) out per the Mountain West availability report; Raymond Moore III fills in. Wyoming: Tyler Hughes (forearm fracture) out, starter not named
+
+Picked teams with flags or news, pick stands: Syracuse (Malachi Nelson cleared,
+Angeli not benched), Georgia Tech (Mendoza starts, Adamson rotates), South
+Carolina (Sellers probable, Friday SEC report), Washington (Williams probable
+Thursday, Fisch expects him to play), Northern Illinois (Dickens tagged
+undisclosed on a CBS injury table Nov 11 with no status; no other report).
+Not found: the Saturday 2-hour Big Ten reports (check-in E).
+
+PDF: `report_2026-11-14_saturday.pdf`.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
