@@ -1,0 +1,2 @@
+sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
+college,401858301,Wake Forest at SMU,11.14.2026 10:53 AM,2,0:00,"Wake Forest 42, SMU 0",Wake Forest,0.9924,0.98,,
