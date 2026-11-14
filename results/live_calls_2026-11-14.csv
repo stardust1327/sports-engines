@@ -1,2 +1,5 @@
 sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
 college,401858301,Wake Forest at SMU,11.14.2026 10:53 AM,2,0:00,"Wake Forest 42, SMU 0",Wake Forest,0.9924,0.98,,
+college,401856859,Cincinnati at Iowa State,11.14.2026 11:52 AM,4,3:58,"Cincinnati 13, Iowa State 34",Iowa State,0.999,0.98,,
+college,401861967,James Madison at UConn,11.14.2026 11:52 AM,4,10:42,"James Madison 16, UConn 33",UConn,0.9846,0.98,,
+college,401858525,Nebraska at Rutgers,11.14.2026 11:52 AM,4,15:00,"Nebraska 21, Rutgers 0",Nebraska,0.999,0.98,,
