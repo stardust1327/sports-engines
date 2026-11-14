@@ -2813,6 +2813,24 @@ Not found: the Saturday 2-hour Big Ten reports (check-in E).
 
 PDF: `report_2026-11-14_saturday.pdf`.
 
+**Check-in E, Saturday 2026-11-14 about 12:50 PM Phoenix.** QB news for the 40
+games kicking off at noon Pacific or later. No pick changed in either model.
+- Reason updated (`set_nopick.py`, both files), still no pick: Oregon State at
+  Boise State. Madsen will start per ESPN College GameDay (RotoWire, Nov 14);
+  Oregon State's Atkinson still out.
+- Still no pick, nothing settled: USC at Indiana (Cignetti "played it coy" on
+  Hoover or Wilson, IndyStar Nov 14; Hoover off the availability report), Florida
+  at Kentucky (Philo reported by team sources, Sumrall has not confirmed), Purdue
+  at Iowa (no announcement found; Brown "projected"), and the rest as logged.
+- Picks stand, checked: Washington (Williams "likely to play" per the Big Ten
+  report, nothing newer found), Northern Illinois (Dickens: no designation for
+  this game found), Louisiana Tech (Baker "will play", Sun Belt report),
+  Southern Miss (John White "the starter going forward", Anderson, SI Nov 6),
+  Michigan (Carr), Tennessee (MacIntyre expected, Elko via KBTX Nov 10),
+  South Carolina (Sellers, nothing new). No QB news found for the other picked
+  teams.
+- Not found: the Saturday 2-hour Big Ten reports.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
