@@ -2599,6 +2599,107 @@ Pacific).** No pick changed.
   (247Sports). Florida State lists no quarterback.
 - Illinois at UCLA stays a no-pick (Nico Iamaleava out for the season).
 
+**Midweek graded, Friday night 2026-11-13 about 8:30 PM Phoenix (owner's
+request).** `grade_picks.py` on both files for 11-10, 11-11 and 11-12. **Engine
+(official) 4-1, framework 4-1** (3 no-picks). 11-10: Western Michigan and Bowling
+Green won in both. 11-11: Toledo won; Ball State (engine 74%, framework 63%) lost
+7-28 to Buffalo. 11-12: Louisiana won 42-21 at UL Monroe. Friday's 11-13 games
+were not final yet; they are graded at the Saturday run.
+
+## College football Saturday 2026-11-14 (engine and framework)
+
+Friday night run, 2026-11-13 about 8:30-10:00 PM Phoenix, at the owner's request
+(ahead of check-in D). Engine first run straight into `results/`
+(`cfb_2026-11-14_picks.csv`, `_qbs.csv`); framework first run straight into
+`results/` (`prompt_cfb_2026-11-14_picks.csv`; the framework used each team's
+last starter, which matches every picked team below). No-picks then applied to
+both with `set_nopick.py`. Engine: 2025 backtest weeks 4-8, 70%+ 103-22; 2026
+out of sample 253-122. Splits in bold.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Duke at Miami (10:00 AM) | Miami 87% | Miami 61% (Miami 31 - Duke 27) |
+| Cincinnati at Iowa State (10:00 AM) | **Iowa State 61%** | **Cincinnati 57% (Cincinnati 33 - Iowa State 30)** |
+| Syracuse at NC State (10:00 AM) | NC State 58% | NC State 63% (NC State 32 - Syracuse 27) |
+| Georgia Tech at Clemson (10:30 AM) | Clemson 72% | Clemson 69% (Clemson 28 - Georgia Tech 20) |
+| Alabama at Vanderbilt (10:45 AM) | Alabama 86% | Alabama 75% (Alabama 33 - Vanderbilt 23) |
+| East Carolina at Charlotte (11:00 AM) | East Carolina 85% | East Carolina 83% (East Carolina 34 - Charlotte 18) |
+| Arkansas State at Coastal Carolina (11:00 AM) | Coastal Carolina 52% | Coastal Carolina 54% (Coastal Carolina 29 - Arkansas State 27) |
+| Tennessee at Texas A&M (1:00 PM) | Tennessee 56% | Tennessee 75% (Tennessee 31 - Texas A&M 20) |
+| New Mexico State at Missouri State (1:00 PM) | **Missouri State 52%** | **New Mexico State 60% (New Mexico State 26 - Missouri State 22)** |
+| Florida International at Delaware (1:00 PM) | Delaware 59% | Delaware 52% (Delaware 26 - Florida International 25) |
+| Missouri at Georgia (1:30 PM) | Georgia 89% | Georgia 79% (Georgia 31 - Missouri 18) |
+| Boston College at Notre Dame (1:30 PM) | Notre Dame 95% | Notre Dame 85% (Notre Dame 35 - Boston College 18) |
+| USC at Indiana (1:30 PM) | Indiana 72% | Indiana 74% (Indiana 34 - USC 24) |
+| Baylor at BYU (1:30 PM) | BYU 80% | BYU 67% (BYU 29 - Baylor 22) |
+| Michigan at Oregon (1:30 PM) | **Oregon 69%** | **Michigan 51% (Michigan 25 - Oregon 24)** |
+| California at Virginia (1:30 PM) | Virginia 76% | Virginia 67% (Virginia 29 - California 23) |
+| Florida Atlantic at Tulsa (1:30 PM) | Tulsa 76% | Tulsa 72% (Tulsa 35 - Florida Atlantic 26) |
+| Nevada at Northern Illinois (1:30 PM) | Nevada 72% | Nevada 69% (Nevada 31 - Northern Illinois 23) |
+| Jacksonville State at Western Kentucky (1:30 PM) | Jacksonville State 66% | Jacksonville State 71% (Jacksonville State 34 - Western Kentucky 25) |
+| Middle Tennessee at Liberty (1:30 PM) | Liberty 93% | Liberty 83% (Liberty 36 - Middle Tennessee 20) |
+| Fresno State at Texas State (2:00 PM) | Texas State 75% | Texas State 53% (Texas State 29 - Fresno State 27) |
+| Ole Miss at Oklahoma (2:15 PM) | **Ole Miss 55%** | **Oklahoma 50% (Oklahoma 25 - Ole Miss 24)** |
+| Washington at Michigan State (2:15 PM) | **Michigan State 51%** | **Washington 66% (Washington 29 - Michigan State 22)** |
+| Southern Miss at Louisiana Tech (3:00 PM) | Louisiana Tech 90% | Louisiana Tech 79% (Louisiana Tech 32 - Southern Miss 19) |
+| Kansas at West Virginia (3:30 PM) | Kansas 67% | Kansas 54% (Kansas 30 - West Virginia 28) |
+| Louisville at North Carolina (5:00 PM) | Louisville 65% | Louisville 62% (Louisville 33 - North Carolina 28) |
+| Minnesota at Penn State (5:00 PM) | Penn State 75% | Penn State 67% (Penn State 29 - Minnesota 22) |
+| Utah at Arizona (5:30 PM) | Utah 80% | Utah 65% (Utah 32 - Arizona 25) |
+| Texas at LSU (5:30 PM) | LSU 73% | LSU 80% (LSU 29 - Texas 16) |
+| Purdue at Iowa (5:30 PM) | Iowa 89% | Iowa 88% (Iowa 38 - Purdue 19) |
+| Stanford at Virginia Tech (5:30 PM) | Virginia Tech 85% | Virginia Tech 86% (Virginia Tech 38 - Stanford 20) |
+| UNLV at New Mexico (5:30 PM) | New Mexico 87% | New Mexico 80% (New Mexico 29 - UNLV 16) |
+| South Carolina at Arkansas (5:45 PM) | South Carolina 53% | South Carolina 69% (South Carolina 29 - Arkansas 22) |
+| North Texas at UTSA (7:00 PM) | North Texas 55% | North Texas 61% (North Texas 35 - UTSA 31) |
+| Texas Tech at Oklahoma State (7:30 PM) | Oklahoma State 64% | Oklahoma State 56% (Oklahoma State 30 - Texas Tech 28) |
+| Colorado State at Washington State (8:30 PM) | Washington State 71% | Washington State 53% (Washington State 34 - Colorado State 33) |
+| North Dakota State at Hawai'i (9:00 PM) | North Dakota State 76% | North Dakota State 78% (North Dakota State 31 - Hawai'i 18) |
+
+37 picks in both models, 19 no-picks; they agree on 32 of 37. Splits (5): Iowa
+State/Cincinnati, Missouri State/New Mexico State, Oregon/Michigan,
+Ole Miss/Oklahoma, Michigan State/Washington (engine first).
+
+No pick (both; full reasons with sources in both picks files and the PDF):
+- Regular starter out: Northwestern at Ohio State (Sayin), Kansas State at TCU
+  (Avery Johnson), Auburn at Mississippi State (Kamario Taylor, season),
+  Georgia Southern at Georgia State (Cameran Brown), Arizona State at UCF
+  (Keene; Fette is the fill-in; UCF's Jenkins), San Jose State at Air Force
+  (Szarka, season; no starter named), Wisconsin at Maryland (Colton Joseph hurt;
+  Hopkins not confirmed as the starter).
+- Starter not confirmed: Wake Forest at SMU (Gio Lopez "optimistic"), Oregon
+  State at Boise State (Madsen expected back, not confirmed), Florida at Kentucky
+  (Jones Jr. not named), App State at Marshall, Nebraska at Rutgers (Lonergan),
+  UAB at Temple (Sheppard questionable last week).
+- QB changed last game, starter and reason not found: James Madison at UConn
+  (Coleman to JC Evans, unexplained), Tulane at Rice (Brown to Ochoa), Kennesaw
+  State at Sam Houston (Collins to Varnes), Troy at South Alabama (both teams),
+  Utah State at San Diego State (both teams), Wyoming at UTEP (UTEP Colson to
+  Moore; Wyoming's Hughes threw 9 passes).
+
+How the QB rule was applied to picked teams (news through Friday night):
+- Coach's decision, settled, pick stands: Texas Tech (Thomas Castellanos replaced
+  Will Hammond as the starter; CBS Sports preview), Southern Miss (Blake Anderson
+  named John White the starter; Lyddy not hurt), Michigan (Tommy Carr named "for
+  the foreseeable future"), Washington State (Owen Eshelman named starter in
+  October over Caden Pinnick).
+- SPLIT or LOW ATTEMPTS with the season leader starting last game and no injury
+  news found, pick stands: Iowa State, Syracuse (Angeli played last game),
+  Clemson, Vanderbilt, Charlotte, East Carolina, Tennessee (MacIntyre), Missouri
+  State, New Mexico State, Delaware, Baylor, Oregon, California, Tulsa, Nevada,
+  Georgia Southern, Western Kentucky, Michigan State, Washington, Louisiana
+  Tech, Kansas (Marshall back Nov 7), Iowa, New Mexico, Colorado State.
+- Every other picked team: no QB injury or change news found.
+- Not found Friday night: the Friday conference availability reports. Check-in D
+  (Sat 6:40 AM) re-checks every game; a pick comes back only by re-running both
+  models into `/tmp/rerun` and merging.
+
+PDF: `report_2026-11-13_friday-night.pdf` (season so far, NFL Week 9 graded,
+college 11-05 to 11-12 graded, NFL Week 10 picks as locked Friday, college
+Saturday picks). NFL Week 10 note: Thursday's Commanders at Giants went final,
+Commanders 24-21 (both models had the Giants); the week is graded at Tuesday's
+check-in.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same

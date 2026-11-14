@@ -1,0 +1,4 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401866458,Western Michigan,Akron,42,14,True,PICK,,Western Michigan,0.6698440337830576,W
+401866459,Kent State,Bowling Green,28,33,True,PICK,,Bowling Green,0.6342842561870647,W
+401866460,Ohio,Miami (OH),17,34,True,NO PICK,"David McComb out for the season; Caleb Heavner starts (Miami athletics, Nov 6)",,,
