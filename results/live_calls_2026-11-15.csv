@@ -1,5 +1,5 @@
 sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
-college,401856887,Ole Miss at Oklahoma,11.15.2026 12:53 PM,4,3:20,"Ole Miss 14, Oklahoma 24",Oklahoma,0.9978,0.98,,
-nfl,401873058,Chiefs at Falcons,11.15.2026 12:53 PM,4,4:18,"Chiefs 35, Falcons 13",Chiefs,0.999,0.98,,
-nfl,401873060,Vikings at Packers,11.15.2026 12:53 PM,4,2:24,"Vikings 30, Packers 10",Vikings,0.999,0.98,,
-nfl,401873054,Bills at Jets,11.15.2026 12:53 PM,4,4:42,"Bills 30, Jets 12",Bills,0.999,0.98,,
+college,401856887,Ole Miss at Oklahoma,11.15.2026 12:53 PM,4,3:20,"Ole Miss 14, Oklahoma 24",Oklahoma,0.9978,0.98,"Ole Miss 17, Oklahoma 24",W
+nfl,401873058,Chiefs at Falcons,11.15.2026 12:53 PM,4,4:18,"Chiefs 35, Falcons 13",Chiefs,0.999,0.98,"Chiefs 35, Falcons 13",W
+nfl,401873060,Vikings at Packers,11.15.2026 12:53 PM,4,2:24,"Vikings 30, Packers 10",Vikings,0.999,0.98,"Vikings 30, Packers 10",W
+nfl,401873054,Bills at Jets,11.15.2026 12:53 PM,4,4:42,"Bills 30, Jets 12",Bills,0.999,0.98,"Bills 31, Jets 12",W
