@@ -2861,6 +2861,14 @@ Chambliss taken off Ole Miss's report (HottyToddy, Nov 13); John Mateer not on
 Oklahoma's report; no newer news after the move to Sunday. Pick stands (Ole
 Miss in both models).
 
+Sunday 11-15, noon Phoenix (owner's request): 11-14 college grade re-run and
+confirmed (engine 24-10, framework 22-12). Both NFL models re-run into
+`/tmp/rerun` for the games not yet started (Seahawks at Raiders, Rams at
+Cardinals, 49ers at Cowboys, Steelers at Bengals, Chargers at Ravens): same
+picks and no-picks as logged (engine win chances moved 0.1 points at most), so
+nothing was merged. No new QB news for the afternoon games. PDF:
+`results/report_2026-11-15_nfl-sunday.pdf`.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
