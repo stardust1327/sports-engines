@@ -1,0 +1,56 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401858525,Nebraska,Rutgers,31,0,True,NO PICK,"Dylan Lonergan (head) out per the Big Ten availability report; AJ Surace expected to start but listed questionable (Nebraska On SI, Nov 12)",,,
+401858519,Purdue,Iowa,7,28,True,NO PICK,Iowa's depth chart lists Hank Brown OR Jeremy Hecklinski at QB (Nov 9); no starter named for this game; starter not confirmed,,,
+401858299,Stanford,Virginia Tech,40,22,True,PICK,,Virginia Tech,0.855,L
+401864540,Wyoming,UTEP,27,15,True,NO PICK,"EJ Colson (injury) out per the Mountain West availability report; Raymond Moore III fills in. Wyoming: Tyler Hughes (forearm fracture) out, starter not named",,,
+401858294,Boston College,Notre Dame,7,41,True,PICK,,Notre Dame,0.8482,W
+401871061,Middle Tennessee,Liberty,23,28,True,PICK,,Liberty,0.8276,W
+401862825,East Carolina,Charlotte,17,16,True,PICK,,East Carolina,0.8238,W
+401864539,UNLV,New Mexico,21,17,True,PICK,,New Mexico,0.7982,L
+401856885,Texas,LSU,22,21,True,PICK,,LSU,0.7861,L
+401871099,Southern Miss,Louisiana Tech,31,63,True,PICK,,Louisiana Tech,0.7878,W
+401856883,Missouri,Georgia,21,48,True,PICK,,Georgia,0.7906,W
+401864537,North Dakota State,Hawai'i,21,13,True,PICK,,North Dakota State,0.785,W
+401860914,Oregon State,Boise State,41,46,True,NO PICK,"Boise State: Maddux Madsen (knee) will start per the ESPN College GameDay broadcast (RotoWire, Nov 14), not confirmed by the team; Oregon State: Braden Atkinson (hand) ruled out, Maalik Murphy likely but not confirmed (OregonLive, Nov 14)",,,
+401856888,Tennessee,Texas A&M,22,7,True,PICK,,Tennessee,0.7537,W
+401856889,Alabama,Vanderbilt,21,6,True,NO PICK,"Keelon Russell (ankle) expected to be held out; Austin Mack expected to start (ESPN, Nov 13); Russell listed probable on Friday's SEC report",,,
+401858518,USC,Indiana,13,27,True,NO PICK,"Josh Hoover hurt his throwing arm Oct 24; Curt Cignetti would not say whether Hoover or Grant Wilson starts (Yahoo / Inside the Hall, Nov 13); starter not confirmed",,,
+401862826,Florida Atlantic,Tulsa,21,38,True,PICK,,Tulsa,0.7222,W
+401861967,James Madison,UConn,22,46,True,NO PICK,"JC Evans started last game after Camden Coleman started 8; JMU has rotated the two and has not named a starter for UConn (Daily Campus, Nov 13)",,,
+401870752,Jacksonville State,Western Kentucky,24,34,True,PICK,,Jacksonville State,0.7147,L
+401858297,Georgia Tech,Clemson,20,6,True,PICK,,Clemson,0.6936,L
+401864536,Nevada,Northern Illinois,28,7,True,PICK,,Nevada,0.6842,W
+401856882,South Carolina,Arkansas,6,34,True,PICK,,South Carolina,0.6824,L
+401858524,Minnesota,Penn State,14,42,True,PICK,,Penn State,0.6775,W
+401856858,Baylor,BYU,7,28,True,PICK,,BYU,0.6728,W
+401858295,California,Virginia,7,36,True,PICK,,Virginia,0.6661,W
+401858521,Washington,Michigan State,21,14,True,PICK,,Washington,0.6438,W
+401856864,Utah,Arizona,40,39,True,PICK,,Utah,0.6548,W
+401864538,San José State,Air Force,3,24,True,NO PICK,"Liam Szarka out; Air Force rotates Kemper Hodges and Evan Medders, no starter named (Colorado Springs Gazette, Nov 11). San Jose State: Daniel Rolovich implied, not announced",,,
+401858300,Syracuse,NC State,34,31,True,PICK,,NC State,0.6379,L
+401858298,Louisville,North Carolina,16,14,True,PICK,,Louisville,0.6221,W
+401856884,Florida,Kentucky,21,14,True,NO PICK,"Aaron Philo reported to start over Tramell Jones Jr., who started the last 2 (Saturday Down South / WRUF, Nov 12); Jon Sumrall has not confirmed it",,,
+401862827,North Texas,UTSA,16,35,True,PICK,,North Texas,0.6128,L
+401858296,Duke,Miami,25,36,True,PICK,,Miami,0.6152,W
+401860915,Utah State,San Diego State,13,30,True,NO PICK,"McCae Hillstead back as starter over season leader Grady Brosterhous, reason not found (Deseret News, Nov 13); San Diego State: Stone Saunders starts after Jayden Denegal's injury ('as of right now')",,,
+401869952,Georgia Southern,Georgia State,34,17,True,NO PICK,"Cameran Brown (undisclosed) doubtful (Sun Belt availability report via RotoWire, Nov 11); Ayden Pereira expected to start",,,
+401856857,Arizona State,UCF,26,13,True,NO PICK,"Mikey Keene (right knee) out of the last 2 games; Jake Fette the fill-in (AP, Nov 13). UCF: Keyone Jenkins (ankle) out indefinitely; Alonza Barnett III starts",,,
+401870796,New Mexico State,Missouri State,21,27,True,PICK,,New Mexico State,0.5892,L
+401858520,Wisconsin,Maryland,21,24,True,NO PICK,"Ryan Hopkins starts again; Luke Fickell said Colton Joseph was 'banged up' (Field Level Media, Nov 13); Hopkins named for this week only, not as the starter going forward",,,
+401856862,Kansas State,TCU,10,20,True,NO PICK,"Avery Johnson and Jacob Knuth out; Blake Barnett and Dillon Duff competing, no starter named (Collin Klein via Field Level Media, Nov 13)",,,
+401871100,Troy,South Alabama,14,27,True,NO PICK,Tucker Kilcrease started the last 2 over Goose Crowder (available) with no reason given; South Alabama: Bishop Davenport back after 6 missed games vs Jared Hollins; neither starter confirmed,,,
+401869928,App State,Marshall,20,16,True,NO PICK,"Coach Gibson had not settled on a starter between Zion Turner and Carlos Del Rio-Wilson, who is cleared to play (WMUL, Nov 13)",,,
+401856859,Cincinnati,Iowa State,13,41,True,PICK,,Cincinnati,0.5623,L
+401858522,Northwestern,Ohio State,19,28,True,NO PICK,"Aidan Chiles (upper body) ruled out (Big Ten availability report, Nov 12); Nicco Marchiol starts. Ohio State: Julian Sayin (throwing arm) out; Luke Fahey starts",,,
+401856863,Texas Tech,Oklahoma State,52,27,True,PICK,,Oklahoma State,0.5636,L
+401856861,Kansas,West Virginia,37,14,True,PICK,,Kansas,0.5497,W
+401869937,Arkansas State,Coastal Carolina,21,28,True,PICK,,Coastal Carolina,0.5466,W
+401860916,Fresno State,Texas State,35,37,True,PICK,,Texas State,0.5465,W
+401858301,Wake Forest,SMU,49,7,True,PICK,,Wake Forest,0.5484,W
+401856886,Auburn,Mississippi State,41,9,True,NO PICK,"Mississippi State: Kamario Taylor (leg) out for the season; AJ Swann starts (AP via National Football Post, Nov 13)",,,
+401860917,Colorado State,Washington State,7,73,True,PICK,,Washington State,0.5245,W
+401862829,UAB,Temple,36,10,True,NO PICK,"Ajani Sheppard (ankle/foot) missed last game; Keeler says he may return; no starter announced, Jaxon Smolik started last game (The Temple News, Nov 14)",,,
+401871060,Florida International,Delaware,16,24,True,PICK,,Delaware,0.5194,W
+401870769,Kennesaw State,Sam Houston,26,7,True,NO PICK,"Rickie Collins (undisclosed) injured last game, day-to-day and questionable (RotoWire, Nov 10); Landon Varnes finished the game; starter not confirmed",,,
+401858523,Michigan,Oregon,7,31,True,PICK,,Michigan,0.5089,L
+401862828,Tulane,Rice,20,17,True,NO PICK,"Jacurri Brown (ankle) lost the job while hurt; Gael Ochoa confirmed QB1 by Scott Abell (Crescent City Sports, Nov 12); regular starter out",,,

@@ -2831,6 +2831,36 @@ games kicking off at noon Pacific or later. No pick changed in either model.
   teams.
 - Not found: the Saturday 2-hour Big Ten reports.
 
+**Check-in F, Sunday 2026-11-15 about 8:40-9:00 AM Pacific.**
+
+Saturday 11-14 graded (`grade_picks.py`, both files; all 55 games final;
+Ole Miss at Oklahoma moved to the 11-15 files): **engine 24-10, framework
+22-12** (21 no-picks). 70%+ picks: engine 15-4, framework 8-4. Splits (4):
+engine 3-1, framework 1-3 (engine right on Iowa State, Missouri State, Oregon;
+framework right on Washington). Losses in both models: NC State, Clemson
+(Georgia Tech won 20-6), Jacksonville State, LSU (Texas 22-21), Virginia Tech
+(Stanford 40-22), New Mexico (UNLV 21-17), South Carolina, North Texas,
+Oklahoma State. Off the record (no-pick games): engine 12-9, framework 16-5.
+
+NFL Week 10, QB check: no pick changed in either model.
+- Early games (inactives, Browns Wire Nov 15 and FantasyPros): no starting QB
+  inactive for the picked teams (Chiefs, Falcons, Texans, Browns, Jaguars,
+  Titans, Panthers, Saints, Bills, Jets). Browns inactives include QBs Dillon
+  Gabriel and Taylen Green, not Deshaun Watson (a PFT "Watson is inactive"
+  piece is from Nov 8, Week 9). Kyler Murray inactive (MIN, already a no-pick).
+- Late and night games: no QB on the 49ers or Cowboys final reports (Nov 13);
+  no news against Brock Purdy, Dak Prescott, Aaron Rodgers or Joe Burrow (a
+  CBS "Purdy inactive again in Week 10" item is from Nov 9, 2025 and was not
+  used). Sam Darnold inactive (SEA, already a no-pick). Picks stand.
+- Munich game (Patriots at Lions) was under way: Drake Maye was hurt during
+  the game; picks were settled at the Friday lock and stay as logged.
+- The 5 Week 10 no-picks stand (Ravens' Monday game: final word at check-in G).
+
+College Sunday 11-15, Ole Miss at Oklahoma (11:00 AM Phoenix): Trinidad
+Chambliss taken off Ole Miss's report (HottyToddy, Nov 13); John Mateer not on
+Oklahoma's report; no newer news after the move to Sunday. Pick stands (Ole
+Miss in both models).
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
