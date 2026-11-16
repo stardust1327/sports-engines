@@ -2961,3 +2961,11 @@ crosses 75/50/25/10%, each with the fair value of the payout (win chance x
 payout) to compare with a cash-out offer. No sportsbook odds are read; the
 payout is typed in by the owner. Separate from the engines. Offline test:
 `node live/worker/test_bets.mjs`.
+
+NFL Week 10, Monday-night check (check-in G, Nov 16), Chargers at Ravens: no
+change. Lamar Jackson (right thumb) still on injured reserve; Jacoby Brissett
+starts (Fox Baltimore and Bolavip, Nov 16). Ravens no-pick stands in both
+models with its logged reason. Justin Herbert has no injury designation and is
+listed as the Chargers' starter. The official 2026 inactive lists weren't
+reachable (the one inactives page found was blocked; others were from 2024),
+but the no-pick doesn't depend on them.
