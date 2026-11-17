@@ -1,0 +1,3 @@
+game_id,kickoff_utc,state,away_id,home_id,away_name,home_name,neutral,venue,home_plays,away_plays,net_epa,net_sr,is_home,p_home,pick,pick_prob,status,reason,kickoff
+401866467,2026-11-19T00:00Z,pre,2006,113,Akron,Massachusetts,False,Warren McGuirk Alumni Stadium,527,557,0.2601467333199107,0.027500265974706718,1.0,0.775436252930926,Massachusetts,0.775436252930926,NO PICK,"William Watson III (ankle) left hurt vs Toledo, status not announced; Logan Inagawa starts if he can't go (VSiN, Nov 16)",Wed 5:00 PM
+401866469,2026-11-19T00:30Z,pre,2117,2084,Central Michigan,Buffalo,False,Broadview Stadium,697,524,-0.14939763209780976,-0.010182125857193192,1.0,0.448364505269871,Central Michigan,0.551635494730129,PICK,,Wed 5:30 PM

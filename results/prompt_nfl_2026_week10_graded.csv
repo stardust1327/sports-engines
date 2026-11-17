@@ -1,0 +1,15 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401873057,Jaguars,Titans,40,23,True,PICK,,Jaguars,0.8316,W
+401873061,Rams,Cardinals,34,6,True,NO PICK,"Gardner Minshew (throwing elbow, UCL surgery) on injured reserve, out for the season; Carson Beck starts (Mike LaFleur, Nov 11)",,,
+401873062,Seahawks,Raiders,21,13,True,NO PICK,"Sam Darnold (quad, ribs) out ('Sam will be another week', Mike Macdonald, Nov 9); Drew Lock (elbow, oblique) starts, off the final report (NBC Sports, Nov 13). Raiders: Kirk Cousins traded to Minnesota; rookie Fernando Mendoza named starter",,,
+401873063,49ers,Cowboys,46,40,True,PICK,,49ers,0.7243,W
+401873065,Chargers,Ravens,23,20,True,NO PICK,"Lamar Jackson (right thumb) on IR; Jacoby Brissett (traded from Arizona) starts (Jesse Minter, Nov 9)",,,
+401873054,Bills,Jets,31,12,True,PICK,,Bills,0.6673,W
+401873056,Texans,Browns,24,27,True,PICK,,Texans,0.6257,L
+401873058,Chiefs,Falcons,35,13,True,PICK,,Chiefs,0.6184,W
+401873053,Patriots,Lions,10,35,True,PICK,,Lions,0.5658,W
+401873060,Vikings,Packers,30,10,True,NO PICK,"Kyler Murray (hamstring) ruled out on Friday's report; Kirk Cousins (traded from Las Vegas Nov 10) starts (Kevin O'Connell via Yahoo, Nov 13)",,,
+401873064,Steelers,Bengals,18,38,True,PICK,,Bengals,0.5318,W
+401873052,Commanders,Giants,24,21,True,PICK,,Giants,0.5309,L
+401873055,Panthers,Saints,20,17,True,PICK,,Panthers,0.5214,W
+401873059,Dolphins,Colts,22,24,True,NO PICK,"Malik Willis (groin) on injured reserve, placed Nov 10, out at least 4 games; Kyle McCord starts (AP via WPTV, Nov 10)",,,

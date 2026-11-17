@@ -1259,6 +1259,91 @@ Brock Purdy not on any Week 10 list (a 2025 article about Purdy missing "Week
 10" with turf toe surfaced in searches and was not used).
 
 
+### 2026 Week 10 final (Tuesday run, 2026-11-17)
+
+All 14 games final. Graded with `nfl_cfbmethod/grade.py --season 2026 --week 10`
+(engine) and `results/grade_picks.py` (framework). **Engine (official) 7-2,
+framework 7-2** (5 no-picks; no ties). Both lost the same two: Texans (engine
+70%, framework 63%) lost 24-27 at Cleveland; Giants (engine 60%, framework 53%)
+lost 21-24 to Washington. Wins: Jaguars, Chiefs, Bills, Bengals, 49ers, Lions,
+Panthers.
+- Closing-line check (Week 10, 9 games): closing-line favorite 7-2; Brier engine
+  0.2022, close 0.1758; 5+ points more confident than the close 1-2 (-1.43
+  units). All graded weeks (67 games): engine 40-26-1, closing-line favorite
+  48-18-1; Brier 0.2346 vs 0.1949; engine picked the market underdog 10 times
+  (1-9); 5+ points more confident than the close 8-15 (-11.07 units).
+- Off the record (no picks): engine 3-2 (Colts, Seahawks, Rams won; Packers,
+  Ravens lost); framework 3-2 (Rams, Seahawks, Vikings won; Ravens, Dolphins
+  lost). Running NFL total (`nopick_leans.py`): engine 11-7, framework 10-8.
+
+### 2026 Week 11 (Tuesday run, 2026-11-17)
+
+Both models' first run of the week, straight into `results/`, about 7:20-8:00
+AM Pacific: engine for 2026-11-19, 11-22 and 11-23; framework with `--refresh`
+and the engine's `_qbs.csv`. No-picks applied to both with `set_nopick.py`.
+Engine backtest with today's data: 964-558 (70%+ 275-95, 60-70% 307-159, under
+60% 382-304); 2026 out of sample 63-37. Framework backtest 558-335 (Brier
+0.2230); 2026 out of sample 63-38.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Colts at Texans (Thu 6:15 PM) | Texans 64.9% | Texans 75.1% (27-19) |
+| Saints at Bears (Sun 11:00 AM) | Bears 69.2% | Bears 76.6% (28-19) |
+| Titans at Cowboys (11:00 AM) | Cowboys 68.8% | Cowboys 61.7% (27-23) |
+| Raiders at Broncos (2:25 PM) | Broncos 78.9% | Broncos 80.5% (29-18) |
+| Jaguars at Giants (2:25 PM) | Jaguars 70.6% | Jaguars 78.1% (29-19) |
+| Bengals at Commanders (Mon 6:15 PM) | Bengals 66.1% | Bengals 64.4% (27-22) |
+
+The models agree on all 6 picks. Engine 70%+: Broncos, Jaguars. Framework 70%+:
+Broncos, Jaguars, Bears, Texans.
+
+No pick (both), 7 games:
+- Dolphins at Bills: Malik Willis (groin) on injured reserve, out at least 4
+  games (placed Nov 10); Kyle McCord started Week 10.
+- Cardinals at Chiefs: Gardner Minshew (throwing elbow, UCL surgery) on IR, out
+  for the season; Carson Beck started Week 10.
+- Steelers at Eagles: Jalen Hurts (blood clots) out for the season; Joe Milton
+  started the last game.
+- Ravens at Panthers: Lamar Jackson (right thumb) on IR; Jacoby Brissett
+  started Week 10.
+- Vikings at 49ers (Sun 6:20 PM, neutral site): Kyler Murray (Grade 2
+  hamstring) not confirmed: "We'll see where he's at and whether he'll
+  potentially be available this week" (Kevin O'Connell via Heavy, Nov 16); Kirk
+  Cousins started Week 10.
+- Buccaneers at Lions: Baker Mayfield (foot/ankle, walking boot over the bye)
+  status for Week 11 uncertain (NFL Network's Mike Garafolo via NFL.com, Nov
+  15); Jalon Daniels next.
+- Jets at Chargers: Geno Smith (left ankle; concussion evaluation in Week 10)
+  having imaging, status uncertain (ESPN, Nov 16); Aaron Glenn: "Geno's our
+  starter." Cade Klubnik next.
+
+Off the record: engine Bills 78.3%, Chiefs 81.9%, Eagles 51.1%, Panthers
+50.5%, 49ers 70.6%, Lions 61.3%, Jets 50.4%; framework Bills 81.5%, Chiefs
+86.2%, Steelers 65.6%, Panthers 51.5%, 49ers 59.0%, Lions 55.6%, Jets 55.8%.
+
+QB check (news Nov 15-17, no official game statuses yet):
+- Raiders (CHANGE): Kirk Cousins traded to Minnesota; rookie Fernando Mendoza
+  named the starter going forward (NBC Sports, Nov 10), not an injury fill-in,
+  and Brett Rypien signed as the third QB "behind starter Fernando Mendoza"
+  (Raiders Wire via Yahoo, Nov 16). No injury reported. Pick stands.
+- Giants (CHANGE): J.J. McCarthy, named the starter going forward (Week 10
+  precedent); Jaxson Dart (knee) out for the season (Yahoo, Nov 16); no new
+  McCarthy injury found (he played Week 10). Pick stands.
+- Colts: Daniel Jones stays the starter Thursday (Shane Steichen via NBC
+  Sports, Nov 15); no injury reported.
+- SPLIT with the last starter playing and no injury news, picks stand: Bears
+  (Caleb Williams), Commanders (Jayden Daniels).
+- Other picked teams, no QB injury news found: C.J. Stroud, Tyler Shough, Cam
+  Ward, Dak Prescott, Bo Nix, Trevor Lawrence, Joe Burrow.
+
+**For the next check-ins:** Wednesday (B): Thursday's game statuses for Jones
+and Stroud. Friday's lock (C): Murray (a pick comes back only if he's
+confirmed), Mayfield and Geno Smith (picks come back if confirmed), and every
+picked team's starter on the final reports; re-run both models into
+`/tmp/rerun` and merge. Dolphins, Cardinals, Eagles and Ravens stay no-picks
+while their regular starters are out. Monday's statuses come Saturday (final
+word at check-in G).
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -2868,6 +2953,74 @@ Cardinals, 49ers at Cowboys, Steelers at Bengals, Chargers at Ravens): same
 picks and no-picks as logged (engine win chances moved 0.1 points at most), so
 nothing was merged. No new QB news for the afternoon games. PDF:
 `results/report_2026-11-15_nfl-sunday.pdf`.
+
+## College football midweek, 2026-11-17 to 11-20 (Tuesday run, 2026-11-17)
+
+Both models' first runs, straight into `results/`, about 7:20-8:00 AM Pacific
+(fresh session, full cache downloaded): engine one date at a time, framework all
+four dates. No-picks applied to both with `set_nopick.py`. Engine 2026 out of
+sample 298-144 (70%+ 178-51); framework 2026 out of sample 289-153.
+
+Also graded: Sunday 11-15 (Ole Miss at Oklahoma, moved from Saturday):
+**engine 0-1, framework 0-1**. Ole Miss (engine 55%) lost 17-24.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Ball State at Ohio (Tue 5:00 PM) | Ohio 76% | Ohio 69% (33-25) |
+| Central Michigan at Buffalo (Wed 5:30 PM) | Central Michigan 55% | Central Michigan 58% (27-24) |
+
+The models agree on both picks. Engine 70%+: Ohio.
+
+No pick (both), 10 games:
+- Eastern Michigan at Western Michigan (Tue 4:00 PM): Noah Kim (undisclosed
+  injury) missed the last two games; no starter named for Tuesday, Kim or "some
+  combination of Brogan McCaughey and Jace Stuckey" (Mitten Football, Nov 16).
+- Miami (OH) at Kent State (Tue 5:00 PM): David McComb out for the season; Drew
+  Bellisari started the last game after Caleb Heavner started 5; starter not
+  confirmed.
+- Akron at Massachusetts (Wed 5:00 PM): William Watson III (ankle) left hurt vs
+  Toledo, status not announced; Logan Inagawa starts if he can't go (VSiN, Nov
+  16).
+- Rice at Temple (Thu 5:30 PM): Jacurri Brown (ankle) lost the job while hurt;
+  Gael Ochoa confirmed QB1 (Crescent City Sports, Nov 12); regular starter out.
+- Iowa State at UCF (Fri 4:00 PM): Keyone Jenkins (ankle) out indefinitely (AP,
+  Nov 13); Alonza Barnett III started the last 2; no newer update found.
+- Bowling Green at Toledo (Fri 5:30 PM): Jay Kastantin (injury) missed the last
+  game (MAC availability report via RotoWire, Nov 10); status for Toledo not
+  announced; Austin Novosad started.
+- Clemson at Duke (Fri 5:30 PM): Tait Reynolds (torn meniscus) out for the
+  season (AP, Nov 15); Christopher Vizzina (concussion) out ("so he's out," Dabo
+  Swinney, Nov 16); Trent Pearman makes his first start (The State, Nov 16).
+- Oregon at Michigan State (Fri 6:00 PM): Alessio Milivojevic (left arm) status
+  uncertain, "no update on Les" (Pat Fitzgerald, Nov 16); Cam Fancher
+  (aggravated right knee) status also unknown (Detroit News, Nov 16).
+- UTEP at Air Force (Fri 6:00 PM): Liam Szarka out; Air Force rotates Kemper
+  Hodges and Evan Medders, no starter named (Colorado Springs Gazette, Nov 11);
+  UTEP's EJ Colson was out last game. No newer news found.
+- New Mexico at Wyoming (Fri 7:00 PM): Tyler Hughes (forearm fracture) out;
+  Landon Sims started the last game; no starter named going forward.
+
+Off the record: engine Western Michigan 80%, Miami (OH) 67%, Massachusetts
+78%, Rice 57%, UCF 54%, Toledo 87%, Duke 76%, Oregon 77%, Air Force 92%, New
+Mexico 73%; framework Western Michigan 74%, Miami (OH) 57%, Massachusetts 84%,
+Temple 56%, Iowa State 51%, Toledo 86%, Duke 81%, Oregon 75%, Air Force 92%,
+New Mexico 63%.
+
+QB check (news through Tuesday morning):
+- Central Michigan (SPLIT): Jadyn Glasser is the season leader in attempts and
+  started the last 3; Angel Flores out for the season (earlier reports). SPLIT
+  alone keeps the pick.
+- Buffalo (LOW ATTEMPTS): Jason Wright, 9 straight starts, no injury news.
+- SPLIT with the last starter playing and no injury news: Ohio (Nick Poulos),
+  Ball State (Keldric Luster).
+
+**For the next check-ins:** the MAC and Big Ten availability reports come the
+day before each game. Today's games kick off at 3:00 and 4:00 PM Pacific, before
+the next check-in. Check-in B (Wed): Watson for Massachusetts, Glasser and
+Wright; (Thu): Rice and Temple. Check-in C (Fri): Milivojevic/Fancher,
+Kastantin, Jenkins, Air Force and Wyoming. A pick comes back only when the
+regular starter is confirmed, by re-running both models into `/tmp/rerun` and
+merging.
 
 ## College Prompt Football framework (built 2026-10-11)
 
