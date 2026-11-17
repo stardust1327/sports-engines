@@ -3022,6 +3022,25 @@ Kastantin, Jenkins, Air Force and Wyoming. A pick comes back only when the
 regular starter is confirmed, by re-running both models into `/tmp/rerun` and
 merging.
 
+**Tuesday run, second session (same check-in A, about 7:15-8:00 AM Pacific).**
+A duplicate run of check-in A graded and ran everything on its own before the
+first session's push landed. It got the same grades (Week 10 engine 7-2,
+framework 7-2; 11-15 0-1), identical win chances and the same 7 NFL no-picks,
+so the files pushed by the first session stand. Differences:
+- **Central Michigan at Buffalo (Wed):** the second session would have made it
+  a no-pick: Angel Flores, who started 5 of Central Michigan's first 7 games,
+  is out for the season (broken bone, surgery; coach Drinkall via Flying C,
+  Oct 24; CMU athletics notes, Nov 15), the same situation as Illinois at UCLA
+  and Florida State at Pittsburgh (regular starter out for the season). The
+  first session kept the pick because Jadyn Glasser, who has started the last
+  3, leads the team in attempts (SPLIT alone). Left as logged (Central
+  Michigan, engine 55%, a pass on the "What to act on" page); **owner's call**
+  which reading of the rule to use going forward.
+- Rice at Temple reason extended in both files (`set_nopick.py`): Temple also
+  changed QBs: Ajani Sheppard (ankle) did not practice Monday and KC Keeler
+  named Jaxon Smolik to start against Rice, not going forward (Philadelphia
+  Inquirer, Nov 16). Still a no-pick.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
