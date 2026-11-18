@@ -3041,6 +3041,21 @@ so the files pushed by the first session stand. Differences:
   named Jaxon Smolik to start against Rice, not going forward (Philadelphia
   Inquirer, Nov 16). Still a no-pick.
 
+**Midweek check (B), Wednesday 2026-11-18, about 3:50 PM Pacific (games kick
+off 4:00 and 4:30 PM).** No pick changes.
+- Akron at Massachusetts stays a no-pick; reason updated in both files
+  (`set_nopick.py`): William Watson III (undisclosed injury) ruled out on the
+  MAC availability report (RotoWire, Nov 18); regular starter out, Logan
+  Inagawa expected to start.
+- Central Michigan at Buffalo: pick stands (Central Michigan, engine 55%, a
+  pass). Jadyn Glasser starts, Jason Wright for Buffalo; no injury news for
+  either (TheSpread preview, Nov 18). The Angel Flores question from the
+  Tuesday run is still the owner's call.
+- NFL Thursday, Colts at Texans: the Week 11 injury report (NFL.com) gives no
+  designation to Daniel Jones or C.J. Stroud; Colts "sticking with Daniel
+  Jones" (NBC Sports, Nov 16). Texans pick stands (engine 65%, framework 75%).
+  Inactives checked Thursday.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
