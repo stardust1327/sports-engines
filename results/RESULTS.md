@@ -3056,6 +3056,16 @@ off 4:00 and 4:30 PM).** No pick changes.
   Jones" (NBC Sports, Nov 16). Texans pick stands (engine 65%, framework 75%).
   Inactives checked Thursday.
 
+**Midweek check (B), Thursday 2026-11-19, about 3:55 PM Pacific.** No pick changes.
+- NFL Thursday, Colts at Texans: Daniel Jones and C.J. Stroud listed as the
+  starters with no injury designation (Bolavip QB depth charts, Nov 19, 6:15 PM
+  ET; NFL.com Week 11 preview). The official inactive lists (due 6:45 PM ET)
+  weren't found in any source reached; neither QB was in any injury news. Texans
+  pick stands (engine 65%, framework 75%).
+- Rice at Temple stays a no-pick in both models with its logged reason (Temple:
+  Ajani Sheppard replaced by Jaxon Smolik for this game; Rice: Jacurri Brown out
+  of the job). No news changes either part.
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
