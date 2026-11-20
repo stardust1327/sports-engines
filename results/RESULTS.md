@@ -1344,6 +1344,68 @@ picked team's starter on the final reports; re-run both models into
 while their regular starters are out. Monday's statuses come Saturday (final
 word at check-in G).
 
+**Friday lock (C), 2026-11-20, about 1:40-2:00 PM Pacific: Week 11 picks
+locked Friday.** Both models re-run into `/tmp/rerun` with the current no-picks
+(engine for 11-19, 11-22, 11-23; framework with `--refresh`) and merged with
+`merge_rerun.py` (12 games refreshed in each file; the Thursday game was final
+and left as logged). Framework backtest now 561-332 (Brier 0.2230); 2026 out of
+sample 65-37.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Colts at Texans (Thu, final) | Texans 64.9% | Texans 75.1% |
+| Saints at Bears (Sun 11:00 AM) | Bears 69.1% | Bears 78.4% (28-18) |
+| Titans at Cowboys (11:00 AM) | Cowboys 69.1% | Cowboys 63.4% (27-23) |
+| Jets at Chargers (2:05 PM) | Jets 50.3% | Jets 56.8% (23-21) |
+| Raiders at Broncos (2:25 PM) | Broncos 79.2% | Broncos 81.7% (29-18) |
+| Jaguars at Giants (2:25 PM) | Jaguars 70.7% | Jaguars 80.3% (29-18) |
+| Bengals at Commanders (Mon 6:15 PM) | Bengals 66.4% | Bengals 67.0% (27-22) |
+
+Changes:
+- **Jets at Chargers: pick back in both models (Jets).** Geno Smith (ankle) was
+  a full participant Friday and has no injury designation (PFT via Yahoo, Nov
+  20). Engine Jets 50.3% (a coin flip), framework Jets 56.8%. Footballguys'
+  undated weekly table still showed him questionable; the dated Friday report
+  was used.
+- Win chances moved slightly with the refreshed data; no other pick changed
+  side. The models agree on all 7 picks.
+
+No pick (both), 6 games, reasons updated where the Friday reports added news:
+- Dolphins at Bills: Malik Willis (groin) on injured reserve (out on the final
+  report); Kyle McCord started Week 10.
+- Buccaneers at Lions: Baker Mayfield (foot/right thumb) **questionable** on the
+  final injury report (DNP Wed, limited Thu-Fri; Buccaneers.com, Nov 20); Todd
+  Bowles says he's "trending" to start, not confirmed; Jalon Daniels next.
+- Cardinals at Chiefs: Gardner Minshew on IR, out for the season; Carson Beck
+  started Week 10 and is himself questionable (back; did not practice Friday,
+  Bleacher Report, Nov 20).
+- Steelers at Eagles: Jalen Hurts (blood clots) out for the season; Joe Milton
+  started the last game (Tanner McKee also practiced fully; Week 11 starter not
+  named in the sources reached).
+- Ravens at Panthers: Lamar Jackson (right thumb) on IR (Tyler Huntley also
+  out); Jacoby Brissett started Week 10.
+- Vikings at 49ers: Kyler Murray (Grade 2 hamstring) will not play (DNP
+  Wed-Thu; NBC Sports, Nov 20); Kirk Cousins starts.
+
+Off the record: engine Bills 77.9%, Lions 61.3%, Chiefs 81.9%, Eagles 51.2%,
+Panthers 50.4%, 49ers 70.4%.
+
+QB check, final Friday reports (Buccaneers.com, SI, Athlon, NFL.com practice
+lists, Footballguys, Nov 20): no designation found for Josh Allen, Caleb
+Williams, Tyler Shough, Dak Prescott, Cam Ward, Jared Goff, Patrick Mahomes
+(full practice), Aaron Rodgers, Bryce Young (foot, full all week, "a full go,"
+SI), Justin Herbert, Brock Purdy, Trevor Lawrence. Fernando Mendoza and Bo Nix
+were not on any report that could be read in full; no injury news for either.
+J.J. McCarthy: not designated, no new injury news. Monday: Joe Burrow (illness)
+and Jayden Daniels (left elbow) shown as "probable" in Footballguys' table (not
+an NFL designation); official statuses come Saturday.
+
+**For the next check-ins:** Sunday (F): inactives for the early games (Bears,
+Cowboys picks; Mayfield's status decides Buccaneers at Lions) and late-game QB
+news (Geno Smith, Mendoza, Nix, Lawrence, McCarthy, Herbert). A Mayfield pick
+comes back only if he's active and confirmed to start (re-run both into
+`/tmp/rerun`, merge). Monday (G): Burrow and Daniels inactives.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -3065,6 +3127,24 @@ off 4:00 and 4:30 PM).** No pick changes.
 - Rice at Temple stays a no-pick in both models with its logged reason (Temple:
   Ajani Sheppard replaced by Jaxon Smolik for this game; Rice: Jacurri Brown out
   of the job). No news changes either part.
+
+**Friday lock (C), 2026-11-20, about 1:40-2:00 PM Pacific: QB check for
+today's 6 games.** All 6 stay no-picks in both models; reasons updated with
+`set_nopick.py` where Friday news added detail. No pick came back.
+- Iowa State at UCF: Keyone Jenkins (ankle) status not announced; UCF goes with
+  Alonza Barnett III tonight (247Sports, Nov 20). Regular starter out.
+- Bowling Green at Toledo: Jay Kastantin's status for Toledo has not been
+  publicly reported (TheSpread, Nov 20); Austin Novosad started the last game.
+- Clemson at Duke: unchanged (Reynolds out for the season, Vizzina out; Trent
+  Pearman starts).
+- Oregon at Michigan State: Alessio Milivojevic (left arm) ruled out (Lansing
+  State Journal via Yahoo, Nov 18); Cam Fancher (knee) questionable; starter
+  not named.
+- UTEP at Air Force: Liam Szarka out for the season; Evan Medders questionable
+  (Athlon, Nov 20), Kemper Hodges next; UTEP's EJ Colson Jr. still out, Raymond
+  Moore III starts.
+- New Mexico at Wyoming: Tyler Hughes (forearm fracture) out; Landon Sims
+  starts again (PokesNews, Nov 20). Regular starter out.
 
 ## College Prompt Football framework (built 2026-10-11)
 
