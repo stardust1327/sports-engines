@@ -1388,7 +1388,8 @@ No pick (both), 6 games, reasons updated where the Friday reports added news:
   Wed-Thu; NBC Sports, Nov 20); Kirk Cousins starts.
 
 Off the record: engine Bills 77.9%, Lions 61.3%, Chiefs 81.9%, Eagles 51.2%,
-Panthers 50.4%, 49ers 70.4%.
+Panthers 50.4%, 49ers 70.4%; framework Bills 84%, Lions 56%, Chiefs 89%,
+Steelers 67%, Panthers 52%, 49ers 61%. PDF: `results/report_2026-11-20_C.pdf`.
 
 QB check, final Friday reports (Buccaneers.com, SI, Athlon, NFL.com practice
 lists, Footballguys, Nov 20): no designation found for Josh Allen, Caleb
