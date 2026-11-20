@@ -1401,6 +1401,18 @@ J.J. McCarthy: not designated, no new injury news. Monday: Joe Burrow (illness)
 and Jayden Daniels (left elbow) shown as "probable" in Footballguys' table (not
 an NFL designation); official statuses come Saturday.
 
+**Friday lock, second session (scheduled check-in C, 1:40-2:00 PM Pacific).**
+Ran the same steps on its own before the first session's push landed and got
+the same result: same 7 picks with the same engine and framework win chances,
+the same 6 no-picks (Murray ruled out, RotoWire via CBS Sports; Mayfield
+questionable, NBC Sports; Beck (back) didn't practice Friday, Josh Johnson
+expected to start, Mike LaFleur via NFL.com), Jets pick back (Geno Smith full
+practice, no designation, PFT, Nov 20), and all 6 college games on 11-20 still
+no-picks (Milivojevic ruled out; Kastantin's status not reported). Burrow
+(illness) and Daniels (left elbow) practiced fully Friday with no designation
+on their teams' Friday reports (A to Z Sports, Nov 20). The files and PDF
+pushed by the first session stand; nothing was changed.
+
 **For the next check-ins:** Sunday (F): inactives for the early games (Bears,
 Cowboys picks; Mayfield's status decides Buccaneers at Lions) and late-game QB
 news (Geno Smith, Mendoza, Nix, Lawrence, McCarthy, Herbert). A Mayfield pick
