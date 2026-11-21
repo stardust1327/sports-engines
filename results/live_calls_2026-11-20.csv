@@ -1,3 +1,3 @@
 sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
-college,401856869,Iowa State at UCF,11.20.2026 5:52 PM,4,14:25,"Iowa State 17, UCF 38",UCF,0.9933,0.98,,
+college,401856869,Iowa State at UCF,11.20.2026 5:52 PM,4,14:25,"Iowa State 17, UCF 38",UCF,0.9933,0.98,"Iowa State 17, UCF 48",W
 college,401864545,UTEP at Air Force,11.20.2026 5:52 PM,2,13:46,"UTEP 3, Air Force 14",Air Force,0.9829,0.98,,
