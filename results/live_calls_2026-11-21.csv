@@ -1,0 +1,4 @@
+sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
+college,401858310,Wake Forest at Georgia Tech,11.21.2026 10:53 AM,2,0:00,"Wake Forest 36, Georgia Tech 7",Wake Forest,0.9988,0.98,,
+college,401856749,Wofford at Ole Miss,11.21.2026 10:53 AM,2,0:00,"Wofford 3, Ole Miss 49",Ole Miss,0.999,0.98,,
+college,401871080,Western Kentucky at Liberty,11.21.2026 10:53 AM,2,12:14,"Western Kentucky 0, Liberty 21",Liberty,0.9935,0.98,,
