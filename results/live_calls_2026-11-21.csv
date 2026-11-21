@@ -1,6 +1,9 @@
 sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
-college,401858310,Wake Forest at Georgia Tech,11.21.2026 10:53 AM,2,0:00,"Wake Forest 36, Georgia Tech 7",Wake Forest,0.9988,0.98,,
-college,401856749,Wofford at Ole Miss,11.21.2026 10:53 AM,2,0:00,"Wofford 3, Ole Miss 49",Ole Miss,0.999,0.98,,
+college,401858310,Wake Forest at Georgia Tech,11.21.2026 10:53 AM,2,0:00,"Wake Forest 36, Georgia Tech 7",Wake Forest,0.9988,0.98,"Wake Forest 50, Georgia Tech 29",W
+college,401856749,Wofford at Ole Miss,11.21.2026 10:53 AM,2,0:00,"Wofford 3, Ole Miss 49",Ole Miss,0.999,0.98,"Wofford 17, Ole Miss 59",W
 college,401871080,Western Kentucky at Liberty,11.21.2026 10:53 AM,2,12:14,"Western Kentucky 0, Liberty 21",Liberty,0.9935,0.98,,
-college,401858533,Wisconsin at Purdue,11.21.2026 11:52 AM,4,6:27,"Wisconsin 35, Purdue 10",Wisconsin,0.999,0.98,,
+college,401858533,Wisconsin at Purdue,11.21.2026 11:52 AM,4,6:27,"Wisconsin 35, Purdue 10",Wisconsin,0.999,0.98,"Wisconsin 42, Purdue 10",W
 college,401856746,Chattanooga at Alabama,11.21.2026 11:52 AM,2,11:33,"Chattanooga 0, Alabama 12",Alabama,0.9985,0.98,,
+college,401858305,North Carolina at Virginia,11.21.2026 12:52 PM,4,0:08,"North Carolina 18, Virginia 41",Virginia,0.999,0.98,,
+college,401856750,Tennessee Tech at Mississippi State,11.21.2026 12:52 PM,4,9:36,"Tennessee Tech 13, Mississippi State 34",Mississippi State,0.999,0.98,,
+college,401856747,Samford at Auburn,11.21.2026 12:52 PM,1,9:13,"Samford 3, Auburn 14",Auburn,0.9967,0.98,,
