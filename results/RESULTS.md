@@ -3265,6 +3265,31 @@ Washington), Oklahoma State (Mestemaker), Indiana (Hoover), South Carolina
 A pick comes back only when the regular starter is confirmed (re-run both into
 `/tmp/rerun`, then `merge_rerun.py`).
 
+### Check-in E, Saturday 2026-11-21 (about 11:55 AM-12:20 PM Pacific)
+
+QB news checked for both teams in the 35 games kicking off at noon Pacific or
+later. **No pick changed in either model**: no new no-picks (every picked team's
+assumed starter has no injury or status news) and no pick came back (no
+no-pick team's regular starter was confirmed). The noon Pacific games (Coastal
+Carolina at Louisiana, Delaware at New Mexico State) kicked off as the check
+started; nothing new was found for them.
+
+No-pick reasons corrected or updated in both files with `set_nopick.py`
+(several morning reasons named the wrong team):
+- Texas A&M at Oklahoma: the Marcel Reed / Brady Hart news is Texas A&M's (Oklahoma's John Mateer has no news).
+- Rutgers at Penn State: Lonergan and Surace are Rutgers QBs; both listed available on the game-day Big Ten report, Surace reported to start, not announced.
+- Old Dominion at UConn: the unnamed starter (Potter / Henicle) is Old Dominion's.
+- Georgia State at Marshall: Cameran Brown now ruled out; Marshall's Khalil Wilkins out for the season, no starter named.
+- Maryland at USC: Malik Washington is Maryland's QB; still questionable, the 2-hour report comes after this check.
+- Pittsburgh at Louisville: Mason Heintschel is Pitt's QB (out for the season); Holden Geriner questionable, Corey Dailey if not.
+- San Diego State at Boise State: the Saunders / Denegal question is San Diego State's (Boise's Maddux Madsen is off the report).
+
+Still open after this check (no pick stands; final reports come later):
+Maryland (Big Ten 2-hour report), Oklahoma State (Mestemaker, 90-minute
+report), Pitt (Geriner), Tennessee (MacIntyre game-time decision), Indiana
+(Hoover), South Carolina (Sellers available but not named), Michigan
+(Underwood reported, not announced), TCU (Schobel expected, Craig doubtful).
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
