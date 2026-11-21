@@ -3159,6 +3159,112 @@ today's 6 games.** All 6 stay no-picks in both models; reasons updated with
 - New Mexico at Wyoming: Tyler Hughes (forearm fracture) out; Landon Sims
   starts again (PokesNews, Nov 20). Regular starter out.
 
+## College football Saturday 2026-11-21 (check-in D, engine and framework)
+
+Check-in D, Saturday 2026-11-21, about 6:40-7:30 AM Pacific (fresh session,
+full cache downloaded). Engine first run straight into `results/`
+(`cfb_2026-11-21_picks.csv`, `_qbs.csv`); framework first run straight into
+`results/` (`prompt_cfb_2026-11-21_picks.csv`; it used each team's last
+starter, which matches every picked team below). QB check: all 61 flagged teams
+plus injury news for every team in the 54 FBS-vs-FBS games, news through
+Saturday morning. No-picks applied to both with `set_nopick.py`. Splits in bold.
+
+**Midweek graded (11-17 to 11-20): engine 1-1, framework 1-1** (same picks).
+Ohio over Ball State (Tue, 76%) won 35-28; Central Michigan at Buffalo (Wed,
+55%) lost 21-40. Thursday's and Friday's 7 games were all no-picks (off the
+record in the PDF).
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| BYU at Kansas (10:00 AM) | BYU 65% | BYU 66% (BYU 29 - Kansas 22) |
+| Wake Forest at Georgia Tech (10:00 AM) | Wake Forest 88% | Wake Forest 90% (Wake Forest 40 - Georgia Tech 18) |
+| Vanderbilt at Florida (10:00 AM) | Florida 74% | Florida 68% (Florida 31 - Vanderbilt 24) |
+| Colorado at Cincinnati (10:00 AM) | **Colorado 52%** | **Cincinnati 55% (Cincinnati 30 - Colorado 28)** |
+| Syracuse at Boston College (10:00 AM) | Boston College 57% | Boston College 53% (Boston College 27 - Syracuse 26) |
+| East Carolina at Army (10:00 AM) | **Army 56%** | **East Carolina 73% (East Carolina 34 - Army 24)** |
+| Memphis at Navy (10:00 AM) | **Navy 51%** | **Memphis 76% (Memphis 37 - Navy 26)** |
+| Charlotte at Tulsa (12:00 PM) | Tulsa 95% | Tulsa 90% (Tulsa 36 - Charlotte 15) |
+| Missouri State at Jacksonville State (12:00 PM) | Jacksonville State 74% | Jacksonville State 68% (Jacksonville State 31 - Missouri State 24) |
+| UL Monroe at App State (12:30 PM) | App State 70% | App State 63% (App State 29 - UL Monroe 24) |
+| Coastal Carolina at Louisiana (1:00 PM) | Louisiana 78% | Louisiana 74% (Louisiana 31 - Coastal Carolina 21) |
+| Delaware at New Mexico State (1:00 PM) | **Delaware 51%** | **New Mexico State 58% (New Mexico State 27 - Delaware 23)** |
+| Arkansas at Texas (1:30 PM) | Texas 86% | Texas 76% (Texas 27 - Arkansas 16) |
+| Texas Tech at Baylor (1:30 PM) | Texas Tech 55% | Texas Tech 50% (Texas Tech 26 - Baylor 25) |
+| NC State at Florida State (1:30 PM) | Florida State 72% | Florida State 52% (Florida State 32 - NC State 31) |
+| Northern Illinois at North Dakota State (2:00 PM) | North Dakota State 93% | North Dakota State 94% (North Dakota State 39 - Northern Illinois 12) |
+| Georgia Southern at Troy (2:00 PM) | Georgia Southern 76% | Georgia Southern 80% (Georgia Southern 31 - Troy 18) |
+| Washington State at Texas State (4:00 PM) | Texas State 81% | Texas State 79% (Texas State 35 - Washington State 22) |
+| Virginia Tech at Miami (5:00 PM) | Miami 91% | Miami 75% (Miami 34 - Virginia Tech 24) |
+| Arkansas State at Louisiana Tech (5:00 PM) | Louisiana Tech 88% | Louisiana Tech 87% (Louisiana Tech 37 - Arkansas State 18) |
+| SMU at Notre Dame (5:30 PM) | Notre Dame 90% | Notre Dame 78% (Notre Dame 35 - SMU 22) |
+| Kentucky at Missouri (5:30 PM) | Missouri 61% | Missouri 71% (Missouri 30 - Kentucky 21) |
+| Stanford at California (5:30 PM) | **California 51%** | **Stanford 50% (Stanford 27 - California 26)** |
+| Colorado State at Fresno State (5:30 PM) | Fresno State 82% | Fresno State 80% (Fresno State 41 - Colorado State 28) |
+| UTSA at UAB (6:00 PM) | UTSA 67% | UTSA 60% (UTSA 28 - UAB 24) |
+| Hawai'i at Nevada (8:30 PM) | Nevada 73% | Nevada 70% (Nevada 29 - Hawai'i 20) |
+
+26 picks in both models, 32 no-picks. Splits (5): Colorado/Cincinnati,
+Army/East Carolina, Navy/Memphis, Delaware/New Mexico State, California/Stanford
+(engine first). All splits are engine picks under 60% (pass).
+
+No pick (both; full reasons with sources in both picks files and the PDF):
+- Ohio State at Nebraska (10:00 AM): Julian Sayin (injury suffered Oct 17 at Indiana) out for the season per Ryan Day (Fox Sports, Oct 20); Luke Fahey, the fill-in, has started the last 3; regular starter out
+- Wofford at Ole Miss (10:00 AM): not enough play-by-play this season: Wofford
+- Northwestern at Minnesota (10:00 AM): Aidan Chiles (upper body) out for a 3rd straight week (Pete Thamel/ESPN via ClutchPoints, Nov 18); Nicco Marchiol expected to fill in, not officially named; regular starter out
+- Wisconsin at Purdue (10:00 AM): Ryan Hopkins listed questionable on the initial availability report (SI, Nov 19); Colton Joseph (started the first 8, 'banged up' Nov 13) starts if Hopkins can't; starter not confirmed
+- North Texas at Tulane (10:00 AM): Tayven Jackson (upper-body injury, Nov 14 at UTSA) out for the rest of the regular season (Dallas Sports Journal, Nov 17); Chris Jimerson Jr. makes his first start (Yahoo Sports, Nov 20); regular starter out
+- North Carolina at Virginia (10:30 AM): Billy Edwards Jr. (injury, left the Nov 14 game) questionable on the ACC availability report (Nov 18); true freshman Travis Burgess could start (SI All Tar Heels, Nov 19); starter not confirmed
+- Houston at West Virginia (11:00 AM): Conner Weigman (undisclosed injury from the Colorado game) questionable, final report due 90 minutes before kickoff (Houston Chronicle via Yahoo, Nov 21); starter not confirmed
+- Tennessee Tech at Mississippi State (11:00 AM): not enough play-by-play this season: Tennessee Tech
+- Western Kentucky at Liberty (11:00 AM): QB job split: Rodney Tisdale Jr. started Nov 14 and was replaced by Brock Glenn in the 3rd quarter (BG Daily News, Nov 14); Tyson Helton: 'It's going to take both these guys' (WKU Herald); no starter named
+- Chattanooga at Alabama (12:00 PM): not enough play-by-play this season: Chattanooga
+- Middle Tennessee at Sam Houston (12:00 PM): Landyn Locke aggravated a lower-leg injury vs Kennesaw State Nov 14, availability 'once again uncertain' (Athlon); projected but not confirmed (MTSU Sidelines, Nov 20); starter not confirmed
+- Iowa at Illinois (12:30 PM): Katin Houser (broken nose, surgery) 'not likely to play Saturday' per Bret Bielema (Field Level Media, Nov 21); Carson Boyd likely makes his first start; regular starter out
+- South Florida at Florida Atlantic (12:30 PM): Michael Van Buren Jr. (undisclosed) ruled out the last 2 games on the American availability report (RotoWire, Nov 6, Nov 12), still listed questionable (RotoWire); Luke Kromenhoek the fill-in; regular starter out or not confirmed
+- Florida International at Kennesaw State (1:00 PM): Rickie Collins (undisclosed) did not play last game (RotoWire, Nov 15), questionable (Athlon, Nov 21); Landon Varnes the fill-in; starter not named
+- UCLA at Michigan (1:30 PM): Whittingham called an open competition (Nov 16); Bryce Underwood reported to start over Tommy Carr, who started the last 4 (Matt Zenitz via RotoWire, Nov 21), not announced by the team. UCLA: Nico Iamaleava (knee) out for the season (247Sports, Nov 20); Ty Dieffenbach starts
+- Indiana at Washington (1:30 PM): Josh Hoover (upper body) still recovering ('looking better every day', Cignetti); Grant Wilson started last game but has not been named the starter (Hoosiers On SI, Nov 20); starter not confirmed
+- LSU at Tennessee (1:30 PM): George MacIntyre (right knee/ankle, hurt Nov 14) a game-time decision vs Faizon Brandon (On3's Pete Nakos via Saturday Down South, Nov 20); starter not confirmed
+- Samford at Auburn (1:30 PM): not enough play-by-play this season: Samford
+- Rutgers at Penn State (1:30 PM): Dylan Lonergan (head) doubtful on the Big Ten availability report (RotoWire, Nov 20); fill-in AJ Surace questionable with three broken ribs (Onward State, Nov 20); starter not confirmed
+- Old Dominion at UConn (1:30 PM): Ricky Rahne would not name a starter between Jaxon Potter (started the last 3) and Quinn Henicle (WTKR, Nov 17); starter not confirmed
+- Texas A&M at Oklahoma (1:45 PM): Marcel Reed (not injured) expected to be benched for Brady Hart's first start, per sources (ESPN, Nov 21); not announced by the team; starter not confirmed
+- Georgia State at Marshall (2:00 PM): Cameran Brown (undisclosed) doubtful; Ayden Pereira likely starts (Last Word on Sports, Nov 20); regular starter out. Marshall: Khalil Wilkins (ankle) status unannounced, Carlos Del Rio-Wilson and Zion Turner available, no starter named (WV MetroNews, Nov 18)
+- South Alabama at Southern Miss (2:00 PM): QB changed (Bishop Davenport started the last 2 after Jared Hollins started the 6 before); no starter named, job unsettled (RotoWire, Nov 15)
+- Maryland at USC (4:15 PM): Malik Washington (left knee) questionable on the Big Ten availability report (RotoWire Nov 18; Yahoo Nov 20); Cardell Williams starts if he can't; starter not confirmed
+- Arizona at Kansas State (5:00 PM): Avery Johnson out long-term ('outside chance' he returns this season, Collin Klein, KCTV5 Nov 3), Jacob Knuth also hurt; Dillon Duff the fill-in for a 3rd start (Field Level Media, Nov 18); regular starter out
+- UNLV at San José State (5:00 PM): Daniel Rolovich, who had taken the job, re-aggravated an undisclosed injury vs Air Force (Mercury News via RotoWire, Nov 17); Luke Weaver fills in; regular starter out
+- Georgia at South Carolina (5:30 PM): QB changed last game (Cutter Woods started; LaNorris Sellers (ankle) started the 9 before); Sellers off the SEC availability reports but sat last week while listed available; Shane Beamer has not named him the starter (Yahoo, Nov 20)
+- Pittsburgh at Louisville (5:30 PM): Mason Heintschel (torn ACL) out for the season (247Sports, Nov 12); Corey Dailey the fill-in, no starter announced for Louisville; regular starter out
+- Utah at TCU (7:00 PM): Jaden Craig (ankle) doubtful on Friday's Big 12 availability report; Adam Schobel expected to make his first start (Pete Thamel/ESPN via ClutchPoints, Nov 21); regular starter out
+- San Diego State at Boise State (7:30 PM): QB changed (Stone Saunders has started the last 4 after Jayden Denegal's injury); Denegal now cleared and Saunders reported to keep the job (Idaho Press, Nov 18), not announced by the team; starter not confirmed
+- Oklahoma State at Arizona State (8:15 PM): Drew Mestemaker (right shoulder) questionable on the Big 12 availability report (Arizona Sports, Nov 20); starter not confirmed. Arizona State: Mikey Keene (knee) out, Jake Fette the fill-in for a 4th start; regular starter out
+- Utah State at Oregon State (8:30 PM): Braden Atkinson (throwing hand) ruled out on the availability report; Maalik Murphy expected, not named (Cache Valley Daily, Nov 20). Utah State: McCae Hillstead has started the last 3 over season leader Grady Brosterhous, reason not found (Deseret News, Nov 13)
+
+Judgment calls for the owner:
+- San Diego State at Boise State: no pick. Jayden Denegal (season leader) is
+  cleared and Stone Saunders reportedly kept the job (Idaho Press), but the team
+  hasn't announced it.
+- San Jose State: no pick, treating Daniel Rolovich (who took the job from Luke
+  Weaver, then got hurt) as the regular starter. Weaver leads in attempts; on the
+  other reading the pick (UNLV 60%) would stand.
+- UCLA: Nico Iamaleava out for the season with Ty Dieffenbach now 5 straight
+  starts (the same question as Central Michigan / Angel Flores on 11-17). The
+  game is a no-pick on Michigan's QB change regardless.
+- Picks kept: Nevada (Jeff Choate named AJ Bianco the starter with Carter Jones
+  healthy, "not ready to take over"); Texas Tech (Thomas Castellanos made QB1
+  over a healthy Will Hammond, Oct 31); Washington State (Owen Eshelman named
+  starter Oct 12, coaching decision); Georgia Tech (LOW ATTEMPTS: Alberto
+  Mendoza has started every game, rotating with Grady Adamson); East Carolina
+  (SPLIT, Emory Williams started the last 2, no news of a change).
+
+**For check-in E (11:50 AM):** Houston (Weigman, final report 90 minutes
+before kickoff), Tennessee (MacIntyre game-time decision), Maryland (Malik
+Washington), Oklahoma State (Mestemaker), Indiana (Hoover), South Carolina
+(Sellers), Rutgers, Michigan, Texas A&M, TCU, plus the Big Ten 2-hour reports.
+A pick comes back only when the regular starter is confirmed (re-run both into
+`/tmp/rerun`, then `merge_rerun.py`).
+
 ## College Prompt Football framework (built 2026-10-11)
 
 `prompt_football/cfb.py`: the owner's five criteria and weights, built the same
