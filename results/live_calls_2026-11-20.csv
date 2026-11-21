@@ -1,5 +1,6 @@
 sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
 college,401856869,Iowa State at UCF,11.20.2026 5:52 PM,4,14:25,"Iowa State 17, UCF 38",UCF,0.9933,0.98,"Iowa State 17, UCF 48",W
-college,401864545,UTEP at Air Force,11.20.2026 5:52 PM,2,13:46,"UTEP 3, Air Force 14",Air Force,0.9829,0.98,,
-college,401858303,Clemson at Duke,11.20.2026 7:53 PM,4,2:37,"Clemson 17, Duke 10",Clemson,0.9892,0.98,,
-college,401858529,Oregon at Michigan State,11.20.2026 7:53 PM,4,14:55,"Oregon 31, Michigan State 7",Oregon,0.999,0.98,,
+college,401864545,UTEP at Air Force,11.20.2026 5:52 PM,2,13:46,"UTEP 3, Air Force 14",Air Force,0.9829,0.98,"UTEP 3, Air Force 52",W
+college,401858303,Clemson at Duke,11.20.2026 7:53 PM,4,2:37,"Clemson 17, Duke 10",Clemson,0.9892,0.98,"Clemson 20, Duke 10",W
+college,401858529,Oregon at Michigan State,11.20.2026 7:53 PM,4,14:55,"Oregon 31, Michigan State 7",Oregon,0.999,0.98,"Oregon 45, Michigan State 7",W
+college,401864542,New Mexico at Wyoming,11.20.2026 8:52 PM,4,14:57,"New Mexico 24, Wyoming 7",New Mexico,0.9921,0.98,,
