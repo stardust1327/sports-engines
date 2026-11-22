@@ -1443,6 +1443,16 @@ comes back only if he's active and confirmed to start (re-run both into
   found for the other early-game starters, who had no designation Friday.
 - PDF: `results/report_2026-11-22_F.pdf` (Saturday college graded, Week 11
   picks).
+- Addendum (third session of this check, session_01BPUPtkc3YU7avniLsPm6cN, same
+  picks reached independently): early-game inactives found for Saints-Bears and
+  Titans-Cowboys (Saints Wire and Tennessean via Yahoo, about 11:32 AM ET): the
+  only inactive QBs are emergency QB3s Zach Wilson (NO) and Case Keenum (CHI);
+  Shough, Williams, Ward and Prescott not inactive. FantasyPros' Week 11 list
+  shows only Beck and Murray (already no-picks) among Sunday QBs. Raiders'
+  CHANGE flag: Fernando Mendoza was named the starter on Nov 10 after the
+  Cousins trade (ESPN), a new starter going forward, so the Broncos pick stands.
+  NFL.com final report: no QB listed for Jets-Chargers, Raiders-Broncos,
+  Jaguars-Giants or Bengals-Commanders. No change from this addendum.
 
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
