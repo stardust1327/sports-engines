@@ -1419,6 +1419,31 @@ news (Geno Smith, Mendoza, Nix, Lawrence, McCarthy, Herbert). A Mayfield pick
 comes back only if he's active and confirmed to start (re-run both into
 `/tmp/rerun`, merge). Monday (G): Burrow and Daniels inactives.
 
+**Sunday check (F), 2026-11-22, about 8:40-9:00 AM Pacific.**
+- **Buccaneers at Lions: pick back in both models (Lions).** Baker Mayfield
+  (foot) is active and will start; Easton Stick is the inactive third QB
+  (Buccaneers.com inactives, "Baker Mayfield Will Start", Nov 22; PFT, "Baker
+  Mayfield is officially active against the Lions", Nov 22). Both models re-run
+  into `/tmp/rerun` with the other 5 no-picks (framework with `--refresh`) and
+  merged (12 games refreshed in each file). Engine Lions 61.3% (lean: the models
+  agree), framework Lions 56.2%. No other pick or win chance changed side.
+- Late games: Geno Smith has no injury designation and is expected to start
+  (SI, Nov 22). No injury news found for Herbert, Mendoza, Nix, Lawrence or
+  McCarthy. Picks stand.
+- Cardinals: Carson Beck ruled out (ESPN, Nov 21), Josh Johnson expected to
+  start; the no-pick stands (Minshew, the regular starter, out for the season);
+  reason updated in both files.
+- Two sessions ran this check at the same time and reached the same result; the
+  first push (commit 1c62799, pick files and grades) stands, and this session
+  added the RESULTS.md entries and the PDF.
+- Other no-picks unchanged: Dolphins (Willis IR), Eagles (Hurts out for the
+  season), Ravens (Jackson IR), Vikings (Murray out).
+- Not reached: a full official inactives list for every early game (no page
+  with the Lions' or other teams' lists could be read); no QB injury news was
+  found for the other early-game starters, who had no designation Friday.
+- PDF: `results/report_2026-11-22_F.pdf` (Saturday college graded, Week 11
+  picks).
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
@@ -3289,6 +3314,15 @@ Maryland (Big Ten 2-hour report), Oklahoma State (Mestemaker, 90-minute
 report), Pitt (Geriner), Tennessee (MacIntyre game-time decision), Indiana
 (Hoover), South Carolina (Sellers available but not named), Michigan
 (Underwood reported, not announced), TCU (Schobel expected, Craig doubtful).
+
+### Saturday 2026-11-21 graded (check-in F, Sunday 2026-11-22)
+
+All 58 games final (`grade_picks.py`, both files): **engine 22-4, framework
+23-3** (32 no-picks). 70%+ picks: engine 15-1, framework 14-1. Splits (5):
+engine 2-3, framework 3-2 (engine right on Navy and Delaware; framework right
+on Cincinnati, East Carolina and Stanford). Lost in both models: Florida State
+(NC State won 28-10). Off the record (no-pick games with a number): engine
+17-11, framework 20-8.
 
 ## College Prompt Football framework (built 2026-10-11)
 
