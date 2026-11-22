@@ -1443,8 +1443,8 @@ comes back only if he's active and confirmed to start (re-run both into
   found for the other early-game starters, who had no designation Friday.
 - PDF: `results/report_2026-11-22_F.pdf` (Saturday college graded, Week 11
   picks).
-- Addendum (third session of this check, session_01BPUPtkc3YU7avniLsPm6cN, same
-  picks reached independently): early-game inactives found for Saints-Bears and
+- Addendum (the session that pushed 1c62799, session_01BPUPtkc3YU7avniLsPm6cN,
+  same picks): early-game inactives found for Saints-Bears and
   Titans-Cowboys (Saints Wire and Tennessean via Yahoo, about 11:32 AM ET): the
   only inactive QBs are emergency QB3s Zach Wilson (NO) and Case Keenum (CHI);
   Shough, Williams, Ward and Prescott not inactive. FantasyPros' Week 11 list
