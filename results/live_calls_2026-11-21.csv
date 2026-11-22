@@ -11,7 +11,7 @@ college,401862832,Charlotte at Tulsa,11.21.2026 1:52 PM,3,0:00,"Charlotte 14, Tu
 college,401856755,Arkansas at Texas,11.21.2026 1:52 PM,2,2:00,"Arkansas 3, Texas 24",Texas,0.9941,0.98,"Arkansas 3, Texas 45",W
 college,401858532,Rutgers at Penn State,11.21.2026 1:52 PM,2,5:00,"Rutgers 0, Penn State 16",Penn State,0.9853,0.98,"Rutgers 25, Penn State 24",L
 college,401858527,Iowa at Illinois,11.21.2026 2:52 PM,4,1:56,"Iowa 34, Illinois 17",Iowa,0.999,0.98,"Iowa 34, Illinois 17",W
-college,401862833,South Florida at Florida Atlantic,11.21.2026 2:52 PM,4,15:00,"South Florida 7, Florida Atlantic 35",Florida Atlantic,0.9976,0.98,,
+college,401862833,South Florida at Florida Atlantic,11.21.2026 2:52 PM,4,15:00,"South Florida 7, Florida Atlantic 35",Florida Atlantic,0.9976,0.98,"South Florida 14, Florida Atlantic 35",W
 college,401869946,Coastal Carolina at Louisiana,11.21.2026 2:52 PM,4,5:03,"Coastal Carolina 17, Louisiana 38",Louisiana,0.999,0.98,"Coastal Carolina 24, Louisiana 38",W
 college,401871077,Delaware at New Mexico State,11.21.2026 2:52 PM,4,8:23,"Delaware 35, New Mexico State 16",Delaware,0.9987,0.98,"Delaware 42, New Mexico State 30",W
 college,401871078,Florida International at Kennesaw State,11.21.2026 2:52 PM,4,9:40,"Florida International 18, Kennesaw State 35",Kennesaw State,0.9947,0.98,"Florida International 24, Kennesaw State 35",W
@@ -20,3 +20,6 @@ college,401869953,Georgia Southern at Troy,11.21.2026 2:52 PM,3,8:20,"Georgia So
 college,401856871,Texas Tech at Baylor,11.21.2026 3:52 PM,4,2:34,"Texas Tech 20, Baylor 10",Texas Tech,0.9943,0.98,"Texas Tech 20, Baylor 10",W
 college,401858304,NC State at Florida State,11.21.2026 3:52 PM,4,2:00,"NC State 28, Florida State 10",NC State,0.9987,0.98,"NC State 28, Florida State 10",W
 college,401861968,Old Dominion at UConn,11.21.2026 3:52 PM,4,0:00,"Old Dominion 14, UConn 29",UConn,1.0,0.98,"Old Dominion 21, UConn 29",W
+college,401860920,Washington State at Texas State,11.21.2026 5:53 PM,4,11:05,"Washington State 7, Texas State 35",Texas State,0.999,0.98,,
+college,401858534,Maryland at USC,11.21.2026 5:53 PM,4,12:49,"Maryland 14, USC 26",USC,0.9811,0.98,,
+college,401869938,Arkansas State at Louisiana Tech,11.21.2026 5:53 PM,2,0:00,"Arkansas State 3, Louisiana Tech 28",Louisiana Tech,0.9964,0.98,,
