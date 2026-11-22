@@ -1,0 +1,2 @@
+sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
+nfl,401873067,Cardinals at Chiefs,11.22.2026 11:53 AM,3,6:48,"Cardinals 7, Chiefs 27",Chiefs,0.9888,0.98,,
