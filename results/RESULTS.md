@@ -1454,6 +1454,14 @@ comes back only if he's active and confirmed to start (re-run both into
   NFL.com final report: no QB listed for Jets-Chargers, Raiders-Broncos,
   Jaguars-Giants or Bengals-Commanders. No change from this addendum.
 
+**Monday night check (G), 2026-11-23, about 3:48-4:05 PM Pacific: no change.**
+Bengals at Commanders: Joe Burrow (illness) and Jayden Daniels (left elbow)
+practiced fully all week with no game designation (Bengals.com final report,
+updated Nov 23) and neither is on the inactive lists (WLWT, 6:47 PM ET:
+Bengals Risner, Dugger, Hinton, Grandy, Robinson; Commanders Robertson,
+Kaliakmanis (QB3), Henry, Barber, Togiai); Bolavip (6:00 PM ET) lists both as
+starters. Pick stands in both models: Bengals (engine 66.4%, framework 67.0%).
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
