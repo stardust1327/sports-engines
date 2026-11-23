@@ -3434,3 +3434,14 @@ models with its logged reason. Justin Herbert has no injury designation and is
 listed as the Chargers' starter. The official 2026 inactive lists weren't
 reachable (the one inactives page found was blocked; others were from 2024),
 but the no-pick doesn't depend on them.
+
+NFL Week 11, Monday-night check (check-in G, Nov 23), Bengals at Commanders: no
+change; the pick stands in both models (engine Bengals 66.4%, framework Bengals
+67.0%). Joe Burrow (illness) and Jayden Daniels (left elbow) practiced fully
+Thursday-Saturday and carry no game designation on the final report (Bengals.com
+injury report, last updated Nov 23; Athlon, Nov 23: Burrow "off the injury report
+after he was cleared to play"). Both are the expected starters (Bolavip, Nov 23:
+backups Joe Flacco and Marcus Mariota). Commanders' SPLIT flag: Daniels is the
+regular starter and the last starter. The official inactive lists weren't
+reachable before this check (Bleacher Nation's inactives page failed to load; no
+other page had them); no page lists either QB as out or inactive.
