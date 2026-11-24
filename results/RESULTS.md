@@ -1564,6 +1564,20 @@ team's starter on the final reports; framework with `--refresh` and `--starter
 Ravens and Patriots stay no-picks while their regular starters are out.
 Monday's statuses come Saturday (final word at check-in G).
 
+**Tuesday run, second session (same scheduled check-in A, 7:15-8:40 AM
+Pacific).** Ran the same steps on its own before the first session's push
+landed and got the same result: Week 11 graded 6-2 in both models, the same 9
+Week 12 picks with the same win chances (within 0.1 point), the same 7 NFL
+no-picks, and the same college picks and 11 no-picks for 11-24 to 11-27. The
+files and PDF pushed by the first session (commit 1b849a7) stand; nothing was
+changed. One extra item for the owner: Vikings. PFT (Nov 11) reported that once
+healthy, Kyler Murray "is slated for a backup role" after the Cousins trade; SI
+(Nov 24) lists Murray questionable, Yahoo (Nov 23) out. If the Vikings confirm
+Cousins as the starter going forward, the Falcons at Vikings pick (engine Vikings
+57.0%, framework Vikings 68.0%) would come back at the Friday lock; it stays a
+no-pick until then. Also new: Chiefs.com (Nov 23) lists Mahomes (knee, right
+elbow) as a full participant; Prescott (left hand) full.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
