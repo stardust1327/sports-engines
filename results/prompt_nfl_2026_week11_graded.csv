@@ -1,0 +1,14 @@
+game_id,away,home,away_score,home_score,final,status,reason,pick,pick_prob,result
+401873067,Cardinals,Chiefs,7,34,True,NO PICK,"Gardner Minshew (throwing elbow, UCL surgery) on injured reserve, out for the season; Carson Beck started Week 10 and has been ruled out for Week 11 (back; ESPN, Nov 21); Josh Johnson expected to start",,,
+401873070,Dolphins,Bills,9,26,True,NO PICK,"Malik Willis (groin) on injured reserve, out at least 4 games (placed Nov 10); Kyle McCord started Week 10",,,
+401873075,Raiders,Broncos,24,38,True,PICK,,Broncos,0.8167,W
+401873069,Jaguars,Giants,18,23,True,PICK,,Jaguars,0.8027,L
+401873071,Saints,Bears,13,21,True,PICK,,Bears,0.7839,W
+401873066,Colts,Texans,3,26,True,PICK,,Texans,0.7508,W
+401873076,Steelers,Eagles,16,19,True,NO PICK,Jalen Hurts (blood clots) out for the season; Joe Milton started the last game,,,
+401873078,Bengals,Commanders,20,22,True,PICK,,Bengals,0.67,L
+401873073,Titans,Cowboys,30,51,True,PICK,,Cowboys,0.6341,W
+401873077,Vikings,49ers,10,35,True,NO PICK,"Kyler Murray (Grade 2 hamstring) will not play (DNP Wed-Thu; NBC Sports, Nov 20); Kirk Cousins starts",,,
+401873074,Jets,Chargers,27,24,True,PICK,,Jets,0.5683,W
+401873072,Buccaneers,Lions,21,31,True,PICK,,Lions,0.5622,W
+401873068,Ravens,Panthers,33,35,True,NO PICK,Lamar Jackson (right thumb) on injured reserve; Jacoby Brissett started Week 10,,,

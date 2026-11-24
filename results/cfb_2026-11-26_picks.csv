@@ -1,0 +1,2 @@
+game_id,kickoff_utc,state,away_id,home_id,away_name,home_name,neutral,venue,home_plays,away_plays,net_epa,net_sr,is_home,p_home,pick,pick_prob,status,reason,kickoff
+401856879,2026-11-27T01:00Z,pre,2628,2641,TCU,Texas Tech,False,Galaxy Stadium,710,706,0.14679890584587188,0.03660152818659396,1.0,0.7227769762354478,Texas Tech,0.7227769762354478,NO PICK,"Jaden Craig (ankle) ruled out; Adam Schobel starts (Yahoo Sports, Nov 24)",Thu 6:00 PM
