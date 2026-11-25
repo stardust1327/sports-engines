@@ -1578,6 +1578,39 @@ Cousins as the starter going forward, the Falcons at Vikings pick (engine Viking
 no-pick until then. Also new: Chiefs.com (Nov 23) lists Mahomes (knee, right
 elbow) as a full participant; Prescott (left hand) full.
 
+**Midweek check (B), Wednesday 2026-11-25, about 3:50-4:30 PM Pacific.** One
+change, framework only: Broncos at Steelers now **Steelers 51.1%** (was Broncos
+50.7%); the engine (which doesn't use the QB) stays Broncos 61.6%, so the models
+now split on that game. No no-picks added or lifted. No college games today.
+- Steelers: Aaron Rodgers benched by a coaches' decision, not injured (not on
+  Tuesday's injury report), and will be inactive Friday; the team named Mason
+  Rudolph "the starting quarterback for the game this Friday against the Denver
+  Broncos" (NFL.com, Nov 24-25; Post-Gazette, Nov 24). The Steelers are then
+  reported to be releasing Rodgers after his McAfee Show comments (NFL.com, PFT
+  and Yardbarker, Nov 25: "are waiving" / "expected to release"). Same case as
+  the Colts this week (regular starter gone, not injured; replacement confirmed
+  for this game), so the pick stands; the framework was re-run into `/tmp/rerun`
+  with `--starter "PIT=Mason Rudolph"` (plus `IND=Anthony Richardson` and the same
+  7 no-picks) and merged. All other games moved 0.3 point or less.
+- Packers at Rams (Wed 6:00 PM Phoenix): Packers inactives (AtoZ Sports, Nov 25,
+  3:48 PM Pacific) are Jacobs, Franklin, Burton, Jennings and Becton; no QB.
+  Jordan Love has no designation; Matthew Stafford (right elbow) full
+  participant all week, no game designation (Enforcethesport, Nov 24; Bolavip,
+  Nov 25 lists both as starters). The Rams' official inactive list wasn't
+  reachable before this check; no page lists either QB as out. Pick stands.
+- Thursday's final statuses (out Wednesday): Caleb Williams and Jared Goff not on
+  their teams' reports (Lions: Rakestraw out, Clark and Wonnum questionable,
+  Lions Wire, Nov 25); Patrick Mahomes not on the Chiefs' final report (out:
+  Walker, Moore, Norman-Lott); Josh Allen not among the Bills' 5 questionable
+  (Syracuse via Yahoo, Nov 25); Dak Prescott (left hand) full participant, no
+  game designation (CBS Sports, Nov 25). Picks stand; Eagles at Cowboys stays a
+  no-pick (Hurts on IR).
+- Broncos: no news found against Bo Nix.
+
+**For Thursday's check (B):** Thursday inactives (Williams, Goff, Prescott,
+Mahomes, Allen); Friday's Broncos-Steelers final statuses (Nix, Rudolph), which
+kick off at noon Pacific, before the Friday lock.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
