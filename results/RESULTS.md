@@ -3709,3 +3709,11 @@ No college games today (Thursday's one game is checked tomorrow).
   framework 50.7%). Eagles at Cowboys stays a no-pick in both models with its
   logged reason (Hurts out for the season; Joe Milton starts). Inactives are
   checked Thursday.
+
+**Midweek check, second session (same check-in B, Wednesday 2026-11-25, 3:50-4:55
+PM Pacific).** Ran alongside the entry above and found one more item: the
+Steelers benched Aaron Rodgers (inactive Friday; reported released Nov 25) and
+named Mason Rudolph Friday's starter. The framework was re-run with `--starter
+"PIT=Mason Rudolph"` and merged: Broncos at Steelers is now a split (engine
+Broncos 61.6%, framework Steelers 51.1%). Details and sources under Week 12 above
+("Midweek check (B), Wednesday 2026-11-25"); PDF `report_2026-11-25_B.pdf`.
