@@ -3654,3 +3654,25 @@ backups Joe Flacco and Marcus Mariota). Commanders' SPLIT flag: Daniels is the
 regular starter and the last starter. The official inactive lists weren't
 reachable before this check (Bleacher Nation's inactives page failed to load; no
 other page had them); no page lists either QB as out or inactive.
+
+**Midweek check (B), Wednesday 2026-11-25, about 3:50 PM Pacific.** No pick changes.
+No college games today (Thursday's one game is checked tomorrow).
+- NFL Wednesday, Packers at Rams (5:00 PM Pacific): Jordan Love isn't on the
+  Packers' injury report (eight questionable, Love not among them; Predictem
+  injury check Nov 25, 9:40 AM CT; ESPN game page). Matthew Stafford (elbow)
+  practiced fully and has no game designation (Predictem, Nov 25; FTN, Nov 25).
+  The official inactive lists weren't reachable (Packers.com inactives page
+  failed to load; Yahoo's "who's in, who's out" still "updating"); no page lists
+  either QB as out or inactive. Rams pick stands (engine 81.4%, framework 77.0%).
+- NFL Thursday, final Wednesday reports: Patrick Mahomes (knee/right elbow) full
+  practice Mon-Wed, no game designation (Chiefs final report via atozsports, Nov
+  25); Josh Allen not on the Bills' report (Buffalobills.com, Nov 25: five
+  questionable, Allen not among them; one AI-written summary calling him
+  questionable is contradicted by the official report); Dak Prescott (left hand)
+  off the report Wednesday (FantasyPros, Nov 25); Jared Goff and Caleb Williams
+  not on the Lions or Bears final reports (Yahoo/SB Nation, Nov 25; Bears.com,
+  Nov 25). Bears' SPLIT flag: Williams is the season leader and last starter.
+  Picks stand: Lions (engine 66.6%, framework 50.4%), Chiefs (engine 58.8%,
+  framework 50.7%). Eagles at Cowboys stays a no-pick in both models with its
+  logged reason (Hurts out for the season; Joe Milton starts). Inactives are
+  checked Thursday.
