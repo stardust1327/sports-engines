@@ -1611,6 +1611,24 @@ now split on that game. No no-picks added or lifted. No college games today.
 Mahomes, Allen); Friday's Broncos-Steelers final statuses (Nix, Rudolph), which
 kick off at noon Pacific, before the Friday lock.
 
+**Midweek check (B), Thursday 2026-11-26, about 3:50-4:15 PM Pacific.** No
+changes. Bears at Lions final and Eagles at Cowboys under way at check time
+(both covered Wednesday).
+- Chiefs at Bills (Thu 6:20 PM Phoenix): the official inactive lists weren't
+  found before this check. Neither Patrick Mahomes nor Josh Allen is on ESPN's
+  game injury list (Chiefs: Walker, Moore, Norman-Lott out; Bills: 5
+  questionable, no QB) or any 2026 report found (AP, Nov 26: no QB injury news).
+  Pick stands (engine Chiefs 58.7%).
+- Broncos at Steelers (Fri 1:00 PM Phoenix): final game statuses out Thursday
+  (Mile High Report via Yahoo, Nov 26); no QB on either team's report; Mason
+  Rudolph starts, Rodgers waived (Denver Gazette, Nov 26). Pick stands (engine
+  Broncos 61.6%; framework Steelers 51.1%, split).
+- TCU at Texas Tech (Thu 6:00 PM Phoenix): stays a no-pick; Jaden Craig (ankle)
+  out, Adam Schobel expected to start (Heartland College Sports, Nov 26).
+- Friday's 10 AM Phoenix college picks (Iowa, UTSA, Akron, Toledo) and Florida:
+  no QB on ESPN's injury lists for those games at check time. No other check-in
+  runs before they kick off.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
