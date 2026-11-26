@@ -3717,3 +3717,17 @@ named Mason Rudolph Friday's starter. The framework was re-run with `--starter
 "PIT=Mason Rudolph"` and merged: Broncos at Steelers is now a split (engine
 Broncos 61.6%, framework Steelers 51.1%). Details and sources under Week 12 above
 ("Midweek check (B), Wednesday 2026-11-25"); PDF `report_2026-11-25_B.pdf`.
+
+**Midweek check (B), Thursday 2026-11-26, about 3:50 PM Pacific.** No pick changes.
+- NFL Thursday night, Chiefs at Bills (5:20 PM Pacific): the inactive lists
+  weren't posted at this check (NFL.com Thanksgiving inactives page showed
+  empty Chiefs and Bills sections). Neither Patrick Mahomes nor Josh Allen
+  carried a game designation on Wednesday's final reports, and no page today
+  lists either as out or inactive (KMBC live updates, Nov 26, 3:15 PM CST: only
+  RB Kenneth Walker III ruled out). Chiefs pick stands (engine 58.8%, framework
+  50.7%).
+- College, TCU at Texas Tech (Thu 6:00 PM Phoenix): no-pick stands in both
+  models. Jaden Craig (ankle) out on the Big 12 availability report; Adam
+  Schobel makes his second straight start (Heartland College Sports and KCBD,
+  Nov 26). Texas Tech's Thomas Castellanos has no injury designation (KCBD, Nov
+  26: 4-0 since replacing Will Hammond).
