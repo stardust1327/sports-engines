@@ -1700,6 +1700,20 @@ and night games (Mendoza, Watson) on the latest news. Seahawks at 49ers comes ba
 only if both Darnold and Purdy are confirmed. Monday (G): Mayfield and Young
 inactives.
 
+**Friday lock, second session (same check-in C, about 1:40-2:50 PM Pacific).**
+A duplicate run of check-in C did its own QB check and re-ran both models into
+`/tmp/rerun` before the first session's push landed. It reached the same calls
+on every game (Falcons at Vikings back, Vikings in both; Purdy added to the
+Seahawks-49ers no-pick; the same 5 NFL no-picks; no college change) with
+identical win chances, so the files and PDF pushed by the first session (commit
+042bbab) stand unchanged. Extra sources it found: Kyler Murray a full
+participant Friday with no designation, O'Connell: "We'll assess him where he's
+at, but likely to be the backup, Carson would be the number three"
+(MinnesotaSportsFan, Nov 27); Drake Maye out on the Friday report (Pats Pulpit,
+Nov 27); Carson Beck out, Josh Johnson starts (Mike LaFleur via ESPN, Nov 27);
+Jaxson Dart (Giants) on IR since Sept 24, McCarthy the starter since his trade
+(giants.com transactions).
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
