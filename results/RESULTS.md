@@ -1629,6 +1629,77 @@ changes. Bears at Lions final and Eagles at Cowboys under way at check time
   no QB on ESPN's injury lists for those games at check time. No other check-in
   runs before they kick off.
 
+**Friday lock (C), 2026-11-27, about 1:40-2:30 PM Pacific. Week 12 picks locked
+Friday.** Both NFL models re-run for Sunday and Monday (engine
+`--date 2026-11-29 --date 2026-11-30`; framework `--refresh`, `--starter
+"IND=Anthony Richardson"`) into `/tmp/rerun` and merged; Broncos at Steelers was
+under way and kept as logged. Engine backtest 964-558 (70%+ 271-93); 2026 out of
+sample 74-39. Framework 561-332; 2026 out of sample 76-42.
+
+One pick changed: **Falcons at Vikings comes back** (engine Vikings 56.9%,
+framework Vikings 68.2%, both agree). Kyler Murray is off the Friday injury report
+and Kevin O'Connell said at Friday's press conference he's "likely to be the
+backup. Carson [Wentz] would be the No. 3" (KhanList citing PFT and NBC Sports,
+Nov 27), so Kirk Cousins starts by a coaching decision after the trade, not as an
+injury fill-in. Same case as the Colts and Steelers this week. Cousins was the
+Vikings' last starter, so the framework needed no `--starter`. Caveat: the
+Vikings' official Friday report wasn't readable (the copy found stopped at
+Thursday). Check-in F re-confirms with the inactives.
+
+| Game (Phoenix kickoff) | Engine (official) | Framework |
+|---|---|---|
+| Saints at Bengals (Sun 11:00 AM) | Bengals 71.4% | Bengals 78.4% |
+| Giants at Colts (11:00 AM) | **Colts 55.0%** | **Giants 54.6%** |
+| Falcons at Vikings (11:00 AM) | Vikings 56.9% | Vikings 68.2% |
+| Titans at Jaguars (11:00 AM) | Jaguars 84.0% | Jaguars 88.9% |
+| Raiders at Browns (6:20 PM) | Browns 73.7% | Browns 69.3% |
+| Panthers at Buccaneers (Mon 6:15 PM) | Buccaneers 60.8% | Buccaneers 63.2% |
+
+Other win chances moved 0.4 point or less. No pick (both), 5 Sunday games:
+- Jets at Dolphins: Malik Willis (groin) on IR; Kyle McCord starts. Neither QB
+  is on the Dolphins' final report (Dolphins Wire via Yahoo, Nov 27).
+- Ravens at Texans: Lamar Jackson on IR; Jacoby Brissett starts. Neither
+  Brissett nor C.J. Stroud is on the final out lists (Texans On SI, Nov 27).
+- Patriots at Chargers: Drake Maye (fibula) out; Tommy DeVito starts. Justin
+  Herbert (concussion) still in protocol and missed practice Wed-Fri; DJ
+  Uiagalelei "increasingly possible" to start (Matt Zenitz via Heavy; CBS
+  Sports/RotoWire, Nov 27).
+- Commanders at Cardinals: Gardner Minshew out for the season; Carson Beck (back
+  spasms) ruled out Friday; Josh Johnson starts (ESPN; Arizona Sports, Nov 27).
+  Jayden Daniels (left elbow/hand) full Wed-Thu, no game status.
+- Seahawks at 49ers: Sam Darnold (quadriceps, ribs) full in practice Wed-Thu, but
+  the only coach word is "That's the plan, assuming practice goes well" (Mike
+  Macdonald); no final status found. **New:** Brock Purdy (ankle) missed practice
+  Wednesday through Friday; Mac Jones in line to start (PFT and 49ers Webzone, Nov
+  27). Both QBs are now unconfirmed.
+
+QB check, picked teams: no QB on any 2026 Wed/Thu report or Friday news found for
+Burrow, Shough, Richardson, McCarthy, Lawrence, Ward, Mendoza or Watson (team
+reports from giants.com, tennesseetitans.com, raiders.com; Jaguars Friday news
+via Yahoo). Most teams' official Friday game statuses weren't readable at check
+time, which was only about 45 minutes after their 1 PM release. Penix (Falcons):
+no Falcons QB on the injury table. Monday game: Baker Mayfield (foot, right
+thumb) and Bryce Young (foot) full participants Thursday and Friday
+(Buccaneers.com, Nov 27); OC Zac Robinson said the thumb has made good progress
+(Rotoballer, Nov 27). Monday statuses come Saturday; check-in G has the final word.
+
+College today: the four games left at check time are all no-picks, and all
+stay no-picks:
+- Texas at Texas A&M: no starter named (Elko, "No, not sure yet"; On3 reports
+  both Reed and Hart will play; Athlon via Yahoo, Nov 27).
+- Minnesota at Wisconsin: still no declaration ("We're not going to make any
+  declarations right now," Luke Fickell; SB Nation via Yahoo, Nov 27).
+- West Virginia at Utah: Michael Hawkins Jr. (ankle) doubtful on Thursday's
+  Big 12 availability report; Scotty Fox Jr. likely, not confirmed. Reason
+  updated in both files with `set_nopick.py`.
+- Air Force at New Mexico (already under way at check time): unchanged.
+
+**For the next checks:** Sunday (F): early-game inactives (8:30 AM Pacific) for
+Burrow, Shough, Richardson, McCarthy, Cousins, Penix, Lawrence and Ward; late
+and night games (Mendoza, Watson) on the latest news. Seahawks at 49ers comes back
+only if both Darnold and Purdy are confirmed. Monday (G): Mayfield and Young
+inactives.
+
 ## College football midweek, 2026-10-13 to 10-16 (engine and framework)
 
 Engine files: `cfb_2026-10-13_picks.csv` through `cfb_2026-10-16_picks.csv`.
