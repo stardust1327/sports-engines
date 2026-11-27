@@ -1,2 +1,2 @@
 sport,game_id,matchup,called_at_pt,period,clock,score,call,win_chance,threshold,final,result
-college,401856879,TCU at Texas Tech,11.26.2026 6:52 PM,2,0:00,"TCU 10, Texas Tech 27",Texas Tech,0.9817,0.98,,
+college,401856879,TCU at Texas Tech,11.26.2026 6:52 PM,2,0:00,"TCU 10, Texas Tech 27",Texas Tech,0.9817,0.98,"TCU 27, Texas Tech 48",W
